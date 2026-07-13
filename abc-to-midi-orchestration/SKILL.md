@@ -35,7 +35,7 @@ Ensure the ABC reflects the interaction map: silent voices have rests for those 
 
 Drums stay out of ABC (they're not pitched). Write them as a step-grid JSON — see `assets/drum-grid-template.json`. Critical: **the grid's total bars must match the ABC's total bars**, section for section, or the drums and the band drift out of sync. Build the grid section-by-section from the same plan so the bar counts line up. Let the drums follow the arc: minimal in quiet sections, full in the peak, fading at the end.
 
-For the actual pocket (per-role tick offsets, gate ratios) instead of inventing numbers ad hoc, read `references/groove-profiles.md` — it distills `references/advanced-microtiming.md` into a named, reusable profile (`neo-soul-core`) that both this grid and the downstream engine can implement consistently. Pick a profile; don't re-derive ticks per song.
+For the actual pocket (per-role tick offsets, gate ratios) instead of inventing numbers ad hoc, read `references/groove-profiles.md` — it distills `references/advanced-microtiming.md` into a named, reusable profile (`neo-soul-core`) that both this grid and the downstream engine can implement consistently. Pick a profile; don't re-derive ticks per song. Declare the choice in the ABC itself as a directive, `%%pocket <id>` (e.g. `%%pocket neo-soul-core`) in the tune header before the first voice, so the downstream engine picks the matching groove profile — the brain's job is to *pick* a profile by name, never to write per-note tick numbers into the ABC.
 
 ### Step 5 — Convert and merge
 

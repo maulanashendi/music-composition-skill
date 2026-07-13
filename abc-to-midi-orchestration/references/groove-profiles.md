@@ -56,12 +56,22 @@ change with tempo.
 - **Pitched voices (ABC).** `advanced-microtiming.md` distinguishes *notated
   displacement* (written rhythm) from *performance placement* (the offsets
   above). ABC written by `abc-notation-writer` stays on notated rhythm;
-  performance placement is not written into the ABC itself — it is either
-  left to the renderer/performer (state the profile name as a comment, e.g.
-  `% pocket: neo-soul-core`) or applied downstream at the MIDI stage if the
-  target pipeline supports per-note offset (this package's `abc_to_midi.py`
-  does not currently apply per-note micro-offset; state the profile as
-  intent for a human or downstream DAW to apply).
+  performance placement is not written into the ABC itself — state the
+  chosen profile as a **directive**, not a comment: `%%pocket neo-soul-core`
+  on its own line in the tune header, before the first `V:` voice. That is a
+  real ABC directive (`%%`, two percent signs), not a `%` comment — the
+  `daw_generative` engine's `src/abc/midi-directives.js` parses `%%pocket` to
+  select which named profile's per-role tick offsets and gate ratios to
+  apply at render time. As of this package's writing, that parsing is
+  planned for Task 7 of the daw_generative 2-tools architecture initiative
+  and is not yet implemented — writing `%%pocket neo-soul-core` today is
+  forward-compat/declarative: it costs nothing (the directive is inert to
+  any consumer that doesn't look for it) and means the ABC is already
+  correct once Task 7 ships. Until then, treat it the same as the fallback
+  below: left to the renderer/performer, or applied downstream at the MIDI
+  stage if the target pipeline supports per-note offset (this package's
+  `abc_to_midi.py` does not currently apply per-note micro-offset; state the
+  profile as intent for a human or downstream DAW to apply).
 - **Drums (step-grid JSON).** `grid_to_midi.py` already implements swing and
   velocity humanization at the grid level (`references/midi-conversion.md`).
   The kick/snare/hi-hat rows above describe the *intended* relationship this
