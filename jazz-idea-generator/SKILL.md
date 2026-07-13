@@ -13,6 +13,8 @@ The core belief: **a chord progression alone loops and feels empty. What gives a
 
 **The dramatic arc is the master. Every other dimension serves it — and you only use a technique when it serves the arc.** Do not stack every available device to prove sophistication. A great arrangement picks the two or three moves that fit the emotional moment and leaves the rest out. If a technique (contrary bass, tight rhythm, silence, register climb) doesn't serve what the section is *feeling*, leave it out. Over-arrangement is how many dimensions turn into noise.
 
+See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain.
+
 ## What "done" looks like
 
 A filled `composition-plan.json` with: a stated dramatic arc, key/tempo/meter/ensemble, bar-by-bar chords per section, a concrete hook, per-section phrasing intent, and a tension-release plan — all coherent with the arc. Prose like "funky, C minor, laid-back" is a starting point, not a plan.

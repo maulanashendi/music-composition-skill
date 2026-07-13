@@ -13,6 +13,8 @@ This skill assumes the musical ideas are decided (by `jazz-idea-generator`) and 
 
 **The dramatic arc (from the composition plan) is the master; the interaction map serves it.** The map is not a chance to make everyone busy — it's how you translate the arc's emotional journey into "who plays when." A section that should feel lonely has one or two voices and lots of silence; a section that should feel full has the ensemble together. Do not add activity that doesn't serve the arc. Subtraction (dropping a voice) is as powerful as addition — often more.
 
+See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain.
+
 ## Workflow
 
 ### Step 1 — Read the plan and the arc
