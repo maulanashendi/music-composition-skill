@@ -23,7 +23,10 @@ def build_drums(spec_path: str, out_path: str, seed: int = 7):
     basevel = spec["base_velocity"]
 
     sec_per_beat = 60.0 / tempo
-    beats_per_bar = 4
+    # Bar length in quarter-note-equivalents: 4 for 4/4, 3.5 for 7/8 (at eighth-
+    # note subdivision), 3 for 3/4, etc. -- numerator * 4/denominator. Defaults
+    # to 4 so every existing 4/4 spec that doesn't set this field is unaffected.
+    beats_per_bar = spec.get("beats_per_bar", 4)
     sec_per_bar = sec_per_beat * beats_per_bar
     sec_per_step = sec_per_bar / spb
 

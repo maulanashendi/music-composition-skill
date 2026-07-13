@@ -1,0 +1,40 @@
+X:1
+T:Settling In
+C:Instrumental (baseline draft, neo-soul/chill-jazz)
+M:4/4
+L:1/8
+Q:1/4=78
+K:Cmin
+V:1 name="Lead" snm="Ld"
+V:2 name="Rhodes" snm="Rh" clef=treble
+V:3 name="Bass" snm="Bs" clef=bass
+%
+% ===== A section (bars 1-8): self-doubt, circling, sparse =====
+V:1
+"Cm7"z2 e2 c2 z2 |"Cm7"z2 g2 e2 c2 |"Fm7"z2 a2 f2 z2 |"Fm7"c2 B,2 z4 |
+"Dm7b5"z2 f2 a2 z2 |"G7b9"z2 =B2 a2 g2 |"Cm7"z2 e2 c2 z2 |"Abmaj7"a2 g2 e2 z2 |
+V:2
+[EGBd]8 |[EGBd]8 |[Aceg]8 |[Aceg]8 |
+[FAc]8 |[=Bfa]8 |[EGBd]8 |[ceg]8 |
+V:3
+C,4 E,2 G,2 |C,4 z4 |F,4 A,2 C2 |F,4 z4 |
+D,4 F,2 A,2 |G,4 =B,2 F,2 |C,4 E,2 G,2 |A,4 C2 E2 |
+%
+% ===== B section (bars 9-16): opening up, searching, brighter, tension fades =====
+V:1
+"Fm7"f2 g2 a2 c'2 |"Bb7"c'2 a2 g2 z2 |"Ebmaj7"g2 f2 e2 z2 |"Abmaj7"a2 g2 f2 z2 |
+"Dm7b5"z2 f2 a2 z2 |"G7"z4 =B2 c2 |"Cm7"c2 z2 e2 z2 |"Cm7/Eb"z4 e2 z2 |
+V:2
+[Aceg]8 |[DAc]8 |[GBd]8 |[ceg]8 |
+[FAc]8 |[=Bdf]8 |[EGBd]8 |[EGBd]8 |
+V:3
+F,4 A,2 C2 |B,4 D2 F2 |E,4 G,2 B,2 |A,4 C2 E2 |
+D,4 F,2 A,2 |G,4 =B,2 D2 |C,4 z4 |E,4 z4 |
+%
+% ===== Outro (bars 17-20): settling, plagal motion, no forced cadence =====
+V:1
+"Fm7"z2 f4 z2 |"Abmaj7"z2 e4 z2 |"Fm7"d2 c4 z2 |"Cm(add9)"!fermata!e8 |]
+V:2
+[Aceg]8 |[ceg]8 |[Aceg]8 |!fermata![CEGd]8 |]
+V:3
+F,4 z4 |A,4 z4 |F,4 z4 |!fermata!C,8 |]

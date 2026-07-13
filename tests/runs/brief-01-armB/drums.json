@@ -1,0 +1,69 @@
+{
+  "title": "Settling In (Late) -- drums",
+  "tempo_bpm": 78,
+  "steps_per_bar": 16,
+  "swing": 0.57,
+  "humanize_velocity": 10,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51 },
+  "base_velocity": { "kick": 88, "snare": 70, "rimshot": 55, "chh": 48, "ohh": 52, "ride": 50 },
+  "sections": [
+    {
+      "label": "Intro bars 1-2 (doubt): fully silent -- Cm9 held, stillness, no drums at all",
+      "bars": 2,
+      "pattern": {}
+    },
+    {
+      "label": "Intro bars 3-4 (doubt): a single soft hi-hat pulse hints the pocket without committing, under the Rhodes hook fragment",
+      "bars": 2,
+      "pattern": {
+        "chh": "x-------x-------"
+      }
+    },
+    {
+      "label": "A1 bars 5-11 (doubt): groove enters but stays minimal -- round kick, dusty rimshot backbeat, hat with a gap left in it, no ghost-note pileup",
+      "bars": 7,
+      "pattern": {
+        "kick":    "x--------x------",
+        "rimshot": "----x-------x---",
+        "chh":     "x-x-x---x-x-x---"
+      }
+    },
+    {
+      "label": "A1 bar 12 (doubt, close): the section's unresolved hanging bar -- drums drop to a bare kick pulse, echoing the suspended G7sus",
+      "bars": 1,
+      "pattern": {
+        "kick": "x---------------"
+      }
+    },
+    {
+      "label": "B bars 13-16 (turning): the one modest lift in the piece -- hat opens up to steady 8ths plus a single open-hat accent at the bar's end, kick gains one extra syncopated hit; still no ride/cymbal wash and no tutti hit -- restrained, per the brief's 'not a big triumphant ending'",
+      "bars": 4,
+      "pattern": {
+        "kick":    "x-----x---x-----",
+        "rimshot": "----x-------x---",
+        "chh":     "x-x-x-x-x-x-x-x-",
+        "ohh":     "--------------x-"
+      }
+    },
+    {
+      "label": "Outro bars 17-22 (acceptance): subtraction -- kick drops out entirely, only a sparse rimshot and a bare hat pulse remain, tapering the groove toward silence",
+      "bars": 6,
+      "pattern": {
+        "rimshot": "--------x-------",
+        "chh":     "x-------x-------"
+      }
+    },
+    {
+      "label": "Outro bar 23 (acceptance, tag): one last, barely-there rimshot echo, timed with the sax's faint closing fragment",
+      "bars": 1,
+      "pattern": {
+        "rimshot": "----------x-----"
+      }
+    },
+    {
+      "label": "Outro bar 24 (acceptance, final): fully silent -- the piece settles on the held Cm9 alone, space, no drums at all, no triumphant final hit",
+      "bars": 1,
+      "pattern": {}
+    }
+  ]
+}

@@ -45,6 +45,12 @@ AI-generated ABC frequently sounds fine but fails strict parsers like music21. T
 - **Cause:** `M:` or `Q:` malformed (`M:44`, `Q:120` without the `1/4=`).
 - **Fix:** `M:4/4`, `Q:1/4=120`. Follow the exact forms in `abc-syntax.md`.
 
+## 8. Voice marker not repeated on every line (validator passes, converter produces 0 notes)
+
+- **Symptom:** `validate_abc.py` reports 0 errors, but `abc-to-midi-orchestration/scripts/abc_to_midi.py` writes a track with 0 notes for a voice (or the voice's later bars are missing from the MIDI).
+- **Cause:** `abc_to_midi.py` extracts each voice's body with a per-line regex (`^\[V:id\]`) — only lines that literally start with `[V:id]` are captured. A second consecutive line of that voice's music, written without repeating `[V:id]` (relying only on the initial switch, as `abc-syntax.md`'s own §14 example used to show), is silently dropped. `validate_abc.py` still passes because it checks general ABC structural validity, not this specific converter's per-line parsing assumption.
+- **Fix:** repeat the `[V:id]` marker at the start of *every* content line for that voice, not only at the first line or at switch points. When in doubt, prefix every line of music with its `[V:id]`.
+
 ## The self-heal loop in practice
 
 Don't rewrite the whole file when validation fails. Read the error's line number and reason, fix that one issue, re-run the validator, repeat. Most failures are a single bad bar or an unclosed tie — a targeted fix is faster and doesn't introduce new errors. Only after `validate_abc.py` reports 0 errors (and, if MIDI is the target, music21 parses it cleanly) is the file ready.

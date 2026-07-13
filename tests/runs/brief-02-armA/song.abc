@@ -1,0 +1,21 @@
+X:1
+T:Restless Seven
+C:unaided baseline (no specialized skill/tooling)
+M:7/8
+L:1/8
+Q:1/8=160
+K:Ddor
+V:1 clef=treble name="Lead"
+V:2 clef=bass name="Bass"
+V:1
+"Dm7" z7 | "Dm7" z7 | "Ebmaj7#11" z2 z2 _E3 | "Dm7" z2 z2 DFA |
+"Dm7" d2 c2 A3 | "Ebmaj7#11" _e2 d2 _B3 | "Dm7" A2 c2 d3 | "C7#9" E2 G2 _B3 |
+"Bbmaj7#11" F2 A2 d3 | "A7alt" c2 _B2 A3 | "Dm7" d3 c2 A2 | "Ebmaj7#11" _e3 d2 _B2 |
+"Em7b5" e3 d2 _B2 | "A7alt" c3 B2 A2 | "Fmaj7#11" f3 e2 c2 | "G7#9" g2 b2 d'3 |
+"D" d'7 | "Gmaj7#11" g2 b2 d'3 | "Bm7" ^F2 d2 B3 | "Dmaj7#11" d'7 |]
+V:2
+"Dm7" D,2 F,2 A,3 | "Dm7" D,2 F,2 A,3 | "Ebmaj7#11" _E,2 G,2 _B,3 | "Dm7" D,2 F,2 A,3 |
+"Dm7" D,2 F,2 A,3 | "Ebmaj7#11" _E,2 G,2 _B,3 | "Dm7" D,2 F,2 A,3 | "C7#9" C,2 E,2 _B,3 |
+"Bbmaj7#11" _B,2 D,2 F,3 | "A7alt" A,2 ^C,2 E,3 | "Dm7" D,3 F,2 A,2 | "Ebmaj7#11" _E,3 G,2 _B,2 |
+"Em7b5" E,3 G,2 _B,2 | "A7alt" A,3 ^C,2 E,2 | "Fmaj7#11" F,3 A,2 c,2 | "G7#9" G,2 B,2 D,3 |
+"D" D,7 | "Gmaj7#11" G,2 B,2 D,3 | "Bm7" B,2 D,2 ^F,3 | "Dmaj7#11" D,7 |]

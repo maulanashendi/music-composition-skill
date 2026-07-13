@@ -1,0 +1,40 @@
+X:1
+T:Riptide
+C:jazz-idea-generator + abc-notation-writer test run (skill-rigor eval, brief-02-armB)
+M:7/8
+L:1/8
+Q:1/8=160
+R:Energetic fusion, 7/8 grouped 2+2+3, straight eighths (no swing)
+K:Dm
+V:Melody clef=treble name="Lead Sax"
+V:Keys clef=treble name="Rhodes"
+V:Bass clef=bass name="Bass"
+% Form: Intro(1-2) A1(3-6) A2(7-10) B(11-14, bar14=near-silent breath before the climax) C-climax(15-18) Outro/tag(19-20)
+% Arc: restless/unsettled urgency (Intro-B, D natural minor/Dorian-ish color) -> triumphant release (C-Outro,
+%   parallel D major/Lydian via explicit accidentals; K:Dm key signature is kept the whole piece, no modulation)
+% Hook: syncopated pickup into a held target a minor 3rd up (D->F), stated bare in the Intro, complete+ascending
+%   in A1, sequenced up a step in A2, transformed into a register-leap major statement at the climax (bar 15)
+% Drums are NOT encoded in this ABC file (percussion is unpitched, GM channel 10). See drums.json (step-grid)
+%   and song.mid (merged output) -- abc-to-midi-orchestration handles the drum conversion and merge separately.
+% Groove: straight (unswung) driving 7/8 feel. groove-profiles.md's only named pocket (neo-soul-core) is
+%   laid-back and does not fit this energetic fusion feel, so no %%pocket directive is declared here
+%   (see composition-plan.json "interpretive_choices" and quality-report.md).
+% --- Melody (lead sheet: melody + chord symbols) ---
+[V:Melody] "Dm9"z2 z D F3 | "Dm11"z7 | "Dm9"z2 z D F G A | "Gm7"A3 G F E2 |
+[V:Melody] "Dm9"z2 z D F3 | "A7sus4"G4 z3 | "Dm9"z2 z e g3 | "Bbmaj7#11"a2 b2 a3 |
+[V:Melody] "Gm7"g2 a2 b3 | "A7b9"b3 c'2 z2 | "Bb7#11"d' c' b _a g f2 | "A7b9"b4 z3 |
+[V:Melody] "A7b9"c'2 ^c'2 d'3 | "A7b9"z7 | "Dmaj7#11"z2 z d' ^f'3 | "Dmaj7#11"e'3 d'2 ^c'2 |
+[V:Melody] "Gmaj7#11"e'2 d'2 ^c'3 | "Dmaj9"d'4 z3 | "A7sus4"^f'2 e'2 d'3 | "Dmaj7#11"d'7 |]
+% --- Keys (Rhodes comping; support/answer role, silent in the Intro, drops out for the bar-14 breath) ---
+[V:Keys] z7 | z7 | z4 [FAce]3 | z3 [B,DF]4 |
+[V:Keys] z4 [FAce]3 | z4 [DEG]3 | z2 [FAce]2 [FAce]3 | [DFAe]3 z [DFAe]3 |
+[V:Keys] [B,DF]2 z [B,DF]2 z2 | [B,^CG]3 z2 [B,^CG]2 | [D_Ae]7 | [B,^CG]4 z3 |
+[V:Keys] z7 | z7 | [D^FA^c]2 z2 [D^FA^c]3 | [D^FA^c]7 |
+[V:Keys] [G=Bd^f]7 | [^FA^ce]7 | [DEG]7 | [D^FA^c]7 |]
+% --- Bass (foundation; sparse/syncopated pedal in Intro-A1, stepping up in A2, full chromatic contrary-motion
+%   walk-up in bar 11, driving riff-lock at the climax) ---
+[V:Bass] D,,3 z4 | D,,3 z4 | D,,3 z2 D,,2 | G,,3 z2 G,,2 |
+[V:Bass] D,,3 z4 | A,,4 z3 | D,,2 E,,2 F,,3 | F,,2 G,,2 A,,3 |
+[V:Bass] G,,3 A,,2 B,,2 | B,,2 ^C,,2 z3 | B,, C, ^C, D, ^D, E, F, | A,4 z3 |
+[V:Bass] A,3 z2 A,2 | A,7 | D,2 z2 A,,3 | D,2 ^F,2 A,3 |
+[V:Bass] G,,2 D,2 G,,3 | D,4 A,,3 | A,,4 z3 | D,7 |]

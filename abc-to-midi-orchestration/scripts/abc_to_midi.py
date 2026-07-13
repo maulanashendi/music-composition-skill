@@ -31,7 +31,26 @@ def render(abc_path, out_path, mono_lead=True):
         bm=re.match(r"^\[V:\s*(\S+)\]\s?(.*)",ln)
         if bm: body.setdefault(bm.group(1),[]).append(bm.group(2))
 
-    pm=pretty_midi.PrettyMIDI()
+    # Parse real tempo/meter from the header so the merged MIDI isn't stuck at
+    # pretty_midi's default 120bpm/4-4 -- fall back to that default if either
+    # header line is missing or doesn't match the expected format.
+    quarter_bpm=None
+    for h in header:
+        qm=re.match(r"^Q:\s*(\d+)/(\d+)=(\d+(?:\.\d+)?)",h)
+        if qm:
+            num,den,bpm_value=int(qm.group(1)),int(qm.group(2)),float(qm.group(3))
+            quarter_bpm=bpm_value*(num/den)*4
+            break
+    ts_num,ts_den=None,None
+    for h in header:
+        mm=re.match(r"^M:\s*(\d+)/(\d+)",h)
+        if mm:
+            ts_num,ts_den=int(mm.group(1)),int(mm.group(2))
+            break
+
+    pm=pretty_midi.PrettyMIDI(initial_tempo=quarter_bpm) if quarter_bpm else pretty_midi.PrettyMIDI()
+    if ts_num and ts_den:
+        pm.time_signature_changes.append(pretty_midi.TimeSignature(ts_num,ts_den,0))
     for vid,bars in body.items():
         name=vnames.get(vid,vid)
         # STRIP chord symbols in quotes so they aren't rendered as notes

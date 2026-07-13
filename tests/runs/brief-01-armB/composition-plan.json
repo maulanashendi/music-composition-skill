@@ -1,0 +1,144 @@
+{
+  "title": "Settling In (Late)",
+  "style": "neo-soul / chill-jazz",
+  "key": "Cm",
+  "tempo_bpm": 78,
+  "meter": "4/4",
+  "feel": "laid-back swung-16th, notes placed slightly behind the beat throughout (neo-soul-core pocket)",
+  "default_note_length": "1/8",
+  "arc": {
+    "journey": "quiet self-doubt (late night, searching, sparse) -> a brief, restrained turn (NOT a build to triumph) -> calm, unforced acceptance (settling, not a loud resolution)",
+    "phases": [
+      {
+        "feeling": "doubt",
+        "sections": ["Intro", "A1"],
+        "requires": "low-mid register, sparse texture, melody stopping on unresolved tones (6th/2nd), laid-back placement, slow harmonic rhythm, no forward-driving motion"
+      },
+      {
+        "feeling": "turning",
+        "sections": ["B"],
+        "requires": "one modest harmonic brightening (borrowed bIII) and one melodic sequence a step higher, bass adds a small chromatic approach, a dominant held before resolving -- restrained, explicitly NOT a full-ensemble climax or held peak note"
+      },
+      {
+        "feeling": "acceptance",
+        "sections": ["Outro"],
+        "requires": "full resolution to tonic, subtraction (drums/bass thin out), register falls, the hook returns only as its falling fragment, space and a soft held final chord"
+      }
+    ]
+  },
+  "ensemble": [
+    { "name": "lead", "role": "melody", "instrument": "alto sax", "register": "mid to upper-mid (capped, never extreme)" },
+    { "name": "keys", "role": "comp", "instrument": "rhodes", "register": "mid" },
+    { "name": "bass", "role": "foundation", "instrument": "electric bass (fingered)", "register": "low" },
+    { "name": "drums", "role": "groove", "instrument": "drum kit (brushed / lo-fi)", "register": "n/a" }
+  ],
+  "hook": {
+    "description": "A short, unresolved 4-note cell: a syncopated pickup rising a minor third then falling a step past its start, landing on an unresolved tone (the 6th or the 2nd). It never resolves down to the tonic itself, so it always sounds like it is still asking something -- that unresolved quality is the emotional fingerprint of self-doubt. Its later fragment-only return in the Outro (just the falling tail, no restatement) is what makes the ending read as acceptance rather than an answer.",
+    "rhythm": "eighth-rest pickup, two syncopated eighth notes, then a held note landing off the downbeat (tied over the barline in its full A1 statement) -- sits behind the beat, laid-back",
+    "contour": "rises a minor third (e.g. C up to Eb) then falls a step past the starting pitch, landing on the 6th (Ab, over Cm9/Abmaj7) or a step lower on the 2nd (D, over G7alt/Bbm7b5) -- never lands on the root or a fully resolved chord tone",
+    "first_appears": "Intro, bars 3-4, bare in Rhodes alone (no lead, no bass movement, no drums) -- fragment form only"
+  },
+  "form": ["Intro", "A1", "B", "Outro"],
+  "sections": [
+    {
+      "label": "Intro",
+      "function": "establish texture and register; state the hook as a bare fragment before the lead ever plays it",
+      "recurrence": "first appearance",
+      "serves_phase": "doubt",
+      "phrasing": {
+        "note_lengths": "no lead melody yet",
+        "contour": "n/a (Rhodes states the hook fragment: rises a minor third then falls to the unresolved 6th)",
+        "peak_note": "none -- this section stays deliberately low and still",
+        "placement": "n/a",
+        "motif": "hook stated bare and fragmentary by Rhodes alone in bars 3-4; this is the motif's first appearance"
+      },
+      "tension": "no built tension yet -- pure space and open voicing (Cm9 held across bars 1-2) establishes stillness before the harmony moves through Abmaj7/Fm9; the only devices present are rest/silence and a bare, unanswered hook fragment",
+      "bars": [
+        { "number": 1, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 2, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 3, "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+        { "number": 4, "chords": [{ "symbol": "Fm9", "beats": 4 }] }
+      ],
+      "bass_character": "bare, mostly silent -- enters in bar 3 with a single held root under Abmaj7, otherwise space; establishes low-mid stillness. Drums are silent or a single soft rimshot/hat pulse enters only in bar 4 to hint the pocket without committing to full groove."
+    },
+    {
+      "label": "A1",
+      "function": "state the primary theme in full; establish the searching, unresolved feeling of doubt",
+      "recurrence": "complete statement, with an internal varied answer (bars 9-10 vs 5-6)",
+      "serves_phase": "doubt",
+      "phrasing": {
+        "note_lengths": "short 2-bar phrases separated by rest",
+        "contour": "stepwise, low-mid register (roughly G3-Eb4); the hook's pickup-and-fall shape stated complete in bars 5-6, then answered with a varied interval/rhythm in bars 9-10 (Statement -> Answer)",
+        "peak_note": "none here -- deliberately withheld; this piece never reaches a held climactic peak (see notes)",
+        "placement": "slightly behind the beat throughout (laid-back)",
+        "motif": "hook stated complete (bars 5-6), answered/varied (bars 9-10)"
+      },
+      "tension": "melody repeatedly left hanging on an unresolved tone (6th or 2nd) at each 2-bar phrase end -- the section's central searching feeling; Bbm7b5 (bar 11) and suspended G7sus (bar 12) add mild harmonic ambiguity without resolving. Texture stays sparse throughout -- this section deliberately does not build.",
+      "bars": [
+        { "number": 5, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 6, "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+        { "number": 7, "chords": [{ "symbol": "Fm9", "beats": 4 }] },
+        { "number": 8, "chords": [{ "symbol": "G7alt", "beats": 4 }] },
+        { "number": 9, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 10, "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+        { "number": 11, "chords": [{ "symbol": "Bbm7b5", "beats": 4 }] },
+        { "number": 12, "chords": [{ "symbol": "G7sus", "beats": 4 }] }
+      ],
+      "bass_character": "sparse, syncopated -- root on beat 1 then rest, occasional chromatic approach note into the next chord change (e.g. approach tone into Fm9, into G7alt); stays out of the way of the sparse melody"
+    },
+    {
+      "label": "B",
+      "function": "the one restrained turn in the piece -- a modest brightening, not a climax",
+      "recurrence": "new material, contrasting harmonic color",
+      "serves_phase": "turning",
+      "phrasing": {
+        "note_lengths": "phrases lengthen slightly and the gaps between them shrink -- momentum without urgency",
+        "contour": "a gentle stepwise rise: the hook's opening cell sequenced up a third (starting from Eb instead of C), reaching a modest local high point in mid register (around Bb4) -- NOT a held climactic peak",
+        "peak_note": "none -- explicitly withheld; the local high point is passed through, not held or emphasized",
+        "placement": "moves closer to on-the-beat than A1 (marking the small lift) but never becomes emphatic or loud",
+        "motif": "hook sequenced up a third (Expansion, per neo-soul motif development), not restated literally"
+      },
+      "tension": "one deliberate, modest lift: borrowed bIII (Ebmaj7) brightens the color, the melody sequence rises a step, bass adds a small chromatic approach, and G7alt is held across bars 15-16 (dominant prolongation) as the single tension device carrying into the Outro's release. These are the only devices used here -- chosen because the brief forbids a big triumphant peak; register and dynamics rise only slightly, never to 'high register / full ensemble'.",
+      "bars": [
+        { "number": 13, "chords": [{ "symbol": "Ebmaj7", "beats": 4 }] },
+        { "number": 14, "chords": [{ "symbol": "Fm9", "beats": 4 }] },
+        { "number": 15, "chords": [{ "symbol": "G7alt", "beats": 4 }] },
+        { "number": 16, "chords": [{ "symbol": "G7alt", "beats": 4 }] }
+      ],
+      "bass_character": "steps up slightly -- still root-anchored but adds one passing/approach note per bar and a soft chromatic lead into the held G7alt; a modest, deliberate lift (Module 3: register/rhythm devices used sparingly), not a walking bassline"
+    },
+    {
+      "label": "Outro",
+      "function": "resolve and settle -- full release, subtraction, the hook returns only as a fragment",
+      "recurrence": "thinned, varied return of the A1 harmonic vocabulary -- not a literal repeat",
+      "serves_phase": "acceptance",
+      "phrasing": {
+        "note_lengths": "sparse again and longer (long notes = stillness)",
+        "contour": "falls, echoing only the hook's falling tail (Fragment/Absence, per neo-soul motif development) rather than a full restatement",
+        "peak_note": "none anywhere in this section, consistent with 'settling, not triumphant'",
+        "placement": "returns to slightly-behind-the-beat (relaxed); the final phrase is a single long tone landing on the tonic (C) or the 9th (D), held through the last bar with space before and after",
+        "motif": "hook's falling tail only (fragment), first in bar 19-20, again barely in bar 23-24"
+      },
+      "tension": "full release: the held dominant from bar 16 resolves to Cm9 at bar 17; drums subtract to hats/rim only; bass thins to long tones; the hook returns only as its falling-tail fragment; the piece ends on a held, softly-voiced Cm9(add9) with space -- resolution without triumph.",
+      "bars": [
+        { "number": 17, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 18, "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+        { "number": 19, "chords": [{ "symbol": "Fm9", "beats": 4 }] },
+        { "number": 20, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 21, "chords": [{ "symbol": "Abmaj9", "beats": 4 }] },
+        { "number": 22, "chords": [{ "symbol": "Fm9", "beats": 4 }] },
+        { "number": 23, "chords": [{ "symbol": "G7sus", "beats": 4 }] },
+        { "number": 24, "chords": [{ "symbol": "Cm9", "beats": 4 }] }
+      ],
+      "bass_character": "thins further than A1 -- long held root tones, minimal movement, drops any approach notes in the last two bars, settles fully on C under the final chord"
+    }
+  ],
+  "ending": "Outro bar 24 holds a soft, open Cm9(add9) voicing through the full bar; drums drop to nothing (or a single soft rim tap) a half-bar before the end; bass sustains its root -- a settling hold, not a ritard-into-stinger. No triumphant final chord -- deliberately avoids a major-tonic Picardy-third resolution.",
+  "notes": [
+    "Deliberately a 3-phase arc (doubt -> turning -> acceptance), omitting the template default's 4th 'peak' phase: the brief explicitly asks for 'not a big triumphant ending, just settling,' so no section reaches 'high register / full ensemble / held peak note.' Verified with the reasoning-theory.md Module 6 tension/release map: planned levels are low / medium / medium-brief-lift / low -- deliberately never 'high'.",
+    "Considered and rejected two other candidates: (B) a fully static modal/pedal treatment (pedal C throughout, harmony barely moving) -- risked too little harmonic motion to serve as a notatable lead sheet, and made 'doubt' and 'acceptance' sound too similar to each other. (C) a faster-harmonic-rhythm turn section with a syncopated 16th-note riff bass -- risked reading as a hopeful/energetic build, fighting the brief's explicit request for restraint. Candidate A (this plan) keeps a slow, spacious harmonic rhythm throughout and realizes the single 'turn' with the smallest possible set of devices (one borrowed chord, one melodic sequence, one held dominant).",
+    "Register ceiling capped intentionally across the whole piece (lead never goes past roughly Bb4/C5, including in the 'turning' section) to avoid accidentally manufacturing an emotional peak the brief does not want.",
+    "Module 4 quality-gate check: one leader per section (Intro=texture/Rhodes, A1=melody, B=harmony movement, Outro=resolution/subtraction) -- no two elements fighting for foreground in the same section; variation budget respected in B (only 1 primary dimension changed -- harmonic color -- while groove feel and bass character anchor stay recognizable).",
+    "Production-stage detail (interaction map, exact voicings/pitches, drum step-grid) is deliberately deferred to abc-notation-writer / abc-to-midi-orchestration, per this skill's Step 3 boundary -- this plan fixes feeling and shape, not exact notes."
+  ]
+}

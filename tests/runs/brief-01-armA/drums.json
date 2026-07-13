@@ -1,0 +1,76 @@
+{
+  "_readme": "Drum pattern for 'Settling In' (baseline draft, no specialized tooling). Steps are 16th notes, 16 per bar (0-indexed, step 0 = beat 1). Each groove lists, per instrument, the steps that are hit with a velocity (0-127). bar_map assigns which groove plays in each of the 20 bars. Swing/humanization (micro-timing push on off-beat steps, small velocity variation) is applied only in generate_midi.py, not encoded here — this file is the quantized pattern.",
+  "tempo_bpm": 78,
+  "time_signature": "4/4",
+  "steps_per_bar": 16,
+  "gm_drum_notes": {
+    "kick": 36,
+    "snare": 38,
+    "ghost_snare": 38,
+    "hihat_closed": 42,
+    "hihat_open": 46
+  },
+  "grooves": {
+    "intro": {
+      "_feel": "very sparse, quiet late-night: just a soft kick on 1 and a quarter-note hihat pulse, no snare at all",
+      "kick": [{"step": 0, "vel": 70}],
+      "hihat_closed": [
+        {"step": 0, "vel": 50},
+        {"step": 4, "vel": 45},
+        {"step": 8, "vel": 50},
+        {"step": 12, "vel": 45}
+      ]
+    },
+    "main": {
+      "_feel": "settled laid-back pocket: kick on 1 and the 'a' of 3 (syncopated), snare on 2 and 4, one soft ghost snare pushing into the next bar, 8th-note hihat with light downbeat accent",
+      "kick": [{"step": 0, "vel": 75}, {"step": 10, "vel": 68}],
+      "snare": [{"step": 4, "vel": 80}, {"step": 12, "vel": 80}],
+      "ghost_snare": [{"step": 14, "vel": 35}],
+      "hihat_closed": [
+        {"step": 0, "vel": 60}, {"step": 2, "vel": 45},
+        {"step": 4, "vel": 60}, {"step": 6, "vel": 45},
+        {"step": 8, "vel": 60}, {"step": 10, "vel": 45},
+        {"step": 12, "vel": 60}, {"step": 14, "vel": 45}
+      ]
+    },
+    "sectionB": {
+      "_feel": "slightly busier / more present, matching the 'searching' energy of the B section: extra kick, extra ghost snare, hihat a touch louder overall",
+      "kick": [{"step": 0, "vel": 78}, {"step": 6, "vel": 65}, {"step": 10, "vel": 72}],
+      "snare": [{"step": 4, "vel": 82}, {"step": 12, "vel": 82}],
+      "ghost_snare": [{"step": 2, "vel": 38}, {"step": 14, "vel": 40}],
+      "hihat_closed": [
+        {"step": 0, "vel": 65}, {"step": 2, "vel": 50},
+        {"step": 4, "vel": 65}, {"step": 6, "vel": 50},
+        {"step": 8, "vel": 65}, {"step": 10, "vel": 50},
+        {"step": 12, "vel": 65}, {"step": 14, "vel": 50}
+      ]
+    },
+    "calm": {
+      "_feel": "transition down from sectionB back toward quiet: kick on 1 only, soft quarter-note hihat pulse, only a soft backbeat on 4 (no snare on 2)",
+      "kick": [{"step": 0, "vel": 65}],
+      "snare": [{"step": 12, "vel": 55}],
+      "hihat_closed": [
+        {"step": 0, "vel": 45}, {"step": 4, "vel": 42},
+        {"step": 8, "vel": 45}, {"step": 12, "vel": 42}
+      ]
+    },
+    "outro": {
+      "_feel": "sparse half-time pulse, no snare at all, letting the harmony do the work while the drums recede",
+      "kick": [{"step": 0, "vel": 55}],
+      "hihat_closed": [{"step": 0, "vel": 35}, {"step": 8, "vel": 32}]
+    },
+    "final": {
+      "_feel": "near-silence for the last bar: one soft kick, nothing else. Deliberately no cymbal swell or fill -- brief asked for settling, not a triumphant ending",
+      "kick": [{"step": 0, "vel": 35}]
+    }
+  },
+  "bar_map": {
+    "1": "intro", "2": "intro",
+    "3": "main", "4": "main", "5": "main", "6": "main", "7": "main", "8": "main",
+    "9": "sectionB", "10": "sectionB", "11": "sectionB", "12": "sectionB",
+    "13": "main", "14": "main",
+    "15": "calm", "16": "calm",
+    "17": "outro", "18": "outro", "19": "outro",
+    "20": "final"
+  }
+}

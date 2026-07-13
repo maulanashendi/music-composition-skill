@@ -1,0 +1,183 @@
+{
+  "title": "Riptide",
+  "style": "jazz-funk / fusion (odd-meter, energetic)",
+  "key": "Dm (D natural minor / Dorian-ish color; parallel D major/Lydian at the climax via explicit accidentals, no key-signature change)",
+  "tempo_bpm": 160,
+  "meter": "7/8",
+  "meter_grouping": "2+2+3 (eighth positions 1-2 | 3-4 | 5-6-7)",
+  "feel": "driving straight eighths, NOT swung; tempo stated as the eighth-note pulse (150-170 BPM felt per eighth-note grouping per brief) -> Q:1/8=160",
+  "default_note_length": "1/8",
+  "ensemble": [
+    { "name": "lead", "role": "melody", "instrument": "soprano sax / lead synth", "register": "upper-mid, climbing to high at the climax" },
+    { "name": "keys", "role": "comp", "instrument": "rhodes", "register": "mid" },
+    { "name": "bass", "role": "foundation", "instrument": "electric bass", "register": "low" },
+    { "name": "drums", "role": "groove", "instrument": "drum kit (kick/snare/hihat/ride)", "register": "n/a" }
+  ],
+  "theory_hierarchy_declaration": {
+    "main_theory": "D tonal center: D natural minor / Dorian color for the restless build (Intro-B), parallel shift to D major/Lydian for the triumphant climax (C-Outro) -- a mode-mixture 'Picardy' arrival, not a modulation (no key-signature change; climax spelled with explicit accidentals over K:Dm)",
+    "harmony_support": "quartal-flavored minor-9/m7 shells in the build (Dm9, Gm7, A7sus4), altered-dominant tension (A7b9, Bb7#11) driving into the climax, open maj7#11/maj9 arrival chords at the climax",
+    "melody_support": "one 4-note hook cell (minor-3rd-up-then-stepwise, D-F-G-A) stated as fragment (Intro) -> complete (A1) -> sequenced up a step (A2) -> transformed to a register-leap major statement at the climax (D6->F#6 held)",
+    "texture_support": "sparse (keys silent, bass alone) in Intro -> comping stabs enter A1 -> thicker two-stab comping A2-B -> full tutti block chords at climax -> one bar of near-total silence (bar 14) as the subtraction breath right before the climax hits",
+    "groove_support": "straight (unswung) driving 7/8 grouped 2+2+3, bass-and-drum riff-lock identity per jazz-funk/fusion style cheatsheet; rhythm density visibly tightens A1->A2->B (more active subdivisions filled) then locks into a tutti hit-pattern at the climax",
+    "devices_outside_hierarchy": [
+      { "device": "bar-11 full chromatic bass walk-up (7 consecutive semitones) contrary to a fast descending melody run", "why": "Module 3 'rhythm tightening' + explicit contrary motion as the single strongest pre-climax tension device; used once, not looped" },
+      { "device": "bar-13 melody anticipates the D-major tonic a bar early while the harmony (A7b9) is still the dominant", "why": "chromatic-approach/anticipation device that previews the arrival, per Module 3 'chromatic approach: transisi halus menuju target chord-tone'; used once" }
+    ]
+  },
+  "arc": {
+    "journey": "restless, unsettled urgency (Intro) -> building tension across A1/A2/B, one breath of subtraction right before the peak -> triumphant, released climax (C) -> a short, confident (not fading) landing tag",
+    "phases": [
+      { "feeling": "restless / unsettled", "sections": ["Intro", "A1"], "requires": "low-mid register, sparse texture (keys silent, bass pedal only), off-grid syncopation against the 2+2+3 grouping, hook stated only as a bare fragment, melody stopping on chord tones without a hopeful lift yet" },
+      { "feeling": "building urgency", "sections": ["A2", "B"], "requires": "register climbs, rhythm density thickens (more subdivisions filled), bass steps upward then walks a full chromatic run contrary to the melody, altered-dominant tension (b9/#9 color) held and prolonged, one bar (14) of near-total silence as the breath before the hit" },
+      { "feeling": "triumphant / released", "sections": ["C"], "requires": "full tutti entrance exactly on the downbeat, register leaps to the highest notes of the piece, hook returns transformed into the parallel major with a held peak note, open maj7#11/maj9 chords, on-the-beat confident placement" },
+      { "feeling": "confident landing (not a fade)", "sections": ["Outro"], "requires": "short 2-bar tag, register eases down slightly from the absolute peak but stays in the bright/major register, ends on a clean sustained final tonic chord -- decisive, matching the brief's 'triumphant... near the end' rather than a long cool-down" }
+    ]
+  },
+  "hook": {
+    "description": "A 4-note rising cell (minor third up, then stepwise: D-F-G-A) that always arrives via a syncopated pickup landing just ahead of the 7/8 bar's final 3-group (eighth position 4 into position 5) -- the pickup+arrival rhythm is the fixed identity; register, mode (minor->major), and completeness (fragment vs. full vs. leap) are what change across the piece.",
+    "rhythm": "two rests, a one-eighth pickup on position 4, then the target landing on position 5 (the downbeat of the bar's 3-group) -- either held (fragment) or continued as three quick ascending eighths (complete form)",
+    "contour": "rising: root, up a minor 3rd, then stepwise up twice (D-F-G-A in the minor statements; D-F#-G#-A i.e. re-spelled as a register-leap in the major climax statement, bar 15)",
+    "first_appears": "Intro, bar 1, bare (fragment only: pickup into a held target, no ensemble support)"
+  },
+  "form": ["Intro", "A1", "A2", "B", "C", "Outro"],
+  "sections": [
+    {
+      "label": "Intro",
+      "function": "establish the groove, the tonal center, and a bare fragment of the hook; keep it lonely",
+      "recurrence": "n/a (opening)",
+      "serves_phase": "restless / unsettled",
+      "phrasing": {
+        "note_lengths": "one short pickup note into one held target note, then a full bar of silence",
+        "contour": "small rise (minor 3rd) then stop",
+        "peak_note": "not here -- reserved for the climax",
+        "placement": "syncopated pickup landing just ahead of the bar's 3-group downbeat",
+        "motif": "hook, fragment form only"
+      },
+      "tension": "melody stops and then the whole ensemble goes silent for a full bar (bar 2) -- tension via emptiness/unresolved space, not harmonic dissonance yet",
+      "bars": [
+        { "number": 1, "chords": [{ "symbol": "Dm9", "beats": 7 }] },
+        { "number": 2, "chords": [{ "symbol": "Dm11", "beats": 7 }] }
+      ],
+      "bass_character": "sparse, syncopated pedal (root held across the bar's first 3 units then silent) -- 'lands on beat 1 then leaves space' per the fusion/jazz-funk style cheatsheet"
+    },
+    {
+      "label": "A1",
+      "function": "state the hook in complete form; still restless/minor, still sparse",
+      "recurrence": "n/a (first full statement)",
+      "serves_phase": "restless / unsettled",
+      "phrasing": {
+        "note_lengths": "short pickup into three quick ascending eighths (complete hook), then a descending answer that stops on an unresolved tone, then the fragment restated, then a held note that trails into silence",
+        "contour": "rise (complete hook) -> fall (answer, landing on the 2nd/9th) -> rise again (fragment restated) -> held sus tone",
+        "peak_note": "not here -- reserved for the climax",
+        "placement": "same syncopated pickup identity as the Intro",
+        "motif": "hook, complete form (bar 3), then fragment restated (bar 5)"
+      },
+      "tension": "bar 6 ends with a held A7sus4 tone (G, the 4th/7th) that trails into 3 units of silence -- a dominant left hanging, unresolved",
+      "bars": [
+        { "number": 3, "chords": [{ "symbol": "Dm9", "beats": 7 }] },
+        { "number": 4, "chords": [{ "symbol": "Gm7", "beats": 7 }] },
+        { "number": 5, "chords": [{ "symbol": "Dm9", "beats": 7 }] },
+        { "number": 6, "chords": [{ "symbol": "A7sus4", "beats": 7 }] }
+      ],
+      "bass_character": "same sparse syncopated pedal pattern as the Intro, restated -- keeps A1 feeling like a continuation of the same restless idea, not a new idea"
+    },
+    {
+      "label": "A2",
+      "function": "begin the build: register climbs, bass starts moving instead of just pedaling, keys thickens from one stab per bar to two",
+      "recurrence": "reharmonized + reorchestrated (same hook rhythm, sequenced up a step; bass changes from pedal to stepwise motion; keys changes from one stab to two)",
+      "serves_phase": "building urgency",
+      "phrasing": {
+        "note_lengths": "pickup + held target (same shape as the Intro fragment, one step higher), then two 2-unit steps climbing to a local peak (Bb5, the highest note so far) and settling",
+        "contour": "rising sequence, reaching a new (temporary) ceiling note, then a held reach with a rest -- tension left open into B",
+        "peak_note": "a temporary ceiling (Bb5) at the end of bar 8/9, NOT the real peak -- deliberately not the highest note of the piece yet",
+        "placement": "on-the-beat, slightly more insistent than A1",
+        "motif": "hook, sequenced up one step from its A1 pitch level"
+      },
+      "tension": "bar 10 melody reaches for Bb5 then C6 (the altered A7b9 tensions) and stops, leaving 2 units of silence before B begins",
+      "bars": [
+        { "number": 7, "chords": [{ "symbol": "Dm9", "beats": 7 }] },
+        { "number": 8, "chords": [{ "symbol": "Bbmaj7#11", "beats": 7 }] },
+        { "number": 9, "chords": [{ "symbol": "Gm7", "beats": 7 }] },
+        { "number": 10, "chords": [{ "symbol": "A7b9", "beats": 7 }] }
+      ],
+      "bass_character": "bass steps up: stepwise ascending motion (root-9th-3rd style steps) instead of the earlier pedal, literally 'stepping up' per the building-phase requirement"
+    },
+    {
+      "label": "B",
+      "function": "the hardest push before the climax: rhythm tightens, bass moves in full chromatic contrary motion against a fast descending melody run, the altered dominant is held/prolonged across two bars, then everything drops out for one bar of near-total silence",
+      "recurrence": "n/a (through-composed peak-approach section, not a repeat)",
+      "serves_phase": "building urgency",
+      "phrasing": {
+        "note_lengths": "bar 11: six fast single-eighth notes in a descending run (busiest rhythm of the piece so far); bars 12-13: held tension notes and a chromatic inner move toward the destination tonic; bar 14: total silence",
+        "contour": "fast descent (bar 11) -> held altered tone (bar 12) -> chromatic ascent that previews the D-major arrival a bar early (bar 13) -> silence (bar 14)",
+        "peak_note": "not here -- this section is about density and harmonic tension, not register height",
+        "placement": "on-the-beat and dense in bar 11 (rhythm tightening); held/withheld in 12-13; absent in 14",
+        "motif": "no hook restatement here -- deliberately: this section is the one place the hook steps aside so the harmonic/rhythmic tension can be the sole focus (one idea per section, per the compatibility-matrix gate)"
+      },
+      "tension": "the single densest tension stack of the piece: rhythm tightening (bar 11) + bass moving contrary to the melody (bar 11) + a dominant chord held across two full bars (12-13) + a bar of total silence as the 'beat of silence right before a big section' (bar 14) -- four techniques, deliberately all pointed at the same arrival",
+      "bars": [
+        { "number": 11, "chords": [{ "symbol": "Bb7#11", "beats": 7 }] },
+        { "number": 12, "chords": [{ "symbol": "A7b9", "beats": 7 }] },
+        { "number": 13, "chords": [{ "symbol": "A7b9", "beats": 7 }] },
+        { "number": 14, "chords": [{ "symbol": "A7b9", "beats": 7 }] }
+      ],
+      "bass_character": "bar 11: a full 7-note chromatic walk-up (B2->F3) moving contrary to the melody's descent -- the single most active bass moment of the piece; bars 12-13: pedal on A (dominant prolongation, deliberately simple so the melody's chromatic motion in bar 13 doesn't collide with a busy bass -- compatibility-matrix check applied); bar 14: one long pedal tone alone, everything else silent"
+    },
+    {
+      "label": "C",
+      "function": "the triumphant, released climax: full ensemble tutti hit exactly on the downbeat, hook returns transformed into the parallel major at the highest register of the piece, held peak note",
+      "recurrence": "the hook returns transformed: same pickup rhythm as the Intro fragment, but now a register leap (two octaves higher than its first appearance) and re-spelled in the parallel major (F# instead of F) instead of a stepwise climb",
+      "serves_phase": "triumphant / released",
+      "phrasing": {
+        "note_lengths": "pickup + long-held peak note (bar 15), then a longer held descending line across the full ensemble sustain (bar 16-18)",
+        "contour": "the biggest rise of the piece (leap to the peak note) then a graceful, still-bright descent",
+        "peak_note": "F#6 (bar 15, held 3 units) is the single highest, most exposed note of the piece, arrived at via a register leap rather than a stepwise climb -- maximizes contrast with every prior section",
+        "placement": "on the beat, confident -- the whole ensemble locks together (kick+snare+keys+bass all hit on the downbeat with the pickup rhythm's landing point)",
+        "motif": "hook, transformed return (register leap + major re-spelling)"
+      },
+      "tension": "release, not build: every device from B (density, chromatic contrary motion, held dominant, silence) resolves here into open maj7#11/maj9 chords, full tutti, and a held peak note -- the arc's payoff",
+      "bars": [
+        { "number": 15, "chords": [{ "symbol": "Dmaj7#11", "beats": 7 }] },
+        { "number": 16, "chords": [{ "symbol": "Dmaj7#11", "beats": 7 }] },
+        { "number": 17, "chords": [{ "symbol": "Gmaj7#11", "beats": 7 }] },
+        { "number": 18, "chords": [{ "symbol": "Dmaj9", "beats": 7 }] }
+      ],
+      "bass_character": "full, driving riff-lock with the drums (root-based tutti hits on the downbeat, then arpeggiated triad motion) -- the 'bass-and-drum riff lock' identity the jazz-funk/fusion cheatsheet calls for, now at full density"
+    },
+    {
+      "label": "Outro",
+      "function": "a short, confident landing tag -- NOT a long cool-down, since the brief places the triumphant release 'near the end' rather than asking for a return to calm",
+      "recurrence": "a compressed recall of the A1/A2 held-dominant-then-rest gesture (bar 6/bar 10), now resolved in the major",
+      "serves_phase": "confident landing (not a fade)",
+      "phrasing": {
+        "note_lengths": "a short descending 3-note figure, then one long final held tonic for the whole final bar",
+        "contour": "gentle descent from the bright upper register down to the tonic, then stop -- decisive, not trailing off",
+        "peak_note": "n/a -- this section deliberately steps back from the absolute peak by a few scale steps, without abandoning the major/bright register",
+        "placement": "on the beat",
+        "motif": "no new hook material -- a cadential tag only"
+      },
+      "tension": "final release: the A7sus4 recall resolves directly into the final Dmaj7#11 tonic, held for the entire last bar with no held-note-into-rest gesture this time (the piece stops instead of trailing off)",
+      "bars": [
+        { "number": 19, "chords": [{ "symbol": "A7sus4", "beats": 7 }] },
+        { "number": 20, "chords": [{ "symbol": "Dmaj7#11", "beats": 7 }] }
+      ],
+      "bass_character": "a final pedal-then-root gesture, ending on a full-bar held tonic under the whole ensemble's final chord"
+    }
+  ],
+  "ending": "a clean, decisive final Dmaj7#11 tonic chord held for the full final bar across the whole ensemble (no fade, no ritard) -- matches the brief's request for a triumphant, released climax near the end rather than a slow cool-down",
+  "tension_release_map": {
+    "Intro": { "planned": "low", "realized": "low -- sparse texture, one held-then-silent gesture", "dominant_elements": "tonic pedal, silence" },
+    "A1": { "planned": "low-to-medium", "realized": "low-to-medium -- complete hook stated, but ends on an unresolved held dominant tone into silence", "dominant_elements": "chord tones, one unresolved sus-tone hold" },
+    "A2": { "planned": "medium, climbing", "realized": "medium, climbing -- register and bass activity both step up, ends reaching into altered-dominant color", "dominant_elements": "stepwise ascent, altered dominant (b9/#9 color)" },
+    "B": { "planned": "high, the highest pre-climax tension", "realized": "high -- densest rhythm, full chromatic contrary-motion bass, two-bar held dominant, then total silence", "dominant_elements": "chromatic notes, held dominant, rest/silence" },
+    "C": { "planned": "release / peak", "realized": "release / peak -- tutti downbeat hit, register-leap peak note, open major/Lydian chords", "dominant_elements": "tonic (parallel major), register climb, open voicing" },
+    "Outro": { "planned": "settle, but stay confident (not a full return to calm)", "realized": "settle -- brief descent then a single held final tonic, no trailing fade", "dominant_elements": "tonic, held chord, register down slightly from the peak" }
+  },
+  "interpretive_choices": [
+    "Brief's tempo phrase '150-170 BPM felt per eighth-note grouping' was read literally as the eighth-note pulse itself (Q:1/8=160 in ABC terms), not the quarter-note pulse -- this is the fastest, most literal reading and is disclosed here because it is a real interpretive fork (an alternative reading would set the quarter note near 80 and feel half as fast).",
+    "Meter grouping chosen as 2+2+3 (not 3+2+2 or another split) for the 7/8 bar -- an arbitrary-but-declared choice per groove-meter.md's requirement to 'define the grouping through bass, drums, and melody' rather than leave it ambiguous.",
+    "The 'triumphant release' is realized as a parallel-mode shift (D minor/Dorian color -> D major/Lydian, same K:Dm key signature, explicit accidentals) rather than a true modulation to a new key -- a deliberate, cheaper-but-effective device; a true modulation was considered and rejected as unnecessary complexity for a 20-bar piece.",
+    "No named groove profile from groove-profiles.md fits this piece: the only profile defined there (neo-soul-core) is an explicitly laid-back pocket, and this piece is straight/driving. Swing is set to 0.5 (straight) in the drum grid instead of inventing an ad hoc numeric profile, per groove-profiles.md's own instruction not to invent one-off tick numbers.",
+    "Small ensemble held to exactly the brief's suggestion (lead, keys, bass, drums) with no additional pad/harmony instrument, to keep the interaction map legible at this bar count."
+  ]
+}

@@ -1,7 +1,8 @@
 {
-  "_comment": "Drum step-grid for grid_to_midi.py. CRITICAL: total bars across all sections MUST equal the ABC's total bars, section for section, or drums drift out of sync. Rows are drums; 'x' = hit, '-' = rest; 16 chars = one bar at 16 steps. Let density follow the arc: minimal when quiet, full at the peak, fading at the end. Remove this _comment in the final file.",
+  "_comment": "Drum step-grid for grid_to_midi.py. CRITICAL: total bars across all sections MUST equal the ABC's total bars, section for section, or drums drift out of sync. Rows are drums; 'x' = hit, '-' = rest; 16 chars = one bar at 16 steps. Let density follow the arc: minimal when quiet, full at the peak, fading at the end. tempo_bpm should ALWAYS be the real musical tempo (matching the ABC's Q: field) -- never fudge it to compensate for beats_per_bar. beats_per_bar is the bar length in quarter-note-equivalents: 4 for 4/4, 3 for 3/4, 3.5 for 7/8 (numerator * 4/denominator) -- set it to match the ABC's M: field. Remove this _comment in the final file.",
   "title": "Untitled drums",
   "tempo_bpm": 90,
+  "beats_per_bar": 4,
   "steps_per_bar": 16,
   "swing": 0.57,
   "humanize_velocity": 10,
