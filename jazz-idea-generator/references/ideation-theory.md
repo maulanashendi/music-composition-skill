@@ -106,3 +106,4 @@ At idea stage you're not writing exact voicings (that's downstream), but decide 
 - **Call and response** between lead and comp creates dialogue and keeps space alive.
 - **Subtraction** (dropping an instrument for a section) is one of the strongest arrangement moves — it makes the re-entry hit.
 - Density should track the arc: sparse intro, fuller middle, thinned ending. Decide these entrances/exits at idea stage so the plan carries them.
+- This is the *ideation-stage* view of roles and density; the concrete bar-by-bar interaction map (who plays each bar) is a production decision, canonical in `abc-to-midi-orchestration/references/interaction-map.md`.

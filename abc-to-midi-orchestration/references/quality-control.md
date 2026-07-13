@@ -59,31 +59,11 @@ Run this audit before final delivery. Do not pass a composition because the chor
 
 ## 5. Instrumental transitions
 
-- Every major boundary has a deliberate direct cut or a designed transition.
-- The largest source-target perceptual gap is identified.
-- Transition duration is proportional to structural change.
-- Setup, threshold, arrival, and aftercare are specified as needed.
-- At least one element is preserved across the boundary unless rupture is intentional.
-- The target section confirms itself through at least two cues.
-- Different transition families are used across the piece.
-- Drum fills, cymbal crashes, generic risers, or chromatic connectors are not the default solution at every boundary.
-- Lead-role handoffs are clear in register, overlap, and accompaniment.
-- Studio-dependent transitions have live alternatives.
+Audit every section boundary against the full criteria in `instrumental-transitions.md` (families, duration proportional to the change, setup/threshold/arrival/aftercare, handoffs). Blocking gates: at least one element is preserved across each boundary unless rupture is intentional; different transition families are used across the piece (fills/crashes/risers are not the default at every seam).
 
 ## 6. Meter, tempo, groove, and microtiming
 
-- Meter, grouping, beat unit, and subdivision are explicit.
-- Bass, drums, comping, and melody agree on the groove framework.
-- Swing is not treated as one rigid ratio for all tempi and layers.
-- Odd meter has an audible reference layer.
-- Clave or cultural timeline is respected where relevant.
-- The notated rhythm works before microtiming is added.
-- A reference layer and anchor events are named.
-- Timing offsets are relational, bounded, and derived from the stated PPQ and tempo when numeric.
-- Velocity, onset timing, note length, and articulation support one pocket.
-- Structural hits and cue events remain clear.
-- Repeated sample-like clips retain consistent internal timing until a deliberate mutation.
-- Random humanization is not used as a substitute for groove design.
+Audit against `groove-meter.md` (meter/subdivision/feel) and, for pocket, `groove-profiles.md` (the numeric table) with `advanced-microtiming.md` (the principles). Blocking gates: bass, drums, comping, and melody agree on the groove framework; the notated rhythm works before microtiming is added; timing offsets are relational and bounded (a named profile, not per-note invention); random humanization is not a substitute for groove design.
 
 ## 7. Harmony
 
@@ -98,17 +78,7 @@ Run this audit before final delivery. Do not pass a composition because the chor
 
 ## 8. Bass and exact voicing
 
-- Bass contour supports form and groove.
-- Thirds, sevenths, characteristic degrees, and color tones form coherent lines.
-- Exact pitches and octaves are supplied when the brief requires exact voicing.
-- MIDI values agree with pitch names in DAW-first output.
-- Top line and inner-line paths are intentional.
-- Altered tensions resolve, continue, or transform intentionally.
-- Register and hand or instrument allocation are playable.
-- Low-register density is controlled.
-- Attack order, gate, note-off, pedal, and reattack behavior are specified where groove depends on them.
-- Core, reduced, expanded, and transformed voicing states are coordinated with form when relevant.
-- The actual voicing matches the chord label.
+Audit against `exact-voicing.md` (voicing families, register zones, voice-leading, attack/gate) when the brief needs exact pitches. Blocking gates: the actual voicing matches the chord label; MIDI values agree with pitch names in DAW-first output; register and hand/instrument allocation are playable and low-register density is controlled.
 
 ## 9. Melody, hook, and thematic development
 
@@ -146,14 +116,7 @@ Run this audit before final delivery. Do not pass a composition because the chor
 
 ## 12. Ensemble interaction and arrangement
 
-- Every instrument or track has a meaningful primary role.
-- Accompaniment leaves space and avoids range conflict.
-- Bass and drums preserve or intentionally transform form.
-- Backgrounds, fills, and counterlines enter at specified places.
-- Trading and breaks have lengths and exit cues.
-- Dynamic, register, harmonic-tension, and density curves are planned independently.
-- Instrumentation, transposition, range, endurance, and physical feasibility are checked.
-- A lead sheet is not falsely presented as a complete score.
+Audit against `interaction-map.md` (roles, subtraction, density that tracks the arc) and `ensemble-interaction.md` for deeper conventions. Blocking gates: every instrument/track has a meaningful primary role and accompaniment leaves space (no range conflict); density curves are planned to serve the arc, not to keep everyone busy; a lead sheet is not falsely presented as a complete score.
 
 ## 13. Production and DAW-first design
 

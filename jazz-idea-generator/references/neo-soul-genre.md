@@ -123,14 +123,9 @@ Angka konkret pocket (offset tick per peran, gate ratio) sudah dibakukan di
 menghitung ulang ticks per not. Selesai bila groove tetap terasa disengaja
 saat hanya drum + bass + voicing chord paling sederhana yang terdengar.
 
-**Doktrin drum paket ini (mengikat, tidak bisa disimpangi per-genre):**
-drum **SELALU** direpresentasikan sebagai step-grid JSON
-(`abc-to-midi-orchestration/assets/drum-grid-template.json`), **TIDAK
-PERNAH** sebagai voice ABC `clef=perc`/`%%MIDI drummap`. ABC di paket ini
-hanya untuk suara berpitch (lead, keys, bass) — lihat
-`abc-notation-writer/references/drums-and-abc.md`. Ini beda dari repo
-`compose-song` sumber adaptasi (yang punya opsi ABC `clef=perc` di engine
-`daw_generative`-nya sendiri); jangan bawa opsi itu ke paket ini.
+**Doktrin drum paket ini (mengikat):** drum **SELALU** step-grid JSON,
+tidak pernah voice ABC — aturan lintas-skill ini dijelaskan di
+`abc-notation-writer/references/drums-and-abc.md` dan `../../RED-FLAGS.md`.
 
 ## 6. Rotasi lead tanpa kehilangan identitas
 

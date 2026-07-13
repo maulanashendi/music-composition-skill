@@ -34,7 +34,7 @@ Useful for concise themes, modal pieces, and modern standards. Maintain phrase c
 
 ### Verse-chorus and song forms
 
-Appropriate for vocal, smooth, contemporary, jazz-pop, and hybrid compositions. Distinguish pop `chorus` from jazz `one chorus of the form`. Assign labels by audible function rather than position, and read `song-architecture.md` for hook-first openings, verses, pre-choruses, refrains, post-choruses, bridges, solo integration, tags, codas, and outros.
+Appropriate for vocal, smooth, contemporary, jazz-pop, and hybrid compositions. Distinguish pop `chorus` from jazz `one chorus of the form`. Assign labels by audible function rather than position — hook-first openings, verses, pre-choruses, refrains, post-choruses, bridges, solo integration, tags, codas, and outros each do a distinct job.
 
 ### Vamp/riff forms
 
@@ -130,17 +130,7 @@ Write exact cue and bar count.
 
 ## 9. Dramatic arc
 
-Map across the performance:
-
-- dynamics;
-- register;
-- density;
-- harmonic tension;
-- rhythmic subdivision;
-- orchestration;
-- improvisational freedom.
-
-A typical arc may build, drop, and rebuild, but other shapes are valid. Ensure the final head does not feel mechanically pasted after solos.
+The arc itself — the emotional journey and the seven dimensions it moves (dynamics, register, density, harmonic tension, rhythmic subdivision, orchestration, improvisational freedom) — is defined once in `ideation-theory.md` §4b–4c; use that as the master. The only form-specific note here: a typical arc may build, drop, and rebuild, but other shapes are valid, and the final head must not feel mechanically pasted after solos.
 
 ## 10. Duration planning
 

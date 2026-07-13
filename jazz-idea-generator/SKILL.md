@@ -1,6 +1,6 @@
 ---
 name: jazz-idea-generator
-description: Turn a brief, mood, reference feel, or emotional journey into a rich, comparable instrumental composition idea — built around a dramatic arc, with melody phrasing, a memorable hook, tension-and-release design, chord progression, groove, and structure — then lock the winning idea into a machine-readable composition-plan.json. Use whenever someone wants to start a new instrumental jazz, lofi, jazzhop, neo-soul, fusion, or jazz-derived piece from scratch, wants help deciding between musical directions, asks for chord/melody/groove/feel ideas, or describes a mood or feeling they want a track to express. Use even when they don't say "composition" — phrases like "I want a laid-back C minor groove," "a song that goes from doubt to acceptance," "give me some chord ideas," or "help me start a lofi track" should trigger this.
+description: Turn a brief, mood, or emotional journey into a locked instrumental composition idea — dramatic arc, hook, chord progression, groove, and phrasing — saved as a machine-readable composition-plan.json. Use to start a new jazz, lofi, jazzhop, neo-soul, or fusion piece, to decide between musical directions, or for chord/melody/groove/feel ideas. Triggers even without the word "composition": "a laid-back C minor groove," "a song that goes from doubt to acceptance," "give me some chord ideas," "help me start a lofi track."
 ---
 
 # Jazz Idea Generator
@@ -46,7 +46,16 @@ The arc decides how quiet the verse is, how the pre-chorus builds, whether the c
 
 ### Step 3 — Generate comparable candidates (each built on the arc)
 
-Read `references/ideation-theory.md` (grounding vocabulary) and `references/style-cheatsheets.md` (target style). If the target style is neo-soul/chill-jazz, also read `references/neo-soul-genre.md` — it has a concrete musical DNA, role model (anchor/rotation/ear-candy), and arrangement architecture for that family. For any style, before locking a candidate's vocabulary, declare the theory hierarchy from `references/reasoning-theory.md` Module 2 (one main theory + supporting harmony/melody/texture/groove) — it constrains which devices are usable without extra justification (Module 3's cause-effect catalog). When the form is loop-centered (lofi, jazzhop, groove-first) or a bar-count/formal-family decision needs more depth than the compact vocabulary here, read `references/form-and-dramaturgy.md` and `references/loop-development.md`. Produce **2–4 materially different candidates** — differing on real structural axes (functional vs. modal, fast vs. slow harmonic rhythm, root-cycle vs. pedal bass, tight loop vs. through-composed). For each candidate give:
+**Default read — always:** `references/ideation-theory.md` (compact grounding vocabulary) and the one matching entry in `references/style-cheatsheets.md`. That is enough for most briefs. Pull in a deeper reference only when its trigger below is actually met — one file at a time, not all at once:
+
+| Read this | Only when |
+|---|---|
+| `references/reasoning-theory.md` Module 2 (theory-hierarchy gate), then Module 3's device catalog as needed | before locking a candidate's vocabulary — declare one main theory + supporting harmony/melody/texture/groove; it constrains which devices are usable without extra justification |
+| `references/neo-soul-genre.md` | the target style is neo-soul / chill-jazz (musical DNA, roles, arrangement architecture for that family) |
+| `references/form-and-dramaturgy.md` | a bar-count or formal-family decision needs more depth than `ideation-theory.md` §7 gives |
+| `references/loop-development.md` | the form is loop-centered (lofi, jazzhop, groove-first) |
+
+Produce **2–4 materially different candidates** — differing on real structural axes (functional vs. modal, fast vs. slow harmonic rhythm, root-cycle vs. pedal bass, tight loop vs. through-composed). For each candidate give:
 
 1. **the arc realized** — one line on how this candidate expresses the emotional journey;
 2. key, tempo, meter;
@@ -66,7 +75,7 @@ Say which candidate you'd pick and why, and why the others lose — in terms of 
 
 ### Step 5 — Quality gate: does this sound like music or like a checklist?
 
-For a more structured pass before the ear-judgment below, run the winning candidate through `references/reasoning-theory.md` Module 4 (compatibility matrix, one leader per section, one idea per dimension per section) and Module 6 (a tension/release map — planned vs. realized per section). These catch "correct in theory but flat or cluttered" issues that a read-through alone can miss.
+For a more structured pass before the ear-judgment below, run the winning candidate through `references/reasoning-theory.md` Module 4 (compatibility matrix, one leader per section, one idea per dimension per section) and Module 6 (a tension/release map — planned vs. realized per section). If a fix is needed, Module 5 (macro/meso/micro levels) keeps you revising at the right altitude — one odd voicing is a micro fix, not a reason to rebuild the form. These catch "correct in theory but flat or cluttered" issues that a read-through alone can miss.
 
 Before locking, read the whole plan back and judge it by ear, not by completeness:
 
@@ -87,13 +96,17 @@ When locked, say the idea is ready to notate and that `abc-notation-writer` take
 
 ## References
 
-- `references/ideation-theory.md` — compact working vocabulary: rhythm/subdivision, scales & chords, progression logic, harmonic rhythm, melody/motif/hook, **phrasing**, **dramatic arc & tension-release**, harmony feel, structure, arrangement, interaction. Read at Step 3.
-- `references/style-cheatsheets.md` — per-style quick reference. Read only the target style's entry.
-- `references/neo-soul-genre.md` — deep genre profile for neo-soul/chill-jazz (musical DNA, anchor/rotation/ear-candy roles, motif development, variation budget, arrangement architecture). Read at Step 3 when that's the target style.
-- `references/reasoning-theory.md` — 7 penalaran modules distilled from `compose-song`: mood→parameter (Module 1, Step 2), theory-hierarchy declaration + cause-effect device catalog (Modules 2–3, Step 3), compatibility/leadership/idea-limits and tension-release evaluation (Modules 4 & 6, Step 5), plus a verification-protocol module (7) picked up again once ABC/MIDI exist downstream.
-- `references/form-and-dramaturgy.md` — deeper form mechanics (formal families, phrase length, cadence strength, solo/intro/ending strategy) for when the compact structure vocabulary in `ideation-theory.md` isn't enough. Read at Step 3 as needed.
-- `references/loop-development.md` — loop DNA, mutation classes, and development timescales for loop-centered styles (lofi, jazzhop, neo-soul, groove pieces). Read at Step 3 as needed.
-- `assets/composition-plan-template.json` — the output contract. Copy and fill this.
+Read the default core; pull a deep file only when its trigger is met (see Step 3's table).
+
+| File | Read when | Canonical for |
+|---|---|---|
+| `references/ideation-theory.md` | **default, every brief** (Step 3) | the compact working vocabulary — and the **dramatic arc & tension-release** (§4b–4c), the home other files point back to |
+| `references/style-cheatsheets.md` | **default** — only the target style's entry | per-style quick reference |
+| `references/reasoning-theory.md` | by module: Module 1 at Step 2, Module 2 (+3) at Step 3, Modules 4 & 6 at Step 5, Module 7 downstream | mood→parameter, theory-hierarchy gate + device catalog, compatibility/leadership/tension evaluation, verification |
+| `references/neo-soul-genre.md` | style is neo-soul / chill-jazz (Step 3) | that genre's DNA and architecture; defers to `groove-profiles.md` / `interaction-map.md` for pocket & roles |
+| `references/form-and-dramaturgy.md` | a form/bar-count call needs more than `ideation-theory.md` §7 | deeper form mechanics (formal families, cadence, solo/intro/ending) |
+| `references/loop-development.md` | the form is loop-centered | loop DNA, mutation classes, development timescales |
+| `assets/composition-plan-template.json` | Step 6 | the output contract — copy and fill |
 
 ## Default assumptions
 

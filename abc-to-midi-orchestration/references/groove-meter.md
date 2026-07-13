@@ -301,7 +301,7 @@ Check:
 - Does each section change energy without losing identity?
 - Are performance directions sufficient without over-notation?
 
-## 17. Extreme syncopation and staccato piano writing
+## 22. Extreme syncopation and staccato piano writing
 
 Use extreme syncopation as controlled metric displacement, not random rhythmic clutter. Preserve at least one audible reference layer in the bass, drums, left hand, or recurring ostinato while the melodic layer attacks weak subdivisions, omits expected downbeats, or sustains across bar lines.
 
@@ -340,6 +340,6 @@ Quality checks:
 - the passage must remain playable at the stated tempo;
 - silence must function as part of the groove rather than as accidental emptiness.
 
-## 22. Advanced microtiming output
+## 23. Advanced microtiming output
 
-For DAW-first, lofi, jazzhop, neo-soul, sample-like, or explicit pocket requests, read `advanced-microtiming.md`. Name the reference layer, anchor events, offset classes, velocity ranges, gate behavior, and section exceptions. Keep notated displacement separate from performance offsets and avoid independent randomization of every event.
+For DAW-first, lofi, jazzhop, neo-soul, sample-like, or explicit pocket requests, the per-role tick offsets, velocity ranges, and gate behavior live in `advanced-microtiming.md` (the "why") and `groove-profiles.md` (the numeric table) — read those rather than re-deriving them here. Keep notated displacement separate from performance offsets.

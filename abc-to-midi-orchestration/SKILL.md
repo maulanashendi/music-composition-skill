@@ -1,6 +1,6 @@
 ---
 name: abc-to-midi-orchestration
-description: Turn a validated ABC composition into a finished multi-track MIDI ready for a DAW like BandLab — designing a bar-by-bar interaction map (who leads, who supports, who answers, who stays silent) that serves the piece's dramatic arc, handling drums as a separate step-grid, and converting everything to clean per-instrument MIDI. Use whenever someone has ABC notation (or a composition-plan.json plus ABC) and wants it rendered to MIDI, wants an arrangement built from it, asks how instruments should interact across sections, or wants a DAW-ready multi-track file with drums. Trigger on "turn this ABC into MIDI," "arrange this for full band," "make a BandLab-ready file," "who should play when," or handing over validated ABC for production.
+description: Turn a validated ABC composition into a DAW-ready multi-track MIDI — designing a bar-by-bar interaction map (who leads, supports, answers, stays silent) that serves the dramatic arc, handling drums as a separate step-grid, and converting to clean per-instrument MIDI. Use when someone has ABC (or composition-plan.json plus ABC) to render to MIDI, arrange for full band, or asks how instruments should interact across sections. Trigger on "turn this ABC into MIDI," "arrange this for full band," "make a BandLab-ready file," "who should play when."
 ---
 
 # ABC to MIDI Orchestration
@@ -63,18 +63,20 @@ This package's converters (BandLab or any external DAW) are the **alternative** 
 
 ## References
 
-- `references/interaction-map.md` — how to design lead/support/answer/silent per section, call-and-response, subtraction, and density that tracks the arc; includes the quality gate.
-- `references/ensemble-interaction.md` — deeper jazz performance-practice reference (duo/trio/big band conventions, call-and-response, trading, cue systems) for when the four-role map needs more nuance.
-- `references/instrumental-transitions.md` — transition families, durations, and source-target analysis for section boundaries.
-- `references/exact-voicing.md` — exact pitch/register/attack/voice-leading detail, in scientific pitch notation; convert to ABC octave marks when writing.
-- `references/advanced-microtiming.md` — the principles behind pocket, velocity, and note-length design (reference layer, bounded offsets, instrument relationships, microtiming profiles).
-- `references/groove-profiles.md` — the numeric distillation of the above into a named, shared pocket table (`neo-soul-core`: per-role tick offsets and gate ratios); pick a profile instead of inventing numbers.
-- `references/groove-meter.md` — meter, subdivision, and feel reference (swing, clave, odd meter, polyrhythm) beyond straightforward 4/4.
-- `references/quality-control.md` — comprehensive pre-delivery audit and scoring rubric across every dimension of the arrangement; run before Step 6.
-- `references/midi-conversion.md` — how the converters work, the two mandatory bug-fixes, GM program mapping, swing/humanization, and the sync/mono verification checks.
-- `scripts/abc_to_midi.py` — multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead).
-- `scripts/grid_to_midi.py` — drum step-grid → channel-10 MIDI with swing and velocity humanization.
-- `assets/drum-grid-template.json` — starting point for a drum grid; match its bar counts to the ABC.
+| File | Read when | Canonical for |
+|---|---|---|
+| `references/interaction-map.md` | **default, Step 2** | lead/support/answer/silent per section, call-and-response, subtraction, density that tracks the arc; the quality gate. The role/density home other files point back to |
+| `references/midi-conversion.md` | **Step 5** | the converters, the two mandatory bug-fixes (chord-strip, mono-lead), GM mapping, swing/humanization, sync/mono checks |
+| `references/groove-profiles.md` | Step 4 | the canonical **numeric** pocket table (`neo-soul-core`: per-role tick offsets, gate ratios) — pick a profile, don't invent numbers |
+| `references/advanced-microtiming.md` | pocket needs justifying beyond a profile | the canonical **"why"** behind pocket/velocity/gate (reference layer, bounded offsets, profiles) |
+| `references/ensemble-interaction.md` | the four-role map needs more nuance | deeper performance practice (duo/trio/big-band, trading, cue systems) — reduce back to the map's table |
+| `references/instrumental-transitions.md` | a section boundary needs more than a bare cut | transition families, durations, source-target analysis |
+| `references/exact-voicing.md` | exact register/attack detail is needed (lofi, neo-soul, smooth jazz) | pitch/voice-leading in scientific pitch notation; convert to ABC octave marks |
+| `references/groove-meter.md` | meter/subdivision/feel beyond straight 4/4 | swing, clave, odd meter, polyrhythm |
+| `references/quality-control.md` | before Step 6 | the pre-delivery **/64 rubric and report template** (audits point to each canonical file above) |
+| `scripts/abc_to_midi.py` | Step 5 | multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead) |
+| `scripts/grid_to_midi.py` | Step 5 | drum step-grid → channel-10 MIDI with swing + humanization |
+| `assets/drum-grid-template.json` | Step 4 | drum-grid starting point; match its bar counts to the ABC |
 
 ## Dependencies
 

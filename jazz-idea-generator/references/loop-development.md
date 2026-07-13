@@ -209,7 +209,7 @@ Avoid using literal recurrence more than twice in a short instrumental unless re
 
 ## 8. Energy and density curves
 
-Track at least four independent curves from 1 to 5:
+These curves are how the dramatic arc (defined in `ideation-theory.md` §4b–4c, the master) is realized across a loop. Track at least four independent curves from 1 to 5:
 
 - rhythmic activity;
 - harmonic tension;
