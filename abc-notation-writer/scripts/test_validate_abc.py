@@ -93,6 +93,28 @@ class ABCValidatorTests(unittest.TestCase):
         self.assertFalse(result.ok)
         self.assertTrue(any("bar 2" in item for item in result.errors))
 
+    def test_bare_z5_rest_fails_abcjs_downstream_quirk(self):
+        result = run_abc("V:Melody\nA,2 z5 =E, |]\n")
+        self.assertFalse(result.ok)
+        self.assertTrue(any("z5" in item and "abcjs" in item for item in result.errors))
+
+    def test_uppercase_bare_Z5_rest_also_fails(self):
+        result = run_abc("V:Melody\nZ5 |]\n")
+        self.assertFalse(result.ok)
+        self.assertTrue(any("abcjs" in item for item in result.errors))
+
+    def test_z50_and_z15_are_not_false_positives(self):
+        result = run_abc("V:Melody\nz50 |]\n")
+        self.assertFalse(any("abcjs" in item for item in result.errors))
+        result = run_abc("V:Melody\nz15 |]\n")
+        self.assertFalse(any("abcjs" in item for item in result.errors))
+
+    def test_z4_and_z6_are_not_false_positives(self):
+        result = run_abc("V:Melody\nC2 z4 D2 |]\n")
+        self.assertFalse(any("abcjs" in item for item in result.errors))
+        result = run_abc("V:Melody\nC2 z6 |]\n")
+        self.assertFalse(any("abcjs" in item for item in result.errors))
+
 
 if __name__ == "__main__":
     unittest.main()

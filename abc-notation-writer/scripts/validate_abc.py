@@ -445,6 +445,15 @@ class ABCValidator:
         pos = pos_after
         token = line[start:pos]
 
+        if pitch in "zZ" and length_text == "5":
+            self.errors.append(
+                f"line {line_no}: rest token {token!r} is a bare 'z5'/'Z5' -- the abcjs "
+                "renderer used by the downstream render engine fails to parse this exact "
+                "duration (\"Duration not representable\"); z1-z4, z6-z10, etc. all parse "
+                "fine, only the digit 5 triggers it. Split into two rests with the same "
+                "total duration instead, e.g. 'z2 z3' or 'z4 z1'."
+            )
+
         if pitch in "ZX":
             if "/" in length_text:
                 self.errors.append(f"line {line_no}: multi-measure rest {token!r} must use an integer measure count")

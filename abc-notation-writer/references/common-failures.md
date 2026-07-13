@@ -51,6 +51,12 @@ AI-generated ABC frequently sounds fine but fails strict parsers like music21. T
 - **Cause:** `abc_to_midi.py` extracts each voice's body with a per-line regex (`^\[V:id\]`) — only lines that literally start with `[V:id]` are captured. A second consecutive line of that voice's music, written without repeating `[V:id]` (relying only on the initial switch, as `abc-syntax.md`'s own §14 example used to show), is silently dropped. `validate_abc.py` still passes because it checks general ABC structural validity, not this specific converter's per-line parsing assumption.
 - **Fix:** repeat the `[V:id]` marker at the start of *every* content line for that voice, not only at the first line or at switch points. When in doubt, prefix every line of music with its `[V:id]`.
 
+## 9. Bare `z5`/`Z5` rest fails the downstream abcjs renderer
+
+- **Symptom:** `validate_abc.py` reports 0 errors and music21 parses the file fine, but the downstream render engine (which gates ABC through the `abcjs` library) rejects the file with `"Duration not representable"`.
+- **Cause:** `abcjs` has a narrow, isolated bug: a bare rest token `z5` or `Z5` (rest letter directly followed by exactly the digit `5`) fails to parse in `abcjs`, while every other count (`z1`, `z2`, `z3`, `z4`, `z6`, `z7`, `z8`, `z9`, `z10`, ...) parses fine. This is specific to `abcjs`, not a music21 or `validate_abc.py` limitation — that's why it slips past both of this package's checks.
+- **Fix:** `validate_abc.py` now catches this and reports it as an error. Split the `z5` into two rest tokens whose durations add up to 5, e.g. `z2 z3` or `z4 z1` (`z1` is the same as a bare `z`). Total bar duration is unchanged, so no other note needs adjusting. Example: `A,2 z5 =E,` (2+5+1=8) becomes `A,2 z2 z3 =E,` (2+2+3+1=8).
+
 ## The self-heal loop in practice
 
 Don't rewrite the whole file when validation fails. Read the error's line number and reason, fix that one issue, re-run the validator, repeat. Most failures are a single bad bar or an unclosed tie — a targeted fix is faster and doesn't introduce new errors. Only after `validate_abc.py` reports 0 errors (and, if MIDI is the target, music21 parses it cleanly) is the file ready.

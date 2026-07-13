@@ -31,8 +31,8 @@ V:3 clef=bass name="Bass"
 [V:1] "Cm9" z C2 E2 D3 | "Abmaj7" z8 | "Bbm7b5" z2 D3 B3 | "G7sus" z2 C6 |
 [V:2] [EGBd]8 | [CEGc]8 | [ACEG]8 | [FA=Be]8 |
 [V:2] [EGBd]8 | [CEGc]8 | [_D=EA]8 | [CDF]8 |
-[V:3] C,2 z6 | A,2 z5 =E, | F,2 z6 | G,2 z5 =B, |
-[V:3] C,2 z6 | A,2 z5 =A, | B,2 z6 | G,2 z5 D, |
+[V:3] C,2 z6 | A,2 z2 z3 =E, | F,2 z6 | G,2 z2 z3 =B, |
+[V:3] C,2 z6 | A,2 z2 z3 =A, | B,2 z6 | G,2 z2 z3 D, |
 % --- B (bars 13-16): turning, one modest lift only, sequenced up a third, no held peak ---
 [V:1] "Ebmaj7" z e g2 b4 | "Fm9" a2 b2 z4 | "G7alt" g2 e2 z4 | "G7alt" z8 |
 [V:2] [GBd]8 | [ACEG]8 | [FA=Be]8 | [FA=Be]8 |
