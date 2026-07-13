@@ -1,0 +1,14 @@
+X:1
+T:Untitled Jazz Composition
+C:Composer
+M:4/4
+L:1/8
+Q:1/4=120
+R:Medium Swing
+K:C
+V:Melody clef=treble name="Melody"
+% Concert-pitch lead sheet
+% Form and performance roadmap go here
+[V:Melody]
+"^A" "Cmaj7" z8 |
+|]

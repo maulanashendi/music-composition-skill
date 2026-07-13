@@ -1,0 +1,70 @@
+#!/usr/bin/env python3
+"""Render multi-voice ABC to multi-track MIDI, one track per V: voice.
+
+Fixes: (1) strip ABC chord-SYMBOL annotations ("Bbm9" etc.) so they are NOT
+sounded as notes; (2) isolate each voice into its own stub so tracks don't leak.
+"""
+import re, sys, tempfile
+import pretty_midi
+from music21 import converter, harmony
+
+PROGRAM = {"sax":65,"horns":61,"rhodes":4,"piano":0,"bass":33,
+           "upright":32,"strings":48,"pad":89,"guitar":27}
+
+def program_for(name):
+    n=name.lower()
+    for k,p in PROGRAM.items():
+        if k in n: return p
+    return 0
+
+def render(abc_path, out_path, mono_lead=True):
+    lines=open(abc_path).read().splitlines()
+    header=[h for h in lines if re.match(r"^[A-Za-z]:",h) and not h.startswith("V:")]
+    vnames={}
+    for ln in lines:
+        m=re.match(r"^V:\s*(\S+)",ln)
+        if m and "name=" in ln:
+            nm=re.search(r'name="([^"]+)"',ln)
+            vnames[m.group(1)]=nm.group(1) if nm else m.group(1)
+    body={}
+    for ln in lines:
+        bm=re.match(r"^\[V:\s*(\S+)\]\s?(.*)",ln)
+        if bm: body.setdefault(bm.group(1),[]).append(bm.group(2))
+
+    pm=pretty_midi.PrettyMIDI()
+    for vid,bars in body.items():
+        name=vnames.get(vid,vid)
+        # STRIP chord symbols in quotes so they aren't rendered as notes
+        clean_bars=[re.sub(r'"[^"]*"','',b) for b in bars]
+        stub="\n".join(header)+f"\nV:{vid}\n"+" ".join(clean_bars)
+        s=converter.parse(stub, format="abc")
+        # remove any ChordSymbol objects that slipped through
+        for cs in list(s.recurse().getElementsByClass(harmony.ChordSymbol)):
+            s.remove(cs, recurse=True)
+        tmp=tempfile.NamedTemporaryFile(suffix=".mid",delete=False)
+        s.write("midi",tmp.name)
+        sub=pretty_midi.PrettyMIDI(tmp.name)
+        for tr in sub.instruments:
+            tr.name=name
+            tr.program=program_for(name)
+            # Lead should be monophonic: if any chords remain, keep top note only
+            if mono_lead and ("sax" in name.lower() or "horn" in name.lower() or "lead" in name.lower()):
+                by_start={}
+                for n in tr.notes: by_start.setdefault(round(n.start,3),[]).append(n)
+                mono=[]
+                for st,ns in by_start.items():
+                    top=max(ns,key=lambda x:x.pitch)
+                    mono.append(top)
+                tr.notes=sorted(mono,key=lambda x:x.start)
+            pm.instruments.append(tr)
+    pm.write(out_path)
+    print(f"wrote {out_path}: {len(pm.instruments)} tracks")
+    for i in pm.instruments:
+        pol=1
+        bs={}
+        for n in i.notes: bs.setdefault(round(n.start,2),0); bs[round(n.start,2)]+=1
+        if bs: pol=max(bs.values())
+        print(f"  {i.name:14s} {len(i.notes):3d} notes  max-poly {pol}")
+
+if __name__=="__main__":
+    render(sys.argv[1], sys.argv[2])

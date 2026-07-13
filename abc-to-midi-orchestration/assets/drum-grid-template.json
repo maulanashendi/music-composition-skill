@@ -1,0 +1,47 @@
+{
+  "_comment": "Drum step-grid for grid_to_midi.py. CRITICAL: total bars across all sections MUST equal the ABC's total bars, section for section, or drums drift out of sync. Rows are drums; 'x' = hit, '-' = rest; 16 chars = one bar at 16 steps. Let density follow the arc: minimal when quiet, full at the peak, fading at the end. Remove this _comment in the final file.",
+  "title": "Untitled drums",
+  "tempo_bpm": 90,
+  "steps_per_bar": 16,
+  "swing": 0.57,
+  "humanize_velocity": 10,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51 },
+  "base_velocity": { "kick": 92, "snare": 80, "rimshot": 60, "chh": 55, "ohh": 62, "ride": 58 },
+  "sections": [
+    {
+      "label": "Intro (quiet phase): near-silent",
+      "bars": 2,
+      "pattern": {
+        "kick": "x-------x-------",
+        "chh":  "x---x---x---x---"
+      }
+    },
+    {
+      "label": "A (building phase): groove enters",
+      "bars": 4,
+      "pattern": {
+        "kick":  "x--x----x-x-----",
+        "snare": "----x-------x---",
+        "chh":   "x-x-x-x-x-x-x-x-"
+      }
+    },
+    {
+      "label": "B (peak phase): full, ride opens it up",
+      "bars": 4,
+      "pattern": {
+        "kick":  "x--x--x-x-x---x-",
+        "snare": "----x---x---x-x-",
+        "chh":   "x-x-x-x-x-x-x-x-",
+        "ride":  "x---x---x---x---"
+      }
+    },
+    {
+      "label": "Outro (resolution phase): fades",
+      "bars": 2,
+      "pattern": {
+        "kick":    "x---------------",
+        "rimshot": "----x-----------"
+      }
+    }
+  ]
+}
