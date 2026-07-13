@@ -1,0 +1,46 @@
+X:1
+T:Settling In (Late)
+M:4/4
+L:1/8
+Q:1/4=78
+R:Neo-soul, laid-back
+K:Cm
+%%pocket neo-soul-core
+% Form: Intro(4) A1(8) B(4) Outro(8) = 24 bars.
+% Arc: doubt (Intro,A1) -> turning (B, deliberately restrained, no big peak) -> acceptance (Outro).
+% Feel: swung-16th, all voices sit slightly behind the beat (neo-soul-core pocket);
+% exact micro-timing/humanization is applied downstream at the MIDI stage, not encoded here.
+% Drums are NOT in this ABC file -- they are a separate step-grid JSON, per this
+% package's doctrine (see abc-to-midi-orchestration / drums-and-abc.md).
+% NOTE (load-bearing): this project's own scripts/abc_to_midi.py extracts each
+% voice's body with a per-LINE regex "^\[V:id\]" -- every physical line of a
+% voice's music must repeat the "[V:id]" prefix, or that line's notes are
+% silently dropped (0 errors from validate_abc.py, but 0 notes in the MIDI).
+% A single "[V:id]" marker followed by unprefixed continuation lines -- the
+% style abc-syntax.md's own example shows -- produces a track with ZERO notes
+% through this specific converter. Confirmed empirically before writing this file.
+V:1 clef=treble name="Sax"
+V:2 clef=treble name="Rhodes"
+V:3 clef=bass name="Bass"
+% --- Intro (bars 1-4): doubt, bare -- the hook fragment lives in the Rhodes, not here ---
+[V:1] "Cm9" z8 | "Cm9" z8 | "Abmaj7" z8 | "Fm9" z8 |
+[V:2] [EGBd]8 | [EGBd]8 | z C2 E4 z | E2 D6 |
+[V:3] z8 | z8 | A,8 | z8 |
+% --- A1 (bars 5-12): doubt, hook stated then answered, sparse, laid-back, unresolved landings ---
+[V:1] "Cm9" z C E2 A4 | "Abmaj7" z8 | "Fm9" z F2 A4 z | "G7alt" z8 |
+[V:1] "Cm9" z C2 E2 D3 | "Abmaj7" z8 | "Bbm7b5" z2 D3 B3 | "G7sus" z2 C6 |
+[V:2] [EGBd]8 | [CEGc]8 | [ACEG]8 | [FA=Be]8 |
+[V:2] [EGBd]8 | [CEGc]8 | [_D=EA]8 | [CDF]8 |
+[V:3] C,2 z6 | A,2 z5 =E, | F,2 z6 | G,2 z5 =B, |
+[V:3] C,2 z6 | A,2 z5 =A, | B,2 z6 | G,2 z5 D, |
+% --- B (bars 13-16): turning, one modest lift only, sequenced up a third, no held peak ---
+[V:1] "Ebmaj7" z e g2 b4 | "Fm9" a2 b2 z4 | "G7alt" g2 e2 z4 | "G7alt" z8 |
+[V:2] [GBd]8 | [ACEG]8 | [FA=Be]8 | [FA=Be]8 |
+[V:3] E,2 F,2 z4 | F,2 G,2 z4 | G,4 A,2 =B,2 | G,4 z3 =B, |
+% --- Outro (bars 17-24): acceptance, hook returns only as its falling tail, settles ---
+[V:1] "Cm9" z4 C4 | "Abmaj7" z8 | "Fm9" z2 E2 A4 | "Cm9" z8 |
+[V:1] "Abmaj9" z4 C4 | "Fm9" z8 | "G7sus" z6 A2 | "Cm9" z2 C6 |]
+[V:2] [EGBd]8 | [CEGc]8 | [ACEG]8 | [EGBd]8 |
+[V:2] [CEGb]8 | [ACEG]8 | [CDF]8 | [EGBd]8 |]
+[V:3] C,8 | A,8 | F,8 | C,8 |
+[V:3] A,8 | F,8 | G,8 | C,8 |]
