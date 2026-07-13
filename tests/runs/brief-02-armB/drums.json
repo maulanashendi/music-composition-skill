@@ -13,32 +13,32 @@
       "label": "Intro (bars 1-2): restless/unsettled, near-silent -- only a soft rimshot marks the downbeat",
       "bars": 2,
       "pattern": {
-        "rimshot": "x------"
+        "rimshot": "x......"
       }
     },
     {
       "label": "A1-main (bars 3-5): soft groove enters -- kick + hats on the 2+2+3 group downbeats",
       "bars": 3,
       "pattern": {
-        "kick": "x-x----",
-        "chh":  "x-x-x-x"
+        "kick": "x.x....",
+        "chh":  "x.x.x.x"
       }
     },
     {
       "label": "A1-fill (bar 6): pickup snare hit on the last eighth, leading into A2",
       "bars": 1,
       "pattern": {
-        "kick":  "x-x----",
-        "chh":   "x-x-x-x",
-        "snare": "------x"
+        "kick":  "x.x....",
+        "chh":   "x.x.x.x",
+        "snare": "......x"
       }
     },
     {
       "label": "A2-main (bars 7-9): building -- kick fills all 3 group downbeats, snare backbeat on the 3-group, hats tighten to every eighth",
       "bars": 3,
       "pattern": {
-        "kick":  "x-x-x--",
-        "snare": "----x--",
+        "kick":  "x.x.x..",
+        "snare": "....x..",
         "chh":   "xxxxxxx"
       }
     },
@@ -46,16 +46,16 @@
       "label": "A2-fill (bar 10): a breath pulling back before section B, matching the melody/bass 'reach and rest' gesture",
       "bars": 1,
       "pattern": {
-        "kick": "x------",
-        "chh":  "x-x----"
+        "kick": "x......",
+        "chh":  "x.x...."
       }
     },
     {
       "label": "B-build (bars 11-13): the hardest pre-climax push -- kick on every group downbeat, syncopated snare pushes off the downbeats, hats driving",
       "bars": 3,
       "pattern": {
-        "kick":  "x-x-x-x",
-        "snare": "--x--x-",
+        "kick":  "x.x.x.x",
+        "snare": "..x..x.",
         "chh":   "xxxxxxx"
       }
     },
@@ -68,8 +68,8 @@
       "label": "C-climax (bars 15-18): full tutti -- kick+snare hit together on the ensemble's downbeat/3-group landing points, hats and ride both driving ('ride opens it up')",
       "bars": 4,
       "pattern": {
-        "kick":  "x---x--",
-        "snare": "x---x--",
+        "kick":  "x...x..",
+        "snare": "x...x..",
         "chh":   "xxxxxxx",
         "ride":  "xxxxxxx"
       }
@@ -78,18 +78,18 @@
       "label": "Outro-tag (bar 19): a confident tag hit, still moving",
       "bars": 1,
       "pattern": {
-        "kick":  "x------",
-        "snare": "x------",
-        "chh":   "x-x-x--"
+        "kick":  "x......",
+        "snare": "x......",
+        "chh":   "x.x.x.."
       }
     },
     {
       "label": "Final (bar 20): one clean stinger on the final held chord, then silence -- no fade",
       "bars": 1,
       "pattern": {
-        "kick":  "x------",
-        "snare": "x------",
-        "ride":  "x------"
+        "kick":  "x......",
+        "snare": "x......",
+        "ride":  "x......"
       }
     }
   ]
