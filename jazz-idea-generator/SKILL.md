@@ -27,6 +27,8 @@ But the most important input is the **feeling**. Ask, in the person's own terms:
 
 If the person only gives a vibe ("chill lofi jazz"), **propose an arc** and confirm it — e.g. "how about: settled → a touch of longing → warm lift → quiet resolution?" A piece needs a journey, or it's just a loop. Don't proceed to candidates until there's an arc, even a simple one.
 
+For a concrete mood-to-parameter mapping (tempo, dynamics, harmonic color, rhythm activity, texture density, register, voice-leading — the same seven dimensions for every mood), see `references/reasoning-theory.md` Module 1. It turns a vibe word into explicit musical decisions before Step 2's table is filled.
+
 ### Step 2 — Design the dramatic arc as the backbone
 
 Before any chords, map the emotional journey onto sections. For each phase state the feeling, the section it lives in, and what that feeling *requires* musically. This table drives everything after it:
@@ -42,7 +44,7 @@ The arc decides how quiet the verse is, how the pre-chorus builds, whether the c
 
 ### Step 3 — Generate comparable candidates (each built on the arc)
 
-Read `references/ideation-theory.md` (grounding vocabulary) and `references/style-cheatsheets.md` (target style). Produce **2–4 materially different candidates** — differing on real structural axes (functional vs. modal, fast vs. slow harmonic rhythm, root-cycle vs. pedal bass, tight loop vs. through-composed). For each candidate give:
+Read `references/ideation-theory.md` (grounding vocabulary) and `references/style-cheatsheets.md` (target style). If the target style is neo-soul/chill-jazz, also read `references/neo-soul-genre.md` — it has a concrete musical DNA, role model (anchor/rotation/ear-candy), and arrangement architecture for that family. For any style, before locking a candidate's vocabulary, declare the theory hierarchy from `references/reasoning-theory.md` Module 2 (one main theory + supporting harmony/melody/texture/groove) — it constrains which devices are usable without extra justification (Module 3's cause-effect catalog). When the form is loop-centered (lofi, jazzhop, groove-first) or a bar-count/formal-family decision needs more depth than the compact vocabulary here, read `references/form-and-dramaturgy.md` and `references/loop-development.md`. Produce **2–4 materially different candidates** — differing on real structural axes (functional vs. modal, fast vs. slow harmonic rhythm, root-cycle vs. pedal bass, tight loop vs. through-composed). For each candidate give:
 
 1. **the arc realized** — one line on how this candidate expresses the emotional journey;
 2. key, tempo, meter;
@@ -61,6 +63,8 @@ Detailed voice-leading (how each note inside a chord moves) and the bar-by-bar i
 Say which candidate you'd pick and why, and why the others lose — in terms of how well each *expresses the arc*, plus hook strength, groove fit, and playability. Have an opinion; let the person override.
 
 ### Step 5 — Quality gate: does this sound like music or like a checklist?
+
+For a more structured pass before the ear-judgment below, run the winning candidate through `references/reasoning-theory.md` Module 4 (compatibility matrix, one leader per section, one idea per dimension per section) and Module 6 (a tension/release map — planned vs. realized per section). These catch "correct in theory but flat or cluttered" issues that a read-through alone can miss.
 
 Before locking, read the whole plan back and judge it by ear, not by completeness:
 
@@ -83,6 +87,10 @@ When locked, say the idea is ready to notate and that `abc-notation-writer` take
 
 - `references/ideation-theory.md` — compact working vocabulary: rhythm/subdivision, scales & chords, progression logic, harmonic rhythm, melody/motif/hook, **phrasing**, **dramatic arc & tension-release**, harmony feel, structure, arrangement, interaction. Read at Step 3.
 - `references/style-cheatsheets.md` — per-style quick reference. Read only the target style's entry.
+- `references/neo-soul-genre.md` — deep genre profile for neo-soul/chill-jazz (musical DNA, anchor/rotation/ear-candy roles, motif development, variation budget, arrangement architecture). Read at Step 3 when that's the target style.
+- `references/reasoning-theory.md` — 7 penalaran modules distilled from `compose-song`: mood→parameter (Module 1, Step 2), theory-hierarchy declaration + cause-effect device catalog (Modules 2–3, Step 3), compatibility/leadership/idea-limits and tension-release evaluation (Modules 4 & 6, Step 5), plus a verification-protocol module (7) picked up again once ABC/MIDI exist downstream.
+- `references/form-and-dramaturgy.md` — deeper form mechanics (formal families, phrase length, cadence strength, solo/intro/ending strategy) for when the compact structure vocabulary in `ideation-theory.md` isn't enough. Read at Step 3 as needed.
+- `references/loop-development.md` — loop DNA, mutation classes, and development timescales for loop-centered styles (lofi, jazzhop, neo-soul, groove pieces). Read at Step 3 as needed.
 - `assets/composition-plan-template.json` — the output contract. Copy and fill this.
 
 ## Default assumptions

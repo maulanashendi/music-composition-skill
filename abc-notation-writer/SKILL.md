@@ -62,7 +62,8 @@ Output the validated `.abc` file, note the validator result, and flag anything h
 
 - `references/abc-syntax.md` — full ABC syntax for lead sheets and compact scores: headers, notes/octaves, durations, chord symbols, ties/slurs, repeats, tuplets, multi-voice. The syntax authority.
 - `references/common-failures.md` — the specific ways AI-generated ABC breaks music21 and how to fix each; read before writing.
-- `references/drums-and-abc.md` — why drums stay out of ABC and how to hand them off as a step-grid.
+- `references/drums-and-abc.md` — why drums stay out of ABC and how to hand them off as a step-grid. Drums are **always** a step-grid JSON in this package, never an ABC `%%MIDI drummap` voice — that split is load-bearing, not a style choice.
+- For exact register/attack/voice-leading precision (which pitches, not just which chord symbol), that's a production-stage decision made in `abc-to-midi-orchestration`'s `references/exact-voicing.md` — this skill notates what's already decided, it doesn't decide voicings.
 - `scripts/validate_abc.py` — structural + duration validator. Run on every file before hand-off.
 - `scripts/test_validate_abc.py` — the validator's own test suite (for maintaining the validator, not per-composition use).
 - `assets/lead-sheet-template.abc` — a minimal valid starting point to copy.
