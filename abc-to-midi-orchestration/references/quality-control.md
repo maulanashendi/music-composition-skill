@@ -63,7 +63,7 @@ Audit every section boundary against the full criteria in `instrumental-transiti
 
 ## 6. Meter, tempo, groove, and microtiming
 
-Audit against `groove-meter.md` (meter/subdivision/feel) and, for pocket, `groove-profiles.md` (the numeric table) with `advanced-microtiming.md` (the principles). Blocking gates: bass, drums, comping, and melody agree on the groove framework; the notated rhythm works before microtiming is added; timing offsets are relational and bounded (a named profile, not per-note invention); random humanization is not a substitute for groove design.
+Audit against the `groove-design` skill — `meter-and-feel.md` (meter/subdivision/feel) and, for pocket, `groove-profiles.md` (the numeric table) with `advanced-microtiming.md` (the principles). Blocking gates: bass, drums, comping, and melody agree on the groove framework; the notated rhythm works before microtiming is added; timing offsets are relational and bounded (a named profile, not per-note invention); random humanization is not a substitute for groove design.
 
 ## 7. Harmony
 

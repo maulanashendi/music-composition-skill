@@ -1,280 +1,278 @@
-# Reasoning theory — lapisan penalaran teori (dari `compose-song`)
+# Reasoning theory — the theory-reasoning layer (from `compose-song`)
 
-Dirangkum dan diadaptasi dari skill Claude Code `compose-song` (konsolidasi
-2026-07-13). Sumber aslinya punya 9 modul penalaran yang mengikat proses
-komposisi *sebelum* nada ditulis; file ini merangkumnya untuk `jazz-idea-generator`
-tanpa mengubah workflow enam-langkah yang sudah ada di `SKILL.md` — anggap
-tujuh modul di bawah sebagai *perkakas tambahan* yang dipakai di dalam Step 2
-(brief & mood), Step 3 (generate candidates), dan Step 5 (quality gate),
-berdampingan dengan `ideation-theory.md` dan `style-cheatsheets.md`. Profil
-genre konkret (neo-soul/chill-jazz) ada di file terpisah:
-`references/neo-soul-genre.md`.
+Summarized and adapted from the Claude Code skill `compose-song`
+(consolidated 2026-07-13). The original had 9 reasoning modules that
+constrain the composition process *before* any note is written; this file
+condenses them for `jazz-idea-generator` without changing the existing
+six-step workflow in `SKILL.md` — treat the seven modules below as *extra
+tools* used inside Step 2 (brief & mood), Step 3 (generate candidates), and
+Step 5 (quality gate), alongside `ideation-theory.md` and
+`style-cheatsheets.md`. The concrete genre profile (neo-soul/chill-jazz) now
+lives in its own skill, `neo-soul-genre`.
 
-Bahasa Indonesia dipertahankan (mengikuti bahasa sumber `compose-song`);
-file-file lain di paket ini (asal JCD) berbahasa Inggris — konsisten per
-sumber, bukan campur dalam satu file.
+## Module 1 — Emotional function: mood → musical parameters
 
-## Modul 1 — Fungsi emosional: mood → parameter musikal
+Used at Step 2 (Lock the brief AND the emotional journey), as the concrete
+complement to a vibe adjective. Every mood is mapped onto the same **seven
+fixed dimensions** so moods stay comparable across candidates: tempo,
+dynamics, harmonic stability & color, rhythmic activity, texture density,
+register, voice-leading character.
 
-Dipakai di Step 2 (Lock the brief AND the emotional journey), sebagai
-pelengkap konkret untuk kata sifat vibe. Setiap mood dipetakan ke **tujuh
-dimensi baku** yang sama supaya lintas-mood tetap bisa dibandingkan: tempo,
-dinamika, stabilitas & warna harmoni, aktivitas ritme, densitas tekstur,
-register, karakter voice-leading.
-
-| Mood | Tempo | Dinamika | Stabilitas & warna harmoni | Aktivitas ritme | Densitas tekstur | Register | Voice-leading |
+| Mood | Tempo | Dynamics | Harmonic stability & color | Rhythmic activity | Texture density | Register | Voice-leading |
 |---|---|---|---|---|---|---|---|
-| **Tenang** | Moderat (68-78 BPM) | Lembut (mp), swell minim | Stabil — diatonic, maj7/m7, cadence jarang | Minim sinkopasi, groove menetap | Jarang (1-2 layer aktif) | Menengah, hindari ekstrem | Halus — common tone, stepwise |
-| **Tegang** | Tetap atau naik tipis | Crescendo/aksen tajam menjelang puncak | Disonan — chromaticism, dominant prolongation, altered dominant | Lebih aktif, sinkopasi/ghost meningkat | Bisa menebal menjelang klimaks | Naik menjelang puncak | Leap terarah, chromatic approach |
-| **Fokus** | Moderat, stabil (72-82 BPM) | Rata, minim lonjakan | Motif konsisten, harmonic rhythm lambat | Berulang, predictable | Tidak padat (density ceiling ketat) | Tengah, konsisten | Motif berulang, minim variasi drastis |
-| **Wistful** | Moderat-lambat (70-80 BPM) | Lembut, sedikit rubato-feel | Borrowed iv/modal interchange, maj7 bersentuhan minor | Lembut, sedikit di belakang beat | Sedang, ada ruang/rest | Menengah-tinggi utk melodi | Chromatic approach halus, turun bertahap |
-| **Hangat** | Moderat (72-84 BPM) | mp-mf konsisten | Stabil, warna maj9/6-9, root movement smooth | Groove menetap, sedikit swing | Medium, layer saling melengkapi register | Tengah, hindari terlalu tinggi/tajam | Common tone dominan, extension lembut |
-| **Nocturnal** | Lambat-moderat (66-76 BPM) | Soft, ruang besar antar frase | Minor/modal, m9/m11, pedal point | Jarang, banyak rest/silence | Sangat jarang, sparse | Rendah-menengah, sesekali tinggi utk kontras | Held tone lama, gerak minimal |
-| **Hopeful** | Moderat naik tipis (78-86 BPM) | Membangun (build), swell menjelang return | Mayor terbuka, secondary dominant mengarah resolusi | Aktif progresif, energi naik bertahap | Menebal seiring progresi | Naik bertahap menuju puncak | Directional, stepwise menuju resolusi |
-| **Introspektif** | Lambat (66-74 BPM) | Sangat lembut, dekat | Minor/modal ambigu, sus chord tak resolve penuh | Minimal, rubato | Sangat jarang, hampir solo instrumen | Rendah-menengah, intim | Inner voice halus, top note nyaris statis |
+| **Calm** | Moderate (68-78 BPM) | Soft (mp), minimal swell | Stable — diatonic, maj7/m7, rare cadences | Little syncopation, settled groove | Sparse (1-2 active layers) | Mid, avoid extremes | Smooth — common tone, stepwise |
+| **Tense** | Steady or slightly rising | Crescendo/sharp accents into the peak | Dissonant — chromaticism, dominant prolongation, altered dominant | More active, rising syncopation/ghosts | May thicken toward the climax | Rising toward the peak | Directed leaps, chromatic approach |
+| **Focused** | Moderate, stable (72-82 BPM) | Even, minimal spikes | Consistent motif, slow harmonic rhythm | Repetitive, predictable | Not dense (tight density ceiling) | Mid, consistent | Repeating motif, minimal drastic variation |
+| **Wistful** | Moderate-slow (70-80 BPM) | Soft, slight rubato feel | Borrowed iv/modal interchange, maj7 brushing minor | Gentle, slightly behind the beat | Medium, with space/rests | Mid-high for the melody | Subtle chromatic approach, gradual descent |
+| **Warm** | Moderate (72-84 BPM) | Consistent mp-mf | Stable, maj9/6-9 color, smooth root movement | Settled groove, slight swing | Medium, layers complement each other's register | Mid, avoid too high/sharp | Common-tone dominant, gentle extensions |
+| **Nocturnal** | Slow-moderate (66-76 BPM) | Soft, large space between phrases | Minor/modal, m9/m11, pedal point | Sparse, lots of rest/silence | Very sparse | Low-mid, occasional high for contrast | Long held tones, minimal motion |
+| **Hopeful** | Moderate, slightly rising (78-86 BPM) | Building, swell into the return | Open major, secondary dominants aiming at resolution | Progressively active, energy rising in stages | Thickening as the progression moves | Rising in stages toward the peak | Directional, stepwise toward resolution |
+| **Introspective** | Slow (66-74 BPM) | Very soft, close | Ambiguous minor/modal, sus chords not fully resolving | Minimal, rubato | Very sparse, near-solo instrument | Low-mid, intimate | Subtle inner voice, top note nearly static |
 
-**Cara pakai:** pilih mood dominan dari brief (boleh kombinasi 2, declare 1
-sebagai leading), salin baris itu jadi tujuh keputusan eksplisit — inilah
-yang membatasi pilihan kandidat di Step 3, bukan sebaliknya. Mood di luar
-tabel: isi ketujuh dimensi yang sama, jangan menambah dimensi baru tanpa
-merefleksikannya balik ke semua baris lain. Kontras dalam satu lagu wajar
-(mis. intro tenang → B tegang → outro hangat), tapi tiap section punya
-mood-nya sendiri yang dideklarasikan penuh — jangan campur tujuh dimensi dari
-dua mood berbeda dalam satu section yang sama.
+**How to use:** pick the dominant mood from the brief (a combination of 2 is
+fine, but declare 1 as leading), copy that row into seven explicit
+decisions — this is what constrains the candidate choices at Step 3, not the
+reverse. For a mood outside the table: fill in the same seven dimensions;
+don't add a new dimension without reflecting it back across all the other
+rows. Contrast within one piece is healthy (e.g. calm intro → tense B →
+warm outro), but each section has its own fully declared mood — don't mix
+the seven dimensions of two different moods inside the same section.
 
-## Modul 2 — Deklarasi hierarki teori (gate)
+## Module 2 — Theory-hierarchy declaration (gate)
 
-Dipakai menjelang Step 3, sebelum kandidat pertama ditulis konkret. Satu
-**teori utama** (biasanya tonal center/mode) + **teori pendukung** per
-dimensi (harmoni, melodi, tekstur, groove) yang menjabarkan bagaimana teori
-utama diwujudkan — bukan daftar device acak, tapi kosakata yang koheren.
-Hierarki yang dideklarasikan lebih dulu **membatasi kosakata** yang boleh
-dipakai tanpa justifikasi tambahan (lihat Modul 3).
+Used approaching Step 3, before the first candidate is written concretely.
+One **main theory** (usually a tonal center/mode) + **supporting theories**
+per dimension (harmony, melody, texture, groove) that spell out how the main
+theory is realized — not a random device list, but a coherent vocabulary.
+The hierarchy declared up front **constrains the vocabulary** that may be
+used without extra justification (see Module 3).
 
 Template:
 
 ```
-## Deklarasi Hierarki Teori — <judul/brief singkat>
+## Theory Hierarchy Declaration — <short title/brief>
 
-- Teori utama: <tonalitas/mode/tonal center + kenapa cocok dgn mood Modul 1>
-- Pendukung harmoni: <vokabulari chord/progresi yang diizinkan>
-- Pendukung melodi: <gerak/kontur/targeting yang diizinkan>
-- Pendukung tekstur: <kepadatan/model comping/voicing yang diizinkan>
-- Pendukung groove: <feel ritme/swing/time-feel yang diizinkan>
-- Device di luar hierarki (isi belakangan bila muncul) + justifikasi:
-  <device> → <mengapa, lihat Modul 3>
+- Main theory: <tonality/mode/tonal center + why it fits the Module 1 mood>
+- Harmony support: <permitted chord/progression vocabulary>
+- Melody support: <permitted motion/contour/targeting>
+- Texture support: <permitted density/comping model/voicing>
+- Groove support: <permitted rhythm feel/swing/time-feel>
+- Devices outside the hierarchy (fill in later if they come up) + justification:
+  <device> → <why, see Module 3>
 ```
 
-Aturan pengikat: mood (Modul 1) mendahului hierarki — pilihan tonal
-center/harmoni harus konsisten dengan tujuh dimensi mood; keputusan level
-besar (bentuk lagu/tonal center, lihat Modul 5) mengikat level di bawahnya;
-satu deklarasi per lagu, variasi per section dicatat sebagai bagian hierarki
-yang sama, bukan hierarki kedua yang independen.
+Binding rules: mood (Module 1) precedes the hierarchy — the tonal
+center/harmony choice must be consistent with the seven mood dimensions;
+macro-level decisions (song form/tonal center, see Module 5) bind the levels
+below them; one declaration per piece, with per-section variation recorded
+as part of the same hierarchy, not a second independent hierarchy.
 
-## Modul 3 — Katalog sebab-akibat device
+## Module 3 — Cause-and-effect device catalog
 
-Dipakai setiap kali memilih device (chord, voicing, ritme) yang belum
-eksplisit tercantum di hierarki teori (Modul 2). Format: **Device → Mengapa
-(efek musikal) → Kapan JANGAN**. Memakai device sesuai kolom "Mengapa" tidak
-butuh justifikasi tambahan; memakainya di luar itu (melanggar "Kapan JANGAN")
-tetap butuh justifikasi eksplisit ekstra, dicatat di baris "Device di luar
-hierarki" pada deklarasi Modul 2.
+Used whenever picking a device (chord, voicing, rhythm) not already
+explicit in the theory hierarchy (Module 2). Format: **Device → Why
+(musical effect) → When NOT to**. Using a device per its "Why" column needs
+no extra justification; using it beyond that (violating "When NOT to") still
+needs explicit extra justification, recorded on the "Devices outside the
+hierarchy" line of the Module 2 declaration.
 
-| Device | Mengapa (efek musikal) | Kapan JANGAN |
+| Device | Why (musical effect) | When NOT to |
 |---|---|---|
-| **ii–V–I** | Butuh arah menuju tonic — rasa "pulang" yang jelas | Section butuh statis/ambigu (mis. nocturnal dengan pedal point) |
-| **maj9 / 6-9** | Warna lembut & hangat, bukan dominant yang keras | Menjelang klimaks yang butuh tegangan tajam |
-| **secondary dominant** | Dorongan terarah ke chord berikutnya | Dipakai berturutan di tiap bar — jadi generik |
-| **broken chord** | Tekstur mengalir, beri ruang bagi bass/melodi | Bass sudah aktif secara ritmis — bisa masking register rendah |
-| **melodi stepwise** | Frase smooth, mudah diikuti, menegaskan motif | Dipakai sepanjang lagu tanpa variasi |
-| **m7/m9/m11** | Warna lembut/introspektif tanpa tegangan dominant | Menggantikan SELURUH fungsi dominant |
-| **7sus/9sus/13sus** | Gerak tanpa agresi, menunda resolusi sengaja | Dipakai di cadence final |
-| **altered dominant** | Tensi singkat & terkonsentrasi, penanda puncak | Section "tenang"/"fokus" |
-| **borrowed iv / modal interchange** | Warna wistful, kaburkan batas mayor/minor | Tanpa top-line yang menegaskan warna baru |
-| **slash chord / inversi** | Bass melodis, memuluskan gerak root | Bass sudah punya garis independen yang berfungsi sendiri |
-| **chromatic approach** | Transisi halus menuju target chord-tone, hemat | Dipakai berturutan >2x |
-| **pedal point** | Menahan satu area harmoni, fokus & ruang | Section butuh gerak root aktif (mis. hopeful yang membangun) |
-| **rest / silence** | Pelepasan tensi, ruang bagi motif untuk "diingat" | Berlebihan hingga groove terasa terputus |
-| **omit-root voicing** | Hindari mud register rendah, beri ruang bass | Instrumen chord main solo tanpa bass |
-| **ghost note** | Feel/pocket (drum & bass), bukan hiasan | Menggantikan groove utama |
-| **register shift** | Menaikkan intensitas, menandai batas section baru | Dipakai tiap bar |
+| **ii–V–I** | Needs direction toward the tonic — a clear "coming home" feel | Section needs to stay static/ambiguous (e.g. nocturnal with pedal point) |
+| **maj9 / 6-9** | Soft, warm color, not a harsh dominant | Approaching a climax that needs sharp tension |
+| **secondary dominant** | Directed push toward the next chord | Used in a row every bar — becomes generic |
+| **broken chord** | Flowing texture, leaves room for bass/melody | Bass is already rhythmically active — can mask the low register |
+| **stepwise melody** | Smooth phrase, easy to follow, affirms the motif | Used the whole piece with no variation |
+| **m7/m9/m11** | Soft/introspective color without dominant tension | Replacing the ENTIRE dominant function |
+| **7sus/9sus/13sus** | Motion without aggression, deliberately delayed resolution | Used at a final cadence |
+| **altered dominant** | Brief, concentrated tension, a peak marker | "Calm"/"focused" sections |
+| **borrowed iv / modal interchange** | Wistful color, blurs the major/minor boundary | Without a top line that affirms the new color |
+| **slash chord / inversion** | Melodic bass, smooths root motion | Bass already has an independent working line of its own |
+| **chromatic approach** | Smooth, economical transition to a target chord-tone | Used more than 2x in a row |
+| **pedal point** | Holds one harmonic area, focus & space | Section needs active root motion (e.g. a building hopeful) |
+| **rest / silence** | Tension release, room for the motif to be "remembered" | Overused until the groove feels broken |
+| **omit-root voicing** | Avoids low-register mud, leaves room for the bass | Chord instrument plays solo without a bass |
+| **ghost note** | Feel/pocket (drum & bass), not decoration | Replacing the main groove |
+| **register shift** | Raises intensity, marks a new section boundary | Used every bar |
 
-Cara pakai: cek dulu apakah device sudah tercakup di baris "Pendukung ..."
-hierarki (Modul 2) — kalau ya, pakai langsung. Kalau tidak, cari di tabel
-ini; kolom "Mengapa" jadi justifikasi otomatis, cek "Kapan JANGAN" dulu.
-Tidak ada di tabel dan tidak di hierarki: butuh justifikasi manual eksplisit
-atau jangan dipakai. Cek "Kapan JANGAN" ulang tiap pemakaian, bukan sekali di
-awal lalu diasumsikan selalu aman. `neo-soul-genre.md` bisa menambah device
-khas genre yang tak generik cukup untuk tabel ini.
+How to use: first check whether the device is already covered by a
+"Support ..." line of the hierarchy (Module 2) — if so, use it directly. If
+not, find it in this table; the "Why" column is the automatic
+justification, but check "When NOT to" first. Not in the table and not in
+the hierarchy: needs explicit manual justification or don't use it. Re-check
+"When NOT to" on each use, not once at the start and then assumed always
+safe. The `neo-soul-genre` skill can add genre-specific devices that aren't
+generic enough for this table.
 
-## Modul 4 — Kompatibilitas, leadership, dan batas ide per section
+## Module 4 — Compatibility, leadership, and idea limits per section
 
-Dipakai di Step 5 (quality gate), terhadap draft kandidat **penuh** — bukan
-per not. Draft yang benar secara teori per section masih bisa gagal ketika
-disusun bersama.
+Used at Step 5 (quality gate), against the **full** candidate draft — not
+per note. A draft that is theory-correct section by section can still fail
+once the sections are assembled together.
 
-**Lensa 1 — Matriks kompatibilitas.** Pasangan yang **cocok** (saling
-memberi ruang): harmoni kompleks + melodi sederhana; groove sederhana +
-voicing kaya; bass tenang + piano lebih aktif; melodi aktif + accompaniment
-minimal. Pasangan yang **tabrakan** (saling merebut ruang): melodi ramai +
-piano ramai bersamaan; harmoni sangat chromatic + bass terlalu bebas (dua
-sumber ketidakstabilan sekaligus); tempo lambat + pergantian chord terlalu
-sering (harmonic rhythm tak proporsional); mood santai + aksen ritmis
-agresif. Kalau ketemu pasangan tabrakan: kurangi salah satu (subtractive),
-jangan tambah elemen ketiga untuk "menyeimbangkan".
+**Lens 1 — Compatibility matrix.** Pairs that **fit** (give each other
+room): complex harmony + simple melody; simple groove + rich voicing; calm
+bass + more active piano; active melody + minimal accompaniment. Pairs that
+**collide** (fight for the same room): busy melody + busy piano at once;
+very chromatic harmony + overly free bass (two sources of instability at
+once); slow tempo + too-frequent chord changes (disproportionate harmonic
+rhythm); relaxed mood + aggressive rhythmic accents. If you hit a colliding
+pair: reduce one (subtractive), don't add a third element to "balance" it.
 
-**Lensa 2 — Element leadership per section.** Tiap section punya **SATU**
-pemimpin; elemen lain memberi ruang:
+**Lens 2 — Element leadership per section.** Each section has **ONE** leader;
+the other elements give room:
 
-| Section | Dipimpin oleh |
+| Section | Led by |
 |---|---|
-| Intro | Tekstur piano/comping |
-| Tema (A) | Melodi |
-| Solo | Improvisasi (lead yang sedang giliran) |
-| Transisi | Harmoni (pergerakan chord yang menandai arah baru) |
-| Outro | Resolusi (harmoni kembali ke tonic + subtraksi elemen) |
+| Intro | Piano/comping texture |
+| Theme (A) | Melody |
+| Solo | Improvisation (whichever lead has the turn) |
+| Transition | Harmony (chord motion marking a new direction) |
+| Outro | Resolution (harmony back to the tonic + subtraction of elements) |
 
-Saat melodi jadi fokus, harmoni & rhythm section WAJIB memberi ruang — bukan
-ikut jadi fokus kedua. Dua elemen berebut foreground di section yang sama
-adalah red flag.
+When the melody is the focus, harmony & rhythm section MUST give room — not
+become a second focus. Two elements fighting for the foreground in the same
+section is a red flag.
 
-**Lensa 3 — Batas ide utama per section.** Per section, batasi ide teori
-yang aktif bersamaan ke **satu** masing-masing: satu karakter harmoni, satu
-motif melodi (versi transformasi motif pusat), satu groove utama, satu
-tekstur dominan. Terlalu banyak teori sekaligus membuat section kehilangan
-identitas — pendengar tak bisa menangkap "section ini tentang apa". Variasi
-*antar*-section itu sehat (lihat variation budget di `neo-soul-genre.md`);
-variasi *di dalam* satu section yang sama itu bahaya.
+**Lens 3 — Main-idea limit per section.** Per section, limit the theory
+ideas active at once to **one** of each: one harmonic character, one melodic
+motif (a transformed version of the central motif), one main groove, one
+dominant texture. Too many theories at once makes a section lose its
+identity — the listener can't grasp "what this section is about". Variation
+*between* sections is healthy (see the variation budget in the
+`neo-soul-genre` skill); variation *within* the same section is dangerous.
 
-**Menjalankan ketiga lensa:** bagi draft per section → cek Lensa 1 (pasangan
-aktif), Lensa 2 (satu pemimpin), Lensa 3 (satu ide per dimensi) → section
-yang gagal salah satu: revisi (biasanya subtractive), lalu jalankan ulang
-Modul 6 (tension/release) untuk section yang direvisi.
+**Running the three lenses:** split the draft by section → check Lens 1
+(active pairings), Lens 2 (one leader), Lens 3 (one idea per dimension) →
+any section failing one: revise (usually subtractive), then re-run Module 6
+(tension/release) for the revised section.
 
-## Modul 5 — Level struktur: makro / meso / mikro
+## Module 5 — Structural levels: macro / meso / micro
 
-Teori bekerja pada tiga level; urutan pengerjaan wajib besar dulu, baru
-menengah, baru kecil.
+Theory works at three levels; the work order must be large first, then
+medium, then small.
 
-| Level | Unit kerja | Contoh keputusan | Kalau bermasalah, revisi di sini... |
+| Level | Work unit | Example decisions | If problematic, revise here... |
 |---|---|---|---|
-| **Besar (makro)** | Seluruh lagu | Bentuk lagu, tonal center, arah energi keseluruhan | Balik ke sini SADAR — re-declare hierarki (Modul 2) bila tonal center berubah |
-| **Menengah (meso)** | Section / frase 4-8 bar | Progresi chord per section, batas frase, cadence, modulasi | Revisi section itu; cek dampak ke section tetangga |
-| **Kecil (mikro)** | Bar / beat | Voicing spesifik, passing tone, artikulasi, motif ritmis lokal | Revisi lokal SAJA — bukan alasan mengubah bentuk besar |
+| **Large (macro)** | The whole piece | Song form, tonal center, overall energy direction | Come back here DELIBERATELY — re-declare the hierarchy (Module 2) if the tonal center changes |
+| **Medium (meso)** | Section / 4-8 bar phrase | Per-section chord progression, phrase boundaries, cadence, modulation | Revise that section; check the impact on neighboring sections |
+| **Small (micro)** | Bar / beat | Specific voicing, passing tone, articulation, local rhythmic motif | Revise locally ONLY — not a reason to change the large form |
 
-Aturan pengikat: keputusan besar mengikat menengah, menengah mengikat kecil.
-Jangan revisi level besar dari keluhan level kecil tanpa sadar — satu voicing
-aneh di satu bar adalah petunjuk perbaikan voicing (kecil), bukan alasan
-otomatis ganti bentuk lagu. Naikkan level revisi hanya bila masalah muncul
-konsisten di banyak section (pola, bukan satu titik), dan lakukan itu secara
-sadar (nyatakan eksplisit alasannya).
+Binding rule: large decisions bind medium, medium binds small. Don't revise
+the large level from a small-level complaint without realizing it — one odd
+voicing in one bar is a cue to fix the voicing (small), not an automatic
+reason to change the song form. Raise the revision level only when the
+problem shows up consistently across many sections (a pattern, not one
+point), and do it deliberately (state the reason explicitly).
 
-Di `jazz-idea-generator`, ini berarti: Step 2-3 mengerjakan level besar
-(arc, bentuk, tonal center) lebih dulu; bar-by-bar chords (Step 3 poin 3) dan
-phrasing (poin 6) adalah level menengah; voicing konkret nota-per-nota adalah
-level kecil yang sengaja **ditunda** ke `abc-notation-writer`/
-`abc-to-midi-orchestration` (lihat catatan "production-stage" di §Workflow
-Step 3 SKILL.md ini) — pemisahan itu konsisten dengan aturan "besar dulu"
-di sini.
+In `jazz-idea-generator`, this means: Steps 2-3 work the large level (arc,
+form, tonal center) first; bar-by-bar chords (Step 3 point 3) and phrasing
+(point 6) are the medium level; concrete note-by-note voicing is the small
+level, deliberately **deferred** to `abc-notation-writer`/
+`abc-to-midi-orchestration` (see the "production-stage" note in the §Workflow
+Step 3 of this SKILL.md) — that split is consistent with the "large first"
+rule here.
 
-## Modul 6 — Tension & release sebagai alat evaluasi
+## Module 6 — Tension & release as an evaluation tool
 
-Berbeda dari palet teknik tension-release di `ideation-theory.md` §4c (daftar
-*teknik* yang bisa dipakai), modul ini adalah **alat evaluasi**: scan draft
-yang sudah ditulis dan bandingkan dengan rencana arah energi level besar
-(Modul 5). Kosakata baku:
+Distinct from the tension-release *palette* in `ideation-theory.md` §4c (a
+list of *techniques* you can use), this module is an **evaluation tool**:
+scan the written draft and compare it against the planned macro-level energy
+direction (Module 5). Fixed vocabulary:
 
-| Elemen | Efek |
+| Element | Effect |
 |---|---|
-| **Tonic** | Stabilitas, "rumah" — titik rileks |
-| **Dominant** | Tegangan — butuh resolusi |
-| **Chromatic note** | Warna / tekanan sesaat |
-| **Rest (silence)** | Pelepasan — ruang bagi motif untuk diingat |
-| **Register tinggi** | Intensitas naik |
-| **Voicing rapat (close)** | Kepadatan |
-| **Voicing terbuka (open/spread)** | Kelonggaran |
+| **Tonic** | Stability, "home" — the relaxation point |
+| **Dominant** | Tension — needs resolution |
+| **Chromatic note** | Momentary color / pressure |
+| **Rest (silence)** | Release — room for the motif to be remembered |
+| **High register** | Rising intensity |
+| **Close voicing** | Density |
+| **Open/spread voicing** | Openness |
 
-Pertanyaan wajib, ditanyakan SEBELUM menulis section (rencana) dan SESUDAH
-(verifikasi): *di mana musik perlu tegang, di mana harus rileks?* Buat peta
-sederhana:
+Mandatory questions, asked BEFORE writing a section (plan) and AFTER
+(verify): *where does the music need to be tense, where relaxed?* Build a
+simple map:
 
-| Section | Rencana (sebelum) | Realisasi (sesudah) | Elemen dominan yang terpakai |
+| Section | Plan (before) | Realized (after) | Dominant element used |
 |---|---|---|---|
-| Intro | rendah | ... | mis. tonic, voicing terbuka, rest |
-| A1 | sedang | ... | mis. dominant di akhir frase |
-| B/detour | tinggi | ... | mis. chromatic note, voicing rapat |
-| A3 | sedang→rendah | ... | mis. kembali ke tonic |
-| Outro | rendah | ... | mis. rest, tonic, register turun |
+| Intro | low | ... | e.g. tonic, open voicing, rest |
+| A1 | medium | ... | e.g. dominant at the phrase end |
+| B/detour | high | ... | e.g. chromatic note, close voicing |
+| A3 | medium→low | ... | e.g. back to the tonic |
+| Outro | low | ... | e.g. rest, tonic, descending register |
 
-Rencana "tinggi" tapi realisasi datar (semua tonic/rest/register rendah) =
-sinyal revisi di level menengah/kecil (Modul 5) — tambahkan device yang
-sesuai (Modul 3), bukan mengubah bentuk lagu. Kesalahan umum yang ditangkap
-alat ini: section "tegang" ditulis dengan kosakata "release" semua; klimaks
-yang tak pernah dipersiapkan; resolusi yang tak pernah tercapai (tension
-menumpuk tanpa rest/tonic yang cukup untuk melepaskannya).
+Plan says "high" but the realization is flat (all tonic/rest/low register)
+= a signal to revise at the medium/small level (Module 5) — add the
+appropriate device (Module 3), not change the song form. Common mistakes
+this tool catches: a "tense" section written entirely in "release"
+vocabulary; a climax that was never prepared; a resolution never reached
+(tension piling up without enough rest/tonic to release it).
 
-## Modul 7 — Protokol verifikasi terukur (adaptasi pipeline paket ini)
+## Module 7 — Measurable verification protocol (adapted to this package's pipeline)
 
-Sumber asli (`compose-song`) menulis protokol ini untuk pipeline JS
-internalnya sendiri (`fromComposition`/`realize`/`toMidi`/`POST /api/render`
-milik repo `daw_generative`). Paket `music-composition-skill` ini **tidak**
-memiliki pipeline itu — hilir paket ini adalah engine `daw_generative`
-(pemakai eksternal, lewat kontrak `POST /api/render {abc, drums?,
-mastering?}`) **atau** konverter music21/`pretty_midi` milik paket ini sendiri
-(`abc-notation-writer/scripts/validate_abc.py` →
-`abc-to-midi-orchestration/scripts/abc_to_midi.py` +
-`grid_to_midi.py`) menuju BandLab/DAW eksternal. Prinsip dan bentuk
-pengecekan tetap sama; berikut adaptasinya:
+The original source (`compose-song`) wrote this protocol for its own
+internal JS pipeline (`fromComposition`/`realize`/`toMidi`/`POST /api/render`
+of the `daw_generative` repo). This `music-composition-skill` package does
+**not** have that pipeline — this package's downstream is the `daw_generative`
+engine (an external consumer, via the `POST /api/render {abc, drums?,
+mastering?}` contract) **or** this package's own music21/`pretty_midi`
+converters (`abc-notation-writer/scripts/validate_abc.py` →
+`abc-to-midi-orchestration/scripts/abc_to_midi.py` + `grid_to_midi.py`)
+toward BandLab/an external DAW. The principle and shape of the checks stay
+the same; here is the adaptation:
 
-1. **Validasi mekanis** (wajib, mengganti "note-on velocity>0 di canonical
-   Song"): `validate_abc.py` (struktur, durasi bar, tie/slur) dan, bila
-   music21 tersedia, `music21.converter.parse` — ini gerbang keras sebelum
-   lanjut ke orchestration (lihat `abc-notation-writer/SKILL.md` Step 4).
-2. **MIDI hasil merge** (menggantikan cek WAV stereo non-silent bila hilir
-   BUKAN `daw_generative`): setelah `abc_to_midi.py` + `grid_to_midi.py` +
-   merge (`abc-to-midi-orchestration/references/midi-conversion.md`), cek
-   sync antar-track, lead mono (polifoni maks 1), dan tidak ada drone
-   (chord-symbol ter-strip) — checklist ini sudah ada di
-   `midi-conversion.md` dan WAJIB dijalankan, bukan diasumsikan lolos karena
-   file `.mid` ada.
-3. **Durasi vs bentuk lagu:** hitung ekspektasi (`bars × beatsPerBar × 60 /
-   bpm`) dan bandingkan dengan durasi MIDI/WAV aktual. Selisih besar → bar
-   count per section di ABC (atau di drum grid) tidak sesuai rencana —
-   kembali ke `jazz-idea-generator`/`abc-notation-writer`, bukan "lewati".
-4. **Densitas per track vs density ceiling genre:** hitung proporsi waktu
-   tiap track aktif (bukan rest) per section, bandingkan dengan density
-   ceiling genre (lihat `neo-soul-genre.md` — mis. ≤1 foreground voice pada
-   satu waktu). Ini menangkap "benar teori tapi penuh" yang tak tertangkap
-   validator mekanis — kembali ke Modul 4 Lensa 2/3 kalau gagal.
-5. **Tabrakan register lead vs comping:** bandingkan rentang MIDI note lead
-   vs comping per section; overlap besar saat keduanya aktif = indikasi
-   masking — perbaikan lewat omit-root voicing/register shift (Modul 3).
-6. **Kalau hilir = `daw_generative` engine:** server itu sudah menjalankan
-   `assertAudible` sendiri saat `POST /api/render` (200 = lolos cek
-   silent/durasi minimal server-side). Status 200 dari server **bukan**
-   pengganti poin 3-5 di atas — itu cuma memastikan tidak bisu total.
+1. **Mechanical validation** (mandatory, replacing "note-on velocity>0 in the
+   canonical Song"): `validate_abc.py` (structure, bar durations, ties/slurs)
+   and, when music21 is available, `music21.converter.parse` — this is the
+   hard gate before moving on to orchestration (see
+   `abc-notation-writer/SKILL.md` Step 4).
+2. **Merged MIDI** (replacing the non-silent stereo WAV check when the
+   downstream is NOT `daw_generative`): after `abc_to_midi.py` +
+   `grid_to_midi.py` + merge
+   (`abc-to-midi-orchestration/references/midi-conversion.md`), check
+   inter-track sync, mono lead (max polyphony 1), and no drone (chord symbols
+   stripped) — this checklist is already in `midi-conversion.md` and MUST be
+   run, not assumed to pass because a `.mid` file exists.
+3. **Duration vs. song form:** compute the expectation (`bars × beatsPerBar ×
+   60 / bpm`) and compare with the actual MIDI/WAV duration. A large gap →
+   the per-section bar count in the ABC (or the drum grid) doesn't match the
+   plan — go back to `jazz-idea-generator`/`abc-notation-writer`, don't "skip
+   it".
+4. **Per-track density vs. genre density ceiling:** compute the proportion of
+   time each track is active (not resting) per section, compare with the
+   genre density ceiling (see the `neo-soul-genre` skill — e.g. ≤1 foreground
+   voice at a time). This catches "theory-correct but overfull" that the
+   mechanical validator misses — go back to Module 4 Lens 2/3 if it fails.
+5. **Lead vs. comping register collision:** compare the lead's MIDI note range
+   vs. the comping's per section; a large overlap while both are active =
+   a masking indicator — fix via omit-root voicing/register shift (Module 3).
+6. **If downstream = the `daw_generative` engine:** that server already runs
+   its own `assertAudible` at `POST /api/render` (200 = passed the server-side
+   silent/minimum-duration check). A 200 from the server is **not** a
+   substitute for points 3-5 above — it only confirms it isn't dead silent.
 
-**Yang TIDAK bisa dilakukan agent** (berlaku di paket ini juga, tanpa
-kecuali): menilai apakah lagu "enak"/"menyentuh"/"sesuai vibe" secara
-subjektif; mendengarkan tanpa bias ekspektasi teori; menangkap elemen yang
-"berlebihan/mengganggu" meski lolos semua cek teoretis. Itu wewenang
-manusia — konsisten dengan prinsip "Telinga dulu, metrik menyusul" di
-`CLAUDE.md` proyek `daw_generative`. Keberadaan file `.mid`/`.wav` **bukan**
-bukti sukses, hanya bukti pipeline jalan tanpa crash. Skill ini (dan skill
-lain di paket ini) **DILARANG** mengklaim "enak"/"bagus"/"keren" — klaim
-maksimal yang boleh: *"lolos teori + metrik terukur sehat, menunggu telinga
-manusia."*
+**What the agent CANNOT do** (applies to this package too, no exceptions):
+judge subjectively whether the piece is "enjoyable"/"moving"/"on-vibe";
+listen without theory-expectation bias; catch elements that are
+"excessive/distracting" even when they pass every theoretical check. That is
+a human's authority — consistent with the "Ear first, metrics follow"
+principle in the `daw_generative` project's `CLAUDE.md`. The existence of a
+`.mid`/`.wav` file is **not** proof of success, only proof the pipeline ran
+without crashing. This skill (and the others in this package) is
+**FORBIDDEN** to claim "enjoyable"/"good"/"cool" — the strongest allowed
+claim: *"passes theory + measured metrics are healthy, awaiting a human ear."*
 
-## Kaitan dengan file lain di paket ini
+## Relation to the other files in this package
 
-- Modul 1-2 dipakai bersamaan dengan `ideation-theory.md` §4b (dramatic arc)
-  saat Step 1-2 `jazz-idea-generator/SKILL.md`.
-- Modul 3-5 dipakai saat Step 3 (generate candidates) dan mengikat bagaimana
-  kandidat dibedakan secara struktural, bukan hanya kosmetik.
-- Modul 4 dan 6 bersama-sama menjadi isi konkret Step 5 (quality gate) —
-  gate itu sudah ada di `SKILL.md`, modul ini memberinya alat yang bisa
-  dijalankan secara eksplisit, bukan sekadar "dengar apakah enak".
-- Modul 7 relevan lagi setelah `abc-notation-writer` dan
-  `abc-to-midi-orchestration` bekerja — dicatat di sini karena kerangka
-  pertanyaannya berasal dari proses penalaran yang sama, meski eksekusi
-  teknisnya ada di skill selanjutnya.
+- Modules 1-2 are used together with `ideation-theory.md` §4b (dramatic arc)
+  during Steps 1-2 of `jazz-idea-generator/SKILL.md`.
+- Modules 3-5 are used at Step 3 (generate candidates) and bind how
+  candidates are differentiated structurally, not just cosmetically.
+- Modules 4 and 6 together become the concrete content of Step 5 (quality
+  gate) — that gate already exists in `SKILL.md`; these modules give it tools
+  that can be run explicitly, not just "listen for whether it's good".
+- Module 7 is relevant again after `abc-notation-writer` and
+  `abc-to-midi-orchestration` have run — noted here because its question
+  framework comes from the same reasoning process, even though the technical
+  execution lives in the later skills.

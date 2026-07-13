@@ -1,12 +1,20 @@
 # music-composition-skill — operating instructions
 
-This package is three Agent Skills meant to be read and run **in this
-order** for any composition task — never skip ahead or run them out of
-order:
+This package is a set of Agent Skills. Three of them are a **pipeline** meant
+to be read and run **in this order** for any composition task — never skip
+ahead or run them out of order:
 
 1. `jazz-idea-generator/SKILL.md` — brief → locked `composition-plan.json`
 2. `abc-notation-writer/SKILL.md` — plan → validated ABC
 3. `abc-to-midi-orchestration/SKILL.md` — ABC → arranged, DAW-ready MIDI
+
+Two more are **capability skills** — cross-cutting knowledge invoked *as
+needed* by the pipeline steps, not stages of their own:
+
+- `groove-design/SKILL.md` — pocket profiles, microtiming, meter/feel (used by
+  both step 1, picking a profile, and step 3, applying it)
+- `neo-soul-genre/SKILL.md` — the neo-soul / chill-jazz genre profile (used at
+  step 1 when that's the target style)
 
 See `README.md` for the architecture/positioning (this package is Tool 1,
 "the brain"; rendering to audio is a separate downstream engine) and

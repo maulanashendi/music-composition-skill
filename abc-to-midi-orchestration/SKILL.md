@@ -37,7 +37,7 @@ Ensure the ABC reflects the interaction map: silent voices have rests for those 
 
 Drums stay out of ABC (they're not pitched). Write them as a step-grid JSON — see `assets/drum-grid-template.json`. Critical: **the grid's total bars must match the ABC's total bars**, section for section, or the drums and the band drift out of sync. Build the grid section-by-section from the same plan so the bar counts line up. Let the drums follow the arc: minimal in quiet sections, full in the peak, fading at the end.
 
-For the actual pocket (per-role tick offsets, gate ratios) instead of inventing numbers ad hoc, read `references/groove-profiles.md` — it distills `references/advanced-microtiming.md` into a named, reusable profile (`neo-soul-core`) that both this grid and the downstream engine can implement consistently. Pick a profile; don't re-derive ticks per song. Declare the choice in the ABC itself as a directive, `%%pocket <id>` (e.g. `%%pocket neo-soul-core`) in the tune header before the first voice, so the downstream engine picks the matching groove profile — the brain's job is to *pick* a profile by name, never to write per-note tick numbers into the ABC.
+For the actual pocket (per-role tick offsets, gate ratios) instead of inventing numbers ad hoc, use the **`groove-design`** skill — its `groove-profiles.md` distills the microtiming principles into a named, reusable profile (`neo-soul-core`) that both this grid and the downstream engine can implement consistently. Pick a profile; don't re-derive ticks per song. Declare the choice in the ABC itself as a directive, `%%pocket <id>` (e.g. `%%pocket neo-soul-core`) in the tune header before the first voice, so the downstream engine picks the matching groove profile — the brain's job is to *pick* a profile by name, never to write per-note tick numbers into the ABC.
 
 ### Step 5 — Convert and merge
 
@@ -53,7 +53,7 @@ python3 scripts/abc_to_midi.py <file.abc> pitched.mid      # per-voice pitched t
 python3 scripts/grid_to_midi.py <drums.json> drums.mid      # channel-10 drum track w/ swing + humanize
 ```
 
-Then merge (append the drum track to the pitched PrettyMIDI object and write once). Verify: each track's end time is roughly equal (sync check), the lead track's max polyphony is 1 (mono check), and total bars match the plan. If the lead runs long-note drones, the chord-strip step was skipped — fix and re-render. If the meter, subdivision, or swing feel itself is in question (odd meter, clave, shuffle vs. straight-16th, etc.), `references/groove-meter.md` is the deeper reference; for a full pre-delivery audit across form, transitions, groove, harmony, voicing, melody, and more, run `references/quality-control.md` before Step 6.
+Then merge (append the drum track to the pitched PrettyMIDI object and write once). Verify: each track's end time is roughly equal (sync check), the lead track's max polyphony is 1 (mono check), and total bars match the plan. If the lead runs long-note drones, the chord-strip step was skipped — fix and re-render. If the meter, subdivision, or swing feel itself is in question (odd meter, clave, shuffle vs. straight-16th, etc.), the **`groove-design`** skill's `meter-and-feel.md` is the deeper reference; for a full pre-delivery audit across form, transitions, groove, harmony, voicing, melody, and more, run `references/quality-control.md` before Step 6.
 
 ### Step 6 — Deliver
 
@@ -67,12 +67,10 @@ This package's converters (BandLab or any external DAW) are the **alternative** 
 |---|---|---|
 | `references/interaction-map.md` | **default, Step 2** | lead/support/answer/silent per section, call-and-response, subtraction, density that tracks the arc; the quality gate. The role/density home other files point back to |
 | `references/midi-conversion.md` | **Step 5** | the converters, the two mandatory bug-fixes (chord-strip, mono-lead), GM mapping, swing/humanization, sync/mono checks |
-| `references/groove-profiles.md` | Step 4 | the canonical **numeric** pocket table (`neo-soul-core`: per-role tick offsets, gate ratios) — pick a profile, don't invent numbers |
-| `references/advanced-microtiming.md` | pocket needs justifying beyond a profile | the canonical **"why"** behind pocket/velocity/gate (reference layer, bounded offsets, profiles) |
+| the **`groove-design`** skill | Step 4 — pocket, feel, or any non-4/4 meter | named pocket profiles (`neo-soul-core`: tick offsets, gate ratios), microtiming principles, and meter/subdivision/swing/clave/odd-meter |
 | `references/ensemble-interaction.md` | the four-role map needs more nuance | deeper performance practice (duo/trio/big-band, trading, cue systems) — reduce back to the map's table |
 | `references/instrumental-transitions.md` | a section boundary needs more than a bare cut | transition families, durations, source-target analysis |
 | `references/exact-voicing.md` | exact register/attack detail is needed (lofi, neo-soul, smooth jazz) | pitch/voice-leading in scientific pitch notation; convert to ABC octave marks |
-| `references/groove-meter.md` | meter/subdivision/feel beyond straight 4/4 | swing, clave, odd meter, polyrhythm |
 | `references/quality-control.md` | before Step 6 | the pre-delivery **/64 rubric and report template** (audits point to each canonical file above) |
 | `scripts/abc_to_midi.py` | Step 5 | multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead) |
 | `scripts/grid_to_midi.py` | Step 5 | drum step-grid → channel-10 MIDI with swing + humanization |

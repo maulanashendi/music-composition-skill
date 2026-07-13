@@ -51,7 +51,8 @@ The arc decides how quiet the verse is, how the pre-chorus builds, whether the c
 | Read this | Only when |
 |---|---|
 | `references/reasoning-theory.md` Module 2 (theory-hierarchy gate), then Module 3's device catalog as needed | before locking a candidate's vocabulary — declare one main theory + supporting harmony/melody/texture/groove; it constrains which devices are usable without extra justification |
-| `references/neo-soul-genre.md` | the target style is neo-soul / chill-jazz (musical DNA, roles, arrangement architecture for that family) |
+| the **`neo-soul-genre`** skill | the target style is neo-soul / chill-jazz (musical DNA, roles, arrangement architecture for that family) |
+| the **`groove-design`** skill | the groove/pocket feel matters (it usually does) — name a profile like `neo-soul-core`; don't derive ticks |
 | `references/form-and-dramaturgy.md` | a bar-count or formal-family decision needs more depth than `ideation-theory.md` §7 gives |
 | `references/loop-development.md` | the form is loop-centered (lofi, jazzhop, groove-first) |
 
@@ -103,10 +104,11 @@ Read the default core; pull a deep file only when its trigger is met (see Step 3
 | `references/ideation-theory.md` | **default, every brief** (Step 3) | the compact working vocabulary — and the **dramatic arc & tension-release** (§4b–4c), the home other files point back to |
 | `references/style-cheatsheets.md` | **default** — only the target style's entry | per-style quick reference |
 | `references/reasoning-theory.md` | by module: Module 1 at Step 2, Module 2 (+3) at Step 3, Modules 4 & 6 at Step 5, Module 7 downstream | mood→parameter, theory-hierarchy gate + device catalog, compatibility/leadership/tension evaluation, verification |
-| `references/neo-soul-genre.md` | style is neo-soul / chill-jazz (Step 3) | that genre's DNA and architecture; defers to `groove-profiles.md` / `interaction-map.md` for pocket & roles |
 | `references/form-and-dramaturgy.md` | a form/bar-count call needs more than `ideation-theory.md` §7 | deeper form mechanics (formal families, cadence, solo/intro/ending) |
 | `references/loop-development.md` | the form is loop-centered | loop DNA, mutation classes, development timescales |
 | `assets/composition-plan-template.json` | Step 6 | the output contract — copy and fill |
+
+**Related capability skills** (separate skills, invoked as needed at Step 3, not files here): the **`neo-soul-genre`** skill for that genre's DNA/roles/architecture, and the **`groove-design`** skill for the pocket profile (`neo-soul-core`) and meter/feel.
 
 ## Default assumptions
 

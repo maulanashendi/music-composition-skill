@@ -25,6 +25,16 @@ jazz-idea-generator  →  abc-notation-writer  →  abc-to-midi-orchestration
    supports/answers/is silent, per section), writes the drum step-grid, and
    converts validated ABC + drum grid into a merged multi-track MIDI.
 
+Plus two **capability skills** — cross-cutting knowledge the pipeline invokes
+as needed, not stages of their own:
+
+- **`groove-design`** — pocket profiles (`neo-soul-core`: tick offsets, gate
+  ratios), microtiming principles, and meter/subdivision/feel. Used at both
+  ideation (name a profile) and orchestration (apply it to the drum grid).
+- **`neo-soul-genre`** — the concrete neo-soul / chill-jazz genre profile
+  (musical DNA, anchor/rotation/ear-candy roles, arrangement architecture).
+  Used at ideation when that's the target style.
+
 ## Artifact flow
 
 ```
@@ -77,15 +87,16 @@ this package became the single source of composition truth:
   (English references) covering advanced microtiming, exact voicing,
   instrumental transitions, ensemble interaction, groove/meter, form and
   dramaturgy, loop development, and a comprehensive quality-control audit.
-- **`compose-song`** — a Claude Code skill (Indonesian references) covering
-  9 theory-reasoning modules (mood→parameter, theory-hierarchy declaration,
-  cause-effect device catalog, compatibility review, structural levels,
-  tension/release, ear-test protocol) plus a neo-soul/chill-jazz genre
-  profile.
+- **`compose-song`** — a Claude Code skill (originally Indonesian references,
+  since translated to English) covering 9 theory-reasoning modules
+  (mood→parameter, theory-hierarchy declaration, cause-effect device catalog,
+  compatibility review, structural levels, tension/release, ear-test protocol)
+  plus a neo-soul/chill-jazz genre profile.
 
-Both sources' substance now lives in `jazz-idea-generator/references/` and
-`abc-to-midi-orchestration/references/`, adapted to this package's own
-doctrine and pipeline (see each skill's `SKILL.md` for exactly where each
-file is read in the workflow). Drums are **always** a step-grid JSON in this
-package — never an ABC `%%MIDI drummap` voice — regardless of which source
-a given reference file was adapted from.
+Both sources' substance now lives across the pipeline skills'
+`references/` folders **and** the two capability skills (`groove-design` holds
+the microtiming/groove-profiles/meter material; `neo-soul-genre` holds the
+genre profile), adapted to this package's own doctrine and pipeline (see each
+`SKILL.md` for exactly where each file is read). All references are English.
+Drums are **always** a step-grid JSON in this package — never an ABC
+`%%MIDI drummap` voice — regardless of which source a file was adapted from.
