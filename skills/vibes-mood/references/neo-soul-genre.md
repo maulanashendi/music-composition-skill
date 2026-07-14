@@ -32,8 +32,8 @@ Nilai-nilai ini adalah titik mulai, bukan hukum — sesuaikan dengan brief vibe
 selama tetap dalam keluarga neo-soul/chill-jazz. Bila hilir akhir adalah
 engine `daw_generative` (`POST /api/render`), catat bahwa engine itu saat ini
 hanya merealisasi `4/4` — cek dulu sebelum menjanjikan meter lain di plan;
-konverter music21 milik paket ini sendiri (`abc-to-midi-orchestration`) tidak
-punya batasan itu.
+konverter music21 milik paket ini sendiri (modul `midi-orchestration`, dulu
+`abc-to-midi-orchestration`) tidak punya batasan itu.
 
 ## 1. Vibe map (lensa genre)
 
@@ -68,8 +68,9 @@ Urutan pengerjaan (selaras Modul 5 `reasoning-theory.md`, level menengah→kecil
    gerak melodi** — cek katalog sebab-akibat (`reasoning-theory.md` Modul 3)
    untuk mengapa tiap device.
 5. Voicing dengan inner-voice halus (detail konkret voicing/register/attack
-   ada di `abc-to-midi-orchestration/references/exact-voicing.md`, dikerjakan
-   di skill itu — di sini cukup putuskan *warna dan gerak*, bukan pitch
+   ada di `skills/harmony/references/voicing-systems.md` — dulu
+   `abc-to-midi-orchestration/references/exact-voicing.md` — dikerjakan
+   di modul itu — di sini cukup putuskan *warna dan gerak*, bukan pitch
    pastinya).
 6. Uji melodi di atas voicing; revisi chord yang melawan motif.
 
@@ -118,17 +119,20 @@ saat lead istirahat · koordinasi dengan kick tanpa mirror tiap hit.
 
 **Pocket rule:** jangan humanize acak tiap nada — tetapkan relasi konsisten.
 Angka konkret pocket (offset tick per peran, gate ratio) sudah dibakukan di
-`abc-to-midi-orchestration/references/groove-profiles.md` sebagai profil
+`skills/groove-rhythm/references/groove-profiles.md` (dulu
+`abc-to-midi-orchestration/references/groove-profiles.md`) sebagai profil
 `neo-soul-core` — otak komposisi di sini cukup **memilih profil itu**, bukan
 menghitung ulang ticks per not. Selesai bila groove tetap terasa disengaja
 saat hanya drum + bass + voicing chord paling sederhana yang terdengar.
 
 **Doktrin drum paket ini (mengikat, tidak bisa disimpangi per-genre):**
 drum **SELALU** direpresentasikan sebagai step-grid JSON
-(`abc-to-midi-orchestration/assets/drum-grid-template.json`), **TIDAK
+(`skills/midi-orchestration/assets/drum-grid-template.json`, dulu
+`abc-to-midi-orchestration/assets/drum-grid-template.json`), **TIDAK
 PERNAH** sebagai voice ABC `clef=perc`/`%%MIDI drummap`. ABC di paket ini
 hanya untuk suara berpitch (lead, keys, bass) — lihat
-`abc-notation-writer/references/drums-and-abc.md`. Ini beda dari repo
+`skills/abc-notation/references/drums-and-abc.md` (dulu
+`abc-notation-writer/references/drums-and-abc.md`). Ini beda dari repo
 `compose-song` sumber adaptasi (yang punya opsi ABC `clef=perc` di engine
 `daw_generative`-nya sendiri); jangan bawa opsi itu ke paket ini.
 
@@ -146,8 +150,9 @@ dibagi lintas performer; artikulasi tiap instrumen distinct (gitar bisa
 bend/muted attack, synth sustain, piano jawaban ritmis, sax/flute pakai
 napas/curve panjang). Selesai bila tiap lead punya alasan masuk, alasan
 keluar, dan relasi ke motif pusat. Eksekusi konkretnya (siapa main di bar
-mana) adalah interaction map — job `abc-to-midi-orchestration` Step 2; di
-sini cukup rencanakan pola rotasinya.
+mana) adalah interaction map — job modul `midi-orchestration` (dulu
+`abc-to-midi-orchestration`) Step 2; di sini cukup rencanakan pola
+rotasinya.
 
 ## 7. Variasi terkontrol
 

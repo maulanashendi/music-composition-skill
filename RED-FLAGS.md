@@ -1,6 +1,6 @@
 # Red flags — common excuses vs. reality
 
-Shared across all three skills. When you catch yourself thinking one of the
+Shared across the `jazz-composition` orchestrator and its 8 modules. When you catch yourself thinking one of the
 excuses below, stop and check the reality column before delivering.
 
 | Excuse (what you might tell yourself) | Reality (what's actually true) | Where to check |

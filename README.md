@@ -1,7 +1,8 @@
 # music-composition-skill
 
 **Tool 1 ("the brain") in the 2-tools architecture.** This package is a
-portable, three-skill Agent Skills bundle that turns a brief, mood, or scene
+portable Agent Skills bundle — a single `jazz-composition` orchestrator plus
+8 supporting modules — that turns a brief, mood, or scene
 into a locked musical idea, encodes it as valid ABC notation, and arranges +
 converts it to a DAW-ready multi-track MIDI. It is deliberately independent
 of any one engine or app — it reasons about music and hands off two
@@ -53,8 +54,9 @@ run folder (progress.md, 01-brief.md … 14-review.md)  →  song.abc + drums.js
 Consumers are LLM/agent surfaces, not a single app: **Claude Code** (running
 these skills directly), **GPT** or another chat LLM (via a flattened
 composer-pack-style prompt), and **Hermes** (agent runtime). None of them
-need API access to a specific engine to use this package — the three skills
-are self-contained reasoning + validation + conversion steps.
+need API access to a specific engine to use this package — the orchestrator
+and its 8 modules are self-contained reasoning + validation + conversion
+steps.
 
 ## Downstream (rendering)
 

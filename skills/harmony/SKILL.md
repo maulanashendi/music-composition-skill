@@ -137,7 +137,8 @@ besar terbaca berani atau naif tergantung intent.
 
 > Pitches di `references/voicing-systems.md` pakai **scientific pitch
 > notation** (middle C = `C4`), bukan notasi oktaf ABC. Saat menerjemahkan
-> voicing ke ABC yang ditulis `abc-notation-writer`, konversi eksplisit: `C`
+> voicing ke ABC yang ditulis modul `abc-notation` (dulu
+> `abc-notation-writer`), konversi eksplisit: `C`
 > tanpa tanda di ABC = `C4`, tiap koma menurunkan satu oktaf (`C,` = `C3`,
 > `C,,` = `C2`), tiap apostrof menaikkan satu (`c'` = `C6`, dengan `c`
 > huruf kecil = `C5`). Pakai referensi ini untuk memutuskan *pitch dan jalur

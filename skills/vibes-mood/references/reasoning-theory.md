@@ -2,8 +2,10 @@
 
 Dirangkum dan diadaptasi dari skill Claude Code `compose-song` (konsolidasi
 2026-07-13). Sumber aslinya punya 9 modul penalaran yang mengikat proses
-komposisi *sebelum* nada ditulis; file ini merangkumnya untuk `jazz-idea-generator`
-tanpa mengubah workflow enam-langkah yang sudah ada di `SKILL.md` — anggap
+komposisi *sebelum* nada ditulis; file ini merangkumnya untuk orchestrator
+`jazz-composition` (workflow lama `jazz-idea-generator` kini bagian dari
+`jazz-composition`/`vibes-mood`) tanpa mengubah workflow enam-langkah yang
+sudah ada di `SKILL.md` — anggap
 tujuh modul di bawah sebagai *perkakas tambahan* yang dipakai di dalam Step 2
 (brief & mood), Step 3 (generate candidates), dan Step 5 (quality gate),
 berdampingan dengan `ideation-theory.md` dan `style-cheatsheets.md`. Profil
@@ -169,13 +171,13 @@ otomatis ganti bentuk lagu. Naikkan level revisi hanya bila masalah muncul
 konsisten di banyak section (pola, bukan satu titik), dan lakukan itu secara
 sadar (nyatakan eksplisit alasannya).
 
-Di `jazz-idea-generator`, ini berarti: Step 2-3 mengerjakan level besar
-(arc, bentuk, tonal center) lebih dulu; bar-by-bar chords (Step 3 poin 3) dan
-phrasing (poin 6) adalah level menengah; voicing konkret nota-per-nota adalah
-level kecil yang sengaja **ditunda** ke `abc-notation-writer`/
-`abc-to-midi-orchestration` (lihat catatan "production-stage" di §Workflow
-Step 3 SKILL.md ini) — pemisahan itu konsisten dengan aturan "besar dulu"
-di sini.
+Di alur `jazz-idea-generator` lama (kini `jazz-composition` + `vibes-mood`),
+ini berarti: Step 2-3 mengerjakan level besar (arc, bentuk, tonal center)
+lebih dulu; bar-by-bar chords (Step 3 poin 3) dan phrasing (poin 6) adalah
+level menengah; voicing konkret nota-per-nota adalah level kecil yang
+sengaja **ditunda** ke modul `abc-notation`/`midi-orchestration` (lihat
+catatan "production-stage" di §Workflow Step 3 SKILL.md ini) — pemisahan
+itu konsisten dengan aturan "besar dulu" di sini.
 
 ## Modul 6 — Tension & release sebagai alat evaluasi
 
@@ -221,18 +223,20 @@ milik repo `daw_generative`). Paket `music-composition-skill` ini **tidak**
 memiliki pipeline itu — hilir paket ini adalah engine `daw_generative`
 (pemakai eksternal, lewat kontrak `POST /api/render {abc, drums?,
 mastering?}`) **atau** konverter music21/`pretty_midi` milik paket ini sendiri
-(`abc-notation-writer/scripts/validate_abc.py` →
-`abc-to-midi-orchestration/scripts/abc_to_midi.py` +
-`grid_to_midi.py`) menuju BandLab/DAW eksternal. Prinsip dan bentuk
+(`skills/abc-notation/scripts/validate_abc.py` →
+`skills/midi-orchestration/scripts/abc_to_midi.py` +
+`grid_to_midi.py`, dulu `abc-notation-writer`/`abc-to-midi-orchestration`)
+menuju BandLab/DAW eksternal. Prinsip dan bentuk
 pengecekan tetap sama; berikut adaptasinya:
 
 1. **Validasi mekanis** (wajib, mengganti "note-on velocity>0 di canonical
    Song"): `validate_abc.py` (struktur, durasi bar, tie/slur) dan, bila
    music21 tersedia, `music21.converter.parse` — ini gerbang keras sebelum
-   lanjut ke orchestration (lihat `abc-notation-writer/SKILL.md` Step 4).
+   lanjut ke orchestration (lihat `skills/abc-notation/SKILL.md`, dulu
+   `abc-notation-writer/SKILL.md` Step 4).
 2. **MIDI hasil merge** (menggantikan cek WAV stereo non-silent bila hilir
    BUKAN `daw_generative`): setelah `abc_to_midi.py` + `grid_to_midi.py` +
-   merge (`abc-to-midi-orchestration/references/midi-conversion.md`), cek
+   merge (`skills/midi-orchestration/references/midi-conversion.md`), cek
    sync antar-track, lead mono (polifoni maks 1), dan tidak ada drone
    (chord-symbol ter-strip) — checklist ini sudah ada di
    `midi-conversion.md` dan WAJIB dijalankan, bukan diasumsikan lolos karena
@@ -240,7 +244,8 @@ pengecekan tetap sama; berikut adaptasinya:
 3. **Durasi vs bentuk lagu:** hitung ekspektasi (`bars × beatsPerBar × 60 /
    bpm`) dan bandingkan dengan durasi MIDI/WAV aktual. Selisih besar → bar
    count per section di ABC (atau di drum grid) tidak sesuai rencana —
-   kembali ke `jazz-idea-generator`/`abc-notation-writer`, bukan "lewati".
+   kembali ke `jazz-composition`/`abc-notation` (dulu
+   `jazz-idea-generator`/`abc-notation-writer`), bukan "lewati".
 4. **Densitas per track vs density ceiling genre:** hitung proporsi waktu
    tiap track aktif (bukan rest) per section, bandingkan dengan density
    ceiling genre (lihat `neo-soul-genre.md` — mis. ≤1 foreground voice pada
@@ -267,14 +272,16 @@ manusia."*
 
 ## Kaitan dengan file lain di paket ini
 
-- Modul 1-2 dipakai bersamaan dengan `ideation-theory.md` §4b (dramatic arc)
-  saat Step 1-2 `jazz-idea-generator/SKILL.md`.
+- Modul 1-2 dipakai bersamaan dengan `ideation-theory.md` §4b lama (kini
+  `skills/arrangement/references/form-and-dramaturgy.md` §11a) saat Step 1-2
+  dari `jazz-composition/SKILL.md` (dulu `jazz-idea-generator/SKILL.md`).
 - Modul 3-5 dipakai saat Step 3 (generate candidates) dan mengikat bagaimana
   kandidat dibedakan secara struktural, bukan hanya kosmetik.
 - Modul 4 dan 6 bersama-sama menjadi isi konkret Step 5 (quality gate) —
   gate itu sudah ada di `SKILL.md`, modul ini memberinya alat yang bisa
   dijalankan secara eksplisit, bukan sekadar "dengar apakah enak".
-- Modul 7 relevan lagi setelah `abc-notation-writer` dan
-  `abc-to-midi-orchestration` bekerja — dicatat di sini karena kerangka
+- Modul 7 relevan lagi setelah `abc-notation` dan `midi-orchestration`
+  (dulu `abc-notation-writer`/`abc-to-midi-orchestration`) bekerja —
+  dicatat di sini karena kerangka
   pertanyaannya berasal dari proses penalaran yang sama, meski eksekusi
   teknisnya ada di skill selanjutnya.

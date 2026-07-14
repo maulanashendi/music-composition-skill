@@ -3,8 +3,9 @@
 > Adapted from `jazz-composition-designer` (archived portable skill package,
 > consolidated 2026-07-13). Pitches here use **scientific pitch notation**
 > (middle C = `C4`), which is not this package's ABC pitch notation. When
-> translating a voicing into the ABC written by `abc-notation-writer`
-> (`references/abc-syntax.md`), convert explicitly: ABC's unmarked uppercase
+> translating a voicing into the ABC written by the `abc-notation` module
+> (`skills/abc-notation/references/abc-syntax.md`; called `abc-notation-writer`
+> before the restructure), convert explicitly: ABC's unmarked uppercase
 > `C` = `C4`, each comma lowers an octave (`C,` = `C3`, `C,,` = `C2`), and
 > each apostrophe raises one (`c'` = `C6`, where lowercase `c` = `C5`). Use
 > this reference to decide *which* pitches and voice-leading path to write;

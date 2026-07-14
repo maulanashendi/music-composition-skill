@@ -5,7 +5,8 @@
 > brief is loop-centered (lofi, jazzhop, neo-soul, groove-first) — it defines
 > loop DNA, mutation classes, and development timescales at idea stage. The
 > concrete mutation *execution* (voicing state, exact drum-grid changes,
-> transitions) is `abc-to-midi-orchestration`'s job once the plan is locked —
+> transitions) is the `midi-orchestration` module's job (named
+> `abc-to-midi-orchestration` before the restructure) once the plan is locked —
 > this file decides *what should vary and when*, not the exact notes.
 
 ## Contents

@@ -2,7 +2,8 @@
 
 > Adapted from `jazz-composition-designer` (archived portable skill package,
 > consolidated 2026-07-13). Use this at Step 2 (interaction map) and Step 4
-> (drum grid) of `abc-to-midi-orchestration/SKILL.md` whenever a section
+> (drum grid) of `skills/midi-orchestration/SKILL.md` (this module was named
+> `abc-to-midi-orchestration` before the restructure) whenever a section
 > boundary needs more than a bare cut — it catalogs transition families,
 > durations, and the source-target analysis that decides which family fits.
 > Section-boundary handling here should agree with the interaction map's

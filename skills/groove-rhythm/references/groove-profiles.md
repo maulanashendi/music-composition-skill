@@ -55,7 +55,8 @@ change with tempo.
 
 - **Pitched voices (ABC).** `advanced-microtiming.md` distinguishes *notated
   displacement* (written rhythm) from *performance placement* (the offsets
-  above). ABC written by `abc-notation-writer` stays on notated rhythm;
+  above). ABC written by the `abc-notation` module (dulu `abc-notation-writer`)
+  stays on notated rhythm;
   performance placement is not written into the ABC itself — state the
   chosen profile as a **directive**, not a comment: `%%pocket neo-soul-core`
   on its own line in the tune header, before the first `V:` voice. That is a
@@ -87,8 +88,9 @@ change with tempo.
 
 ## Choosing vs. deriving
 
-The composing brain (`jazz-idea-generator` at idea stage, or a human
-directing `abc-to-midi-orchestration`) should **select** a named profile —
+The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
+`jazz-idea-generator` — or a human directing the `midi-orchestration`
+module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
 currently only `neo-soul-core` is defined here — rather than invent new
 per-role tick numbers ad hoc. A genuinely different pocket (e.g. a tight
 acoustic-swing profile, per `advanced-microtiming.md` §9 "Tight acoustic or
