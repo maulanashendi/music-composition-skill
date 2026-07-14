@@ -93,7 +93,7 @@ A2
 
 ## Gate — ask, don't guess
 
-- "The chorus should basically repeat the verse — it's a loop, that's fine." → A dramatic arc that never changes isn't an arc. Verse and chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.
+- "Chorus tinggal ulang verse aja — kan emang loop, gak masalah." (alasan yang ditolak, lihat RED-FLAGS.md) → Arc dramatis yang tidak pernah berubah bukan arc. Verse dan chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
 ## Modul pendalaman

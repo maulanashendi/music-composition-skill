@@ -28,7 +28,7 @@ Drum roadmap, bukan notasi penuh pada tahap awal.
 
 ## Gate — ask, don't guess
 
-- "The drum grid and the ABC don't line up bar-for-bar, but it's close enough." → Close enough drifts into audible desync seiring lagu berjalan. Jumlah bar antara drum step-grid dan ABC harus persis sama, section demi section.
+- "Drum grid dan ABC gak pas persis bar-per-bar, tapi udah cukup dekat kok." (alasan yang ditolak, lihat RED-FLAGS.md) → "Cukup dekat" perlahan menjadi desync yang terdengar seiring lagu berjalan. Jumlah bar antara drum step-grid dan ABC harus persis sama, section demi section.
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
 ## Modul pendalaman

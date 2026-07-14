@@ -66,7 +66,7 @@ Unison line pada dua bar terakhir
 
 ## Gate — ask, don't guess
 
-- "This section needs every device to prove it's sophisticated." → Stacking every technique is how a section turns into noise. Arc yang menentukan device apa yang dipakai; sebagian besar section cukup 2-3 gerakan, bukan semuanya.
+- "Section ini butuh semua device biar kelihatan canggih." (alasan yang ditolak, lihat RED-FLAGS.md) → Menumpuk semua teknik justru membuat section berubah jadi noise. Arc yang menentukan device apa yang dipakai; sebagian besar section cukup 2-3 gerakan, bukan semuanya.
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
 ## Modul pendalaman
