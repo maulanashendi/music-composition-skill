@@ -105,7 +105,11 @@ stop, unresolved dominant, final unison hit, fade-style vamp. Ending
 sebaiknya berhubungan dengan motif utama.
 
 Output level ini: intro dan coda yang punya identitas, bukan sekadar
-tambahan.
+tambahan. Sebelum memilih, jalankan gate wajib di
+`../jazz-composition/references/level-12-intro-ending.md` — intro
+performatif (≥1 kejadian performatif spesifik) dan pertimbangan tertulis
+opsi rekontekstualisasi sebelum ending "makin sepi + tonic panjang"
+dipilih.
 
 ## Level 13 — Dinamika dan dramaturgi
 
