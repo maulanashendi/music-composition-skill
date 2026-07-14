@@ -226,7 +226,7 @@ Switch voices:
 [V:Bass] F,4 C,4 |
 ```
 
-**For this package's `abc-to-midi-orchestration/scripts/abc_to_midi.py` converter specifically**: repeat the `[V:id]` marker at the start of *every* content line for that voice, not only at the first line or at switch points. The converter only captures lines that literally begin with `[V:id]`; a continuation line without the marker is silently skipped (0 notes for that voice), even though `validate_abc.py` reports 0 errors — the validator checks general ABC structure, not this converter's per-line convention. When in doubt, prefix every line of music with its `[V:id]`.
+**For this package's `../../midi-orchestration/scripts/abc_to_midi.py` converter specifically**: repeat the `[V:id]` marker at the start of *every* content line for that voice, not only at the first line or at switch points. The converter only captures lines that literally begin with `[V:id]`; a continuation line without the marker is silently skipped (0 notes for that voice), even though `validate_abc.py` reports 0 errors — the validator checks general ABC structure, not this converter's per-line convention. When in doubt, prefix every line of music with its `[V:id]`.
 
 For polyphony, each voice should contain valid bar durations. Use `%%score` if the renderer supports grouping.
 

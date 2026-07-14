@@ -8,35 +8,35 @@ of any one engine or app — it reasons about music and hands off two
 artifacts (ABC + a drum step-grid) that a separate rendering tool ("Tool 2",
 the engine) turns into audio.
 
-## The gateway and the three skills, in order
+## `jazz-composition`, the single orchestrator, and its 8 modules
 
 ```
-composition-gateway  →  jazz-idea-generator  →  abc-notation-writer  →  abc-to-midi-orchestration
-   (route the request)    (brief → plan)          (plan → valid ABC)      (ABC → arranged MIDI)
+skills/jazz-composition  (single entry point + orchestrator, 14-level SOP)
+   │
+   ├─ harmony             (chord-scale, progression logic, voicing systems)
+   ├─ melody-design        (phrasing, motif/hook, melody fundamentals)
+   ├─ advanced-melody       (chromatic vocabulary, enclosures — Level 4 tahap 7-8)
+   ├─ vibes-mood            (brief/mood → parameter, genre profile)
+   ├─ groove-rhythm         (rhythm/subdivision, groove profiles, microtiming)
+   ├─ arrangement           (form/dramaturgy, ensemble interaction, transitions)
+   ├─ abc-notation          (plan → validated ABC)
+   └─ midi-orchestration    (ABC + drum grid → arranged MIDI)
 ```
 
-0. **`composition-gateway`** — the single entry point. Greets any request to
-   compose/write/arrange a track, works out where the person already is in
-   the pipeline, and routes into the right skill below. Holds the
-   fourteen-layer composition map (concept → detail), each layer pointing at
-   the skill that executes it. Routes and maps; it does not compose, notate,
-   or arrange itself.
-1. **`jazz-idea-generator`** — turns a brief/mood/reference feel into a
-   dramatic arc, hook, chord progression, groove, and phrasing plan, locked
-   into `composition-plan.json`. Does not write notation.
-2. **`abc-notation-writer`** — encodes a locked plan (or any already-decided
-   progression/melody) into a portable, validated ABC subset. Does not
-   invent musical content; validates with `scripts/validate_abc.py`.
-3. **`abc-to-midi-orchestration`** — designs the interaction map (who leads/
-   supports/answers/is silent, per section), writes the drum step-grid, and
-   converts validated ABC + drum grid into a merged multi-track MIDI.
+`skills/jazz-composition/SKILL.md` is the single entry point: it greets any
+composition request, runs the 14-level workflow itself, and calls into
+whichever of the 8 modules above is relevant to the level currently being
+worked (see the 14-level → module table in `skills/jazz-composition/SKILL.md`).
+There is no separate gateway or brief→plan/plan→ABC/ABC→MIDI skill split
+anymore — the orchestrator owns the whole pipeline end to end, deferring
+craft detail to modules per level.
 
 ## Artifact flow
 
 ```
-composition-plan.json  →  song.abc  +  drums.json  →  song.mid
-   (jazz-idea-generator)    (abc-notation-writer,        (abc-to-midi-
-                              abc-to-midi-orchestration)    orchestration)
+run folder (progress.md, 01-brief.md … 14-review.md)  →  song.abc + drums.json  →  output.mid
+        (skills/jazz-composition, all 14 levels)         (abc-notation,             (midi-
+                                                            midi-orchestration)        orchestration)
 ```
 
 - `composition-plan.json` — the idea contract: arc, key/tempo/meter,
@@ -71,7 +71,7 @@ it). Two downstream paths consume that output:
   produce, then voice, mute, or edit tracks by hand.
 
 Whichever path is used, this package's job ends at valid ABC + a
-bar-matched drum grid (or the merged MIDI, if `abc-to-midi-orchestration`
+bar-matched drum grid (or the merged MIDI, if `skills/midi-orchestration`
 ran) — it never renders audio and never calls an AI/LLM API itself.
 
 ## Origin
@@ -89,9 +89,15 @@ this package became the single source of composition truth:
   tension/release, ear-test protocol) plus a neo-soul/chill-jazz genre
   profile.
 
-Both sources' substance now lives in `jazz-idea-generator/references/` and
-`abc-to-midi-orchestration/references/`, adapted to this package's own
-doctrine and pipeline (see each skill's `SKILL.md` for exactly where each
-file is read in the workflow). Drums are **always** a step-grid JSON in this
-package — never an ABC `%%MIDI drummap` voice — regardless of which source
-a given reference file was adapted from.
+Both sources' substance now lives across `skills/vibes-mood/references/`,
+`skills/arrangement/references/`, `skills/groove-rhythm/references/`,
+`skills/harmony/references/`, and the other module folders under `skills/`
+(the package was restructured 2026-07-14 from the earlier
+gateway/idea-generator/notation-writer/orchestration split into the single
+`jazz-composition` orchestrator + 8 modules above — see
+`docs/migration-map.md` for the exact old-path → new-path mapping),
+adapted to this package's own doctrine and pipeline (see each skill's
+`SKILL.md` for exactly where each file is read in the workflow). Drums are
+**always** a step-grid JSON in this package — never an ABC `%%MIDI
+drummap` voice — regardless of which source a given reference file was
+adapted from.

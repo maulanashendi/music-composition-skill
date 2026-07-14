@@ -1,5 +1,5 @@
 ---
-name: abc-to-midi-orchestration
+name: midi-orchestration
 description: Turn a validated ABC composition into a finished multi-track MIDI ready for a DAW like BandLab — designing a bar-by-bar interaction map (who leads, who supports, who answers, who stays silent) that serves the piece's dramatic arc, handling drums as a separate step-grid, and converting everything to clean per-instrument MIDI. Use whenever someone has ABC notation (or a composition-plan.json plus ABC) and wants it rendered to MIDI, wants an arrangement built from it, asks how instruments should interact across sections, or wants a DAW-ready multi-track file with drums. Trigger on "turn this ABC into MIDI," "arrange this for full band," "make a BandLab-ready file," "who should play when," or handing over validated ABC for production.
 ---
 
@@ -53,7 +53,7 @@ python3 scripts/abc_to_midi.py <file.abc> pitched.mid      # per-voice pitched t
 python3 scripts/grid_to_midi.py <drums.json> drums.mid      # channel-10 drum track w/ swing + humanize
 ```
 
-Then merge (append the drum track to the pitched PrettyMIDI object and write once). Verify: each track's end time is roughly equal (sync check), the lead track's max polyphony is 1 (mono check), and total bars match the plan. If the lead runs long-note drones, the chord-strip step was skipped — fix and re-render. If the meter, subdivision, or swing feel itself is in question (odd meter, clave, shuffle vs. straight-16th, etc.), `references/groove-meter.md` is the deeper reference; for a full pre-delivery audit across form, transitions, groove, harmony, voicing, melody, and more, run `references/quality-control.md` before Step 6.
+Then merge (append the drum track to the pitched PrettyMIDI object and write once). Verify: each track's end time is roughly equal (sync check), the lead track's max polyphony is 1 (mono check), and total bars match the plan. If the lead runs long-note drones, the chord-strip step was skipped — fix and re-render. If the meter, subdivision, or swing feel itself is in question (odd meter, clave, shuffle vs. straight-16th, etc.), `references/groove-meter.md` is the deeper reference; for a full pre-delivery audit across form, transitions, groove, harmony, voicing, melody, and more, run this module's `references/rubric.md` (plus the sibling `rubric.md` in each other module) before Step 6.
 
 ### Step 6 — Deliver
 
@@ -70,7 +70,7 @@ This package's converters (BandLab or any external DAW) are the **alternative** 
 - `references/advanced-microtiming.md` — the principles behind pocket, velocity, and note-length design (reference layer, bounded offsets, instrument relationships, microtiming profiles).
 - `references/groove-profiles.md` — the numeric distillation of the above into a named, shared pocket table (`neo-soul-core`: per-role tick offsets and gate ratios); pick a profile instead of inventing numbers.
 - `references/groove-meter.md` — meter, subdivision, and feel reference (swing, clave, odd meter, polyrhythm) beyond straightforward 4/4.
-- `references/quality-control.md` — comprehensive pre-delivery audit and scoring rubric across every dimension of the arrangement; run before Step 6.
+- `references/rubric.md` — this module's scoring rubric (production/DAW-first, plus the DAW-plan validation row); run before Step 6 alongside the other modules' `references/rubric.md` and `skills/jazz-composition/references/scorecard-template.md` for the full cross-module audit.
 - `references/midi-conversion.md` — how the converters work, the two mandatory bug-fixes, GM program mapping, swing/humanization, and the sync/mono verification checks.
 - `scripts/abc_to_midi.py` — multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead).
 - `scripts/grid_to_midi.py` — drum step-grid → channel-10 MIDI with swing and velocity humanization.

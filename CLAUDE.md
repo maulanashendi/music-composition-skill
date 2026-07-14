@@ -1,17 +1,22 @@
 # music-composition-skill — operating instructions
 
-**Start at the gateway.** `composition-gateway/SKILL.md` is the single entry
-point: it greets any composition request, works out where the person already
-is, and routes into the three skills below. It routes and holds the
-big-picture layer map — it does **not** compose, notate, or arrange itself.
+**Start at `skills/jazz-composition/SKILL.md`** — the single entry point and
+orchestrator. It greets any composition request, runs the 14-level workflow
+itself, and calls into whichever module below is relevant to the level
+currently being worked; it is not a router that hands off to separate
+brief→plan/plan→ABC/ABC→MIDI skills anymore.
 
-Under the gateway, this package is three Agent Skills meant to be read and
-run **in this order** for any composition task — never skip ahead or run
-them out of order:
+The 8 modules it draws on for level detail (never run standalone out of
+order — the orchestrator decides when each is relevant):
 
-1. `jazz-idea-generator/SKILL.md` — brief → locked `composition-plan.json`
-2. `abc-notation-writer/SKILL.md` — plan → validated ABC
-3. `abc-to-midi-orchestration/SKILL.md` — ABC → arranged, DAW-ready MIDI
+- `skills/harmony/SKILL.md`
+- `skills/melody-design/SKILL.md`
+- `skills/advanced-melody/SKILL.md`
+- `skills/vibes-mood/SKILL.md`
+- `skills/groove-rhythm/SKILL.md`
+- `skills/arrangement/SKILL.md`
+- `skills/abc-notation/SKILL.md`
+- `skills/midi-orchestration/SKILL.md`
 
 See `README.md` for the architecture/positioning (this package is Tool 1,
 "the brain"; rendering to audio is a separate downstream engine) and
@@ -38,16 +43,17 @@ this package:
   worked** — always check the actual rendered MIDI (track count, notes per
   track, tempo/time-signature), not just the validator's exit status.
 
-## Ground rules that apply to all three skills
+## Ground rules that apply to the orchestrator and all 8 modules
 
 - If a required field is missing (key, tempo, meter, the actual chords —
   or whether the plan is even locked yet), **ask; do not guess.** Each
   SKILL.md says this individually; it's restated here because it's the
   single most common way these skills get used wrong.
-- Each skill stops at its own boundary — `jazz-idea-generator` does not
-  write notation, `abc-notation-writer` does not invent musical content,
-  `abc-to-midi-orchestration` does not invent chords or melodies. Handing
-  a downstream skill an undecided input is a sign the upstream skill's
-  step was skipped, not a shortcut.
-- A high rubric score (`abc-to-midi-orchestration/references/quality-control.md`)
-  is a floor, not a ceiling — see `RED-FLAGS.md`'s last row.
+- Each module stops at its own boundary — `vibes-mood`/`harmony`/
+  `melody-design`/`advanced-melody`/`groove-rhythm`/`arrangement` do not
+  write notation, `abc-notation` does not invent musical content,
+  `midi-orchestration` does not invent chords or melodies. Handing a
+  downstream module an undecided input is a sign an earlier level's step
+  was skipped, not a shortcut.
+- A high rubric score (`skills/*/references/rubric.md`, one per module) is
+  a floor, not a ceiling — see `RED-FLAGS.md`'s last row.
