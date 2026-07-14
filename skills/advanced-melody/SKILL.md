@@ -75,3 +75,8 @@ Outside akan terdengar efektif — dan boleh dipakai — hanya apabila:
 
 Jika salah satu dari keempat syarat ini tidak terpenuhi, jangan pakai
 outside pada bar tersebut — kembalikan ke vocabulary `melody-design` biasa.
+
+Chromatic vocabulary tahap 7–8 juga tunduk pada **gate tempo
+densitas-vs-BPM yang sama** di `../melody-design/SKILL.md` (BPM brief
+eksplisit + cek IOI/napas terhadap tabel BPM band
+`../vibes-mood/references/reasoning-theory.md`) — bukan gate terpisah.

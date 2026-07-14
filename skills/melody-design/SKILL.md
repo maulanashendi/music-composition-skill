@@ -70,6 +70,24 @@ Broken chord membuat harmoni terdengar secara linear. Contoh pada Dm9:
 Jangan selalu berurutan — gunakan displacement (`D – A – F – E – C`) atau
 intervallic arpeggio (`F – C – E – A`).
 
+## Gate tempo — densitas ritmis vs BPM (wajib)
+
+Artefak Level 4 wajib:
+
+1. Menyebut **BPM brief secara eksplisit** (angka, bukan "sedang").
+2. Menyatakan **IOI (inter-onset interval) tercepat** yang benar-benar
+   dipakai melodi (subdivisi terkecil antar onset, mis. 16th) dan **rest
+   ratio** melodi (proporsi waktu rest per section).
+3. Mengecek keduanya terhadap tabel BPM band di
+   `../vibes-mood/references/reasoning-theory.md` (kolom "Subdivisi melodi
+   wajar" + "Napas minimum" untuk band BPM brief).
+
+Melodi yang memakai subdivisi lebih rapat dari kolom "Subdivisi melodi
+wajar" band-nya, atau napas lebih pendek dari "Napas minimum", **direvisi
+atau diberi justifikasi eksplisit tertulis** — bukan dilewatkan diam-diam.
+Motif 16th padat yang lolos semua rubrik teori tetap ditolak di sini bila
+tidak bisa dimainkan wajar pada BPM brief.
+
 ## Output level ini
 
 Melodi utama dalam bentuk notasi atau MIDI yang sudah memiliki: motif,

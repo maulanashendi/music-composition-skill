@@ -31,6 +31,12 @@ kapan sebuah level butuh pendalaman modul tertentu.
 - Setiap generate menulis artefak bernomor ke run folder — lihat
   `## Run folder` di bawah — bukan output sekali-pakai yang hilang antar
   sesi.
+- **Tempo adalah parameter hilir, bukan dekorasi.** Setiap level yang
+  memutuskan materi ritmis — Level 4 (melodi), Level 5 (groove), Level 8
+  (bass), Level 9 (drum) — wajib menyebut **BPM brief** secara eksplisit
+  di artefaknya sendiri dan mengecek keputusan
+  subdivisi/napas/harmonic-rhythm/swing-nya terhadap tabel BPM band di
+  `../vibes-mood/references/reasoning-theory.md`.
 
 ## Gambaran besar — 10 lapisan
 

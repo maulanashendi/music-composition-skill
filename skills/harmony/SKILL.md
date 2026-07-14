@@ -33,6 +33,25 @@ Harmonic rhythm adalah seberapa sering chord berubah — 1 chord per bar,
 memberi ruang modal; harmonic rhythm cepat memberi kesan bebop atau
 functional jazz.
 
+### Durasi absolut per chord — cek terhadap BPM (wajib)
+
+Rumuskan harmonic rhythm sebagai **durasi absolut**, bukan hanya "N chord
+per bar":
+
+```
+durasi per chord (detik) = bars_per_chord × beats_per_bar × 60 / BPM
+```
+
+Target: minimal **±2 detik per chord** agar perubahan harmoni "teraba"
+pendengar. Konsekuensi rumus ini (bukan aturan tempo-vs-jumlah-chord yang
+berdiri sendiri): pada BPM rendah satu bar berdurasi lebih panjang secara
+absolut, sehingga 2 chord/bar tetap bisa aman asal masih ≥2 detik per
+chord; pada BPM tinggi 2 chord/bar lebih berisiko karena tiap chord
+kebagian waktu absolut yang pendek. Kriteria rubrik `references/rubric.md`
+"ritme harmonik cocok dengan tempo dan groove" kini dicek dengan rumus
+ini, bukan penilaian rasa; ringkasan band per BPM ada di tabel BPM band
+`../vibes-mood/references/reasoning-theory.md`.
+
 ## Langkah 3 — Buat harmonic skeleton
 
 Contoh delapan bar (baru kerangka fungsi):
