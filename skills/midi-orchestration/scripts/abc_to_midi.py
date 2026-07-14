@@ -17,8 +17,12 @@ def program_for(name):
         if k in n: return p
     return 0
 
-def render(abc_path, out_path, mono_lead=True):
-    lines=open(abc_path).read().splitlines()
+def split_voices(lines):
+    """Split ABC lines into (header_lines, voice_names, body_by_voice).
+
+    Extracted from render() so notation_facts.py can reuse the exact same
+    ABC voice-splitting path instead of writing a second parser.
+    """
     header=[h for h in lines if re.match(r"^[A-Za-z]:",h) and not h.startswith("V:")]
     vnames={}
     for ln in lines:
@@ -30,6 +34,12 @@ def render(abc_path, out_path, mono_lead=True):
     for ln in lines:
         bm=re.match(r"^\[V:\s*(\S+)\]\s?(.*)",ln)
         if bm: body.setdefault(bm.group(1),[]).append(bm.group(2))
+    return header, vnames, body
+
+
+def render(abc_path, out_path, mono_lead=True):
+    lines=open(abc_path).read().splitlines()
+    header, vnames, body = split_voices(lines)
 
     # Parse real tempo/meter from the header so the merged MIDI isn't stuck at
     # pretty_midi's default 120bpm/4-4 -- fall back to that default if either
