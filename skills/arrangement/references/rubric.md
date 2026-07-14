@@ -18,4 +18,6 @@ kalimat per kriteria.
 | Klimaks disiapkan (bukan tiba-tiba) dan punya konsekuensi; setidaknya satu elemen "subtraction" hadir jika bukan konsep akumulasi kontinu | | |
 
 skala 0-2: 0 = tidak ada/kontradiktif, 1 = ada tapi lemah/tidak konsisten,
-2 = jelas dan konsisten sepanjang artefak.
+2 = jelas dan konsisten sepanjang artefak. Jika suatu device (mis. klimaks)
+sengaja absen sesuai brief, isi kolom skor dengan N/A + 1 kalimat
+justifikasi absennya — bukan skor 0.

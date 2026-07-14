@@ -13,7 +13,7 @@ runs/<tanggal>-<slug>/
 ├── 01-brief.md
 ├── 02-form.md
 ├── 03-harmony.md
-├── 04-melody.abc          (atau .md untuk artefak non-notasi)
+├── 04-melody.abc          (catatan desain, lihat catatan di bawah; atau .md untuk artefak non-notasi)
 ├── 05-groove.md
 ├── 06-arrangement.md
 ├── 07-comping.md
@@ -33,6 +33,19 @@ runs/<tanggal>-<slug>/
 Nomor artefak `01`–`14` mengikuti urutan 14 level SOP (lihat tabel di
 `../SKILL.md`), bukan urutan bebas — artefak level N selalu ditulis sebelum
 level N+1 dimulai.
+
+### Catatan khusus `04-melody.abc`
+
+`04-melody.abc` adalah **artefak catatan desain** (design note), bukan
+notasi final tervalidasi. Tahap 5–8 (motif, target tones, membangun
+melodi, outside material) semuanya menulis ke file ini secara kumulatif —
+isinya boleh prosa penjelasan disertai fragmen ABC ilustratif/kecil
+(beberapa blok `X:` kecil untuk mendemonstrasikan motif atau target tone
+tertentu), dan **tidak wajib** berupa satu tune ABC tunggal yang valid.
+Melodi final yang sudah divalidasi (lolos `validate_abc.py`, siap
+di-render ke MIDI) hidup di `song.abc` (`V:1`), bukan di `04-melody.abc`.
+Jangan memperlakukan `04-melody.abc` sebagai sumber kebenaran untuk
+rendering — itu peran `song.abc`.
 
 ## Aturan penamaan
 

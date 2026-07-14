@@ -26,7 +26,12 @@ output MIDI/DAW, bukan composition plan.)
 Setiap `rubric.md` modul memakai skala 0-2 (bukan 0-4 seperti §17 lama)
 karena granularitasnya per-kriteria, bukan per-domain — tapi prinsip
 skalanya sama: 0 = tidak ada/kontradiktif, 1 = usable dengan revisi
-substansial, 2 = kuat/konsisten. Struktur laporan akhir §18 lama (status
+substansial, 2 = kuat/konsisten. Kriteria yang menilai kehadiran suatu
+device (mis. klimaks, fills/setup) butuh afforansi N/A: jika device itu
+sengaja absen sesuai brief (bukan lupa/tidak sengaja), isi kolom skor
+dengan **N/A** + satu kalimat justifikasi kenapa device itu absen —
+jangan diberi skor 0, karena 0 berarti "ada tapi gagal", bukan "sengaja
+tidak ada". Struktur laporan akhir §18 lama (status
 validasi tiap artefak, skor musikal, isu blocking yang sudah diperbaiki,
 risiko development, pilihan interpretatif yang tersisa, alternatif live,
 keterbatasan renderer/format) sudah terwakili oleh gabungan L1+L2 per
@@ -68,7 +73,7 @@ dilarang).
 |---|---|---|
 | Setiap bagian punya fungsi dramaturgis | | |
 | Ada kontras antar-bagian | | |
-| Klimaks ditempatkan pada bagian yang tepat | | |
+| Klimaks ditempatkan pada bagian yang tepat (jika klimaks sengaja absen sesuai brief, isi N/A + 1 kalimat justifikasi — bukan skor 0) | | |
 
 ## Level 3 — Peta Harmoni
 
@@ -163,7 +168,7 @@ dilarang).
 | Kriteria | Skor (0-2) | Alasan (1 kalimat) |
 |---|---|---|
 | Dinamika drum mengikuti struktur lagu | | |
-| Fills/setup ditempatkan pada transisi yang logis | | |
+| Fills/setup ditempatkan pada transisi yang logis (jika fills/setup sengaja absen sesuai brief, isi N/A + 1 kalimat justifikasi — bukan skor 0) | | |
 
 ## Level 10 — Desain Improvisasi
 

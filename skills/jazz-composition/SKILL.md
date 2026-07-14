@@ -84,7 +84,10 @@ berupa mood/scene tanpa keputusan musik.
 Setiap tahap dianotasi dengan artefak run-folder yang harus dihasilkan
 (lihat `## Run folder`). Beberapa tahap berbagi satu artefak karena
 levelnya sama (mis. Tahap 5–8 semuanya bagian dari desain melodi,
-`04-melody.abc`).
+`04-melody.abc`). `04-melody.abc` adalah **artefak catatan desain**
+(prosa + fragmen ABC ilustratif boleh, tidak wajib satu tune valid) —
+melodi final yang tervalidasi hidup di `song.abc`; lihat catatan detail
+di `references/run-folder-protocol.md`.
 
 **Tahap 1 — Buat brief** → artefak `01-brief.md`
 
