@@ -232,6 +232,40 @@ Setiap run folder punya satu `scorecard.md` berisi penilaian tiga lapis
 Template lengkap dan aturan pengisiannya ada di
 `references/scorecard-template.md`.
 
+## Reviewer segar (L2)
+
+Rubrik L2 tiap level (lihat tabel `| Kriteria | Skor (0-2) | Alasan |` di
+`references/scorecard-template.md`) **wajib** diisi oleh subagent yang
+**baru** — tanpa histori percakapan generasi artefak yang sedang dinilai.
+Self-grading oleh agent/percakapan yang sama yang membuat artefak itu
+**dilarang**: agent yang baru saja menulis `04-melody.abc` tidak boleh
+juga yang mengisi skor rubriknya sendiri.
+
+Alur konkret:
+
+1. Setelah artefak level tertentu selesai (mis. `03-harmony.md`), spawn
+   subagent baru khusus review — jangan lanjutkan di agent/context yang
+   sama.
+2. Beri subagent itu **hanya** dua hal: artefak yang mau dinilai, dan
+   `rubric.md` modul yang relevan (mis. Level 3 →
+   `../../harmony/references/rubric.md`; Level 5/8/9 →
+   `../../groove-rhythm/references/rubric.md`; Level 4 →
+   `../../melody-design/references/rubric.md` dan/atau
+   `../../advanced-melody/references/rubric.md`; Level 1 → `vibes-mood`;
+   Level 2/6/7/10/11/12/13 → `arrangement`; Level 14 → `abc-notation`
+   dan/atau `midi-orchestration` — lihat tabel "14 level" di atas untuk
+   pemetaan level-ke-modul lengkap). Jangan beri histori percakapan
+   generasi, brief asli di luar yang tertulis di artefak, atau alasan di
+   balik keputusan desain — reviewer harus menilai apa yang benar-benar
+   ada di artefak, bukan apa yang dimaksud.
+3. Subagent mengisi tabel skor (0-2) + alasan 1 kalimat per kriteria dari
+   `rubric.md` yang diberikan, lalu **menulis hasilnya langsung ke bagian
+   L2 di `scorecard.md`** run folder yang bersangkutan — bukan melaporkan
+   balik lewat chat untuk ditranskrip manual.
+4. Skor rubrik tinggi tetap lantai, bukan langit-langit — lanjut ke
+   `RED-FLAGS.md` dan (untuk `output.mid` final) L3 telinga manusia di
+   `../../../tests/human-ear-protocol.md` sebelum piece dianggap selesai.
+
 ## Sebelum menganggap sebuah piece selesai
 
 Baca `../../RED-FLAGS.md` — kumpulan pola "alasan yang terdengar masuk

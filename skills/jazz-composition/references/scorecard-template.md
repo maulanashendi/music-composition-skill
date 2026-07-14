@@ -6,6 +6,33 @@ rubrik, L3 telinga) untuk seluruh 14 level, ditulis dalam bahasa Indonesia.
 Salin struktur di bawah ini persis, ganti isi placeholder `<...>` sesuai
 run yang sedang dikerjakan.
 
+## Validasi mesin lintas-level (dari `quality-control.md` §14 lama)
+
+Bagian "composition plan" dari §14 (Machine-readable plans) — label
+section unik, bar count/durasi chord valid, section terbuka dilabeli
+eksplisit, performance order/solo form merujuk section yang benar-benar
+ada, plan cocok dengan prosa dan notasi — adalah pemeriksaan **L1
+mekanis**, bukan rubrik L2 subjektif, jadi tempatnya bukan di satu
+`rubric.md` modul melainkan di sini, sebagai gerbang lintas-level yang
+dicek tiap kali `composition-plan.json` diperbarui. Jalankan validator
+kalau tersedia; kalau tidak, verifikasi checklist ini manual dan tulis di
+`scorecard.md` bahwa validasinya manual — jangan diam-diam dilewati.
+(Bagian "DAW plan" dari §14 sudah dipindah ke
+`../../midi-orchestration/references/rubric.md`, karena itu pemeriksaan
+output MIDI/DAW, bukan composition plan.)
+
+## Format skor dan laporan (dari `quality-control.md` §17-18 lama)
+
+Setiap `rubric.md` modul memakai skala 0-2 (bukan 0-4 seperti §17 lama)
+karena granularitasnya per-kriteria, bukan per-domain — tapi prinsip
+skalanya sama: 0 = tidak ada/kontradiktif, 1 = usable dengan revisi
+substansial, 2 = kuat/konsisten. Struktur laporan akhir §18 lama (status
+validasi tiap artefak, skor musikal, isu blocking yang sudah diperbaiki,
+risiko development, pilihan interpretatif yang tersisa, alternatif live,
+keterbatasan renderer/format) sudah terwakili oleh gabungan L1+L2 per
+level di bawah ini plus `L3 (telinga)` di akhir — tidak diduplikasi jadi
+satu blok laporan terpisah.
+
 ```markdown
 # Scorecard — <judul sementara / slug run>
 
