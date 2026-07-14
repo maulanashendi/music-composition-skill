@@ -286,6 +286,15 @@ Alur konkret:
    `RED-FLAGS.md` dan (untuk `output.mid` final) L3 telinga manusia di
    `references/human-ear-protocol.md` sebelum piece dianggap selesai.
 
+Untuk **Level 3, 4, dan 7**, subagent reviewer juga diberi **output
+`notation_facts.py` yang sama** yang sudah dilampirkan generator ke artefak
+(bukan hanya artefak + `rubric.md`). Ini supaya penilaian rubrik bisa
+**memverifikasi klaim teori terhadap fakta notasi** (interval, chord-tone vs.
+outside, borrowed vs. diatonik, klaim top-note/voice-leading), bukan sekadar
+membaca prosa. Reviewer boleh menjalankan ulang
+`skills/abc-notation/scripts/notation_facts.py` pada notasi artefak bila output
+yang dilampirkan diragukan.
+
 ## Sebelum menganggap sebuah piece selesai
 
 Baca `../RED-FLAGS.md` — kumpulan pola "alasan yang terdengar masuk

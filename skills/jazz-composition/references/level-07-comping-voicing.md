@@ -69,6 +69,15 @@ Head out: simplified voicing
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
+## Cek fakta notasi (wajib sebelum lanjut)
+
+Sebelum comping chart / voicing dianggap selesai:
+
+1. Tulis voicing per bar sebagai bracket chord ABC (`[..]`) di voice keys, lalu jalankan:
+   `cd skills/abc-notation/scripts && uv run --with music21 --with pretty_midi python notation_facts.py <file.abc> --voice <keys-id>`
+2. **Lampirkan** output `top-note` per bar + daftar nada bawah→atas ke artefak.
+3. **Cocokkan klaim voice-leading top-note** dengan fakta script. Contoh nyata dari run lama: klaim "top note bergerak G→F→E" padahal voicing yang benar-benar tertulis punya top-note lain. Ketidakcocokan = **revisi voicing dulu**, jangan lanjut. (Ingat: `notation_facts.py` melaporkan **pitch tertinggi** sebagai top note, sesuai oktaf ABC — verifikasi voicing ditulis di oktaf yang dimaksud.)
+
 ## Modul pendalaman
 
 - ../../arrangement/SKILL.md

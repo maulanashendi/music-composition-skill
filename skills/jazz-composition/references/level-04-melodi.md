@@ -173,6 +173,16 @@ Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`
 - "Chorus tinggal ulang verse aja — kan emang loop, gak masalah." (alasan yang ditolak, lihat RED-FLAGS.md) → Arc dramatis yang tidak pernah berubah bukan arc. Verse dan chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
+## Cek fakta notasi (wajib sebelum lanjut)
+
+Sebelum artefak `04-melody.abc` (dan tiap kandidat motif di `04-melodi-candidates.md`) dianggap selesai:
+
+1. Jalankan pada notasi motif/melodi:
+   `cd skills/abc-notation/scripts && uv run --with music21 --with pretty_midi python notation_facts.py <file.abc> --voice <id>`
+2. **Lampirkan** output relevan (jumlah pitch, interval antar nada, klasifikasi chord-tone/tension/outside) ke artefak.
+3. **Cocokkan tiap label teori** dengan fakta script. Contoh nyata dari run lama yang harus tertangkap: motif diklaim "4-not" padahal `notation_facts.py` hanya melaporkan **3 pitch** (rest bukan pitch); arpeggio chord-tone dilabeli "outside" padahal script melaporkannya `chord-tone`. Ketidakcocokan = **revisi dulu**, jangan lanjut.
+4. Nada yang jatuh di bar dengan chord `unparsed` diperiksa manual.
+
 ## Modul pendalaman
 
 - ../../melody-design/SKILL.md

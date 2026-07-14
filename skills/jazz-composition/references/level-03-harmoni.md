@@ -103,6 +103,16 @@ Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`
 - "Chorus tinggal ulang verse aja — kan emang loop, gak masalah." (alasan yang ditolak, lihat RED-FLAGS.md) → Arc dramatis yang tidak pernah berubah bukan arc. Verse dan chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
 
+## Cek fakta notasi (wajib sebelum lanjut ke Level 4)
+
+Sebelum artefak `03-harmony.md` dianggap selesai:
+
+1. Tulis progresi terpilih ke satu file ABC kecil (chord symbols per bar di `V:1`), lalu jalankan:
+   `cd skills/abc-notation/scripts && uv run --with music21 --with pretty_midi python notation_facts.py <file.abc>`
+2. **Lampirkan** output yang relevan (`chord-vs-key` per bar) ke `03-harmony.md`.
+3. **Cocokkan tiap label teori** di artefak dengan fakta script — khususnya klaim `modal interchange`/`borrowed`. Contoh nyata dari run lama: `Abmaj7`/`Ebmaj7` dilabeli "borrowed" padahal `notation_facts.py` melaporkannya **`diatonik`** di key minor. Ketidakcocokan = **revisi artefak dulu**, jangan lanjut.
+4. Chord yang dilaporkan `unparsed` (simbol tak dikenal script) diperiksa manual — jangan diasumsikan benar hanya karena script tidak bisa menilainya.
+
 ## Modul pendalaman
 
 - ../../harmony/SKILL.md
