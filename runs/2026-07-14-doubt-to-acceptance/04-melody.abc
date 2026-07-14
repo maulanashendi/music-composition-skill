@@ -1,0 +1,49 @@
+% 04-melody.abc — Level 4, Desain Melodi (Tahap 5-8)
+% Ini catatan desain melodi (motif/kontur/target-tone/outside), bukan file
+% ABC final yang divalidasi -- itu ada di song.abc. Ditulis sebagai fragmen
+% ABC + prosa sesuai contoh format di level-04-melodi.md.
+
+% Tahap 5 -- motif inti (hook):
+% Cell 4-not, tak pernah resolve ke tonic -- fingerprint emosional "doubt":
+% pickup 8th rest, naik minor third (C->Eb), turun satu step lewat titik
+% awal, mendarat di nada tak-resolve (6th=Ab, atau 2nd=D).
+X:1
+T:Hook fragment (motif Level 4)
+M:4/4
+L:1/8
+K:Cm
+z C E2 A4 |
+
+% Tahap 6 -- target tones per chord (guide tones, dipetakan ke bar A1):
+% | Cm9 | Abmaj7 | Fm9 | G7alt |
+% |  Eb |    C   |  A  |  D    |   <- target tone tiap chord (3rd/6th, tak
+%                                     pernah root, supaya tetap "mencari")
+
+% Tahap 7 -- membangun melodi (A1 statement, bar 5-8), pakai device:
+% interval (minor third naik), broken chord (implisit lewat target tone),
+% passing tone (C->E2 di bar 5), enclosure tidak dipakai di head (disimpan
+% utk B, lihat outside di bawah), chromaticism minimal, space (rest lebar
+% tiap bar), repetition (motif sama diulang di bar 9-10 dng variasi ritme).
+[V:1] "Cm9" z C E2 A4 | "Abmaj7" z8 | "Fm9" z F2 A4 z | "G7alt" z8 |
+
+% Tahap 7 lanjutan -- A1 answer (bar 9-12), motif divariasi (interval &
+% ritme diubah, bukan restatement identik -- lihat gate Level 3/4):
+[V:1] "Cm9" z C2 E2 D3 | "Abmaj7" z8 | "Bbm7b5" z2 D3 B3 | "G7sus" z2 C6 |
+
+% Tahap 8 -- outside material (bagian B, bar 13-16): motif inti disequence
+% naik sepertiga (dari Eb, bukan C) menuju local high point Bb4 -- ini
+% "outside" yang terkontrol: pola ritmenya sama dengan hook asli, durasinya
+% terbatas (2 bar), dan meresolve turun (tidak ditahan sebagai peak).
+[V:1] "Ebmaj7" z e g2 b4 | "Fm9" a2 b2 z4 | "G7alt" g2 e2 z4 | "G7alt" z8 |
+
+% Outro (bar 17-24) -- motif HANYA muncul sebagai ekor turunnya (fragment),
+% bukan restatement penuh -- ini yang membuat ending terdengar "settling"
+% bukan "menjawab pertanyaan yang sama lagi":
+[V:1] "Cm9" z4 C4 | "Abmaj7" z8 | "Fm9" z2 E2 A4 | "Cm9" z8 |
+[V:1] "Abmaj9" z4 C4 | "Fm9" z8 | "G7sus" z6 A2 | "Cm9" z2 C6 |]
+
+% Kontur keseluruhan: rendah-diam (Intro) -> stepwise mencari, tak resolve
+% (A1) -> naik terkontrol ke local high Bb4, TANPA peak tertahan (B) ->
+% turun, hanya ekor motif, held tonic (Outro). Register dibatasi (tak
+% pernah lewat ~Bb4/C5) supaya tak sengaja membentuk klimaks yang brief
+% larang. Peak note: sengaja TIDAK ADA di seluruh piece -- lihat 13-dynamics.md.

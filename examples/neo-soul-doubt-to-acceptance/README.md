@@ -23,5 +23,5 @@ tempo/time-signature tag is correct (78 BPM / 4-4), not the original run's
 120 BPM / 4-4.
 
 This is a worked example, not a claim that the piece is "good" — see
-`tests/human-ear-protocol.md` for the layer of judgment this package
+`../../skills/jazz-composition/references/human-ear-protocol.md` for the layer of judgment this package
 cannot make for you.
