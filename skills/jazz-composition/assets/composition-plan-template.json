@@ -1,0 +1,57 @@
+{
+  "_comment": "Contract from jazz-idea-generator to abc-notation-writer. Fill every field. Chord beats per section must sum to the meter's beats-per-bar. The 'arc' is the master: every section's phrasing and tension must serve it. Remove this _comment in the final file.",
+  "title": "Untitled",
+  "style": "lofi jazz",
+  "key": "Cm",
+  "tempo_bpm": 90,
+  "meter": "4/4",
+  "feel": "relaxed swung-16th, slightly behind the beat",
+  "default_note_length": "1/8",
+  "arc": {
+    "journey": "e.g. doubt -> hope -> peak -> acceptance",
+    "phases": [
+      { "feeling": "doubt", "sections": ["Intro", "A1"], "requires": "low-mid register, melody stops on unresolved tones, sparse, laid-back" },
+      { "feeling": "hope", "sections": ["B"], "requires": "rhythm tightens, bass steps up, register climbs, instrument enters" },
+      { "feeling": "peak", "sections": ["C"], "requires": "high register, full ensemble, melody holds its peak note, open harmony" },
+      { "feeling": "acceptance", "sections": ["Outro"], "requires": "register falls, rhythm loosens, resolve to tonic, space" }
+    ]
+  },
+  "ensemble": [
+    { "name": "lead", "role": "melody", "instrument": "sax", "register": "upper-mid" },
+    { "name": "keys", "role": "comp", "instrument": "rhodes", "register": "mid" },
+    { "name": "bass", "role": "foundation", "instrument": "upright", "register": "low" },
+    { "name": "drums", "role": "groove", "instrument": "drum kit", "register": "n/a" }
+  ],
+  "hook": {
+    "description": "one-sentence description of the memorable motif and what makes it stick",
+    "rhythm": "where it lands, e.g. syncopated pickup into a held target note",
+    "contour": "interval shape, e.g. rise an octave then fall to the b5",
+    "first_appears": "e.g. Intro, bare"
+  },
+  "form": ["Intro", "A1", "B", "C", "Outro"],
+  "sections": [
+    {
+      "label": "A1",
+      "function": "state the primary theme",
+      "recurrence": "complete statement",
+      "serves_phase": "doubt",
+      "phrasing": {
+        "note_lengths": "short phrases with long gaps between them",
+        "contour": "gentle rise then fall, stopping on the 6th (unresolved)",
+        "peak_note": "not here — saved for the peak section",
+        "placement": "slightly behind the beat",
+        "motif": "state the hook motif, fragment form"
+      },
+      "tension": "melody left hanging on an unresolved tone; sparse texture — no build yet",
+      "bars": [
+        { "number": 1, "chords": [{ "symbol": "Cm9", "beats": 4 }] },
+        { "number": 2, "chords": [{ "symbol": "Abmaj7", "beats": 4 }] },
+        { "number": 3, "chords": [{ "symbol": "Fm9", "beats": 4 }] },
+        { "number": 4, "chords": [{ "symbol": "G7alt", "beats": 4 }] }
+      ],
+      "bass_character": "sparse, syncopated, lands on beat 1 then leaves space"
+    }
+  ],
+  "ending": "resolve to Cm9 with a ritard and widening space, or a clean loop point",
+  "notes": []
+}
