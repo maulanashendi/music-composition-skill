@@ -55,8 +55,8 @@ makin panjang frase dalam bar.**
 
 | BPM band | Label | Subdivisi melodi wajar | Napas minimum | Harmonic rhythm wajar | Swing feel |
 |---|---|---|---|---|---|
-| < 72 | Ballad | 16th aman | ≥2 beat | 2 chord/bar masih bisa aman (cek rumus durasi absolut) | ≈2:1 (66%) |
-| 72-92 | Medium-slow | 16th selektif | ≥1.5 beat | 1-2 chord/bar (cek rumus durasi absolut) | ≈60-66% |
+| < 72 | Ballad | 16th aman | ≥2 beat | 1 chord/bar; 2 chord/bar hanya aman ≤60 BPM (cek rumus durasi absolut) | ≈2:1 (66%) |
+| 72-92 | Medium-slow | 16th selektif | ≥1.5 beat | 1 chord/bar; 2 chord/bar <2 detik di band ini — butuh justifikasi eksplisit | ≈60-66% |
 | 92-120 | Medium | 8th dominan, 16th sebagai ornamen | ≥1 beat | 1 chord/bar default; 2 chord/bar mulai berisiko | ≈60-64% |
 | > 120 | Up | 8th/quarter, 16th berisiko | ≥1 beat | 1 chord per 1-2 bar; hindari 2 chord/bar | mendekati even (≈55-57%) |
 
