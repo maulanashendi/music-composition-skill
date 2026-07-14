@@ -1,7 +1,9 @@
 # Spec: Wave 2-3 — Enforcement Gates dan Gigi Penilaian
 
 **Tanggal**: 2026-07-14
-**Status**: desain final untuk implementasi (Gelombang 2-3 dari rangkaian 3 gelombang)
+**Status**: desain final untuk implementasi (Gelombang 2-3 dari rangkaian 3
+gelombang); **diamandemen 2026-07-14** menambah Komponen E (export produksi
+via engine `daw_generative`) — lihat "Amandemen — Komponen E" setelah D5.
 
 ## Latar
 
@@ -40,14 +42,17 @@ digerbang, plus menjadikan tempo parameter hilir yang dicek lintas-level.
 Gelombang 3 (komponen D1-D5) memberi "gigi" pada penilaian: kriteria blocker
 fail-closed, uji buta emosional, audit cliché, dan syarat bukti revisi.
 
-**Seluruh perubahan Gelombang 2-3 di spec ini adalah perubahan DOKUMEN
-SAJA — nol perubahan kode Python.** Ini keputusan YAGNI yang sadar: semua
-komponen di bawah adalah instruksi prosa yang dieksekusi oleh agent LLM yang
-mengikuti `SKILL.md`, bukan logika yang perlu diotomasi di script. Konsekuensi
-langsung: verifikasi implementasi nanti = **konsistensi teks, anchor, dan
-cross-reference** antar file (nama file dirujuk benar-benar ada, istilah
-dipakai konsisten, gate bisa diikuti langkah demi langkah oleh agent) —
-**bukan** unit test Python.
+**Seluruh perubahan Gelombang 2-3 (C1-C8, D1-D5) di spec ini adalah perubahan
+DOKUMEN SAJA — nol perubahan kode Python.** Ini keputusan YAGNI yang sadar:
+semua komponen di bawah adalah instruksi prosa yang dieksekusi oleh agent LLM
+yang mengikuti `SKILL.md`, bukan logika yang perlu diotomasi di script.
+Konsekuensi langsung: verifikasi implementasi nanti = **konsistensi teks,
+anchor, dan cross-reference** antar file (nama file dirujuk benar-benar ada,
+istilah dipakai konsisten, gate bisa diikuti langkah demi langkah oleh
+agent) — **bukan** unit test Python. (**Amandemen**: klaim "nol perubahan
+Python" ini tetap berlaku persis untuk C1-C8/D1-D5 — Komponen E yang
+ditambahkan di bawah, setelah D5, adalah pengecualian **terbatas dan
+eksplisit**, bukan pembatalan prinsip ini; lihat "Amandemen — Komponen E".)
 
 ## Scope
 
@@ -61,11 +66,28 @@ dipakai konsisten, gate bisa diikuti langkah demi langkah oleh agent) —
 - Gelombang 3 — D1 s.d. D5: blocker scorecard fail-closed, L2-blind
   (emotional blind test), L2-cliche (originality audit + register cliché),
   bukti revisi, dan L3 wajib per-piece + checklist pra-L3.
+- **Amandemen — Komponen E** (baru, requirement product owner 2026-07-14:
+  "export harus memakai flow yang ada di `daw_generative`; instrumen
+  disesuaikan dengan yang tersedia"): export produksi lewat flow engine yang
+  **sudah ada** di repo induk (`POST /api/render`), konverter format drum
+  Tool 1 → skema engine, dan penyelarasan instrumentasi ke registry
+  instrumen engine yang sungguh tersedia — lihat "Amandemen — Komponen E:
+  Export via engine daw_generative" (E1-E4) setelah D5 di bawah. Berbeda
+  dari C1-C8/D1-D5, komponen ini **mencakup perubahan kode Python terbatas**
+  (lihat catatan out-of-scope tepat di bawah).
 
 **Out of scope (jangan dikerjakan sebagai bagian spec ini):**
 
-- Perubahan kode Python apa pun (`*.py` di `skills/*/scripts/`) — nol
-  perubahan mekanis, murni dokumen.
+- **Untuk C1-C8/D1-D5 (Gelombang 2-3):** perubahan kode Python apa pun
+  (`*.py` di `skills/*/scripts/`) — nol perubahan mekanis di dua gelombang
+  itu, murni dokumen; ini **tidak berubah** oleh amandemen Komponen E.
+- **Komponen E adalah pengecualian terbatas dan eksplisit** atas batas di
+  atas — bukan pembatalannya: satu script konverter **baru**
+  (`skills/midi-orchestration/scripts/drums_to_engine.py`) + test TDD-nya,
+  plus penyelarasan angka pada `PROGRAM` map yang **sudah ada** di
+  `skills/midi-orchestration/scripts/abc_to_midi.py` (lihat E2 dan E3 di
+  bagian Amandemen). Di luar dua titik itu, tidak ada perubahan Python lain
+  yang masuk scope spec ini.
 - Audio dalam bentuk apa pun — render tetap eksklusif Tool 2 (`daw_generative`
   engine, `POST /api/render`), tidak disentuh spec ini.
 - Renumbering lapisan penilaian L1/L2/L3 — penomoran yang sudah dipakai di
@@ -599,6 +621,361 @@ tercentang", bukan penilaian subjektif kapan sebuah piece "cukup matang".
 - `skills/jazz-composition/SKILL.md` §Penilaian — checklist fail-closed
   pra-L3 (6 item di atas).
 
+## Amandemen — Komponen E: Export via engine daw_generative
+
+**Tanggal amandemen**: 2026-07-14, menyusul requirement baru product owner:
+"export harus memakai flow yang ada di `daw_generative`; instrumen
+disesuaikan dengan yang tersedia."
+
+**Tujuan.** C1-C8/D1-D5 di atas menutup celah *penilaian* dan *gate teori* di
+dalam Tool 1 (paket ini) — tapi berhenti di `output.mid` validasi lokal
+(Python), belum pernah benar-benar menempuh jalur produksi (Tool 2, engine
+`daw_generative`, `POST /api/render`) yang menghasilkan WAV bertimbre jujur
+(soundfont FluidR3_GM asli, bukan preview browser). Komponen E menutup celah
+itu: mewajibkan setiap run yang dianggap selesai benar-benar diekspor lewat
+flow engine yang **sudah ada** di repo induk (bukan flow baru yang perlu
+dibangun), dengan instrumentasi yang diselaraskan ke registry instrumen
+engine yang sungguh tersedia — bukan nama instrumen yang hanya masuk akal di
+kepala composer.
+
+**Konsekuensi pada batas Gelombang 2-3.** Prinsip "nol perubahan kode
+Python" (Latar/Scope) tetap berlaku persis untuk C1-C8/D1-D5 — Komponen E
+adalah pengecualian **terbatas dan eksplisit**: satu script konverter baru +
+penyelarasan angka di satu script yang sudah ada + test-nya (E2/E3), tidak
+lebih. Konstrain arsitektur "tidak ada audio di paket ini" juga tidak
+dilanggar: WAV tetap 100% dihasilkan Tool 2 di luar repo ini; paket ini
+hanya memicu (trigger) dan mendokumentasikan flow-nya.
+
+Semua fakta engine di bawah diverifikasi langsung dari kode repo induk
+`/home/shendi/self-project/daw_generative` (bukan asumsi) — lihat file
+sumber yang dikutip di tiap sub-bagian.
+
+### E1. Referensi baru `skills/midi-orchestration/references/engine-export.md`
+
+**Tujuan.** Belum ada dokumentasi tunggal yang menjelaskan flow export
+produksi Tool 1 → Tool 2: server dev mana yang harus hidup, kontrak HTTP
+persis, skema `drums` yang diterima ENGINE (beda dari skema Tool 1 v1/v2),
+dan batasan lingkungan (soundfont/ffmpeg) yang membuat export bisa gagal di
+luar kendali composer. Tanpa referensi ini, "cara export" hanya hidup
+sebagai pengetahuan tak tertulis.
+
+**Perubahan konkret.** File referensi **baru**
+`skills/midi-orchestration/references/engine-export.md`, isi:
+
+- **Prasyarat.**
+  - Server dev engine harus hidup: `npm run dev` dijalankan dari **ROOT
+    repo induk** `/home/shendi/self-project/daw_generative` (Vite dev
+    middleware — `vite-plugin-render.js` via `vite.config.js` — dev-only,
+    tidak ada build/production server terpisah untuk endpoint ini).
+  - Port default Vite **5173**, TAPI **auto-increment** bila port terpakai
+    — komposer **WAJIB membaca port sesungguhnya dari log terminal**
+    `npm run dev`, bukan mengasumsikan 5173.
+  - Soundfont GM `FluidR3_GM.sf2` **TIDAK auto-download**. Dicek berurutan
+    di: env `NEO_SOUL_SOUNDFONT` → cache
+    `~/.cache/hermes-neo-soul-soundfonts/fluidr3/usr/share/sounds/sf2/FluidR3_GM.sf2`
+    → path sistem `/usr/share/sounds/sf2/FluidR3_GM.sf2`. Cek dulu mana
+    yang ada sebelum mencoba render — tak satu pun ada → status export
+    **PENDING** (lihat E4), bukan dipaksakan gagal diam-diam.
+  - `fluidsynth` **auto-bootstrap** (unduh `.deb` via `apt-get download`)
+    bila absen dari PATH/cache — tak perlu instalasi manual di jalur
+    happy-path.
+  - `ffmpeg` **wajib ada di PATH** bila `mastering` bukan `false` (default
+    `mastering` = `'neo-soul'`, jadi ffmpeg wajib di jalur default).
+
+- **Request.** `POST http://127.0.0.1:<port>/api/render`, header
+  `content-type: application/json`, body `{abc, drums?, mastering?}`.
+  - `mastering`: `'neo-soul'` (default bila field absen), `'legacy'`, atau
+    `false` (tanpa mastering). Boolean **`true` DITOLAK** (422) — berbeda
+    dari jalur legacy octet-stream (di luar kontrak JSON ini) yang
+    menerima `true` → profil `'legacy'`.
+  - Body dibatasi **1 MB** — lebih besar → **413**, ditolak begitu
+    akumulasi byte melewati cap (tidak menunggu body selesai diterima).
+
+- **Skema `drums` — skema ENGINE, BUKAN skema Tool 1:**
+
+  ```
+  {
+    steps_per_bar: 8 | 12 | 16,
+    gm_map: { voice: <35..81> },
+    base_velocity: { voice: <1..127> },
+    swing?: <0.5..0.75>,
+    sections: [ { bars: <int >= 1>, pattern: { voice: "x.Xg..." } } ]
+  }
+  ```
+
+  Karakter pola hanya `x` (hit normal), `X` (aksen), `g` (ghost), `.`
+  (off). **Semantik velocity engine berbeda dari Tool 1**: engine — `X` =
+  base_velocity **+12** (cap 127), `g` = **35 tetap** (nilai absolut,
+  bukan relatif ke base_velocity); Tool 1 `grid_to_midi.py` — `X` =
+  base_velocity **×1.2**, `g` = base_velocity **×0.45**. Divergensi ini
+  **didokumentasikan, bukan disamakan** — WAV hasil engine adalah artefak
+  produksi otoritatif untuk timbre/velocity aktual; output MIDI Tool 1
+  tetap alat validasi lokal.
+
+  Format Tool 1 **v2** (pattern list per-bar + `phrase_velocity` +
+  top-level `timing`) **TIDAK diterima langsung oleh engine** — wajib
+  dikonversi dulu lewat E2. `phrase_velocity` dan `timing` **tidak ikut
+  terbawa** ke hasil export (keterbatasan skema engine yang tercatat,
+  bukan bug tersembunyi); engine punya penggantinya sendiri: swing grid +
+  groove profile `%%pocket`.
+
+- **Cross-check bar.** Total bar `drums` (jumlah `sections[].bars`)
+  **WAJIB sama** dengan jumlah bar ABC (dihitung dari not terjauh di semua
+  track; bar kosong di ekor tidak terhitung) — mismatch → **422** dengan
+  body `{error, abcBars, gridBars}`.
+
+- **`%%pocket`.** Hanya id **`neo-soul-core`** yang valid (satu-satunya
+  profil terdaftar di engine). Directive ini **tune-level**: harus muncul
+  **sebelum voice pertama aktif** di ABC — kemunculan setelah voice aktif
+  **diabaikan diam-diam** (bukan error).
+
+- **Respons sukses.** **200**, body **binary WAV** (`content-type:
+  audio/wav`), plus header `X-Conformance-Summary` (JSON satu baris
+  ringkas: jumlah bar, total not, jumlah track, velocity-std minimum antar
+  track melodis, pct-on-grid maksimum, id pocket + status
+  konformansinya — **non-gating**, nilai apa pun tetap 200). Simpan body
+  ke `runs/<run>/render.wav`; catat isi `X-Conformance-Summary` di
+  `scorecard.md`. `render.wav` **tidak dicommit** (lihat E4).
+
+- **Pra-cek murah tanpa render penuh.** `node scripts/conformance-audit.mjs
+  <song.abc> [drums-engine.json]` dijalankan dari root repo induk —
+  menjalankan pipeline gate yang sama (normalize → gate → import ABC →
+  drum-grid → realize → audit) **tanpa** memanggil `toMidi`/FluidSynth/
+  ffmpeg, jauh lebih murah untuk memeriksa apakah ABC/drums akan lolos
+  sebelum render sungguhan.
+
+- **Error umum.**
+  - **422** — ABC gagal gate, `drums` gagal validasi skema engine, bar
+    `drums` ≠ bar ABC, atau `mastering` tak dikenal.
+  - **413** — body > 1MB.
+  - **500** — kegagalan runtime (soundfont tak ketemu, fluidsynth/ffmpeg
+    gagal atau timeout — timeout fluidsynth 120 detik, ffmpeg 60 detik —
+    atau hasil render silent yang ditangkap pemeriksaan audibilitas).
+  - **Batas keras render**: `maxBars` 512, `maxNotes` 50.000, `maxVoices`
+    16, BPM 20-400, durasi maksimum 900 detik (15 menit).
+
+**File yang berubah:**
+
+- **File baru** `skills/midi-orchestration/references/engine-export.md` —
+  dokumentasi lengkap di atas.
+
+### E2. Konverter `skills/midi-orchestration/scripts/drums_to_engine.py` (+ `test_drums_to_engine.py`, TDD)
+
+**Tujuan.** Format `drums.json` yang selama ini dihasilkan Tool 1 (v1
+pattern-dict, atau v2 pattern-list + `phrase_velocity`/`timing`/
+`humanize_velocity`/`label` — lihat
+`skills/midi-orchestration/assets/drum-grid-template.json`) tidak diterima
+mentah oleh engine (skema berbeda, lihat E1). Tanpa konverter, tiap run
+harus menerjemahkan manual dan berisiko salah bentuk → 422 yang
+membingungkan di titik render, bukan di titik yang lebih murah untuk
+didiagnosis.
+
+**Perubahan konkret.** Script baru
+`skills/midi-orchestration/scripts/drums_to_engine.py`, ditulis TDD
+(`test_drums_to_engine.py` ditulis lebih dulu, mengikuti pola
+`test_abc_to_midi_and_grid.py` yang sudah ada di folder yang sama). Input:
+`drums.json` Tool 1 (v1 **atau** v2). Output: JSON skema engine murni
+(lihat E1) siap dikirim sebagai field `drums` di body `POST /api/render`.
+
+Aturan konversi:
+
+- **(a)** `pattern` berbentuk **dict** (v1) → satu `section {bars,
+  pattern}` apa adanya, tanpa pemecahan.
+- **(b)** `pattern` berbentuk **list** (v2, satu dict pattern per bar) →
+  dipecah per bar dulu, lalu **bar berurutan yang identik digabung** jadi
+  satu `section {bars: N}` (mis. 4 bar: 2 identik lalu 2 beda-beda → 3
+  section: `{bars:2}, {bars:1}, {bars:1}`).
+- **(c)** Field yang tidak dikenal skema engine (`phrase_velocity`,
+  `timing`, `humanize_velocity`, `label`, `title`, `tempo_bpm`,
+  `beats_per_bar`, `_comment`, dll.) **dibuang**, dengan **WARNING
+  eksplisit ke stderr** menyebut nama field yang hilang dan alasannya
+  (bukan silent drop).
+- **(d)** `steps_per_bar`, `gm_map`, `base_velocity`, `swing`
+  **dipertahankan** apa adanya (sudah kompatibel bentuk dengan skema
+  engine).
+- **(e)** Validasi sebelum dikirim ke engine (fail cepat, bukan 422
+  misterius di titik render): `steps_per_bar` ∈ {8,12,16}; nilai `gm_map`
+  35-81; nilai `base_velocity` 1-127; karakter pola hanya `x`/`X`/`g`/`.`.
+  Pelanggaran → error Python jelas yang menyebut field & nilai yang salah.
+
+**Test wajib** (`test_drums_to_engine.py`):
+
+1. v2 pattern-list 4 bar (2 bar identik berurutan + 2 bar berbeda) →
+   `sections` `[{bars:2}, {bars:1}, {bars:1}]`.
+2. v1 pattern-dict → passthrough apa adanya sebagai satu section.
+3. Field asing (`phrase_velocity`, `timing`, dst.) di input → dibuang dari
+   output **dan** warning tercatat (assert pesan menyebut nama field).
+4. `steps_per_bar` di luar {8,12,16} → error tervalidasi (assert raise +
+   pesan jelas).
+5. Output valid untuk contoh
+   `skills/midi-orchestration/assets/drum-grid-template.json` **yang ada
+   saat ini** (dijalankan sebagai regression fixture, bukan fixture buatan
+   sendiri).
+
+**File yang berubah:**
+
+- **File baru** `skills/midi-orchestration/scripts/drums_to_engine.py`.
+- **File baru** `skills/midi-orchestration/scripts/test_drums_to_engine.py`.
+
+### E3. Instrumen selaras engine
+
+**Tujuan.** Instrumentasi yang dipilih Level 1
+(`level-01-konsep.md`) dan dinotasikan lewat `%%MIDI program` di Level
+14/`abc-notation` bisa menyebut instrumen yang tidak dikenal atau salah
+nomor GM di registry engine — render lolos secara teori tapi menghasilkan
+timbre yang tidak dimaksud composer (mis. maksud Jazz Guitar tapi kena
+Clean Electric Guitar karena nomor program keliru).
+
+**Perubahan konkret.**
+
+- Tabel baru di `engine-export.md` (E1) — **registry kurasi engine** (id →
+  nama → GM program):
+
+  | id | Nama | GM program |
+  |---|---|---|
+  | sax | Tenor Sax | 66 |
+  | piano | Acoustic Piano | 0 |
+  | guitar | Jazz Guitar | 26 |
+  | bass | Acoustic Bass | 32 |
+  | rhodes | Rhodes E-Piano | 4 |
+  | trumpet | Trumpet | 56 |
+  | vibraphone | Vibraphone | 11 |
+  | guitar-clean | Clean Electric Guitar | 27 |
+  | bass-finger | Finger Bass | 33 |
+  | synth-bass | Synth Bass | 38 |
+  | synth-lead | Soft Synth Lead | 81 |
+  | jazz-kit | — (drum kit) | kanal drum GM 10, note number perkusi 35-81 (bukan program) |
+
+  Plus **palet siap pakai** engine (kombinasi id di atas per track):
+  `neo-soul-warm`, `jazz-cafe`, `lofi-dusty`, `modern-chill`.
+
+  Render engine sesungguhnya menerima **GM 0-127 penuh** (soundfont
+  FluidR3 general-purpose, tidak dibatasi ke 12 id di atas) — registry ini
+  adalah **menu default yang direkomendasikan**, bukan pagar keras. GM
+  lain di luar tabel boleh dipakai, hanya dengan **justifikasi eksplisit**
+  ditulis di artefak `01-brief.md`/Level 1.
+
+- **Gate baru** di `skills/jazz-composition/references/level-01-konsep.md`:
+  instrumentasi run **WAJIB** dipilih dari registry engine di atas, atau
+  disertai justifikasi eksplisit bila memakai GM lain. ABC final (Level
+  14/`abc-notation`) **WAJIB** menulis `%%MIDI program N` eksplisit per
+  voice **sesuai nomor di tabel** — jangan mengandalkan name-matching
+  otomatis engine (yang hanya menebak dari keyword `sax/bass/guitar/piano`
+  dan jatuh ke piano untuk selainnya) sebagai satu-satunya jalur penentuan
+  timbre.
+
+- **Selaraskan `PROGRAM` map**
+  `skills/midi-orchestration/scripts/abc_to_midi.py` (dipakai Tool 1 untuk
+  MIDI validasi lokal) dengan registry engine di atas — prinsip: **keyword
+  yang sama menghasilkan nomor program yang sama** dengan registry engine,
+  supaya preview MIDI Tool 1 dan hasil WAV engine tidak diam-diam berbeda
+  timbre untuk instrumen yang sama. Perubahan konkret pada dict `PROGRAM`
+  yang sudah ada:
+
+  | Keyword | Nilai lama | Nilai baru (selaras registry) |
+  |---|---|---|
+  | `sax` | 65 | **66** |
+  | `guitar` | 27 | **26** |
+  | `bass` | 33 | **32** |
+  | `vibraphone` | *(belum ada)* | **11** (entri baru) |
+  | `synth-lead` | *(belum ada)* | **81** (entri baru) |
+
+  `trumpet` (56), `rhodes` (4), `piano` (0) sudah selaras, tidak berubah.
+  Keyword lain di `PROGRAM` yang tidak punya padanan langsung di registry
+  engine (`horns`:61, `upright`:32, `strings`:48, `pad`:89) **dipertahankan
+  apa adanya** — di luar cakupan penyelarasan ini (tidak dikurasi engine,
+  bukan berarti salah). Nilai persis final tetap diputuskan penulis plan
+  implementasi (bukan dikunci di spec ini); test guard yang sudah ada di
+  `test_abc_to_midi_and_grid.py` untuk keyword yang berubah wajib
+  diperbarui mengikuti nilai baru, bukan dibiarkan gagal.
+
+**File yang berubah:**
+
+- `skills/midi-orchestration/references/engine-export.md` — tabel registry
+  + palet instrumen engine (bagian dari file baru E1).
+- `skills/jazz-composition/references/level-01-konsep.md` — gate
+  instrumentasi dari registry engine + kewajiban `%%MIDI program`
+  eksplisit.
+- `skills/midi-orchestration/scripts/abc_to_midi.py` — penyelarasan 3
+  nilai + 2 entri baru di `PROGRAM` map.
+- `skills/midi-orchestration/scripts/test_abc_to_midi_and_grid.py` — test
+  guard diupdate mengikuti nilai baru.
+
+### E4. Wiring export ke workflow
+
+**Tujuan.** Tanpa titik wiring eksplisit di orchestrator, langkah export
+(E1-E3) hanya jadi dokumentasi yang bisa dilewatkan — perlu langkah
+konkret di alur "piece dianggap selesai" yang sudah ada (Tahap akhir/
+`## Penilaian` di `SKILL.md`, Level 14 di referensinya) yang menjalankan
+konverter → pra-cek → render sungguhan, dengan jalur keluar jujur
+(`PENDING`) saat lingkungan tidak lengkap, alih-alih memaksakan gagal atau
+diam-diam dilewati.
+
+**Perubahan konkret.**
+
+- `skills/jazz-composition/SKILL.md`, **section baru di akhir file**
+  (setelah `## Sebelum menganggap sebuah piece selesai`, yaitu setelah
+  checklist fail-closed pra-L3 dari D5 terpenuhi): **`## Export produksi
+  (Tool 2 — engine daw_generative)`**, berisi urutan langkah:
+  1. Jalankan `skills/midi-orchestration/scripts/drums_to_engine.py` atas
+     `drums.json` run (bila run punya drum) → hasilkan
+     `drums-engine.json`.
+  2. Bila repo induk `daw_generative` tersedia di mesin: pra-cek murah
+     `node scripts/conformance-audit.mjs <song.abc> [drums-engine.json]`
+     dari root repo induk.
+  3. `POST /api/render` (lihat E1 untuk kontrak lengkap) ke
+     `http://127.0.0.1:<port>` — port dibaca dari log `npm run dev`,
+     bukan diasumsikan 5173.
+  4. Simpan body respons ke `runs/<run>/render.wav`; catat header
+     `X-Conformance-Summary` dan profil `mastering` yang dipakai di
+     `scorecard.md` (lihat perubahan `scorecard-template.md` di bawah).
+  5. Bila server dev/soundfont/fluidsynth/ffmpeg **tidak tersedia** di
+     lingkungan yang menjalankan run: status export dicatat **PENDING** +
+     alasan konkret (mis. "soundfont tak ditemukan di 3 path yang
+     dicek") — **run itu sendiri TIDAK dianggap gagal**; `output.mid`
+     (Tool 1) tetap ada dan cukup untuk L3 telinga manusia, tapi WAV hasil
+     engine tetap **artefak produksi otoritatif** begitu lingkungan
+     tersedia.
+
+  Referensi silang ditambahkan di
+  `skills/jazz-composition/references/level-14-detail.md` — **nama file
+  ini terverifikasi via `ls` sebelum spec ini ditulis**: file yang
+  sebenarnya ada di `skills/jazz-composition/references/` adalah
+  `level-14-detail.md`, **bukan** `level-14-review.md`; `14-review.md`
+  hanyalah nama **artefak run** (output Tahap 15 di `SKILL.md`), sedangkan
+  file **referensi skill** yang dibaca orchestrator untuk Level 14 adalah
+  `level-14-detail.md`. Referensi silang ini menunjuk balik ke section
+  export produksi di atas sebagai langkah setelah semua gate/checklist
+  Level 14 terpenuhi.
+
+- `.gitignore` di root repo ini (`music-composition-skill` — tempat folder
+  `runs/` benar-benar hidup dan tercatat git, dicek langsung: `runs/<run>/`
+  sudah tracked git saat ini): tambah baris `runs/*/render.wav` — WAV
+  tidak dicommit (ukurannya besar, dan merupakan artefak Tool 2, bukan
+  sumber kebenaran yang perlu di-diff/di-review lewat git).
+
+- `skills/jazz-composition/references/scorecard-template.md`: tambah
+  bagian baru **"Export"** (ditempatkan setelah `Level 14 — Detail Low
+  Level`, sebelum `L3 (telinga)` — sejalan dengan penempatan bagian "L2
+  global" dari D1-D4 di titik yang sama), berisi field:
+
+  | Field | Isi |
+  |---|---|
+  | Status | selesai / PENDING + alasan |
+  | Path | `runs/<run>/render.wav` (bila ada) |
+  | Conformance summary | isi `X-Conformance-Summary` apa adanya |
+  | Mastering | profil yang dipakai (`neo-soul` / `legacy` / `false`) |
+
+**File yang berubah:**
+
+- `skills/jazz-composition/SKILL.md` — section baru `## Export produksi
+  (Tool 2 — engine daw_generative)`.
+- `skills/jazz-composition/references/level-14-detail.md` — referensi
+  silang ke section export produksi.
+- `skills/jazz-composition/references/scorecard-template.md` — bagian baru
+  "Export".
+- `.gitignore` (root repo ini) — baris `runs/*/render.wav`.
+
 ## Uji penerimaan
 
 1. **Semua anchor/cross-ref valid + istilah konsisten.** Setiap file yang
@@ -633,6 +1010,24 @@ tercentang", bukan penilaian subjektif kapan sebuah piece "cukup matang".
      ke temuan nyata L1/L2.
    `L3 (telinga)` pada run ini **dibiarkan kosong**, menunggu user — bukan
    diasumsikan lolos karena L1/L2 (termasuk L2-blind/L2-cliche) hijau.
+3. **Export produksi nyata via engine, untuk run baru yang sama di atas.**
+   Agent menghidupkan `npm run dev` dari root repo induk `daw_generative`,
+   membaca port sesungguhnya dari log terminal (bukan mengasumsikan 5173),
+   dan mengecek ketersediaan soundfont `FluidR3_GM.sf2` di tiga path yang
+   didokumentasikan (E1) **sebelum** mencoba render. Target: **WAV nyata**
+   tersimpan di `runs/<run>/render.wav` — usahakan sampai tercapai, bukan
+   berhenti di percobaan pertama yang gagal karena hal yang bisa
+   diperbaiki (mis. server belum jalan). Bila lingkungan benar-benar tidak
+   lengkap (soundfont/fluidsynth/ffmpeg tak tersedia sama sekali di
+   mesin), status export **PENDING** dicatat **jujur** di `scorecard.md`
+   dengan alasan konkret — bukan diklaim selesai. Kriteria lolos konkret:
+   - `render.wav` ada di run folder **dan tidak ke-commit** (cek `git
+     status`/`.gitignore` sesuai E4);
+   - `X-Conformance-Summary` dan profil `mastering` tercatat di bagian
+     "Export" `scorecard.md`;
+   - instrumentasi run memakai id dari registry instrumen engine (E3)
+     **dan** ABC final menulis `%%MIDI program N` eksplisit per voice
+     sesuai tabel registry — bukan mengandalkan name-matching.
 
 ## Risiko & tradeoff
 
@@ -643,12 +1038,19 @@ tercentang", bukan penilaian subjektif kapan sebuah piece "cukup matang".
 | Register cliché (`cliche-register.md`) jadi checklist mati | Daftar statis berisiko dihafal lalu di-"tick" tanpa dipikirkan, atau jadi larangan absolut yang mematikan device yang sebetulnya sah dipakai sadar. | Tiap entri **wajib** punya kolom jalur reinterpretasi yang menyelamatkan — cliché bukan larangan mutlak, tapi sinyal "pakai sadar dengan reinterpretasi atau revisi", konsisten dengan gate C2/C3/C5/C6 yang jadi jalur reinterpretasinya. |
 | "Bukti revisi" dipalsukan sebagai revisi kosmetik | Composer bisa menulis pasangan before/after yang trivial (mis. ganti satu artikulasi tak penting) hanya untuk memenuhi syarat administratif. | Syarat eksplisit: bukti revisi harus **terhubung ke temuan nyata** L1/L2/L2-blind/L2-cliche — bukan revisi berdiri sendiri yang tidak menjawab temuan spesifik mana pun; reviewer L2 berikutnya bisa menolak pasangan before/after yang tidak menjawab temuan yang dicatat. |
 | Gate baru menambah panjang setiap artefak level yang tersentuh | 8 dari 14 level (7, 8, 10, 11, 12, 13, plus 4/5/9 untuk tempo) kini punya tabel/field wajib tambahan — risiko artefak jadi lebih berat dibaca/ditulis. | Diterima sadar: seluruh gate ini menutup celah yang sudah terbukti nyata di run lama (device generik lolos tanpa gate) — biaya verbosity dianggap lebih murah daripada biaya rilis piece yang terasa template. |
+| Export kehilangan `phrase_velocity`/`timing` per-role | Skema `drums` ENGINE (E1) tidak punya field ini — frase dinamika halus & micro-timing per-role yang dirancang di Tool 1 tidak ikut terbawa ke WAV produksi. | Diterima sadar sebagai keterbatasan format, bukan bug tersembunyi: didokumentasikan eksplisit di E1/E2 (WARNING stderr di titik konversi). Engine punya penggantinya sendiri (swing grid + groove profile `%%pocket neo-soul-core`) yang tidak identik tapi menutup sebagian celah ekspresif yang sama. |
+| Dependensi lingkungan (soundfont/ffmpeg/server dev) | Export bisa **PENDING** di mesin yang tidak punya `FluidR3_GM.sf2`/`ffmpeg` terpasang atau repo induk `daw_generative` tak ter-checkout — di luar kendali paket ini (Tool 1). | Fallback eksplisit di E4: status PENDING dicatat jujur + alasan, run tidak dianggap gagal; `output.mid` (Tool 1) tetap cukup untuk L3 telinga sementara menunggu lingkungan lengkap; uji penerimaan (poin 3) tetap mewajibkan **usaha nyata** mencapai WAV, bukan PENDING sebagai jalan pintas default. |
+| Dua semantik velocity `X`/`g` berbeda (Tool 1 vs engine) | `grid_to_midi.py` (Tool 1): `X`=×1.2, `g`=×0.45 (relatif base_velocity). Engine: `X`=+12 (absolut, cap 127), `g`=35 tetap (absolut). Preview MIDI lokal dan WAV produksi bisa terdengar berbeda dinamika drum-nya untuk pola yang sama. | Didokumentasikan eksplisit di E1 sebagai divergensi yang diketahui, bukan disamakan paksa (menyamakan berarti mengubah kode engine, di luar wewenang paket ini) — **WAV engine dinyatakan otoritatif** untuk timbre/dinamika aktual; Tool 1 MIDI tetap alat validasi struktural (bar/not/tempo), bukan sumber kebenaran dinamika final. |
+| `render.wav` membengkakkan run folder | File audio WAV tak terkompresi bisa puluhan MB per run — berkali lipat lebih besar dari seluruh artefak teks run lainnya digabung. | `.gitignore` (E4) mengecualikan `runs/*/render.wav` dari commit — disk lokal boleh menyimpannya (dibutuhkan untuk didengarkan), tapi repo git tidak ikut membengkak; scorecard tetap mencatat path & conformance summary sebagai jejak tanpa perlu menyimpan biner di git. |
 
 ## Ringkasan file yang berubah (rekap lintas komponen)
 
 - `skills/jazz-composition/SKILL.md` — C5 (pointer 12), C8e (ground rule
   tempo), D1 (fail-closed §Penilaian), D2 (prosedur L2-blind), D3 (prosedur
-  L2-cliche), D4 (Tahap 15, bukti revisi), D5 (checklist pra-L3).
+  L2-cliche), D4 (Tahap 15, bukti revisi), D5 (checklist pra-L3), **E4**
+  (section baru `## Export produksi (Tool 2 — engine daw_generative)`).
+- `skills/jazz-composition/references/level-01-konsep.md` — **E3** (gate
+  instrumentasi dari registry engine + `%%MIDI program` eksplisit).
 - `skills/jazz-composition/references/level-07-comping-voicing.md` — C6.
 - `skills/jazz-composition/references/level-08-bass.md` — C3.
 - `skills/jazz-composition/references/level-10-improvisasi.md` — C4.
@@ -656,8 +1058,10 @@ tercentang", bukan penilaian subjektif kapan sebuah piece "cukup matang".
   — C1.
 - `skills/jazz-composition/references/level-12-intro-ending.md` — C5.
 - `skills/jazz-composition/references/level-13-dinamika-dramaturgi.md` — C2.
+- `skills/jazz-composition/references/level-14-detail.md` — **E4**
+  (referensi silang ke section export produksi).
 - `skills/jazz-composition/references/scorecard-template.md` — D1, D2, D3,
-  D4 (bagian "L2 global" baru).
+  D4 (bagian "L2 global" baru), **E4** (bagian "Export" baru).
 - `skills/jazz-composition/references/human-ear-protocol.md` — D5.
 - `skills/jazz-composition/references/cliche-register.md` — **file baru**,
   D3.
@@ -671,3 +1075,14 @@ tercentang", bukan penilaian subjektif kapan sebuah piece "cukup matang".
 - `skills/harmony/SKILL.md` — C8c (durasi absolut per chord).
 - `skills/groove-rhythm/references/groove-meter.md` — C8d (breakpoint
   swing ratio).
+- `skills/midi-orchestration/references/engine-export.md` — **file baru**,
+  E1 + E3 (tabel registry instrumen + palet engine).
+- `skills/midi-orchestration/scripts/drums_to_engine.py` — **file baru**,
+  E2 (konverter drums.json Tool 1 → skema engine).
+- `skills/midi-orchestration/scripts/test_drums_to_engine.py` — **file
+  baru**, E2 (test TDD konverter).
+- `skills/midi-orchestration/scripts/abc_to_midi.py` — **E3** (penyelarasan
+  `PROGRAM` map: sax/guitar/bass + entri baru vibraphone/synth-lead).
+- `skills/midi-orchestration/scripts/test_abc_to_midi_and_grid.py` — **E3**
+  (test guard `PROGRAM` map diupdate mengikuti nilai baru).
+- `.gitignore` (root repo ini) — **E4** (baris `runs/*/render.wav`).
