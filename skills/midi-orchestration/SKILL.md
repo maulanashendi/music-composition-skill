@@ -7,13 +7,13 @@ description: Turn a validated ABC composition into a finished multi-track MIDI r
 
 Take a **validated** ABC composition and produce a **DAW-ready multi-track MIDI**: one clean track per instrument, plus a drum track on channel 10. Along the way, design the **interaction map** — which instrument leads, supports, answers, or stays silent, bar by bar — so the arrangement breathes instead of everyone playing all the time.
 
-This skill assumes the musical ideas are decided (by `jazz-idea-generator`) and the ABC is written and validated (by `abc-notation-writer`). It does not invent chords or melodies. Its job is arrangement + conversion.
+This skill assumes the musical ideas are decided (by `jazz-composition`) and the ABC is written and validated (by `abc-notation`). It does not invent chords or melodies. Its job is arrangement + conversion.
 
 ## The rule that keeps arrangements from sounding cluttered
 
 **The dramatic arc (from the composition plan) is the master; the interaction map serves it.** The map is not a chance to make everyone busy — it's how you translate the arc's emotional journey into "who plays when." A section that should feel lonely has one or two voices and lots of silence; a section that should feel full has the ensemble together. Do not add activity that doesn't serve the arc. Subtraction (dropping a voice) is as powerful as addition — often more.
 
-See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain.
+See `../../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain.
 
 ## Workflow
 
@@ -31,7 +31,7 @@ The map drives how you write or adjust the ABC voices (a "silent" instrument get
 
 ### Step 3 — Prepare the pitched ABC
 
-Ensure the ABC reflects the interaction map: silent voices have rests for those bars, answering voices play in the lead's gaps, and the density matches each section's role. If the ABC needs changes, that's an `abc-notation-writer` task — keep it validated (`validate_abc.py`) before converting. Every voice needs a `V:` header with a `name="..."` so the converter can map it to an instrument. When the ABC needs exact register/attack/voice-leading detail (lofi, neo-soul, smooth jazz, production-ready harmony), read `references/exact-voicing.md` — it uses scientific pitch notation (`C4` = middle C), so convert explicitly to ABC's octave marks before writing (see the note at the top of that file).
+Ensure the ABC reflects the interaction map: silent voices have rests for those bars, answering voices play in the lead's gaps, and the density matches each section's role. If the ABC needs changes, that's an `abc-notation` task — keep it validated (`validate_abc.py`) before converting. Every voice needs a `V:` header with a `name="..."` so the converter can map it to an instrument. When the ABC needs exact register/attack/voice-leading detail (lofi, neo-soul, smooth jazz, production-ready harmony), read `references/exact-voicing.md` — it uses scientific pitch notation (`C4` = middle C), so convert explicitly to ABC's octave marks before writing (see the note at the top of that file).
 
 ### Step 4 — Design the drum grid (also serving the arc)
 

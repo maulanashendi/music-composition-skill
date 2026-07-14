@@ -1,17 +1,17 @@
 ---
 name: abc-notation-writer
-description: Encode a finalized musical idea into valid, parseable ABC notation and validate it before it goes to MIDI. Use whenever someone has a locked composition idea — a composition-plan.json, a chord progression, a bassline, or a melody they've decided on — and wants it written as ABC, or when AI-generated ABC keeps failing to parse (bar-count mismatches, unclosed ties/slurs, wrong note lengths) and needs fixing or validating. Trigger on "write this as ABC," "turn this progression into ABC," "my ABC won't parse into MIDI," "validate this ABC," or handing over a composition plan to notate. This skill does the encoding and validation; it does not brainstorm musical ideas (that's jazz-idea-generator) or render MIDI.
+description: Encode a finalized musical idea into valid, parseable ABC notation and validate it before it goes to MIDI. Use whenever someone has a locked composition idea — a composition-plan.json, a chord progression, a bassline, or a melody they've decided on — and wants it written as ABC, or when AI-generated ABC keeps failing to parse (bar-count mismatches, unclosed ties/slurs, wrong note lengths) and needs fixing or validating. Trigger on "write this as ABC," "turn this progression into ABC," "my ABC won't parse into MIDI," "validate this ABC," or handing over a composition plan to notate. This skill does the encoding and validation; it does not brainstorm musical ideas (that's jazz-composition) or render MIDI.
 ---
 
 # ABC Notation Writer
 
 Encode a **decided** musical idea into ABC notation that parses cleanly on the first or second try. The value of this skill is reliability: AI-generated ABC often looks fine but fails strict parsers (music21) on subtle structural errors. This skill writes a constrained, portable ABC subset and validates it before hand-off.
 
-This skill does **not** invent musical content. If the idea isn't decided yet, that's `jazz-idea-generator`'s job — stop and say so rather than guessing chords or melodies.
+This skill does **not** invent musical content. If the idea isn't decided yet, that's `jazz-composition`'s job — stop and say so rather than guessing chords or melodies.
 
 ## Input
 
-Best input is a filled `composition-plan.json` (produced by `jazz-idea-generator`). But this skill also accepts a raw progression, bassline, or melody the person already committed to (from jamming, a reference, or another session). If a critical field is missing — key, tempo, meter, or the actual notes/chords per bar — **ask; do not guess**. Guessing is how misaligned notation happens.
+Best input is a filled `composition-plan.json` (produced by `jazz-composition`). But this skill also accepts a raw progression, bassline, or melody the person already committed to (from jamming, a reference, or another session). If a critical field is missing — key, tempo, meter, or the actual notes/chords per bar — **ask; do not guess**. Guessing is how misaligned notation happens.
 
 ## Workflow
 
@@ -54,7 +54,7 @@ This is the **self-healing retry loop**: feed the parser's error back into a tar
 
 If music21 is available and the target is MIDI, a second check is to attempt `music21.converter.parse(open('file.abc').read())` — the validator catches structural errors, but music21 is the actual downstream consumer, so a clean music21 parse is the real green light.
 
-See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain — a clean validator run is not the same as a correct render.
+See `../../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain — a clean validator run is not the same as a correct render.
 
 ### Step 5 — Deliver
 
@@ -65,7 +65,7 @@ Output the validated `.abc` file, note the validator result, and flag anything h
 - `references/abc-syntax.md` — full ABC syntax for lead sheets and compact scores: headers, notes/octaves, durations, chord symbols, ties/slurs, repeats, tuplets, multi-voice. The syntax authority.
 - `references/common-failures.md` — the specific ways AI-generated ABC breaks music21 and how to fix each; read before writing.
 - `references/drums-and-abc.md` — why drums stay out of ABC and how to hand them off as a step-grid. Drums are **always** a step-grid JSON in this package, never an ABC `%%MIDI drummap` voice — that split is load-bearing, not a style choice.
-- For exact register/attack/voice-leading precision (which pitches, not just which chord symbol), that's a production-stage decision made in `abc-to-midi-orchestration`'s `references/exact-voicing.md` — this skill notates what's already decided, it doesn't decide voicings.
+- For exact register/attack/voice-leading precision (which pitches, not just which chord symbol), that's a production-stage decision made in `midi-orchestration`'s `references/exact-voicing.md` — this skill notates what's already decided, it doesn't decide voicings.
 - `scripts/validate_abc.py` — structural + duration validator. Run on every file before hand-off.
 - `scripts/test_validate_abc.py` — the validator's own test suite (for maintaining the validator, not per-composition use).
 - `assets/lead-sheet-template.abc` — a minimal valid starting point to copy.
