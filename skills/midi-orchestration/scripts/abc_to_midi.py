@@ -8,7 +8,7 @@ import re, sys, tempfile
 import pretty_midi
 from music21 import converter, harmony
 
-PROGRAM = {"sax":65,"horns":61,"rhodes":4,"piano":0,"bass":33,
+PROGRAM = {"sax":65,"horns":61,"trumpet":56,"rhodes":4,"piano":0,"bass":33,
            "upright":32,"strings":48,"pad":89,"guitar":27}
 
 def program_for(name):
