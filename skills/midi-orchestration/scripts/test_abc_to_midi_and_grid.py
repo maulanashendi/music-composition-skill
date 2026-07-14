@@ -164,5 +164,97 @@ class GridToMidiAccentGhostTests(unittest.TestCase):
         self.assertLess(ghost_notes[0].velocity, normal_notes[0].velocity)
 
 
+def make_v2_spec(sections, timing=None, hum=0) -> dict:
+    spec = {
+        "tempo_bpm": 120,
+        "steps_per_bar": 4,
+        "swing": 0.5,
+        "humanize_velocity": hum,
+        "gm_map": {"kick": 36, "snare": 38},
+        "base_velocity": {"kick": 100, "snare": 80},
+        "sections": sections,
+    }
+    if timing is not None:
+        spec["timing"] = timing
+    return spec
+
+
+class GridToMidiV2Tests(unittest.TestCase):
+    def test_per_bar_list_renders_each_bar_independently(self):
+        # bar 0 hits kick at step 0; bar 1 hits snare at step 0
+        spec = make_v2_spec([{
+            "bars": 2,
+            "pattern": [
+                {"kick": ["x", "", "", ""]},
+                {"snare": ["x", "", "", ""]},
+            ],
+        }])
+        pm = build_drums(spec)
+        notes = sorted(pm.instruments[0].notes, key=lambda n: n.start)
+        self.assertEqual(len(notes), 2)
+        self.assertEqual(notes[0].pitch, 36)               # kick, bar 0
+        self.assertAlmostEqual(notes[0].start, 0.0, places=3)
+        self.assertEqual(notes[1].pitch, 38)               # snare, bar 1
+        self.assertAlmostEqual(notes[1].start, 2.0, places=3)  # 120bpm, 4/4 -> 2s/bar
+
+    def test_pattern_list_length_mismatch_raises(self):
+        spec = make_v2_spec([{"bars": 3, "pattern": [{"kick": ["x", "", "", ""]}]}])
+        with self.assertRaises(ValueError):
+            build_drums(spec)
+
+    def test_phrase_velocity_scales_each_bar(self):
+        spec = make_v2_spec([{
+            "bars": 2,
+            "pattern": {"kick": ["x", "", "", ""]},
+            "phrase_velocity": [1.0, 0.5],
+        }])
+        pm = build_drums(spec)
+        notes = sorted(pm.instruments[0].notes, key=lambda n: n.start)
+        self.assertEqual([n.velocity for n in notes], [100, 50])
+
+    def test_phrase_velocity_length_mismatch_raises(self):
+        spec = make_v2_spec([{
+            "bars": 2,
+            "pattern": {"kick": ["x", "", "", ""]},
+            "phrase_velocity": [1.0],
+        }])
+        with self.assertRaises(ValueError):
+            build_drums(spec)
+
+    def test_timing_offsets_target_role_only_and_clamps(self):
+        spec = make_v2_spec(
+            [{"bars": 1, "pattern": {"kick": ["x", "", "", ""], "snare": ["x", "", "", ""]}}],
+            timing={"kick": 100},   # +100 ms on kick only
+        )
+        pm = build_drums(spec)
+        starts = {n.pitch: round(n.start, 3) for n in pm.instruments[0].notes}
+        self.assertAlmostEqual(starts[36], 0.1, places=3)   # kick shifted +0.1s
+        self.assertAlmostEqual(starts[38], 0.0, places=3)   # snare unchanged
+
+    def test_timing_negative_offset_clamped_to_zero(self):
+        spec = make_v2_spec(
+            [{"bars": 1, "pattern": {"kick": ["x", "", "", ""]}}],
+            timing={"kick": -500},
+        )
+        pm = build_drums(spec)
+        self.assertAlmostEqual(pm.instruments[0].notes[0].start, 0.0, places=3)
+
+    def test_lint_warns_on_identical_multibar_section(self):
+        spec = make_v2_spec([{
+            "bars": 3,
+            "pattern": [{"kick": ["x"]}, {"kick": ["x"]}, {"kick": ["x"]}],
+        }])
+        self.assertTrue(grid_to_midi.lint_sections(spec))
+
+    def test_lint_silent_on_varied_and_on_short_sections(self):
+        varied = make_v2_spec([{
+            "bars": 3,
+            "pattern": [{"kick": ["x"]}, {"kick": ["g"]}, {"kick": ["x"]}],
+        }])
+        self.assertEqual(grid_to_midi.lint_sections(varied), [])
+        short = make_v2_spec([{"bars": 2, "pattern": {"kick": ["x", "", "", ""]}}])
+        self.assertEqual(grid_to_midi.lint_sections(short), [])
+
+
 if __name__ == "__main__":
     unittest.main()
