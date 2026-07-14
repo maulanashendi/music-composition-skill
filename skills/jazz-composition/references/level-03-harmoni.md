@@ -91,6 +91,13 @@ A2
 | Dm9      | G13      | Cmaj9     | E7alt     |
 | Am9      | D7alt    | Dm9 G13   | Cmaj9     |
 
+## Kandidat & seleksi (Level 3)
+
+Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`):
+
+- Tulis **progresi utama** + **1 alternatif lebih sederhana** + **1 alternatif lebih berani**, masing-masing dengan **exact chord symbols per bar**, sebagai material telanjang.
+- Kandidat + verdict selector ditulis ke `03-harmoni-candidates.md`; `03-harmony.md` memakai pemenang.
+
 ## Gate — ask, don't guess
 
 - "Chorus tinggal ulang verse aja — kan emang loop, gak masalah." (alasan yang ditolak, lihat RED-FLAGS.md) → Arc dramatis yang tidak pernah berubah bukan arc. Verse dan chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.

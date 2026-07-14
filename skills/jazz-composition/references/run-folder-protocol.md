@@ -10,9 +10,13 @@ dihentikan dan dilanjutkan (resume) tanpa mengulang level yang sudah selesai.
 ```
 runs/<tanggal>-<slug>/
 ├── progress.md
+├── 01-konsep-candidates.md   (hanya Level 1-4: material kandidat + verdict selector)
 ├── 01-brief.md
+├── 02-arsitektur-candidates.md
 ├── 02-form.md
+├── 03-harmoni-candidates.md
 ├── 03-harmony.md
+├── 04-melodi-candidates.md
 ├── 04-melody.abc          (catatan desain, lihat catatan di bawah; atau .md untuk artefak non-notasi)
 ├── 05-groove.md
 ├── 06-arrangement.md
@@ -33,6 +37,16 @@ runs/<tanggal>-<slug>/
 Nomor artefak `01`–`14` mengikuti urutan 14 level SOP (lihat tabel di
 `../SKILL.md`), bukan urutan bebas — artefak level N selalu ditulis sebelum
 level N+1 dimulai.
+
+### Artefak `NN-<level>-candidates.md` (hanya Level 1-4)
+
+Level 1-4 memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`),
+jadi selain artefak utama bernomor, tiap level itu juga menulis satu
+`NN-<level>-candidates.md` (`01-konsep-`, `02-arsitektur-`, `03-harmoni-`,
+`04-melodi-`). File ini memuat material kandidat telanjang + verdict selector di
+bagian akhirnya, mengikuti kontrak artefak ramping (7 field) di
+`candidate-selection-protocol.md` — **bukan** kontrak 11-field artefak lain.
+Level 5-14 **tidak** punya artefak `-candidates.md` (single-shot).
 
 ### Catatan khusus `04-melody.abc`
 

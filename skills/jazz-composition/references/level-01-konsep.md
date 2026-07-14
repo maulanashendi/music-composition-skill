@@ -76,6 +76,14 @@ Instrumentasi: tenor sax, piano, bass, drum
 Kompleksitas: menengah
 Arah energi: tenang, berkembang, intens, lalu terbuka
 
+## Kandidat & seleksi (Level 1)
+
+Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`). Tambahan wajib pada output level ini:
+
+- **Aesthetic thesis** — 1 kalimat ide musikal spesifik yang bisa **didengar** (bukan daftar atribut genre). Contoh: "satu nada yang awalnya terasa salah tak pernah dihilangkan; di akhir, harmoni di bawahnya berubah sehingga nada itu terasa diterima."
+- **2 konsep kandidat berbeda secara struktural** ditulis sebagai material telanjang (≤1 kalimat intent per kandidat, tanpa pembelaan). Ini yang memenuhi tuntutan rubrik `vibes-mood` "minimal dua konsep berbeda secara struktural".
+- Kandidat + verdict selector ditulis ke `01-konsep-candidates.md`; `01-brief.md` memakai pemenang.
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**

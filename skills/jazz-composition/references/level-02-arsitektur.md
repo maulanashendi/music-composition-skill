@@ -69,6 +69,13 @@ Shout chorus: 16 bar
 Head out: 32 bar
 Coda: 4 bar
 
+## Kandidat & seleksi (Level 2)
+
+Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`):
+
+- Tulis **≥2 alternatif bentuk** sebelum memilih (mis. through-composed vs. return-with-recontext), masing-masing 2-3 kalimat + **risiko statis/simetris**-nya, sebagai material telanjang.
+- Kandidat + verdict selector ditulis ke `02-arsitektur-candidates.md`; `02-form.md` memakai pemenang.
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**

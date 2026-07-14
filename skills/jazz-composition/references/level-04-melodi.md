@@ -160,6 +160,14 @@ Melodi utama dalam bentuk notasi atau MIDI yang sudah memiliki:
 * ruang
 * identitas ritmis
 
+## Kandidat & seleksi (Level 4)
+
+Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`):
+
+- Tulis **3 kandidat motif**, masing-masing sebagai **notasi ABC 1-2 bar** + fakta objektif: jumlah pitch aktual (rest **bukan** pitch), interval aktual antar nada berurutan (semitone + nama interval), relasi tiap nada ke chord (chord-tone / tension / outside).
+- Fakta objektif itu **wajib** diambil dari `../../abc-notation/scripts/notation_facts.py` pada tiap kandidat (jangan mengklaim dari ingatan) — lihat juga bagian "Cek fakta notasi" di bawah.
+- Kandidat + verdict selector ditulis ke `04-melodi-candidates.md`; `04-melody.abc` memakai pemenang.
+
 ## Gate — ask, don't guess
 
 - "Chorus tinggal ulang verse aja — kan emang loop, gak masalah." (alasan yang ditolak, lihat RED-FLAGS.md) → Arc dramatis yang tidak pernah berubah bukan arc. Verse dan chorus (atau bagian berulang lain) butuh perkembangan yang bisa didengar — register, density, harmoni, atau interaksi — bukan restatement identik.

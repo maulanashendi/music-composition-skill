@@ -89,6 +89,16 @@ levelnya sama (mis. Tahap 5–8 semuanya bagian dari desain melodi,
 melodi final yang tervalidasi hidup di `song.abc`; lihat catatan detail
 di `references/run-folder-protocol.md`.
 
+> **Level 1-4 memakai protokol kandidat→seleksi.** Tahap 1 (konsep), 2 (bentuk),
+> 3 (harmoni), dan 5 (motif/melodi) **tidak** langsung menulis satu artefak lalu
+> membelanya. Masing-masing menghasilkan **beberapa kandidat sebagai material
+> telanjang** dulu, lalu **subagent selector segar** memilih pemenang (fallback:
+> self-selection + pre-mortem). Kandidat + verdict ditulis ke
+> `NN-<level>-candidates.md`; artefak utama (`01-brief.md`, `02-form.md`,
+> `03-harmony.md`, `04-melody.abc`) memakai pemenangnya. Prosedur lengkap +
+> kontrak artefak ramping: `references/candidate-selection-protocol.md`. Baca itu
+> sebelum mengerjakan Tahap 1-5.
+
 **Tahap 1 — Buat brief** → artefak `01-brief.md`
 
 Gaya:
@@ -243,6 +253,13 @@ Rubrik L2 tiap level (lihat tabel `| Kriteria | Skor (0-2) | Alasan |` di
 Self-grading oleh agent/percakapan yang sama yang membuat artefak itu
 **dilarang**: agent yang baru saja menulis `04-melody.abc` tidak boleh
 juga yang mengisi skor rubriknya sendiri.
+
+Untuk **Level 1-4**, prinsip "reviewer/selektor segar" ini **sudah dipakai lebih
+awal**, di titik seleksi kandidat (lihat
+`references/candidate-selection-protocol.md`): sebelum L2 menilai artefak akhir,
+pemenang tiap level dipilih oleh subagent selector segar dari beberapa kandidat.
+Jadi untuk Level 1-4, L2 menilai artefak yang **sudah** lolos seleksi
+independen, bukan artefak single-shot.
 
 Alur konkret:
 
