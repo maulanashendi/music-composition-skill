@@ -175,6 +175,15 @@ identitas — pendengar tak bisa menangkap "section ini tentang apa". Variasi
 *antar*-section itu sehat (lihat variation budget di `neo-soul-genre.md`);
 variasi *di dalam* satu section yang sama itu bahaya.
 
+Klarifikasi (rekonsiliasi dengan `../../RED-FLAGS.md` baris "most
+sections need 2-3 moves"): **satu ide UTAMA per dimensi per section, plus
+hingga 2-3 detail pendukung yang berkorelasi dengannya.** Detail
+pendukung bukan ide independen kedua — ia harus bisa dijelaskan sebagai
+penjabaran/penguat ide utama yang sama, bukan tema kedua yang bersaing
+untuk perhatian. "2-3 moves" di RED-FLAGS.md = ide utama + detail
+pendukungnya; Lensa 3 membatasi jumlah ide UTAMA, bukan jumlah move —
+kedua kalimat itu sejalan, bukan kontradiksi.
+
 **Menjalankan ketiga lensa:** bagi draft per section → cek Lensa 1 (pasangan
 aktif), Lensa 2 (satu pemimpin), Lensa 3 (satu ide per dimensi) → section
 yang gagal salah satu: revisi (biasanya subtractive), lalu jalankan ulang

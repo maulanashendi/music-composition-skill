@@ -3,19 +3,32 @@
 LEVEL 13 — DINAMIKA DAN DRAMATURGI
 Tujuan
 Membuat lagu terasa hidup dari awal sampai akhir.
-Buat energy curve
-Contoh:
+Buat peta dinamika observabel
+Angka persentase (mis. "Intro 20%") adalah klaim yang tak bisa
+diverifikasi dari notasi — jangan dipakai. Ganti dengan **tabel per
+section berisi metrik observabel**:
 
-Intro        20%
-A1           35%
-A2           45%
-Bridge       60%
-A3           50%
-Solo 1       55–70%
-Solo 2       65–85%
-Shout chorus 100%
-Head out     70%
-Coda         30%
+| Metrik | Sumber |
+|---|---|
+| Active voices | hitung manual dari partitur/ABC per section |
+| Note-attacks per bar | output `notation_facts.py` per voice (`../../abc-notation/scripts/notation_facts.py`, sudah ada dari Gelombang 1) |
+| Register lead | rendah/tengah/tinggi + rentang aktual |
+| Durasi not rata-rata | dari notasi per section |
+| Drum hits per bar | dari `drums.json`/roadmap drum |
+| Dynamic marks | dari notasi (mf, mp, dst., bila ada) |
+
+Micro-apex (field wajib)
+Satu bar spesifik per piece (atau per bagian besar) yang menjadi momen
+paling berarti, ditulis sebagai **"bar N: <mekanisme>"**. Mekanisme harus
+dari kelas **non-volume**: register ekstrem tipis (satu nada
+tinggi/rendah sesaat), dissonance singkat, drop groove (instrumen
+berhenti sesaat), ruang kosong (rest terjadwal), dsb — **bukan** "volume
+naik" atau "semua instrumen tutti".
+
+**Gate**: section yang dilabeli "tidak ada peak"/"restrained" tanpa
+micro-apex yang terdefinisi = **ditolak** — restrained tidak sama dengan
+datar; artefak tetap menunjuk satu momen mekanisme non-volume yang
+membuat section itu diingat.
 Parameter dinamika
 Bukan hanya volume.
 Gunakan:
@@ -29,7 +42,7 @@ Gunakan:
 * note duration
 * silence
 Output level ini
-Peta energi per section.
+Tabel metrik observabel per section + field micro-apex.
 
 ## Gate — ask, don't guess
 

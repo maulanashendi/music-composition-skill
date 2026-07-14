@@ -215,7 +215,9 @@ dilarang).
 
 ### L1 (mekanis)
 
-- [ ] Energy curve tercantum per section dengan angka/persentase
+- [ ] Peta dinamika observabel tercantum per section (tabel metrik +
+      micro-apex terisi) — bukan persentase (lihat
+      `level-13-dinamika-dramaturgi.md`)
 
 ### L2 (rubrik)
 

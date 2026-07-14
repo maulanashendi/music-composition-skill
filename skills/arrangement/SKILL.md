@@ -78,6 +78,15 @@ Solo: interactive comping
 Head out: simplified voicing
 ```
 
+Deliverable wajib (selaras gate di
+`../jazz-composition/references/level-07-comping-voicing.md`): pilih
+**≥3 comping cell berbeda** (held / delayed answer / short syncopated
+stab, atau turunan teknik comping di atas), lalu **petakan ke ruang
+lead** — bar mana lead bernapas (rest/held note panjang) → cell apa yang
+mengisi ruang itu, atau justru diam. Comping uniform 1 attack/bar
+sepanjang lagu ditolak tanpa justifikasi eksplisit terhadap peta napas
+lead.
+
 ## Level 11 — Interlude, shout chorus, dan transisi
 
 **Tujuan**: mencegah bentuk lagu terasa hanya seperti tema → solo → tema.

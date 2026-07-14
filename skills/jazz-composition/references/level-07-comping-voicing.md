@@ -65,6 +65,23 @@ Bridge: denser voicing
 Solo: interactive comping
 Head out: simplified voicing
 
+### Comping cells mengikuti ruang lead (wajib)
+
+Deskripsi kepadatan seperti chart di atas belum cukup — itu deskripsi
+density, bukan pemetaan interaksi. Deliverable tambahan:
+
+1. Pilih **≥3 comping cell berbeda** dari vocabulary yang sudah ada —
+   held / delayed answer / short syncopated stab, atau turunan dari
+   teknik comping di atas (Charleston rhythm, anticipatory stab,
+   fragmented chord, dll.).
+2. **Petakan ke ruang lead**: bar mana lead bernapas (rest/held note
+   panjang) → cell comping apa yang mengisi ruang itu, atau justru diam.
+
+**Gate**: comping uniform 1 attack/bar sepanjang lagu = **ditolak**,
+kecuali dijustifikasi eksplisit terhadap peta napas lead (mis. lead
+memang tidak pernah bernapas di section itu, sehingga comping sengaja
+seragam untuk mendukung — bukan lupa memvariasikan).
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
