@@ -45,7 +45,7 @@ win for "no skill," see bug #4.
 ## Human-ear layer (layer 3)
 
 Not run in this pass — no audio was rendered (see `tests/human-ear-protocol.md`
-for how to do this later). Every "confidence" caveat in every subagent
+for how to do this later) [file kini di skills/jazz-composition/references/human-ear-protocol.md]. Every "confidence" caveat in every subagent
 report explicitly says the same thing: whether either version is actually
 *enjoyable* to listen to was not and cannot be verified by an agent reading
 notation. This is disclosed, not glossed over.

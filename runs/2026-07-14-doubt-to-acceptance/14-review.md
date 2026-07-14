@@ -67,7 +67,7 @@ Checks:
 
 Belum diisi di sini — lihat `scorecard.md` (L2 wajib diisi subagent
 reviewer segar tanpa histori percakapan ini; L3 wajib telinga manusia
-sesuai `../../tests/human-ear-protocol.md`, keduanya di luar wewenang
+sesuai `../../skills/jazz-composition/references/human-ear-protocol.md`, keduanya di luar wewenang
 agent yang menulis artefak ini).
 
 ## Gate check

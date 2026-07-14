@@ -7,7 +7,7 @@ diperbolehkan). **Semua L2 (rubrik) diisi 2026-07-14 oleh reviewer segar**
 artefak run folder ini + rubric.md modul terkait), memenuhi larangan
 self-grading di `../../skills/jazz-composition/SKILL.md` (§Reviewer segar).
 L3 (telinga) masih belum diisi — butuh manusia, per
-`../../tests/human-ear-protocol.md`.
+`../../skills/jazz-composition/references/human-ear-protocol.md`.
 
 ## Validasi mesin lintas-level
 
@@ -273,4 +273,4 @@ akal terhadap brief, bukan mengarang skor untuk solo yang tidak ada*
 
 *Belum diisi. `output.mid` sudah tersedia di
 `runs/2026-07-14-doubt-to-acceptance/output.mid` — L3 menunggu sesi
-`../../tests/human-ear-protocol.md` oleh manusia/reviewer terpisah.*
+`../../skills/jazz-composition/references/human-ear-protocol.md` oleh manusia/reviewer terpisah.*
