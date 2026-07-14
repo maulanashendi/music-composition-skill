@@ -306,3 +306,18 @@ For each section state:
 - Are open sections constrained enough to be repeatable?
 - Are cues visible or audible?
 - Is the return to the head unmistakable?
+
+## 20. Arrangement dan interaksi instrumen (dari `ideation-theory.md` §8)
+
+Dipindah dari `melody-fundamentals.md` (rapikan Task 3 — bukan materi
+melodi; disatukan di sini karena melengkapi §1–§19 di atas).
+
+- Beri tiap instrumen sebuah **peran** dan **lane register** supaya tidak
+  bertabrakan: bass (rendah, fondasi), keys (menengah, harmoni/comping),
+  lead (menengah-atas, melodi), pad (lebar, perekat), drum (groove).
+- **Call and response** antara lead dan comp menciptakan dialog dan
+  menjaga ruang tetap hidup.
+- **Subtraction** (menghilangkan satu instrumen untuk satu section) adalah
+  salah satu gerakan aransemen terkuat — membuat entry kembali terasa kena.
+- Density harus mengikuti arc: intro jarang, tengah lebih penuh, ending
+  menipis. Putuskan entrance/exit ini di tahap ide supaya plan membawanya.

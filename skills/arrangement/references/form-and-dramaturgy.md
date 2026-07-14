@@ -166,3 +166,59 @@ State whether the estimate assumes no repeats or performance repeats.
 - Is the solo architecture compatible with the head?
 - Are transitions cued?
 - Does the performance arc have a clear beginning, development, and ending?
+
+## 11a. Dramatic arc, tension-release, dan song structure (dari `ideation-theory.md` §4b/§4c/§7)
+
+Dipindah dari `melody-fundamentals.md` (rapikan Task 3 — bukan materi
+melodi; disatukan di sini karena melengkapi §9 Dramatic arc dan §2 Common
+formal families di atas).
+
+**Dramatic arc — tulang punggung.** Progresi chord yang berulang tanpa
+bentuk emosi adalah loop, bukan karya. Arc adalah perjalanan emosi lagu
+dari satu rasa ke rasa lain, dan ini keputusan induk yang melayani semua
+keputusan lain. Nyatakan arc sebagai urutan rasa per section, mis. "ragu →
+harap → puncak → penerimaan" atau "tenang → rindu → hangat → istirahat".
+Tiap rasa menuntut kondisi musikal spesifik:
+
+- **fase mencari/ragu** — register rendah-menengah, melodi berhenti di
+  nada belum resolve (2, 6, 7), instrumentasi jarang, timing santai;
+- **fase membangun/harap** — ritme mengencang, bass melangkah naik,
+  register merangkak naik, instrumen masuk satu-satu, motif diulang lebih
+  tinggi (sequence);
+- **fase puncak** — register tinggi, ensemble penuh, melodi mencapai dan
+  *menahan* nada tertingginya, harmoni terbuka/mayor, on-the-beat (percaya
+  diri);
+- **fase resolusi** — register turun, ritme melonggar, resolusi penuh ke
+  tonic, ruang dan keheningan, ambience melebar.
+
+Arc menentukan sepi-nya verse, cara pre-chorus membangun, apakah chorus
+membuka atau meledak, dan bagaimana ending mendarat. Desain ini sebelum
+chord. Kalau brief hanya berupa vibe, usulkan arc dan konfirmasi.
+
+**Tension-release sebagai dramaturgi** (bagian dari §9 di atas, bukan
+mekanik interval melodi — lihat `melody-fundamentals.md` untuk sisi
+phrasing-nya): bangun tensi lalu lepaskan, tapi pilih hanya teknik yang
+melayani arc saat itu — menumpuk semuanya adalah over-arrangement.
+Paletnya: dominant chord ditahan sebelum resolve ke tonic; bass bergerak
+berlawanan arah dengan melodi (friksi); ritme mengencang (subdivisi makin
+rapat); instrumen ditambah satu-satu; register naik; volume/intensitas
+naik; reverb/ambience melebar; satu ketuk hening tepat sebelum section
+besar (membuat entrance terasa kena); broken chord membuka ke ruang; dan
+keheningan/ruang yang disengaja sebagai release itu sendiri. Section yang
+hanya membangun tanpa pernah lepas jadi melelahkan; yang hanya melepas
+tanpa membangun jadi hanyut — arc menentukan mana yang dibutuhkan tiap
+section.
+
+**Song structure (pelengkap keluarga bentuk jazz di §2):**
+
+- Bentuk jazz: **AABA (32-bar)**, **blues (12-bar)**, **ABAC**, atau
+  **through-composed** (lihat §2 untuk detail). Bentuk berbasis loop:
+  **intro → loop A → variasi → kontras (B) → transformed return → outro**.
+- Tiap section berulang harus *bervariasi* — reorkestrasi, reharmonisasi,
+  fragmentasi, penipisan tekstur, atau transformasi. Repetisi literal tanpa
+  tujuan adalah penyebab #1 kebosanan.
+- Rencanakan **macro arc**: di mana klimaks, di mana subtraction/breakdown,
+  di mana ending. Bahkan loop lofi yang santai tetap butuh satu build dan
+  satu drop.
+- Beri lagu **ending yang jelas** — tag, ritard, chord final, atau titik
+  loop yang bersih. Jangan biarkan loop tanpa keputusan keluar.

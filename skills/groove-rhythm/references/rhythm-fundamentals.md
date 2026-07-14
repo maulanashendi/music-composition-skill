@@ -16,3 +16,15 @@ sebelum menulis pola groove/bass/drum konkret di `groove-rhythm/SKILL.md`.
 - **Pocket** = the consistent micro-timing relationship between layers.
   Bass slightly behind, hats slightly ahead, etc. Decide this at idea stage
   because it defines the groove's identity.
+
+## Karakter bassline
+
+Dipindah dari `ideation-theory.md` §4 (rapikan Task 3 — bukan materi
+melodi, jadi tidak lagi tinggal di `melody-fundamentals.md`).
+
+The bass defines the groove as much as the drums. Decide its *type* at idea stage:
+
+- **Root-cycle / walking** — one note per beat outlining changes; swing and bebop default.
+- **Pedal** — one held/repeated note under moving harmony; tension and modal stasis.
+- **Riff / ostinato** — a repeating rhythmic figure; funk, fusion, lofi hooks.
+- **Sparse / syncopated** — space and off-beat hits; laid-back neo-soul and lofi. Landing on beat 1 then leaving space reads as "relaxed."

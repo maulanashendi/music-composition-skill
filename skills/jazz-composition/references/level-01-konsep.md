@@ -82,4 +82,6 @@ Arah energi: tenang, berkembang, intens, lalu terbuka
 
 ## Modul pendalaman
 
-- Tidak ada modul pendalaman khusus untuk level ini — cukup prosedur di atas dan `../../RED-FLAGS.md`.
+- `../../vibes-mood/SKILL.md` — baca saat perlu menerjemahkan brief mood
+  ("tenang", "misterius", "urban") menjadi keputusan gaya/tempo/karakter
+  yang konkret; selain itu cukup prosedur di atas dan `../../RED-FLAGS.md`.
