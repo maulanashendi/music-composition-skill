@@ -8,13 +8,19 @@ of any one engine or app — it reasons about music and hands off two
 artifacts (ABC + a drum step-grid) that a separate rendering tool ("Tool 2",
 the engine) turns into audio.
 
-## The three skills, in order
+## The gateway and the three skills, in order
 
 ```
-jazz-idea-generator  →  abc-notation-writer  →  abc-to-midi-orchestration
-  (brief → plan)          (plan → valid ABC)      (ABC → arranged MIDI)
+composition-gateway  →  jazz-idea-generator  →  abc-notation-writer  →  abc-to-midi-orchestration
+   (route the request)    (brief → plan)          (plan → valid ABC)      (ABC → arranged MIDI)
 ```
 
+0. **`composition-gateway`** — the single entry point. Greets any request to
+   compose/write/arrange a track, works out where the person already is in
+   the pipeline, and routes into the right skill below. Holds the
+   fourteen-layer composition map (concept → detail), each layer pointing at
+   the skill that executes it. Routes and maps; it does not compose, notate,
+   or arrange itself.
 1. **`jazz-idea-generator`** — turns a brief/mood/reference feel into a
    dramatic arc, hook, chord progression, groove, and phrasing plan, locked
    into `composition-plan.json`. Does not write notation.
