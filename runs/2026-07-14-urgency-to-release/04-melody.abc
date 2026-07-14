@@ -1,0 +1,90 @@
+% 04 — Desain Melodi (Level 4, Tahap 5-8). Catatan desain, prosa + fragmen
+% ABC ilustratif. BUKAN sumber final tervalidasi — final ada di ../song.abc.
+
+Tahap 5 — Motif inti
+------------------------
+Identitas interval: rising perfect 4th followed by falling minor 3rd
+(D -> G -> E), landing off the downbeat inside the 4+3 grouping so the
+motif itself feels like it's leaning forward ("restless"/"urgent").
+Rhythmic identity: short pickup + syncopated cell that lands on the "+3"
+half of the bar (beats 5-7 of the 7/8, i.e. the short group), not on beat 1.
+
+Illustrative fragment (motif alone, not yet fit to full bar):
+X:1
+M:7/8
+L:1/8
+K:D
+D2 G2 E3 |
+
+Tahap 6 — Target tones (per bar, from 03-harmony.md)
+------------------------
+Bar3 Dm11 -> F   | Bar4 G13sus -> C   | Bar5 Dm11 -> F   | Bar6 Cmaj7#11 -> F#
+Bar7 Dm9  -> E   | Bar8 Ebmaj7#11 -> A(nat) | Bar9 Dm9 -> E | Bar10 G7alt -> Bb
+Bar11 Bbmaj7#11 -> E(nat) | Bar12 Ab7#9 -> B(nat) | Bar13 G7#11 -> C#
+Bar14 A7alt -> Bb (resolves up into bar 15's G#)
+Bar15/17 Dmaj9#11 -> G# | Bar16 Bm11/D -> F# | Bar18 A/D -> C# | Bar19 -> F#
+Guide tones connect stepwise/chromatically bar to bar (F->C is a leap
+answered by stepwise recovery in the next cell, per the "leap -> recovery"
+principle) so the line has direction even while the harmony below it is
+restless.
+
+Tahap 7 — Membangun melodi (A section, bars 3-6, illustrative)
+------------------------
+Uses: interval (P4 up / m3 down motif), broken chord (Dm11 arpeggio
+fragments), passing tone (chromatic approach into target tones), space
+(the motif leaves the long "4" group of each bar empty — melody only
+speaks in the short "3" group, bars 3 and 5; this is deliberate: it is
+what makes the meter's asymmetry audible rather than just a bass/drum
+fact), repetition (the same rising-4th/falling-3rd cell recurs bar 3 and
+5, varied bar 6 to mark the modal-interchange chord).
+
+X:1
+M:7/8
+L:1/8
+K:D
+z4 D2 G2 E3 | z4 G2 C2 E3 | z4 D2 G2 F3 | z4 F2 A2 F#3 |
+
+(Reading: first 4 eighths silent = the long "4" group; melody enters in
+the short "3" group each bar. Bar 6 varies the cell — F-A-F# outlines
+Cmaj7#11's #11 color instead of repeating the Dm cell verbatim, marking
+the bVII arrival per Tahap 9's "vary the repeat" rule.)
+
+Tahap 8 — Outside material (placed at high-tension bars per tension map)
+------------------------
+Bar 8 (Ebmaj7#11, chromatic mediant) and bars 11-14 (B section run-up to
+climax) are where outside material lives — this matches the tension map's
+"tinggi"/"dominan puncak" marks, not placed arbitrarily.
+
+Inside (Dm9, bar 7):      D  F  A  C  (arpeggio)
+Outside (Eb, bar 8):      Eb G  Bb D  (parallel arpeggio a half-step up —
+                            classic side-slipping move, resolves back to
+                            the Dm9 arpeggio shape in bar 9)
+Resolution (Dm9, bar 9):  D  F  A  E  (lands on the bar's guide tone E)
+
+Bars 11-14 (B, tension run-up) use a rising chromatic/quartal sequence
+across Bbmaj7#11 -> Ab7#9 -> G7#11 -> A7alt, each bar restating a
+compressed version of the core motif a step higher, so the "outside"
+material is still recognizably the same rhythmic cell, not a different
+vocabulary bolted on (this is the Tahap 9 rule: outside is effective when
+"pola ritmenya kuat, bentuk motifnya jelas, durasinya terbatas, resolusinya
+nyata" — resolution lands hard on beat 1 of bar 15, the climax's brightened
+D).
+
+Tahap 9 — Tema vs. improvisational vocabulary
+------------------------
+This piece is through-composed with no dedicated solo section (see
+`02-form.md` — recorded as a deliberate absence, not an oversight), so
+there is no separate "development vocabulary" layer distinct from the
+theme: bars 7-14 ARE the development, built directly out of the head
+motif's interval/rhythm identity rather than introducing new material.
+The climax (bars 15-18) restates the motif's rhythmic shape one more time
+but with the interval content widened (P4 -> P5/octave leaps) and the
+harmony brightened — same identity, "triumphant" version.
+
+## Gate check (Level 4)
+
+Motif (rising P4/falling m3, syncopated into the short 7/8 group), kontur
+(low, syncopated cells -> chromatic build -> wide triumphant leaps),
+target tones (table above) all determined. Bar count of this design note
+(bars 3-18 covered, matching harmony) is consistent with `03-harmony.md`'s
+20-bar skeleton.

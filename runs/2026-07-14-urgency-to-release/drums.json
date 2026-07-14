@@ -1,0 +1,104 @@
+{
+  "title": "Undertow — drum step-grid",
+  "tempo_bpm": 80,
+  "beats_per_bar": 3.5,
+  "steps_per_bar": 14,
+  "swing": 0.5,
+  "humanize_velocity": 10,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51, "crash": 49 },
+  "base_velocity": { "kick": 95, "snare": 88, "rimshot": 60, "chh": 60, "ohh": 78, "ride": 70, "crash": 100 },
+  "sections": [
+    {
+      "label": "Intro (bars 1-2): bass+drums only, establishing 4+3",
+      "bars": 2,
+      "pattern": {
+        "kick": "x.......x.....",
+        "chh":  "x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "label": "A (bars 3-4): motif enters, snare accents the short-group downbeat",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x.......x.....",
+        "snare": "........x.....",
+        "chh":   "x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "label": "A (bars 5-6): bar 6 modal-interchange color, ride touch",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x.......x.....",
+        "snare": "........x.....",
+        "chh":   "x.x.x.x.x.x.x.",
+        "ride":  ".............x"
+      }
+    },
+    {
+      "label": "A' (bars 7-8): comping call-and-response, kick busier",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x...x...x.....",
+        "snare": "........x.....",
+        "chh":   "x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "label": "A' (bars 9-10): snare fill leading into B's tension build",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x.......x.....",
+        "snare": "........x..x..",
+        "chh":   "x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "label": "B (bars 11-12): hi-hat opens to 16ths, ride enters, snare every bar",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x...x...x.x...",
+        "snare": "....x...x...x.",
+        "chh":   "xxxxxxxxxxxxxx",
+        "ride":  "........x....."
+      }
+    },
+    {
+      "label": "B (bars 13-14): max tension, dominant push toward climax",
+      "bars": 2,
+      "pattern": {
+        "kick":  "x.x.x...x.x...",
+        "snare": "....x...x..x..",
+        "chh":   "xxxxxxxxxxxxxx",
+        "ride":  "x.......x....."
+      }
+    },
+    {
+      "label": "Climax (bars 15-18): full kit, crash+open hat on downbeat, ride eighths",
+      "bars": 4,
+      "pattern": {
+        "kick":  "x...x...x.x...",
+        "snare": "....x.......x.",
+        "ohh":   "x.............",
+        "crash": "x.............",
+        "ride":  "x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "label": "Coda (bar 19): final unison hit",
+      "bars": 1,
+      "pattern": {
+        "kick":  "x.............",
+        "crash": "x.............",
+        "ride":  "x............."
+      }
+    },
+    {
+      "label": "Coda (bar 20): near-silence, resolved",
+      "bars": 1,
+      "pattern": {
+        "rimshot": "....x........."
+      }
+    }
+  ]
+}

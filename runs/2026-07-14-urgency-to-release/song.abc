@@ -1,0 +1,27 @@
+X:1
+T:Undertow
+M:7/8
+L:1/8
+Q:1/8=160
+K:C
+V:1 clef=treble name="Tenor Sax"
+V:2 clef=treble name="Rhodes"
+V:3 clef=bass name="Bass"
+[V:1] z4 z3 | z4 z3 |
+[V:1] "Dm11" z4 D G E | "G13sus" z4 G C A | "Dm11" z4 D G E | "Cmaj7#11" z4 F A ^F |
+[V:1] "Dm9" z4 D G E | "Ebmaj7#11" z4 _E _A F | "Dm9" z4 D G E | "G7alt" z4 _A _D _B |
+[V:1] "Bbmaj7#11" z4 _B _E c | "Ab7#9" z4 C F D | "G7#11" z4 D G E | "A7alt" z4 ^C E ^G |
+[V:1] "Dmaj9#11" d2 ^f2 a3 | "Bm11/D" ^f2 a2 b3 | "Dmaj9#11" a2 d'2 ^f'3 | "A/D" d'7 |
+[V:1] "Dmaj9#11" a2 ^f2 d3 | "D" D7 |
+[V:2] z4 z3 | z4 z3 |
+[V:2] [FAce]4 z3 | [Ace]4 z3 | [FAce]4 z3 | [EGB^F]4 z3 |
+[V:2] z2 [Dfa]2 z3 | z2 [G_B_E_A]2 z3 | z2 [Dfa]2 z3 | [_A_D]2 [_B_E]2 z3 |
+[V:2] [_BE]2 [c_e]2 z3 | [_A_B]2 [c_e]2 z3 | [G^C]2 [df]2 z3 | [^CE]2 [^GB]2 z3 |
+[V:2] [D^FAd]7 | [D^FAB]7 | [D^FAd]7 | [D^FAd]7 |
+[V:2] [D^FAd]7 | [Dd]7 |
+[V:3] D,4 A,2 D,1 | D,4 A,2 D,1 |
+[V:3] D,2 F,2 D,3 | G,2 B,2 D,3 | D,2 F,2 A,3 | C,2 E,2 G,3 |
+[V:3] D,2 F,2 A,3 | D,4 _E,3 | D,2 F,2 A,3 | D,2 F,1 A,1 _A,3 |
+[V:3] _B,2 D,2 F,3 | _A,2 C,2 _E,3 | G,2 B,2 D,3 | A,2 ^C,2 E,3 |
+[V:3] D,4 d3 | D,4 d3 | D,4 d3 | D,3 d4 |
+[V:3] D,4 d3 | D,7 |
