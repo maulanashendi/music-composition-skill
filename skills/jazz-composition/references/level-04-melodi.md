@@ -164,7 +164,7 @@ Melodi utama dalam bentuk notasi atau MIDI yang sudah memiliki:
 
 Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`):
 
-- Tulis **3 kandidat motif**, masing-masing sebagai **notasi ABC 1-2 bar** + fakta objektif: jumlah pitch aktual (rest **bukan** pitch), interval aktual antar nada berurutan (semitone + nama interval), relasi tiap nada ke chord (chord-tone / tension / outside).
+- Tulis **3 kandidat motif**, masing-masing sebagai **notasi ABC 1-2 bar** + fakta objektif: jumlah pitch aktual (rest **bukan** pitch), interval aktual antar nada berurutan (semitone + nama interval), relasi tiap nada ke chord (chord-tone / tension-diatonik / outside).
 - Fakta objektif itu **wajib** diambil dari `../../abc-notation/scripts/notation_facts.py` pada tiap kandidat (jangan mengklaim dari ingatan) — lihat juga bagian "Cek fakta notasi" di bawah.
 - Kandidat + verdict selector ditulis ke `04-melodi-candidates.md`; `04-melody.abc` memakai pemenang.
 
@@ -177,9 +177,11 @@ Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`
 
 Sebelum artefak `04-melody.abc` (dan tiap kandidat motif di `04-melodi-candidates.md`) dianggap selesai:
 
+Tulis tiap kandidat sebagai tune ABC mini yang lengkap (header `X:`, `M:`, `L:`, `K:` + baris nada berawalan `[V:1]`) — `notation_facts.py` hanya membaca baris ber-`[V:id]`; fragmen tanpa itu menghasilkan analisis kosong tanpa error.
+
 1. Jalankan pada notasi motif/melodi:
    `cd skills/abc-notation/scripts && uv run --with music21 --with pretty_midi python notation_facts.py <file.abc> --voice <id>`
-2. **Lampirkan** output relevan (jumlah pitch, interval antar nada, klasifikasi chord-tone/tension/outside) ke artefak.
+2. **Lampirkan** output relevan (jumlah pitch, interval antar nada, klasifikasi chord-tone/tension-diatonik/outside) ke artefak.
 3. **Cocokkan tiap label teori** dengan fakta script. Contoh nyata dari run lama yang harus tertangkap: motif diklaim "4-not" padahal `notation_facts.py` hanya melaporkan **3 pitch** (rest bukan pitch); arpeggio chord-tone dilabeli "outside" padahal script melaporkannya `chord-tone`. Ketidakcocokan = **revisi dulu**, jangan lanjut.
 4. Nada yang jatuh di bar dengan chord `unparsed` diperiksa manual.
 
