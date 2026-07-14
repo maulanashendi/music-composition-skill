@@ -1,8 +1,13 @@
 # music-composition-skill — operating instructions
 
-This package is three Agent Skills meant to be read and run **in this
-order** for any composition task — never skip ahead or run them out of
-order:
+**Start at the gateway.** `composition-gateway/SKILL.md` is the single entry
+point: it greets any composition request, works out where the person already
+is, and routes into the three skills below. It routes and holds the
+big-picture layer map — it does **not** compose, notate, or arrange itself.
+
+Under the gateway, this package is three Agent Skills meant to be read and
+run **in this order** for any composition task — never skip ahead or run
+them out of order:
 
 1. `jazz-idea-generator/SKILL.md` — brief → locked `composition-plan.json`
 2. `abc-notation-writer/SKILL.md` — plan → validated ABC
