@@ -1,0 +1,28 @@
+X:1
+T:Home by Dawn
+C:Home by Dawn (music-composition-skill run 2026-07-14-dawn-shift-home)
+M:4/4
+L:1/8
+Q:1/4=74
+K:C
+V:1 clef=treble name="Lead Trumpet"
+V:2 clef=treble name="Rhodes"
+V:3 clef=bass name="Bass"
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] F2 A2 z4 | A8 | z4 A4 | ^f4 e4 |
+[V:1] g4 e4 | ^f2 e2 z4 | z8 | z8 |
+[V:1] z8 | ^f8 | e8 | d8 |
+[V:2] z8 | z8 | z8 | z8 |
+[V:2] [FAce]8 | [_BDf]8 | [FAce]8 | [EGB]8 |
+[V:2] [FAce]8 | [Ace]8 | [_BDfa]8 | [EGBd]8 |
+[V:2] [FAce]8 | [FAce]8 | [DEG]8 | [^FAce]8 |
+[V:2] [EGB^f]8 | [^FAce]8 | [^FBe]8 | [BD^f]8 |
+[V:2] [^FBe]8 | [^FBe]8 | [^FBe]8 | z8 |
+[V:3] "Dm9"D4 A2 z2 | "Dm9"D4 F2 z2 | "Dm9"D4 C2 z2 | "Dm9"D4 E2 z2 |
+[V:3] "Dm9"D4 A2 z2 | "Gm7"G4 _B2 z2 | "Dm9"D4 F2 z2 | "Cmaj7"C4 E2 D2 |
+[V:3] "Dm9"D2 F2 A2 z2 | "Fmaj7"F2 A2 C2 z2 | "Gm9"G2 _B2 D2 z2 | "CMaj9"C2 E2 G2 B2 |
+[V:3] "Dm9"D4 F2 z2 | "Dm9"D8 | "A7sus4"A2 D2 E2 G2 | "D9"D4 ^F2 A2 |
+[V:3] "Cmaj7#11"C2 E2 G2 B2 | "D9"D8 | "D6add9"D8 | "Gmaj7"G8 |
+[V:3] "D6add9"D8 | "D6add9"^F8 | "D6add9"E8 | "D"D8 |

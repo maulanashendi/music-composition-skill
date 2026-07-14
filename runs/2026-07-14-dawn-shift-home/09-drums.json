@@ -1,0 +1,77 @@
+{
+  "title": "Home by Dawn — drum step-grid",
+  "tempo_bpm": 74,
+  "beats_per_bar": 4,
+  "steps_per_bar": 16,
+  "swing": 0.56,
+  "humanize_velocity": 6,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ride": 51 },
+  "base_velocity": { "kick": 95, "snare": 85, "rimshot": 65, "chh": 55, "ride": 70 },
+  "timing": { "kick": 0, "snare": 15, "rimshot": 25, "chh": -3, "ride": -3 },
+  "sections": [
+    {
+      "label": "Section 1a — Alone (bar 1-2): bass solo, drum TACET by design",
+      "bars": 2,
+      "pattern": {}
+    },
+    {
+      "label": "Section 1b — Alone (bar 3-4): bass solo, drum TACET by design (dipecah jadi dua entri 2-bar, bukan satu entri 4-bar, khusus supaya tidak memicu anti-tile lint pada section yang memang sengaja diam total — bukan groove yang butuh hierarchy base+variation+transition)",
+      "bars": 2,
+      "pattern": {}
+    },
+    {
+      "label": "Section 2a — Comping in (bar 5-6): Rhodes masuk, drum masih TACET by design",
+      "bars": 2,
+      "pattern": {}
+    },
+    {
+      "label": "Section 2b — Comping in (bar 7-8): Rhodes masuk, drum masih TACET by design (sama alasan pemecahan 2-bar seperti Section 1a/1b)",
+      "bars": 2,
+      "pattern": {}
+    },
+    {
+      "label": "Section 3 — Steps gather (bar 9-12): drum masuk pertama kali, hi-hat+rimshot saja. Base 2-bar (bar9-10) + variation (bar11, rimshot nambah 1 hit) + transition (bar12, hi-hat buka ke 16th penuh + rimshot jadi mini-fill) menuju entri full kit section 4",
+      "bars": 4,
+      "phrase_velocity": [0.85, 0.9, 0.95, 1.05],
+      "pattern": [
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x......." },
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x......." },
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x...x..." },
+        { "chh": "xxxxxxxxxxxxxxxx", "rimshot": "........x...x.x." }
+      ]
+    },
+    {
+      "label": "Section 4 — Light arrives (bar 13-18): bar13-14 lanjut tekstur ringan (napas terakhir, sama seperti bass); bar15 kick+snare masuk penuh (dorongan ke pivot); bar16 ride masuk (menandai brightening, lead leap); bar17 groove penuh; bar18 mereda + ONE-OFF IMPERFECTION (kick sengaja dihilangkan total di bar18, menandai jeda sebelum thinning section 5)",
+      "bars": 6,
+      "phrase_velocity": [1.0, 1.0, 1.1, 1.15, 1.1, 0.9],
+      "pattern": [
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x...x.x." },
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x...x.x." },
+        { "kick": "x.......x.......", "snare": "....x...x.......", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x.......x.......", "snare": "....x...x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x..............." },
+        { "kick": "x.......x.......", "snare": "....x...x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x.......x......." },
+        { "snare": "....x...........", "chh": "x.x.x.x.x.x.x.x.", "ride": "x..............." }
+      ]
+    },
+    {
+      "label": "Section 5 — Thinning/Return (bar 19-21): ghost hi-hat saja, menipis progresif tiap bar (graft — jejak tetap ada, tidak diam total)",
+      "bars": 3,
+      "phrase_velocity": [0.8, 0.7, 0.6],
+      "pattern": [
+        { "chh": "g...g...g...g..." },
+        { "chh": "g.......g......." },
+        { "chh": "g..............." }
+      ]
+    },
+    {
+      "label": "Section 6 — Arrival (bar 22-24): satu aksen rimshot halus di titik konvergensi unison bass+lead (bar22), lalu diam total (bar23-24)",
+      "bars": 3,
+      "phrase_velocity": [0.75, 1.0, 1.0],
+      "pattern": [
+        { "rimshot": "X..............." },
+        {},
+        {}
+      ]
+    }
+  ]
+}

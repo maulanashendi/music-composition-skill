@@ -1,0 +1,113 @@
+% 04 — Desain Melodi (Level 4, Tahap 5-8). Catatan desain, prosa + fragmen
+% ABC ilustratif. BUKAN sumber final tervalidasi — final ada di ../song.abc.
+% Pemenang seleksi: lihat 04-melodi-candidates.md — Kandidat 1 (major 6th
+% leap, stepwise recovery), dengan graft: mendarat di E (9th D9) bukan D
+% (root). Motif ini adalah identitas LEAD (flugelhorn/muted trumpet), yang
+% baru masuk di section 4 (bar 13) per 02-form.md.
+
+Tahap 5 — Motif inti
+------------------------
+Identitas interval: lompatan naik major 6th (A -> F#), satu-satunya
+lompatan lebar di seluruh lagu (terkunci dari Level 1/2), diikuti
+pemulihan stepwise turun (F# -> E) yang mendarat di 9th D9 (bukan root) —
+warna lush, bukan resolusi telanjang.
+Identitas ritmis: pickup diam (rest) -> nada panjang (leap) -> nada
+panjang (recovery) — napas lambat, konsisten dengan tempo 74 BPM yang
+"tak pernah mempercepat langkahnya" (aesthetic thesis Level 1).
+
+Fragmen terverifikasi (`notation_facts.py`, lihat 04-melodi-candidates.md
+untuk histori seleksi + koreksi label):
+X:1
+M:4/4
+L:1/8
+K:G
+V:1
+[V:1] "A7sus4"z4 A4 | "D9"^f4 e4 |
+Fakta: +9 (Major Sixth) naik, lalu -2 (Major Second) turun. A dan F# dan E
+semua chord-tone (tidak ada outside) — motif ini murni "inside", sengaja,
+supaya kontras dengan outside material yang lebih dulu muncul di section
+2-3 (lihat Tahap 8).
+
+Tahap 6 — Target tones (section 4-6, dari 03-harmony.md)
+------------------------
+Bar13 Dm9 -> F (m3, lembut) | Bar14 Dm9 -> A (5th, ditahan, napas
+terakhir) | Bar15 A7sus4 -> A (pickup, chord-tone) | Bar16 D9 -> F#
+(target utama, leap) | Bar17 Cmaj7#11 -> B (natural, 6th D Mixolydian,
+guide tone turun dari F#) | Bar18 D9 -> E (9th, fragment) | Bar19-21
+(Thinning) -> sebagian besar diam (lihat Tahap 9, "Absence") | Bar22-24
+(Arrival) -> F#/E lagi, dikutip ulang di unison dengan bass (graft
+konvergensi Level 1-2).
+Guide tone F# (Bar16) turun ke B (Bar17, 6th D Mixolydian, bukan Bb —
+catatan gate: pastikan lead memainkan B natural supaya cross-relation
+dengan Gm7 di bar 6/11 yang butuh Bb hanya terjadi di section awal,
+tidak pernah bersamaan waktu dengan lead karena lead belum masuk saat
+itu — jadi TIDAK ada benturan aktual, hanya perlu dicatat supaya musisi
+tidak salah baca).
+
+Tahap 7 — Membangun melodi (bar 13-18, ilustratif)
+------------------------
+Bar 13-14 (Statement — masuk pelan): lead masuk lembut, bukan langsung
+leap — dua nada pendek chord-tone Dm9 (F, A) diikuti nada panjang
+ditahan (A, "napas terakhir" bersama harmoni yang juga menahan Dm9).
+Bar 15-16 (Leap — momen paling berarti): motif inti persis seperti
+fragmen di atas.
+Bar 17 (Answer — jawaban dari leap): interval jauh lebih kecil dari leap
+utama (masih lompat sepertiga, bukan stepwise — koreksi dari draf awal
+yang salah label "minor 3rd turun": B ke G turun sebenarnya **major 3rd**
+turun, 4 semitone, ditemukan reviewer L2 saat mencocokkan label terhadap
+interval sesungguhnya, lihat `scorecard.md` Level 4), memakai tone
+Cmaj7#11 (B turun ke G) — jawaban yang lebih tenang setelah pernyataan
+besar, prinsip "Answer" dari `neo-soul-genre.md` §4.
+Bar 18 (Fragment): hanya 2 nada (F#-E, potongan langsung dari motif inti)
+— repetisi terkontrol, bukan restatement penuh.
+
+Catatan: realisasi final di `../song.abc` bar 17 sedikit berbeda dari
+ilustrasi B->G di bawah — dipakai G->E (turun minor 3rd sungguhan, 3
+semitone, mendarat lagi di E supaya konsisten dengan E sebagai anchor
+top-note Rhodes di `07-comping.md`). Ilustrasi di bawah tetap sah sebagai
+CONTOH prinsip "Answer" (bukan sumber final, per konvensi
+`run-folder-protocol.md`), tapi angka interval-nya sudah dikoreksi di
+atas supaya tidak menyesatkan.
+
+Ilustrasi (bar 13-18, bukan ABC final):
+X:1
+M:4/4
+L:1/8
+K:G
+V:1
+[V:1] "Dm9"z4 F2 A2 | "Dm9"A8 | "A7sus4"z4 A4 | "D9"^f4 e4 | "Cmaj7#11"B4 G2 z2 | "D9"^f2 e6 |
+
+Tahap 8 — Outside material
+------------------------
+Motif LEAD sendiri sengaja 100% chord-tone (tidak ada outside) — ini
+kebalikan dari konvensi "outside di puncak tension" karena tension
+tertinggi lagu ini justru dibawa oleh HARMONI (borrowed iv Gm7/Gm9 di
+section 2-3, lihat 03-harmony.md), bukan oleh melodi lead (yang belum
+main saat itu). Ketegangan lead sendiri datang dari REGISTER dan
+INTERVAL (lompatan 6th), bukan dari outside pitch — pilihan yang
+konsisten dengan karakter "restrained, bukan agresif" yang jadi alasan
+utama Kandidat 1 menang di seleksi (lihat 04-melodi-candidates.md).
+Satu-satunya outside pitch di seluruh desain melodi level ini ada di
+kandidat yang KALAH (Kandidat 3, D# di bar D9) — sengaja tidak dipakai.
+
+Tahap 9 — Tema vs. improvisational vocabulary; Absence
+------------------------
+Piece ini tidak punya solo section berdiri sendiri (Level 2 mencatat ini
+sebagai ketiadaan disengaja), jadi tidak ada "vocabulary improvisasi"
+terpisah dari tema. Bar 19-21 (section 5, Thinning/Return) memakai
+device **Absence** dari `neo-soul-genre.md` §4: lead sengaja diam/sangat
+sparse di sini (motif "diingat", bukan diulang) — memberi ruang untuk
+penipisan Rhodes/drum terdengar jelas sebagai peristiwa, bukan tertutup
+lead yang terus main. Bar 22-24 (section 6, Arrival) = **Expansion** +
+konvergensi: motif inti (F#->E) dikutip ulang, kali ini di unison/oktaf
+dengan bass (graft Level 1), sebagai gema penutup — bukan pernyataan baru.
+
+## Gate check (Level 4)
+
+Motif (lompatan major 6th A->F#, recovery stepwise ke E/9th), kontur
+(diam -> leap -> answer -> fragment -> absence -> convergence), target
+tones (tabel Tahap 6), semua ditentukan. Cek fakta notasi dijalankan pada
+fragmen final (termasuk versi ber-graft) — hasil cocok dengan label prosa
+di atas (+9 lalu -2, seluruhnya chord-tone). Bar count desain (bar 13-24,
+12 bar) konsisten dengan section 4-6 di `02-form.md`/`03-harmony.md`.
+Lanjut ke Level 5.
