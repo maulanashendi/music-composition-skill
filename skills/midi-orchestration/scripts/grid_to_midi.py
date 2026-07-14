@@ -41,13 +41,19 @@ def build_drums(spec_path: str, out_path: str, seed: int = 7):
                 note = gm[voice]
                 bv = basevel[voice]
                 for i, ch in enumerate(row):
-                    if ch != "x":
+                    if ch == "x":
+                        hit_vel = bv
+                    elif ch == "X":
+                        hit_vel = bv * 1.2  # accent: ~+20% of normal
+                    elif ch == "g":
+                        hit_vel = bv * 0.45  # ghost: ~45% of normal
+                    else:
                         continue
                     t = bar_start + i * sec_per_step
                     # swing: push the second 16th of each 8th-note pair later
                     if i % 2 == 1:
                         t += (swing - 0.5) * 2 * sec_per_step
-                    vel = max(1, min(127, bv + random.randint(-hum, hum)))
+                    vel = max(1, min(127, round(hit_vel) + random.randint(-hum, hum)))
                     drum.notes.append(pretty_midi.Note(
                         velocity=vel, pitch=note,
                         start=t, end=t + sec_per_step * 0.9))

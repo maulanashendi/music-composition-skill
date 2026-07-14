@@ -30,12 +30,13 @@ GM program mapping (by keyword in the voice name): sax→65, horns→61, rhodes�
 
 `grid_to_midi.py <grid.json> <out.mid>`:
 
-- Reads a step-grid (rows = drums, `x` = hit) and writes GM percussion on channel 10 (`is_drum=True`).
+- Reads a step-grid (rows = drums, `x` = normal hit, `X` = accent, `g` = ghost, `.` = rest) and writes GM percussion on channel 10 (`is_drum=True`).
 - **`tempo_bpm`**: the real musical tempo — always match this to the ABC's `Q:` field (quarter-note BPM). Never fudge this to compensate for bar length; use `beats_per_bar` for that instead.
 - **`beats_per_bar`**: the bar length in quarter-note-equivalents (`numerator * 4/denominator` from the ABC's `M:` field) — 4 for 4/4, 3 for 3/4, 3.5 for 7/8. Defaults to 4 if omitted, so plain 4/4 grids don't need to set it. Set this explicitly for any non-4/4 meter so `sec_per_bar` comes out correct without touching `tempo_bpm`.
 - **`steps_per_bar`**: how many grid columns make up one bar (independent of `beats_per_bar` — e.g. a 7/8 bar at eighth-note subdivision uses `steps_per_bar: 7`).
 - **Swing**: off-beat (odd-index) 16th steps are nudged later by `(swing - 0.5)` of a step, giving the laid-back feel. 0.5 = straight; ~0.56–0.58 = typical lofi/funk swing.
 - **Humanization**: each hit's velocity varies by ±`humanize_velocity` around the drum's base velocity, for a natural, non-machine feel.
+- **Accent/ghost velocity**: `X` (accent) renders at ~1.2x the voice's `base_velocity`; `g` (ghost) renders at ~0.45x; both are still clamped to 1-127 and still get `humanize_velocity` jitter applied on top.
 - GM map and base velocities are set in the grid JSON, so you can tune the kit per song.
 
 ## Merging and verifying

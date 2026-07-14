@@ -133,5 +133,36 @@ class GridToMidiBeatsPerBarTests(unittest.TestCase):
         self.assertAlmostEqual(notes_default[1].start, 2.0, places=3)
 
 
+def make_accent_ghost_spec(ch: str) -> dict:
+    """Single-hit spec whose one step uses the given pattern character."""
+    spec = make_drum_spec()
+    spec["sections"] = [{"bars": 1, "pattern": {"kick": [ch, "", "", ""]}}]
+    return spec
+
+
+class GridToMidiAccentGhostTests(unittest.TestCase):
+    def test_accent_X_has_higher_velocity_than_normal_x(self):
+        pm_normal = build_drums(make_accent_ghost_spec("x"))
+        pm_accent = build_drums(make_accent_ghost_spec("X"))
+
+        normal_notes = pm_normal.instruments[0].notes
+        accent_notes = pm_accent.instruments[0].notes
+
+        self.assertEqual(len(normal_notes), 1)
+        self.assertEqual(len(accent_notes), 1)
+        self.assertGreater(accent_notes[0].velocity, normal_notes[0].velocity)
+
+    def test_ghost_g_has_lower_velocity_than_normal_x(self):
+        pm_normal = build_drums(make_accent_ghost_spec("x"))
+        pm_ghost = build_drums(make_accent_ghost_spec("g"))
+
+        normal_notes = pm_normal.instruments[0].notes
+        ghost_notes = pm_ghost.instruments[0].notes
+
+        self.assertEqual(len(normal_notes), 1)
+        self.assertEqual(len(ghost_notes), 1)
+        self.assertLess(ghost_notes[0].velocity, normal_notes[0].velocity)
+
+
 if __name__ == "__main__":
     unittest.main()

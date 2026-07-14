@@ -36,3 +36,18 @@ around in this run folder, `skills/` left untouched.
    this specific file — but the mismatch between template documentation
    and actual script behavior would bite the next person who takes the
    template's comment at face value).
+
+## Resolution
+
+Both defects fixed directly in `skills/` (status: fixed, commit ref "ini").
+
+1. `skills/midi-orchestration/SKILL.md:56,72` now link to
+   `../groove-rhythm/references/groove-meter.md` (verified with `test -f`).
+2. `skills/midi-orchestration/scripts/grid_to_midi.py` now recognizes `X`
+   (accent, ~1.2x `base_velocity`) and `g` (ghost, ~0.45x `base_velocity`)
+   in addition to `x` (normal hit); added `GridToMidiAccentGhostTests`
+   (2 new tests) to
+   `skills/midi-orchestration/scripts/test_abc_to_midi_and_grid.py`,
+   confirmed failing before the fix (4 passed / 2 errors) and passing
+   after (6 passed / 0 errors). Documented the velocity multipliers in
+   `skills/midi-orchestration/references/midi-conversion.md`.
