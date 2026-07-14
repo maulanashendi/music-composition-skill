@@ -20,7 +20,7 @@ order — the orchestrator decides when each is relevant):
 
 See `README.md` for the architecture/positioning (this package is Tool 1,
 "the brain"; rendering to audio is a separate downstream engine) and
-`RED-FLAGS.md` for failure patterns that are easy to miss.
+`skills/RED-FLAGS.md` for failure patterns that are easy to miss.
 
 ## Why these skills exist, not just raw generation
 
@@ -56,4 +56,4 @@ this package:
   downstream module an undecided input is a sign an earlier level's step
   was skipped, not a shortcut.
 - A high rubric score (`skills/*/references/rubric.md`, one per module) is
-  a floor, not a ceiling — see `RED-FLAGS.md`'s last row.
+  a floor, not a ceiling — see `skills/RED-FLAGS.md`'s last row.

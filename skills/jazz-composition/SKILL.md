@@ -24,7 +24,7 @@ kapan sebuah level butuh pendalaman modul tertentu.
 - Jika field wajib belum diputuskan — key, tempo, meter, chord, bentuk,
   atau apakah plan/level sebelumnya sudah "locked" — **tanya, jangan
   menebak.** Ini aturan yang paling sering dilanggar; lihat
-  `../../RED-FLAGS.md` untuk pola kegagalannya.
+  `../RED-FLAGS.md` untuk pola kegagalannya.
 - Level berikutnya **tidak boleh mulai** tanpa artefak level sebelumnya
   memenuhi DoD-nya (field wajib terisi + bar count konsisten dengan
   artefak hulu). Ini gerbang anti-halu di titik handoff antar-level.
@@ -61,18 +61,18 @@ mengeksekusinya secara berurutan.
 |---|---|---|
 | 1 — Konsep Artistik | `references/level-01-konsep.md` | — |
 | 2 — Arsitektur Lagu | `references/level-02-arsitektur.md` | — |
-| 3 — Peta Harmoni | `references/level-03-harmoni.md` | `../../harmony/SKILL.md` |
-| 4 — Desain Melodi | `references/level-04-melodi.md` | `../../melody-design/SKILL.md`, `../../advanced-melody/SKILL.md` (tahap 7-8) |
-| 5 — Desain Ritme dan Groove | `references/level-05-ritme-groove.md` | `../../groove-rhythm/SKILL.md` |
-| 6 — Aransemen Instrumen | `references/level-06-aransemen.md` | `../../arrangement/SKILL.md` |
-| 7 — Desain Comping dan Voicing | `references/level-07-comping-voicing.md` | `../../arrangement/SKILL.md` |
-| 8 — Desain Bass Line | `references/level-08-bass.md` | `../../groove-rhythm/SKILL.md` |
-| 9 — Desain Drum | `references/level-09-drum.md` | `../../groove-rhythm/SKILL.md` |
+| 3 — Peta Harmoni | `references/level-03-harmoni.md` | `../harmony/SKILL.md` |
+| 4 — Desain Melodi | `references/level-04-melodi.md` | `../melody-design/SKILL.md`, `../advanced-melody/SKILL.md` (tahap 7-8) |
+| 5 — Desain Ritme dan Groove | `references/level-05-ritme-groove.md` | `../groove-rhythm/SKILL.md` |
+| 6 — Aransemen Instrumen | `references/level-06-aransemen.md` | `../arrangement/SKILL.md` |
+| 7 — Desain Comping dan Voicing | `references/level-07-comping-voicing.md` | `../arrangement/SKILL.md` |
+| 8 — Desain Bass Line | `references/level-08-bass.md` | `../groove-rhythm/SKILL.md` |
+| 9 — Desain Drum | `references/level-09-drum.md` | `../groove-rhythm/SKILL.md` |
 | 10 — Desain Improvisasi | `references/level-10-improvisasi.md` | — |
-| 11 — Interlude, Shout Chorus, dan Transisi | `references/level-11-interlude-shout-transisi.md` | `../../arrangement/SKILL.md` |
-| 12 — Intro dan Ending | `references/level-12-intro-ending.md` | `../../arrangement/SKILL.md` |
-| 13 — Dinamika dan Dramaturgi | `references/level-13-dinamika-dramaturgi.md` | `../../arrangement/SKILL.md` |
-| 14 — Detail Low Level | `references/level-14-detail.md` | — (ABC/MIDI encoding: `../../abc-notation/SKILL.md`, `../../midi-orchestration/SKILL.md`) |
+| 11 — Interlude, Shout Chorus, dan Transisi | `references/level-11-interlude-shout-transisi.md` | `../arrangement/SKILL.md` |
+| 12 — Intro dan Ending | `references/level-12-intro-ending.md` | `../arrangement/SKILL.md` |
+| 13 — Dinamika dan Dramaturgi | `references/level-13-dinamika-dramaturgi.md` | `../arrangement/SKILL.md` |
+| 14 — Detail Low Level | `references/level-14-detail.md` | — (ABC/MIDI encoding: `../abc-notation/SKILL.md`, `../midi-orchestration/SKILL.md`) |
 
 Modul `vibes-mood/SKILL.md` tidak terikat satu level saja — dipakai untuk
 menerjemahkan mood/vibe mentah dari brief (Level 1) ke parameter musik
@@ -251,10 +251,10 @@ Alur konkret:
    sama.
 2. Beri subagent itu **hanya** dua hal: artefak yang mau dinilai, dan
    `rubric.md` modul yang relevan (mis. Level 3 →
-   `../../harmony/references/rubric.md`; Level 5/8/9 →
-   `../../groove-rhythm/references/rubric.md`; Level 4 →
-   `../../melody-design/references/rubric.md` dan/atau
-   `../../advanced-melody/references/rubric.md`; Level 1 → `vibes-mood`;
+   `../harmony/references/rubric.md`; Level 5/8/9 →
+   `../groove-rhythm/references/rubric.md`; Level 4 →
+   `../melody-design/references/rubric.md` dan/atau
+   `../advanced-melody/references/rubric.md`; Level 1 → `vibes-mood`;
    Level 2/6/7/10/11/12/13 → `arrangement`; Level 14 → `abc-notation`
    dan/atau `midi-orchestration` — lihat tabel "14 level" di atas untuk
    pemetaan level-ke-modul lengkap). Jangan beri histori percakapan
@@ -267,11 +267,11 @@ Alur konkret:
    balik lewat chat untuk ditranskrip manual.
 4. Skor rubrik tinggi tetap lantai, bukan langit-langit — lanjut ke
    `RED-FLAGS.md` dan (untuk `output.mid` final) L3 telinga manusia di
-   `../../tests/human-ear-protocol.md` sebelum piece dianggap selesai.
+   `references/human-ear-protocol.md` sebelum piece dianggap selesai.
 
 ## Sebelum menganggap sebuah piece selesai
 
-Baca `../../RED-FLAGS.md` — kumpulan pola "alasan yang terdengar masuk
+Baca `../RED-FLAGS.md` — kumpulan pola "alasan yang terdengar masuk
 akal, tapi realitanya tidak" yang sudah terbukti muncul berulang di paket
 ini (dari section yang di-stack semua device sampai skor rubrik tinggi
 yang dikira berarti enak didengar). Skor rubrik tinggi adalah lantai,

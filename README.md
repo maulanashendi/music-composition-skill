@@ -9,6 +9,15 @@ of any one engine or app — it reasons about music and hands off two
 artifacts (ABC + a drum step-grid) that a separate rendering tool ("Tool 2",
 the engine) turns into audio.
 
+## Install
+
+The `skills/` folder is fully self-contained: it vendors its own
+`skills/RED-FLAGS.md` and `skills/jazz-composition/references/human-ear-protocol.md`,
+so nothing outside `skills/` (no root-level file, no `tests/`) is required
+for the skills to work. Copying or symlinking `skills/` alone into another
+project's skills directory is enough — `cp -r skills/ <target>` or
+`ln -s $(pwd)/skills <target>/skills`.
+
 ## `jazz-composition`, the single orchestrator, and its 8 modules
 
 ```

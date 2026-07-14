@@ -3,7 +3,8 @@
 Modul ini tidak punya satu section tunggal di `quality-control.md` (lama);
 kriteria berikut diturunkan dari poin "outside material" di §11
 (Improvisation) quality-control.md lama, serta SOP Level 4 tahap 7-8
-(`docs/raw/sop-komposisi-jazz-14-level.md`) — dipersempit ke lingkup khusus
+(`docs/raw/sop-komposisi-jazz-14-level.md` — provenance di repo sumber,
+boleh tak tersedia setelah install) — dipersempit ke lingkup khusus
 modul ini: chromatic vocabulary, enclosure, dan outside playing terkontrol
 pada Level 4 tahap 7-8.
 

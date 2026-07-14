@@ -243,7 +243,7 @@ dilarang).
 ## L3 (telinga) — hanya diisi sekali, di akhir
 
 Diisi **setelah** `output.mid` ada, mengikuti
-`../../../tests/human-ear-protocol.md`. Skor L2 yang tinggi adalah lantai
+`human-ear-protocol.md`. Skor L2 yang tinggi adalah lantai
 (tidak ada yang rusak/tipis), bukan langit-langit (belum tentu enak
 didengar) — L3 adalah pemeriksaan wajib terakhir sebelum piece dianggap
 selesai.

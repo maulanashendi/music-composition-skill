@@ -100,3 +100,14 @@ sudah tidak punya file tersisa (0 hasil `find -type f`) — hanya direktori
 kosong/keliru yang tercatat di bagian "Artefak folder-kosong" di atas.
 Tidak ada file di keempat folder lama yang tidak punya baris di dokumen
 ini.
+
+## Vendoring untuk self-contained install (final-review fix)
+
+Selain restrukturisasi 4 folder lama di atas, dua file pendukung
+dipindah ke dalam `skills/` supaya folder itu bisa di-copy/symlink
+sendirian tanpa root repo:
+
+| File lama | Tujuan baru | Catatan |
+|---|---|---|
+| `RED-FLAGS.md` | `skills/RED-FLAGS.md` | `git mv`; semua referensi lintas paket (SKILL.md orchestrator + `abc-notation`/`midi-orchestration`, plus mention di `CLAUDE.md`) diperbaiki ke kedalaman relatif baru. |
+| `tests/human-ear-protocol.md` | `skills/jazz-composition/references/human-ear-protocol.md` | `git mv`; referensi dari `skills/jazz-composition/SKILL.md` dan `references/scorecard-template.md` diperbaiki ke lokasi baru (sama-direktori untuk yang kedua). |

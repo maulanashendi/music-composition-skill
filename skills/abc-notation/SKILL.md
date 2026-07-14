@@ -54,7 +54,7 @@ This is the **self-healing retry loop**: feed the parser's error back into a tar
 
 If music21 is available and the target is MIDI, a second check is to attempt `music21.converter.parse(open('file.abc').read())` — the validator catches structural errors, but music21 is the actual downstream consumer, so a clean music21 parse is the real green light.
 
-See `../../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain — a clean validator run is not the same as a correct render.
+See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain — a clean validator run is not the same as a correct render.
 
 ### Step 5 — Deliver
 
