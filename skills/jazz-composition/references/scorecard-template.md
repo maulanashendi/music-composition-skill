@@ -174,7 +174,9 @@ dilarang).
 
 ### L1 (mekanis)
 
-- [ ] Solo map mencantumkan jumlah chorus per solois
+- [ ] Solo map mencantumkan jumlah chorus per solois — atau, untuk piece
+      tanpa solo section: micro-improvisation map terisi lengkap (5 field,
+      lihat `level-10-improvisasi.md`)
 
 ### L2 (rubrik)
 
