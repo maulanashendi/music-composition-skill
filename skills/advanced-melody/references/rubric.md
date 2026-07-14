@@ -1,9 +1,9 @@
 # Rubrik kualitas — advanced-melody
 
 Modul ini tidak punya satu section tunggal di `quality-control.md` (lama);
-kriteria berikut diturunkan dari poin "outside material" yang tersebar di
-§3 (Development and anti-boredom), §9 (Melody, hook, and thematic
-development), dan §11 (Improvisation) — dipersempit ke lingkup khusus
+kriteria berikut diturunkan dari poin "outside material" di §11
+(Improvisation) quality-control.md lama, serta SOP Level 4 tahap 7-8
+(`docs/raw/sop-komposisi-jazz-14-level.md`) — dipersempit ke lingkup khusus
 modul ini: chromatic vocabulary, enclosure, dan outside playing terkontrol
 pada Level 4 tahap 7-8.
 

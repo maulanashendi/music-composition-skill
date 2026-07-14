@@ -264,7 +264,7 @@ Alur konkret:
    balik lewat chat untuk ditranskrip manual.
 4. Skor rubrik tinggi tetap lantai, bukan langit-langit — lanjut ke
    `RED-FLAGS.md` dan (untuk `output.mid` final) L3 telinga manusia di
-   `../../../tests/human-ear-protocol.md` sebelum piece dianggap selesai.
+   `../../tests/human-ear-protocol.md` sebelum piece dianggap selesai.
 
 ## Sebelum menganggap sebuah piece selesai
 
