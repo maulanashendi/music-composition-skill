@@ -51,6 +51,14 @@ change with tempo.
 | Keys / Rhodes | ~0.62–0.86 | Wider range because comping density varies most by section — sparse comping can gate as low as 0.62; sustained pad-like voicings sit near 0.86. |
 | Lead | ~0.86–0.96 | Closest to full sustain — the lead should not sound clipped; use the lower end only for deliberately detached/staccato phrasing. |
 
+**Ready-to-paste `drums.json` `timing` map (ms offsets, derived from the tick table above).** Convert the tick ranges to ms at 96 BPM/960 PPQ and round to a single per-role value the drum grid can use directly (kick as anchor at 0; snare/rimshot laid-back behind the grid; hi-hat a touch ahead). The composing brain copies this block into `drums.json` under top-level `timing` — do not re-derive per song:
+
+```json
+"timing": { "kick": 0, "snare": 15, "rimshot": 25, "chh": -3 }
+```
+
+`grid_to_midi.py` applies these deterministically per role (see `../../midi-orchestration/references/midi-conversion.md`, `timing` field). Ride/open-hat, if used, sit near the hi-hat/anchor range; add them only when the kit uses them, keeping kick at 0 as the reference.
+
 ## How this maps to this package's artifacts
 
 - **Pitched voices (ABC).** `advanced-microtiming.md` distinguishes *notated

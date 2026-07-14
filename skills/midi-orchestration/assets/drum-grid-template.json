@@ -1,16 +1,17 @@
 {
-  "_comment": "Drum step-grid for grid_to_midi.py. CRITICAL: total bars across all sections MUST equal the ABC's total bars, section for section, or drums drift out of sync. Rows are drums; 'x' = hit, 'X' = accent, 'g' = ghost, '.' = rest; 16 chars = one bar at 16 steps. Let density follow the arc: minimal when quiet, full at the peak, fading at the end. tempo_bpm should ALWAYS be the real musical tempo (matching the ABC's Q: field) -- never fudge it to compensate for beats_per_bar. beats_per_bar is the bar length in quarter-note-equivalents: 4 for 4/4, 3 for 3/4, 3.5 for 7/8 (numerator * 4/denominator) -- set it to match the ABC's M: field. Remove this _comment in the final file.",
+  "_comment": "Drum step-grid for grid_to_midi.py. section.pattern boleh (a) DICT tunggal instrumen->string 16-step (LEGACY: di-tile identik ke semua bar section) atau (b) LIST of dict, satu pattern per bar, panjang list HARUS == bars. 'x' = hit, 'X' = accent, 'g' = ghost, '.' = rest; 16 chars = satu bar di 16 steps. Field opsional: 'phrase_velocity' (list float per bar, panjang == bars, dikali ke velocity semua hit bar itu -- bentuk frase, bukan jitter) dan top-level 'timing' (map role->offset_ms, digeser deterministik ke onset). Urutan velocity: base -> accent X/ghost g -> phrase_velocity -> humanize_velocity kecil (polish terakhir, bukan sumber variasi). Untuk section > 2 bar WAJIB hierarchy: base groove 2-bar + variation sekitar bar-4 + transition di bar terakhir; JANGAN semua bar identik (grid_to_midi.py akan warning). tempo_bpm SELALU tempo musikal nyata (match Q: ABC). beats_per_bar = numerator*4/denominator dari M: ABC. Hapus _comment ini di file final.",
   "title": "Untitled drums",
   "tempo_bpm": 90,
   "beats_per_bar": 4,
   "steps_per_bar": 16,
   "swing": 0.57,
-  "humanize_velocity": 10,
+  "humanize_velocity": 6,
   "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51 },
   "base_velocity": { "kick": 92, "snare": 80, "rimshot": 60, "chh": 55, "ohh": 62, "ride": 58 },
+  "timing": { "kick": 0, "snare": 15, "rimshot": 25, "chh": -3 },
   "sections": [
     {
-      "label": "Intro (quiet phase): near-silent",
+      "label": "Intro (2 bar, bentuk dict legacy tetap valid)",
       "bars": 2,
       "pattern": {
         "kick": "x.......x.......",
@@ -18,26 +19,28 @@
       }
     },
     {
-      "label": "A (building phase): groove enters",
+      "label": "A building (4 bar, list per-bar + phrase_velocity): base 2-bar (bar 1-2), restate (bar 3), transition (bar 4)",
       "bars": 4,
-      "pattern": {
-        "kick":  "x..x....x.x.....",
-        "snare": "....x.......x...",
-        "chh":   "x.x.x.x.x.x.x.x."
-      }
+      "phrase_velocity": [0.95, 1.0, 1.0, 1.08],
+      "pattern": [
+        { "kick": "x..x....x.x.....", "rimshot": "....x.......x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x..x....x.x.....", "rimshot": "....x.......x..g", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x..x....x.x.....", "rimshot": "....x.......x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x..x..x.x.x...x.", "snare": "....x.......x.X.", "chh": "x.x.x.x.x.x.x.xX", "ohh": "..............x." }
+      ]
     },
     {
-      "label": "B (peak phase): full, ride opens it up",
+      "label": "B peak (4 bar, list per-bar): ONE-OFF imperfection = kick downbeat sengaja hilang sekali di bar 3",
       "bars": 4,
-      "pattern": {
-        "kick":  "x..x..x.x.x...x.",
-        "snare": "....x...x...x.x.",
-        "chh":   "x.x.x.x.x.x.x.x.",
-        "ride":  "x...x...x...x..."
-      }
+      "pattern": [
+        { "kick": "x..x..x.x.x...x.", "snare": "....x...x...x.x.", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x..." },
+        { "kick": "x..x..x.x.x...x.", "snare": "....x...x...x.x.", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x..." },
+        { "kick": "...x..x.x.x...x.", "snare": "....x...x...x.x.", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x..." },
+        { "kick": "x..x..x.x.x..xx.", "snare": "....x...x...x.X.", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x..x" }
+      ]
     },
     {
-      "label": "Outro (resolution phase): fades",
+      "label": "Outro (2 bar, bentuk dict legacy): fades",
       "bars": 2,
       "pattern": {
         "kick":    "x...............",
