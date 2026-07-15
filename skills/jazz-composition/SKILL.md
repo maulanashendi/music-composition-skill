@@ -251,6 +251,32 @@ Setiap run folder punya satu `scorecard.md` berisi penilaian tiga lapis
 Template lengkap dan aturan pengisiannya ada di
 `references/scorecard-template.md`.
 
+### Aturan fail-closed — 4 blocker L2 global
+
+Selain L2-rubrik per level, scorecard punya bagian **"L2 global"** (lihat
+`references/scorecard-template.md`) berisi 4 kriteria **blocker**:
+identitas, memorability, interaction, emotional specificity. Skor **0**
+pada salah satu = run **BELUM SELESAI**, terlepas dari skor kriteria
+lain — wajib revisi + re-review sebelum boleh disebut selesai. Skor
+tinggi di L2-rubrik per-level **tidak menyelamatkan** blocker yang gagal.
+
+### Checklist pra-L3 (fail-closed)
+
+Operasionalisasi konkret aturan fail-closed di atas: sebuah piece **boleh
+diserahkan ke telinga manusia (L3)** hanya bila SEMUA item berikut
+terpenuhi — "belum boleh disebut selesai" berarti "checklist ini belum
+semua tercentang", bukan penilaian subjektif kapan piece "cukup matang":
+
+- [ ] L1 (mekanis) — lulus semua level.
+- [ ] L2-rubrik — lengkap terisi semua 14 level.
+- [ ] 4 kriteria blocker (L2 global) — semuanya bernilai **≥1** (tidak
+      ada yang 0).
+- [ ] L2-blind — dijalankan, hasilnya **benar** (lihat prosedur L2-blind
+      di bagian Penilaian ini).
+- [ ] L2-cliche — semua temuan sudah direspons: revisi atau justifikasi
+      audible (lihat prosedur L2-cliche di bagian Penilaian ini).
+- [ ] Bukti revisi — ada, terhubung ke temuan nyata (lihat Tahap 15).
+
 ## Reviewer segar (L2)
 
 Rubrik L2 tiap level (lihat tabel `| Kriteria | Skor (0-2) | Alasan |` di

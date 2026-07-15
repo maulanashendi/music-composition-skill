@@ -244,6 +244,24 @@ dilarang).
 | Voicing tidak terlalu padat | | |
 | Ending terasa selesai | | |
 
+## L2 global — kriteria blocker lintas-level (fail-closed)
+
+Dinilai terhadap **keseluruhan piece** (bukan per level), oleh reviewer
+segar, setelah Level 14 selesai. Empat kriteria di bawah adalah
+**BLOCKER**:
+
+| # | Kriteria blocker | Skor (0-2) | Bukti dari notasi (bar spesifik) |
+|---|---|---|---|
+| 1 | Identitas — 4 bar pertama bisa dibedakan dari template genre | | |
+| 2 | Memorability — motif bisa diingat/dinyanyikan setelah sekali baca-dengar | | |
+| 3 | Interaction — instrumen terdengar saling mendengar (ada bukti call-response/ruang) | | |
+| 4 | Emotional specificity — arc terasa dari notasi tanpa membaca brief | | |
+
+**Semantik fail-closed**: skor **0** pada **salah satu** dari keempat
+kriteria ini = run **BELUM SELESAI**, terlepas dari skor kriteria lain —
+wajib revisi + re-review sebelum boleh disebut selesai. Skor tinggi di
+L2-rubrik per-level **tidak menyelamatkan** blocker yang gagal.
+
 ## L3 (telinga) — hanya diisi sekali, di akhir
 
 Diisi **setelah** `output.mid` ada, mengikuti

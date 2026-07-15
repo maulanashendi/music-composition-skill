@@ -18,6 +18,16 @@ Run this on a small subset (2 briefs is enough) before a release that
 changes composition craft, not on every eval run — it's the expensive
 layer, spend it deliberately.
 
+**Klarifikasi cakupan (penting):** aturan sampling di atas ("2 briefs is
+enough", "not on every eval run") **hanya berlaku untuk eksperimen
+evaluasi skill/paket ini sendiri** (mis. eval before/after seperti
+`tests/results/2026-07-13-brief-01-02-armA-vs-armB.md`). Untuk **piece
+produksi** — composer benar-benar membuat lagu untuk dipakai, bukan
+mengevaluasi skill — **L3 wajib per-piece** sebelum piece itu disebut
+selesai; tidak ada sampling untuk kasus ini. Gerbang mekanis sebelum L3
+boleh dijalankan: checklist pra-L3 (fail-closed) di `../SKILL.md`
+§Penilaian.
+
 ## 1. Render both candidates to audio
 
 This package stops at MIDI; it does not render audio itself (see
