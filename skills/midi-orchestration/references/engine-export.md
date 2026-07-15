@@ -175,3 +175,17 @@ Sumber: `src/instruments/palettes.js` repo induk:
   (dict `PROGRAM`, selaras registry engine). Supaya preview lokal dan WAV
   engine setimbre: beri nama voice yang mengandung id registry (mis.
   `name="Rhodes"`, `name="Guitar-Clean"`, `name="Tenor Sax"`).
+- **Chord symbol WAJIB ditulis di `V:1` (voice pertama), bukan hanya di
+  voice comping.** Ditemukan run `2026-07-15-porch-light`: engine
+  (`src/abc/parse.js`, fungsi `fromAbc`) mengambil `chords` **hanya dari
+  `voices[0]`** ("lead") untuk membangun `sharedContext.harmony` — chord
+  symbol yang ditulis di `V:2`/`V:3` (mis. voice comping) **diabaikan
+  total**, bukan digabung. Efeknya: `conformance-audit.mjs`/`POST
+  /api/render` gagal dengan `bridgeHarmony: harmony ABC kosong/tak
+  terparse` walau ABC valid dan `validate_abc.py` lulus 0 error (validator
+  Tool 1 tidak memeriksa hal ini). Perbaikan: duplikasi chord symbol yang
+  sama ke tiap bar `V:1` (murni aditif, tidak mengubah pitch/durasi not
+  manapun) — cukup untuk lolos `bridgeHarmony`, apa pun instrumen yang
+  sebenarnya membawa melodi head. Jalankan `conformance-audit.mjs`
+  **sebelum** `POST /api/render` justru untuk menangkap gotcha ini murah,
+  tanpa perlu render penuh.

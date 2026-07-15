@@ -1,0 +1,56 @@
+X:1
+T:Quiet Landing
+C:Generative Music Engine
+M:4/4
+L:1/8
+Q:1/4=76
+R:Neo-soul / chill-jazz, laid-back swung-16th
+K:Dm
+%%pocket neo-soul-core
+% 48 bars: Intro(1-8), A1(9-16), A2(17-24), B(25-32), Release(33-40), Coda(41-48).
+% Drums are in separate drums.json. Every music line repeats [V:id] for abc_to_midi.py.
+V:Lead clef=treble name="Guitar-Clean Lead"
+%%MIDI program 27
+V:Rhodes clef=treble name="Rhodes"
+%%MIDI program 4
+V:Bass clef=bass name="Bass-Finger"
+%%MIDI program 33
+% Intro: delayed lead entrance; incomplete Rhodes voicings and scheduled silence.
+[V:Lead] "Dm11" z8 | "A7sus4" z8 | "Dm9" z8 | "Gm9" z8 | "Bbmaj9" z8 | "A7sus4" z8 | "Dm9" z8 | "A7alt" z8 |
+[V:Rhodes] [FAC]8 | [DEG]4 z4 | [FAC]8 | [Bdfa]4 z4 | [DFac]8 | [DEG]4 z4 | [FAC]8 | [^Gce]4 z4 |
+[V:Bass] D,8 | z8 | D,8 | G,8 | B,,8 | z8 | D,8 | A,,8 |
+% A1: motif statement, sparse answers.
+[V:Lead] "Dm9" A2 c2 e4 | "Gm9" z2 e2 d2 c2 | "Bbmaj9" A2 c2 e4 | "A7sus4" d2 c2 A4 |
+[V:Lead] "Dm9" A2 c2 e4 | "Gm9" z2 e2 d2 c2 | "Em7b5" E2 G2 F2 E2 | "A7alt" A2 ^c2 e2 A2 |
+[V:Rhodes] [FAC]4 z2 [FAC]2 | z4 [Bdfa]4 | [DFac]4 z2 [DFac]2 | z4 [DEG]4 |
+[V:Rhodes] [FAC]4 z2 [FAC]2 | z4 [Bdfa]4 | [GBd]4 z2 [GBd]2 | z4 [^Gce]4 |
+[V:Bass] D,2 A,,2 C,2 D,2 | G,2 D,2 F,2 G,2 | B,,2 F,2 A,2 B,,2 | A,,2 E,2 G,2 A,2 |
+[V:Bass] D,2 A,,2 C,2 D,2 | G,2 D,2 F,2 G,2 | E,2 B,,2 D,2 E,2 | A,,2 E,2 ^C,2 A,,2 |
+% A2: answer rises one register then leaves more air.
+[V:Lead] "Dm9" e2 c2 A4 | "Bbmaj9" z4 e2 d2 | "Gm9" d2 c2 A4 | "A7sus4" z2 A2 c2 d2 |
+[V:Lead] "Dm9" A2 c2 e4 | "Gm9" z2 d2 c2 A2 | "Bbmaj9" A2 c2 d2 f2 | "A7alt" A2 ^c2 e2 A2 |
+[V:Rhodes] [FAC]4 z4 | z4 [DFac]4 | [Bdfa]4 z4 | z4 [DEG]4 |
+[V:Rhodes] [FAC]4 z4 | z4 [Bdfa]4 | [DFac]4 z4 | z4 [^Gce]4 |
+[V:Bass] D,2 A,,2 C,2 D,2 | B,,2 F,2 A,2 B,,2 | G,2 D,2 F,2 G,2 | A,,2 E,2 G,2 A,2 |
+[V:Bass] D,2 A,,2 C,2 D,2 | G,2 D,2 F,2 G,2 | B,,2 F,2 A,2 B,,2 | A,,2 E,2 ^C,2 A,,2 |
+% B: narrow high-tension window; C# resolves to E.
+[V:Lead] "Fmaj9" A2 c2 e2 f2 | "Gm9" g2 f2 d2 c2 | "C13sus4" d2 e2 g2 a2 | "A7alt" ^c2 e2 A2 z2 |
+[V:Lead] "Bbmaj9" f2 e2 d2 c2 | "Gm9" d2 c2 A4 | "Em7b5" E2 G2 B2 d2 | "A7alt" ^c2 e2 z4 |
+[V:Rhodes] [Aceg]4 z4 | [Bdfa]4 z4 | [DEGa]4 z2 [DEGa]2 | z8 |
+[V:Rhodes] [DFac]4 z4 | [Bdfa]4 z4 | [GBd]4 z4 | z4 [^Gce]4 |
+[V:Bass] F,2 C2 E2 F2 | G,2 D,2 F,2 G,2 | C,2 G,,2 B,,2 C,2 | A,,2 E,2 ^C,2 A,,2 |
+[V:Bass] B,,2 F,2 A,2 B,,2 | G,2 D,2 F,2 G,2 | E,2 B,,2 D,2 E,2 | A,,2 E,2 ^C,2 A,,2 |
+% Release: E first appears in bass, then harmony opens around it.
+[V:Lead] "Dm9" A2 c2 e4 | "C/E" z4 e2 d2 | "Bbmaj9" c2 d2 f4 | "Gm9" z2 d2 c2 A2 |
+[V:Lead] "Fmaj9" A2 c2 e2 f2 | "Gm9" z4 d2 c2 | "A7sus4" A2 c2 d2 e2 | "A7alt" z2 ^c2 e4 |
+[V:Rhodes] [FAC]4 z4 | z4 [CEGc]4 | [DFac]4 z4 | z4 [Bdfa]4 |
+[V:Rhodes] [Aceg]4 z4 | z4 [Bdfa]4 | [DEG]4 z4 | z4 [^Gce]4 |
+[V:Bass] D,2 A,,2 C,2 D,2 | E,8 | B,,2 F,2 A,2 B,,2 | G,2 D,2 F,2 G,2 |
+[V:Bass] F,2 C2 E2 F2 | G,2 D,2 F,2 G,2 | A,,2 E,2 G,2 A,2 | A,,2 E,2 ^C,2 A,,2 |
+% Coda: E stays while D pedal and subtraction change its meaning to accepted warmth.
+[V:Lead] "Dm6/9" e4 z4 | "Bbmaj9/D" e2 d2 c4 | "Gm9/D" d2 c2 A4 | "Dm6/9" e4 z4 |
+[V:Lead] "Dm6/9" e4 z4 | "Bbmaj9/D" e2 d2 c4 | "Dm6/9" e4 z4 | "Dm6/9" e8 |]
+[V:Rhodes] [FABC]8 | [DFac]4 z4 | [DFA]4 z4 | [FABC]8 |
+[V:Rhodes] [FABC]4 z4 | [DFac]4 z4 | z4 [DE]4 | [DE]8 |]
+[V:Bass] D,8 | D,8 | D,8 | D,8 |
+[V:Bass] D,8 | D,8 | D,8 | D,8 |]

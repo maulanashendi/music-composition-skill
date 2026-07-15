@@ -1,0 +1,1088 @@
+# Voice: Lead
+Key: d minor
+Notes: 117  Rests: 22  Rest-ratio: 0.158  Shortest(ql): 1.0  Longest(ql): 4.0
+
+## Bar 1  chord=Dm11  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E, G
+## Bar 2  chord=A7sus4  chord-vs-key=diatonik  top-note=None
+   chord tones: A, D, E, G
+## Bar 3  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+## Bar 4  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+## Bar 5  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+## Bar 6  chord=A7sus4  chord-vs-key=diatonik  top-note=None
+   chord tones: A, D, E, G
+## Bar 7  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+## Bar 8  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+## Bar 9  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 10  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   E5 (midi 76) -> tension-diatonik
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+## Bar 11  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 12  chord=A7sus4  chord-vs-key=diatonik  top-note=None
+   chord tones: A, D, E, G
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 13  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 14  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   E5 (midi 76) -> tension-diatonik
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+## Bar 15  chord=Em7b5  chord-vs-key=diatonik  top-note=None
+   chord tones: E, G, B-, D
+   E4 (midi 64) -> chord-tone
+   G4 (midi 67) -> chord-tone
+   F4 (midi 65) -> tension-diatonik
+   E4 (midi 64) -> chord-tone
+## Bar 16  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+   G#4 (midi 68) -> outside
+   A4 (midi 69) -> chord-tone
+   C#5 (midi 73) -> chord-tone
+   E5 (midi 76) -> tension-diatonik
+## Bar 17  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+   A5 (midi 81) -> chord-tone
+   C5 (midi 72) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 18  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+   D5 (midi 74) -> unparsed
+## Bar 19  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 20  chord=A7sus4  chord-vs-key=diatonik  top-note=None
+   chord tones: A, D, E, G
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   D5 (midi 74) -> chord-tone
+## Bar 21  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 22  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 23  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+## Bar 24  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+   G#4 (midi 68) -> outside
+   A4 (midi 69) -> chord-tone
+   C#5 (midi 73) -> chord-tone
+   E5 (midi 76) -> tension-diatonik
+## Bar 25  chord=Fmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+   F5 (midi 77) -> unparsed
+## Bar 26  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   G5 (midi 79) -> chord-tone
+   F5 (midi 77) -> chord-tone
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+## Bar 27  chord=C13sus4  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   D5 (midi 74) -> unparsed
+   E5 (midi 76) -> unparsed
+   G5 (midi 79) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 28  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+   C#5 (midi 73) -> chord-tone
+   E5 (midi 76) -> tension-diatonik
+   G#4 (midi 68) -> outside
+   A4 (midi 69) -> chord-tone
+## Bar 29  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   F5 (midi 77) -> unparsed
+   E5 (midi 76) -> unparsed
+   D5 (midi 74) -> unparsed
+   C5 (midi 72) -> unparsed
+## Bar 30  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 31  chord=Em7b5  chord-vs-key=diatonik  top-note=None
+   chord tones: E, G, B-, D
+   E4 (midi 64) -> chord-tone
+   G4 (midi 67) -> chord-tone
+   B-4 (midi 70) -> chord-tone
+   D5 (midi 74) -> chord-tone
+## Bar 32  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+   C#5 (midi 73) -> chord-tone
+   E5 (midi 76) -> tension-diatonik
+## Bar 33  chord=Dm9  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, A, C, E
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 34  chord=C/E  chord-vs-key=diatonik  top-note=None
+   chord tones: E, G, C
+   E5 (midi 76) -> chord-tone
+   D5 (midi 74) -> tension-diatonik
+## Bar 35  chord=Bbmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   C5 (midi 72) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+## Bar 36  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 37  chord=Fmaj9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+   F5 (midi 77) -> unparsed
+## Bar 38  chord=Gm9  chord-vs-key=diatonik  top-note=None
+   chord tones: G, B-, D, F, A
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+## Bar 39  chord=A7sus4  chord-vs-key=diatonik  top-note=None
+   chord tones: A, D, E, G
+   A4 (midi 69) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   D5 (midi 74) -> chord-tone
+   E5 (midi 76) -> chord-tone
+## Bar 40  chord=A7alt  chord-vs-key=borrowed  top-note=None
+   chord tones: A, C#, E#, G, B-
+   C#5 (midi 73) -> chord-tone
+   E5 (midi 76) -> tension-diatonik
+## Bar 41  chord=Dm6/9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+## Bar 42  chord=Bbmaj9/D  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+   D5 (midi 74) -> unparsed
+   C5 (midi 72) -> unparsed
+## Bar 43  chord=Gm9/D  chord-vs-key=diatonik  top-note=None
+   chord tones: D, F, G, A, B-
+   D5 (midi 74) -> chord-tone
+   C5 (midi 72) -> tension-diatonik
+   A4 (midi 69) -> chord-tone
+## Bar 44  chord=Dm6/9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+## Bar 45  chord=Dm6/9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+## Bar 46  chord=Bbmaj9/D  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+   D5 (midi 74) -> unparsed
+   C5 (midi 72) -> unparsed
+## Bar 47  chord=Dm6/9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+## Bar 48  chord=Dm6/9  chord-vs-key=unparsed  top-note=None
+   chord tones: UNPARSED (simbol tak dikenal)
+   E5 (midi 76) -> unparsed
+
+Intervals (nada melodi berurutan):
+   +3 Minor Third naik
+   +4 Major Third naik
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -2 Major Second turun
+   -3 Minor Third turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -2 Major Second turun
+   -2 Major Second turun
+   -3 Minor Third turun
+   0 Perfect Unison unison
+   +3 Minor Third naik
+   +4 Major Third naik
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -2 Major Second turun
+   -8 Minor Sixth turun
+   +3 Minor Third naik
+   -2 Major Second turun
+   -1 Minor Second turun
+   +4 Major Third naik
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   +5 Perfect Fourth naik
+   -9 Major Sixth turun
+   +4 Major Third naik
+   0 Perfect Unison unison
+   -2 Major Second turun
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -3 Minor Third turun
+   0 Perfect Unison unison
+   +3 Minor Third naik
+   +2 Major Second naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -2 Major Second turun
+   -2 Major Second turun
+   -3 Minor Third turun
+   0 Perfect Unison unison
+   +3 Minor Third naik
+   +2 Major Second naik
+   +3 Minor Third naik
+   -9 Diminished Seventh turun
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   +2 Major Second naik
+   -2 Major Second turun
+   -3 Minor Third turun
+   -2 Major Second turun
+   +2 Major Second naik
+   +2 Major Second naik
+   +3 Minor Third naik
+   +2 Major Second naik
+   -8 Minor Sixth turun
+   +3 Minor Third naik
+   -8 Minor Sixth turun
+   +1 Minor Second naik
+   +8 Minor Sixth naik
+   -1 Minor Second turun
+   -2 Major Second turun
+   -2 Major Second turun
+   +2 Major Second naik
+   -2 Major Second turun
+   -3 Minor Third turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -1 Minor Second turun
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -2 Major Second turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   -3 Minor Third turun
+   -2 Major Second turun
+   -3 Minor Third turun
+   0 Perfect Unison unison
+   +3 Minor Third naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -3 Minor Third turun
+   -2 Major Second turun
+   -3 Minor Third turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   +2 Major Second naik
+   -3 Minor Third turun
+   +3 Minor Third naik
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -2 Major Second turun
+   +2 Major Second naik
+   -2 Major Second turun
+   -3 Minor Third turun
+   +7 Perfect Fifth naik
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   -2 Major Second turun
+   -2 Major Second turun
+   +4 Major Third naik
+   0 Perfect Unison unison
+
+# Voice: Rhodes
+Key: d minor
+Notes: 183  Rests: 41  Rest-ratio: 0.183  Shortest(ql): 1.0  Longest(ql): 4.0
+
+## Bar 1  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 2  chord=None  chord-vs-key=None  top-note=G
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+## Bar 3  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 4  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 5  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 6  chord=None  chord-vs-key=None  top-note=G
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+## Bar 7  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 8  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 9  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 10  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 11  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 12  chord=None  chord-vs-key=None  top-note=G
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+## Bar 13  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 14  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 15  chord=None  chord-vs-key=None  top-note=D
+   G4 (midi 67) -> unparsed
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   G4 (midi 67) -> unparsed
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+## Bar 16  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 17  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 18  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 19  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 20  chord=None  chord-vs-key=None  top-note=G
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+## Bar 21  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 22  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 23  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 24  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 25  chord=None  chord-vs-key=None  top-note=G
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+   G5 (midi 79) -> unparsed
+## Bar 26  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 27  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 28  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 29  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 30  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 31  chord=None  chord-vs-key=None  top-note=D
+   G4 (midi 67) -> unparsed
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+## Bar 32  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 33  chord=None  chord-vs-key=None  top-note=A
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 34  chord=None  chord-vs-key=None  top-note=C
+   C4 (midi 60) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+   C5 (midi 72) -> unparsed
+## Bar 35  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 36  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 37  chord=None  chord-vs-key=None  top-note=G
+   A4 (midi 69) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+   G5 (midi 79) -> unparsed
+## Bar 38  chord=None  chord-vs-key=None  top-note=A
+   B-4 (midi 70) -> unparsed
+   D5 (midi 74) -> unparsed
+   F5 (midi 77) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 39  chord=None  chord-vs-key=None  top-note=G
+   D4 (midi 62) -> unparsed
+   E4 (midi 64) -> unparsed
+   G4 (midi 67) -> unparsed
+## Bar 40  chord=None  chord-vs-key=None  top-note=E
+   G#4 (midi 68) -> unparsed
+   C5 (midi 72) -> unparsed
+   E5 (midi 76) -> unparsed
+## Bar 41  chord=None  chord-vs-key=None  top-note=B-
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   B-4 (midi 70) -> unparsed
+## Bar 42  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 43  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+## Bar 44  chord=None  chord-vs-key=None  top-note=B-
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   B-4 (midi 70) -> unparsed
+## Bar 45  chord=None  chord-vs-key=None  top-note=B-
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   B-4 (midi 70) -> unparsed
+## Bar 46  chord=None  chord-vs-key=None  top-note=A
+   D4 (midi 62) -> unparsed
+   F4 (midi 65) -> unparsed
+   C5 (midi 72) -> unparsed
+   A5 (midi 81) -> unparsed
+## Bar 47  chord=None  chord-vs-key=None  top-note=B-
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   B-4 (midi 70) -> unparsed
+## Bar 48  chord=None  chord-vs-key=None  top-note=B-
+   C4 (midi 60) -> unparsed
+   F4 (midi 65) -> unparsed
+   A4 (midi 69) -> unparsed
+   B-4 (midi 70) -> unparsed
+
+Intervals (nada melodi berurutan):
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -7 Perfect Fifth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -19 Perfect Twelfth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -1 Minor Second turun
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -16 Major Tenth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -9 Major Sixth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -19 Perfect Twelfth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -19 Perfect Twelfth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -9 Major Sixth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -14 Major Ninth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -7 Perfect Fifth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -6 Diminished Fifth turun
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -16 Major Tenth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -7 Perfect Fifth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -11 Major Seventh turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   -7 Perfect Fifth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -13 Minor Ninth turun
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -7 Perfect Fifth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   -9 Major Sixth turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   +14 Major Ninth naik
+   -13 Minor Ninth turun
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -14 Major Ninth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -11 Major Seventh turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -14 Major Ninth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -6 Diminished Fifth turun
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -16 Major Tenth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   -9 Major Sixth turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +5 Perfect Fourth naik
+   -10 Minor Seventh turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -11 Major Seventh turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -12 Perfect Octave turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   +3 Minor Third naik
+   -9 Major Sixth turun
+   +4 Major Third naik
+   +3 Minor Third naik
+   +4 Major Third naik
+   -19 Perfect Twelfth turun
+   +2 Major Second naik
+   +3 Minor Third naik
+   +1 Augmented Unison naik
+   +4 Diminished Fourth naik
+   +4 Major Third naik
+   -16 Major Tenth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -8 Minor Sixth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -19 Perfect Twelfth turun
+   +3 Minor Third naik
+   +4 Major Third naik
+   -9 Major Sixth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -10 Minor Seventh turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -8 Minor Sixth turun
+   +3 Minor Third naik
+   +7 Perfect Fifth naik
+   +9 Major Sixth naik
+   -21 Major Thirteenth turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -10 Minor Seventh turun
+   +5 Perfect Fourth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+
+# Voice: Bass
+Key: d minor
+Notes: 139  Rests: 2  Rest-ratio: 0.014  Shortest(ql): 1.0  Longest(ql): 4.0
+
+## Bar 1  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 2  chord=None  chord-vs-key=None  top-note=None
+## Bar 3  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 4  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+## Bar 5  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+## Bar 6  chord=None  chord-vs-key=None  top-note=None
+## Bar 7  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 8  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+## Bar 9  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+   A2 (midi 45) -> unparsed
+   C3 (midi 48) -> unparsed
+   D3 (midi 50) -> unparsed
+## Bar 10  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 11  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+   F3 (midi 53) -> unparsed
+   A3 (midi 57) -> unparsed
+   B-2 (midi 46) -> unparsed
+## Bar 12  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   G3 (midi 55) -> unparsed
+   A3 (midi 57) -> unparsed
+## Bar 13  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+   A2 (midi 45) -> unparsed
+   C3 (midi 48) -> unparsed
+   D3 (midi 50) -> unparsed
+## Bar 14  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 15  chord=None  chord-vs-key=None  top-note=None
+   E3 (midi 52) -> unparsed
+   B-2 (midi 46) -> unparsed
+   D3 (midi 50) -> unparsed
+   E3 (midi 52) -> unparsed
+## Bar 16  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   C#3 (midi 49) -> unparsed
+   A2 (midi 45) -> unparsed
+## Bar 17  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+   A2 (midi 45) -> unparsed
+   C3 (midi 48) -> unparsed
+   D3 (midi 50) -> unparsed
+## Bar 18  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+   F3 (midi 53) -> unparsed
+   A3 (midi 57) -> unparsed
+   B-2 (midi 46) -> unparsed
+## Bar 19  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 20  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   G3 (midi 55) -> unparsed
+   A3 (midi 57) -> unparsed
+## Bar 21  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+   A2 (midi 45) -> unparsed
+   C3 (midi 48) -> unparsed
+   D3 (midi 50) -> unparsed
+## Bar 22  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 23  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+   F3 (midi 53) -> unparsed
+   A3 (midi 57) -> unparsed
+   B-2 (midi 46) -> unparsed
+## Bar 24  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   C#3 (midi 49) -> unparsed
+   A2 (midi 45) -> unparsed
+## Bar 25  chord=None  chord-vs-key=None  top-note=None
+   F3 (midi 53) -> unparsed
+   C4 (midi 60) -> unparsed
+   E4 (midi 64) -> unparsed
+   F4 (midi 65) -> unparsed
+## Bar 26  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 27  chord=None  chord-vs-key=None  top-note=None
+   C3 (midi 48) -> unparsed
+   G2 (midi 43) -> unparsed
+   B-2 (midi 46) -> unparsed
+   C3 (midi 48) -> unparsed
+## Bar 28  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   C#3 (midi 49) -> unparsed
+   A2 (midi 45) -> unparsed
+## Bar 29  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+   F3 (midi 53) -> unparsed
+   A3 (midi 57) -> unparsed
+   B-2 (midi 46) -> unparsed
+## Bar 30  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 31  chord=None  chord-vs-key=None  top-note=None
+   E3 (midi 52) -> unparsed
+   B-2 (midi 46) -> unparsed
+   D3 (midi 50) -> unparsed
+   E3 (midi 52) -> unparsed
+## Bar 32  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   C#3 (midi 49) -> unparsed
+   A2 (midi 45) -> unparsed
+## Bar 33  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+   A2 (midi 45) -> unparsed
+   C3 (midi 48) -> unparsed
+   D3 (midi 50) -> unparsed
+## Bar 34  chord=None  chord-vs-key=None  top-note=None
+   E3 (midi 52) -> unparsed
+## Bar 35  chord=None  chord-vs-key=None  top-note=None
+   B-2 (midi 46) -> unparsed
+   F3 (midi 53) -> unparsed
+   A3 (midi 57) -> unparsed
+   B-2 (midi 46) -> unparsed
+## Bar 36  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 37  chord=None  chord-vs-key=None  top-note=None
+   F3 (midi 53) -> unparsed
+   C4 (midi 60) -> unparsed
+   E4 (midi 64) -> unparsed
+   F4 (midi 65) -> unparsed
+## Bar 38  chord=None  chord-vs-key=None  top-note=None
+   G3 (midi 55) -> unparsed
+   D3 (midi 50) -> unparsed
+   F3 (midi 53) -> unparsed
+   G3 (midi 55) -> unparsed
+## Bar 39  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   G3 (midi 55) -> unparsed
+   A3 (midi 57) -> unparsed
+## Bar 40  chord=None  chord-vs-key=None  top-note=None
+   A2 (midi 45) -> unparsed
+   E3 (midi 52) -> unparsed
+   C#3 (midi 49) -> unparsed
+   A2 (midi 45) -> unparsed
+## Bar 41  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 42  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 43  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 44  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 45  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 46  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 47  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+## Bar 48  chord=None  chord-vs-key=None  top-note=None
+   D3 (midi 50) -> unparsed
+
+Intervals (nada melodi berurutan):
+   0 Perfect Unison unison
+   +5 Perfect Fourth naik
+   -9 Major Sixth turun
+   +4 Major Third naik
+   -5 Perfect Fourth turun
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -9 Major Sixth turun
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   -11 Major Seventh turun
+   -1 Minor Second turun
+   +7 Perfect Fifth naik
+   +3 Minor Third naik
+   +2 Major Second naik
+   -7 Perfect Fifth turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -3 Minor Third turun
+   -6 Augmented Fourth turun
+   +4 Major Third naik
+   +2 Major Second naik
+   -7 Perfect Fifth turun
+   +7 Perfect Fifth naik
+   -3 Minor Third turun
+   -4 Major Third turun
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -4 Major Third turun
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   -11 Major Seventh turun
+   +9 Major Sixth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -10 Minor Seventh turun
+   +7 Perfect Fifth naik
+   +3 Minor Third naik
+   +2 Major Second naik
+   -7 Perfect Fifth turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -9 Major Sixth turun
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   -11 Major Seventh turun
+   -1 Minor Second turun
+   +7 Perfect Fifth naik
+   -3 Minor Third turun
+   -4 Major Third turun
+   +8 Minor Sixth naik
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -10 Minor Seventh turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -7 Perfect Fifth turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -3 Minor Third turun
+   +7 Perfect Fifth naik
+   -3 Minor Third turun
+   -4 Major Third turun
+   +1 Minor Second naik
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   -11 Major Seventh turun
+   +9 Major Sixth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -3 Minor Third turun
+   -6 Augmented Fourth turun
+   +4 Major Third naik
+   +2 Major Second naik
+   -7 Perfect Fifth turun
+   +7 Perfect Fifth naik
+   -3 Minor Third turun
+   -4 Major Third turun
+   +5 Perfect Fourth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   +2 Major Second naik
+   -6 Augmented Fourth turun
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   -11 Major Seventh turun
+   +9 Major Sixth naik
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -2 Major Second turun
+   +7 Perfect Fifth naik
+   +4 Major Third naik
+   +1 Minor Second naik
+   -10 Minor Seventh turun
+   -5 Perfect Fourth turun
+   +3 Minor Third naik
+   +2 Major Second naik
+   -10 Minor Seventh turun
+   +7 Perfect Fifth naik
+   +3 Minor Third naik
+   +2 Major Second naik
+   -12 Perfect Octave turun
+   +7 Perfect Fifth naik
+   -3 Minor Third turun
+   -4 Major Third turun
+   +5 Perfect Fourth naik
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+   0 Perfect Unison unison
+

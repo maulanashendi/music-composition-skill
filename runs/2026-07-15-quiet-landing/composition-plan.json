@@ -1,0 +1,17 @@
+{
+  "title": "Quiet Landing",
+  "key": "D minor",
+  "tempo_bpm": 76,
+  "meter": "4/4",
+  "arc": "ragu → hangat menerima",
+  "ensemble": ["Rhodes E-Piano", "Clean Electric Guitar", "Finger Bass", "Jazz Kit"],
+  "sections": [
+    {"label":"Intro","bars":8,"tension":"low","chords":["Dm11","A7sus4","Dm9","Gm9","Bbmaj9","A7sus4","Dm9","A7alt"]},
+    {"label":"A1","bars":8,"tension":"rising","chords":["Dm9","Gm9","Bbmaj9","A7sus4","Dm9","Gm9","Em7b5","A7alt"]},
+    {"label":"A2","bars":8,"tension":"rising","chords":["Dm9","Bbmaj9","Gm9","A7sus4","Dm9","Gm9","Bbmaj9","A7alt"]},
+    {"label":"B","bars":8,"tension":"high","chords":["Fmaj9","Gm9","C13sus4","A7alt","Bbmaj9","Gm9","Em7b5","A7alt"]},
+    {"label":"Release","bars":8,"tension":"falling","chords":["Dm9","C/E","Bbmaj9","Gm9","Fmaj9","Gm9","A7sus4","A7alt"]},
+    {"label":"Coda","bars":8,"tension":"low","chords":["Dm6/9","Bbmaj9/D","Gm9/D","Dm6/9","Dm6/9","Bbmaj9/D","Dm6/9","Dm6/9"]}
+  ],
+  "hook": "A-C-E, lalu D-C-A; E direkontekstualisasi di coda"
+}

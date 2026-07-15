@@ -1,0 +1,58 @@
+# 04-melody.abc — Level 4 design note (Porch Light)
+
+Catatan: file ini adalah **artefak catatan desain** (prosa + fragmen ABC ilustratif), bukan notasi final tervalidasi — notasi final hidup di `song.abc` (Level 14). Lihat `04-melodi-candidates.md` untuk seleksi motif lengkap.
+
+## Tahap 5 — Motif inti (pemenang seleksi)
+**Kandidat B — "static repeated-note, chromatic neighbor"** terpilih. Nada tunggal A (chord-tone `F/A`) diulang dengan satu neighbor kromatik Bb (outside), rhythm tersinkopasi, diakhiri turun ke F (chord-tone) dengan ruang. Device ini memindahkan thesis Level 1 ("sama lalu resolve") ke sumbu melodi: melodi diam/stasis persis seperti harmoni, resolusi ditahan sampai bar 8.
+
+```
+[V:1] "F/A" A2 A2 _B1 A1 A2 | "F/A" z2 A2 F2 z2 |
+```
+
+## Tahap 6 — Target tones
+| Bar | Chord | Target tone | Peran |
+|---|---|---|---|
+| 1-2 | F/A | A (chord-tone) | Home/anchor pitch — thesis "kesamaan" |
+| 3-4 | F/A | A → C | C diperkenalkan sebagai anchor kedua (masih chord-tone) |
+| 5 | F/A | A (ditahan 4 ketuk) | Titik ruang maksimal — "menahan nafas" sebelum harmoni mulai bergerak |
+| 6 | F/A | F-A-C (broken chord) | "Reveal" — voicing beku F-A-C dimunculkan eksplisit di melodi tepat sebelum bass mulai bergerak bar 7 |
+| 7 | F/G | A → G (stepwise turun) | Guide tone menuju resolusi — G = chord-tone F/G |
+| 8 | F/D | F (ditahan) | **Resolusi** — F adalah not yang sama persis dari voicing beku (F-A-C), sekarang terbaca sebagai minor 3rd `Dm9` yang hangat |
+
+## Tahap 7 — Bangun melodi (8 bar A section penuh)
+```
+X:1
+T:A-section melody build (Motif B developed, bar 1-8)
+M:4/4
+L:1/8
+K:DDor
+V:1
+[V:1] "F/A" A2 A2 _B1 A1 A2 | "F/A" z2 A2 F2 z2 |
+[V:1] "F/A" A2 A2 _B1 A1 A2 | "F/A" z2 C2 A2 z2 |
+[V:1] "F/A" A4 z4 | "F/A" F2 A2 C2 z2 |
+[V:1] "F/G" A2 G2 z4 | "F/D" F4 z4 |]
+```
+Teknik dipakai: repeated note (bar 1,3), chromatic neighbor (Bb, bar 1/3), broken chord (F-A-C, bar 6 — arpeggio naik menaikkan struktur beku secara eksplisit), stepwise target-tone connection (A→G, bar 7), space/rest (bar 2,4,5,7,8 — rest-ratio 0.276 pada `notation_facts.py`, konsisten dengan tuntutan "reflektif, berruang" di brief).
+
+**A2 (bar 3-4) sengaja hampir identik dengan A1 (bar 1-2)** kecuali target tone kedua (C alih-alih F) — variasi minimal ini bukan pengembangan melodi utama (itu tugas Level 5 lewat pocket yang mengendur), tapi memberi sedikit "napas baru" tanpa merusak device kesamaan.
+
+**Graft opsional A3 (dari selector Level 4):** pada repeat A3 (bar 3-4 dari head A3, analog posisi bar 2 di atas), ganti `z2 A2 F2 z2` dengan `z2 A4` (A ditahan lebih panjang, meniru gestur "held note" Kandidat A) — supaya repeat terakhir sebelum solo chorus terasa sedikit menggantung, echo dari lompatan kandidat yang kalah tanpa mengambil lompatannya.
+
+## Tahap 8 — Outside material
+Placement mengikuti tension map Level 3 (`03-harmony.md`): titik paling "luar-key" di B section ada di bar 14 (`Ebmaj7`, modal interchange). Melodi B section (dikembangkan penuh di Level 6/7 arrangement — bukan bagian tema utama per Tahap 9, karena B berfungsi kontras/eksplorasi, bukan identitas) sebaiknya menempatkan warna outside-nya (mis. b9/#5 dari `A7b9#5` bar 10/12/15-16, atau nada di luar `Ebmaj7` bar 14) tepat di titik-titik tension tinggi itu — bukan disebar rata di seluruh B, supaya "outside" tetap terkontrol (durasi terbatas, resolusi nyata) sesuai prinsip Tahap 8.
+
+Untuk tema A sendiri, satu-satunya outside tone adalah Bb (chromatic neighbor, bar 1/3) — sengaja dibatasi ke satu titik per repeat supaya tema tetap "jelas dikenali" (Tahap 9), bukan sarat vocabulary.
+
+## Cek fakta notasi (`notation_facts.py`)
+
+Dijalankan pada motif (kandidat, `04-melodi-candidates.md`) dan pada build 8-bar penuh (`04-melody-a-section.abc`):
+
+- **21 pitch, 8 rest** (rest-ratio 0.276) di build 8-bar — konsisten dengan klaim "berruang".
+- Bar 1/3 (`Bb`): **`outside`** — cocok dengan klaim "chromatic neighbor" motif.
+- Bar 6 (`F-A-C` broken chord): seluruhnya **`chord-tone`** — cocok dengan klaim "reveal" voicing beku.
+- Bar 7 (`A→G`): keduanya **`chord-tone`** terhadap `F/G` — cocok dengan klaim "guide tone stepwise".
+- **Bar 8 (`F`, resolusi): `chord-tone`** terhadap `F/D` — mengonfirmasi klaim inti Level 3/4: not F yang sama dari voicing beku benar-benar menjadi bagian chord tonic yang resolve, bukan klaim tekstual.
+- Tidak ada `unparsed`; tidak ada ketidakcocokan label ditemukan pada level ini.
+
+## Kandidat & seleksi
+Lihat `04-melodi-candidates.md` untuk 3 kandidat motif, fakta objektif tiap kandidat, dan verdict selector segar lengkap.

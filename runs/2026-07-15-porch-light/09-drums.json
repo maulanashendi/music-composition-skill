@@ -1,0 +1,170 @@
+{
+  "title": "Porch Light",
+  "tempo_bpm": 86,
+  "beats_per_bar": 4,
+  "steps_per_bar": 16,
+  "swing": 0.63,
+  "humanize_velocity": 5,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51 },
+  "base_velocity": { "kick": 76, "snare": 68, "rimshot": 54, "chh": 44, "ohh": 54, "ride": 50 },
+  "timing": { "kick": 0, "snare": 18, "rimshot": 22, "chh": -3, "ride": 5 },
+  "sections": [
+    {
+      "label": "Intro (bar 1-4) - tacet total (bar 1-3), anticipation tick tunggal bar 4 menjelang A1",
+      "bars": 4,
+      "phrase_velocity": [0.5, 0.5, 0.55, 0.6],
+      "pattern": [
+        {},
+        {},
+        {},
+        { "rimshot": "..............g." }
+      ]
+    },
+    {
+      "label": "A1 (bar 5-12) - base groove ride+ghost snare (bar 1-2), ghost bergeser (bar 3-4), ruang penuh (bar 5), kembali base (bar 6), lock kick+bass di resolusi (bar 7-8)",
+      "bars": 8,
+      "phrase_velocity": [0.75, 0.75, 0.78, 0.8, 0.72, 0.78, 0.85, 0.9],
+      "pattern": [
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "kick": "x...............", "ride": "x...x...x...x..." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "A2 (bar 13-20) - identik A1 (harmoni & motif identik Level 3/4; pocket mengendur dibawa lewat swing/timing, bukan grid)",
+      "bars": 8,
+      "phrase_velocity": [0.78, 0.78, 0.8, 0.82, 0.74, 0.8, 0.87, 0.92],
+      "pattern": [
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "kick": "x...............", "ride": "x...x...x...x..." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "B (bar 21-28) - kontras: kick per-downbeat, chh 8th aktif, rimshot bergerak mengikuti tension map; bar 8 = fill/transition kembali ke A3",
+      "bars": 8,
+      "phrase_velocity": [0.95, 0.95, 1.0, 1.0, 0.9, 1.0, 1.05, 1.1],
+      "pattern": [
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x......." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "....x..........." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x...x..." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "....x......x...." },
+        { "kick": "x...............", "chh": "x...x...x...x...", "ride": "x...x...x...x..." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x...x..." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x......." },
+        { "kick": "x...........x...", "snare": "............x.X.", "chh": "x.x.x.x.x.x.x.xX", "ride": "x...x...x...x..x" }
+      ]
+    },
+    {
+      "label": "A3 head (bar 29-36) - sama A1; ONE-OFF imperfection tunggal seluruh lagu di bar 8 (resolusi): kick sengaja DIHILANGKAN supaya klik resolusi murni dari Rhodes+bass, bukan error",
+      "bars": 8,
+      "phrase_velocity": [0.75, 0.75, 0.78, 0.8, 0.7, 0.78, 0.85, 0.8],
+      "pattern": [
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "kick": "x...............", "ride": "x...x...x...x..." },
+        { "ride": "x...x...x...x...", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Solo A1' (bar 37-44) - medium-dense: chh 8th ditambah di bawah ride, rimshot aksen bar 6 menandai sisipan secondary-dominant A7/C#",
+      "bars": 8,
+      "phrase_velocity": [0.9, 0.9, 0.92, 0.94, 0.88, 0.95, 1.0, 1.02],
+      "pattern": [
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Solo A2' (bar 45-52) - identik Solo A1'",
+      "bars": 8,
+      "phrase_velocity": [0.92, 0.92, 0.94, 0.96, 0.9, 0.97, 1.02, 1.04],
+      "pattern": [
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Solo B' (bar 53-60) - identik B (kontras dipertahankan di dalam solo chorus)",
+      "bars": 8,
+      "phrase_velocity": [1.0, 1.0, 1.04, 1.05, 0.95, 1.05, 1.08, 1.12],
+      "pattern": [
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x......." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "....x..........." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x...x..." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "....x......x...." },
+        { "kick": "x...............", "chh": "x...x...x...x...", "ride": "x...x...x...x..." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x...x..." },
+        { "kick": "x...............", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x...", "rimshot": "........x......." },
+        { "kick": "x...........x...", "snare": "............x.X.", "chh": "x.x.x.x.x.x.x.xX", "ride": "x...x...x...x..x" }
+      ]
+    },
+    {
+      "label": "Solo A3' (bar 61-68) - sama Solo A1' (bukan lokasi one-off; itu hanya di A3 head)",
+      "bars": 8,
+      "phrase_velocity": [0.88, 0.88, 0.9, 0.92, 0.84, 0.9, 0.95, 0.9],
+      "pattern": [
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Head out - A3 ringkas (bar 69-76) - simplified: kembali ke tekstur A1 polos, tanpa chh tambahan",
+      "bars": 8,
+      "phrase_velocity": [0.7, 0.7, 0.72, 0.74, 0.65, 0.72, 0.78, 0.75],
+      "pattern": [
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x...", "snare": "........g......." },
+        { "ride": "x...x...x...x..." },
+        { "ride": "x...x...x...x...", "snare": "............g..." },
+        { "kick": "x...............", "ride": "x...x...x...x..." },
+        { "kick": "x...............", "ride": "x...x...x...x...", "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Coda (bar 77-80) - fade: half-time ride (bar 1-2), cymbal swell (bar 3), diam (bar 4)",
+      "bars": 4,
+      "phrase_velocity": [0.7, 0.6, 0.55, 0.4],
+      "pattern": [
+        { "kick": "x...............", "ride": "x.......x......." },
+        { "ride": "x.......x......." },
+        { "ohh": "x..............." },
+        {}
+      ]
+    }
+  ]
+}

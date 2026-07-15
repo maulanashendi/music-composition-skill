@@ -1,0 +1,320 @@
+{
+  "steps_per_bar": 16,
+  "gm_map": {
+    "kick": 36,
+    "rimshot": 37,
+    "snare": 38,
+    "chh": 42,
+    "ohh": 46
+  },
+  "base_velocity": {
+    "kick": 88,
+    "rimshot": 58,
+    "snare": 70,
+    "chh": 48,
+    "ohh": 54
+  },
+  "swing": 0.57,
+  "sections": [
+    {
+      "bars": 4,
+      "pattern": {}
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "chh": "x...x...x......g"
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x...x...",
+        "rimshot": "....x.......x..g",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x...x...",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x...x...",
+        "rimshot": "....x.......x..g",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x...x.x.x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x...x...",
+        "snare": "....x.......x.X.",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ohh": "..............x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x...x...",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x.x.x...",
+        "rimshot": "....x.......x..g",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "....x...x...x...",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "kick": "x...x...x...x...",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x.x.x...",
+        "rimshot": "....x.......x..g",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...x...x...x...",
+        "rimshot": "....x.......x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x..x..x.x.x...x.",
+        "snare": "....x.......x.X.",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ohh": "..............x."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "kick": "x..x..x.x.x...x.",
+        "snare": "....x...x...x.x.",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x..x..x.x...x...",
+        "snare": "....x...x...x.x.",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x..x..x.x.x..xx.",
+        "snare": "....x...x...x.X.",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ohh": "..............x."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "kick": "x..x..x.x.x...x.",
+        "snare": "....x...x...x.x.",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x..x..x.x...x...",
+        "snare": "....x...x...x.x.",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x..x..x.x.x..xx.",
+        "snare": "....x...x...x.X.",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ohh": "..............x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...........x...",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "rimshot": "....x...........",
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...........x...",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "rimshot": "....x...........",
+        "chh": "x...x...x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "rimshot": "....x...........",
+        "chh": "x.......x......g"
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "rimshot": "........x.......",
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "rimshot": "............x...",
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "rimshot": "........x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "chh": "x..............."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "rimshot": "............x..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {}
+    }
+  ]
+}

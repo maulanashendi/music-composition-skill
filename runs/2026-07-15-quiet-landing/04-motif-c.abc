@@ -1,0 +1,8 @@
+X:1
+T:Motif C
+M:4/4
+L:1/8
+Q:1/4=76
+K:Dm
+V:1 name="Guitar-Clean Lead"
+[V:1] "Dm9" A2 c2 ^c2 e2 | "Gm9" d2 c2 A4 |]

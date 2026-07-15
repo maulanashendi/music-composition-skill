@@ -1,0 +1,508 @@
+{
+  "steps_per_bar": 16,
+  "gm_map": {
+    "kick": 36,
+    "snare": 38,
+    "rimshot": 37,
+    "chh": 42,
+    "ohh": 46,
+    "ride": 51
+  },
+  "base_velocity": {
+    "kick": 76,
+    "snare": 68,
+    "rimshot": 54,
+    "chh": 44,
+    "ohh": 54,
+    "ride": 50
+  },
+  "swing": 0.63,
+  "sections": [
+    {
+      "bars": 3,
+      "pattern": {}
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "rimshot": "..............g."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x......x...."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x...x...x...x...",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...........x...",
+        "snare": "............x.X.",
+        "chh": "x.x.x.x.x.x.x.xX",
+        "ride": "x...x...x...x..x"
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x......x...."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x...x...x...x...",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x.......x.......",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "ride": "x...x...x...x...",
+        "rimshot": "........x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...........x...",
+        "snare": "............x.X.",
+        "chh": "x.x.x.x.x.x.x.xX",
+        "ride": "x...x...x...x..x"
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "chh": "x.x.x.x.x.x.x.x.",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 2,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "........g......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x...x...x...x...",
+        "snare": "............g..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x..."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x...x...x...x...",
+        "rimshot": "....x..........."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "kick": "x...............",
+        "ride": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ride": "x.......x......."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {
+        "ohh": "x..............."
+      }
+    },
+    {
+      "bars": 1,
+      "pattern": {}
+    }
+  ]
+}

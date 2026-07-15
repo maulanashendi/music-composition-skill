@@ -1,0 +1,7 @@
+# Level 4 — Desain Melodi
+
+- **Motif inti:** `A–C–E | D–C–A`; statement → answer → fragment → expansion → absence.
+- **Kontur:** naik dua lompatan kecil ke E, lalu recovery turun stepwise.
+- **Target tones:** E di Dm9 (bar 9, 17, 33) dan E sebagai 9th pada Dm6/9 (bar 41–48); C#→E hanya bar 28/A7alt.
+- **Tempo gate:** 76 BPM (medium-slow); shortest IOI final = eighth note (0.395 s), lebih longgar dari 16th selektif; rest lead ≥2 beat pada banyak bar, memenuhi napas minimum ≥1.5 beat.
+- **Kromatik terkontrol:** bar 28 `C#→E` di A7alt adalah push setengah-langkah menuju E; setelah audit, G# di semua A7alt dihapus agar tidak ada outside claim yang tidak terdokumentasi.
