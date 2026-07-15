@@ -300,6 +300,18 @@ L1/L2-rubrik/L2-blind/L2-cliche (lihat `SKILL.md` Tahap 15):
 Run tanpa satu pun revisi tercatat = red flag "first draft dianggap
 final" (`RED-FLAGS.md`).
 
+## Export (Tool 2 — engine daw_generative)
+
+Diisi setelah section `## Export produksi` di `SKILL.md` dijalankan
+(kontrak lengkap: `midi-orchestration/references/engine-export.md`):
+
+| Field | Isi |
+|---|---|
+| Status | <selesai / PENDING + alasan konkret> |
+| Path | <`runs/<run>/render.wav` bila ada> |
+| Conformance summary | <isi header `X-Conformance-Summary` apa adanya> |
+| Mastering | <profil yang dipakai: `neo-soul` / `legacy` / `false`> |
+
 ## L3 (telinga) — hanya diisi sekali, di akhir
 
 Diisi **setelah** `output.mid` ada, mengikuti

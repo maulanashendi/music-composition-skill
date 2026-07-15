@@ -53,6 +53,16 @@ Periksa:
 * siapa merespons
 * bagaimana transisi terjadi
 
+## Setelah level ini — export produksi
+
+Setelah semua gate/checklist Level 14 terpenuhi (dan checklist pra-L3 di
+`../SKILL.md` §Penilaian tercentang semua), jalankan section
+`## Export produksi (Tool 2 — engine daw_generative)` di `../SKILL.md`:
+konversi drum (`drums_to_engine.py`) → pra-cek `conformance-audit.mjs` →
+`POST /api/render` → simpan `runs/<run>/render.wav` + catat
+`X-Conformance-Summary` di `scorecard.md` (status **PENDING** yang jujur
+bila lingkungan tidak lengkap — run tidak dianggap gagal).
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**

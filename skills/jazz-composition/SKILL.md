@@ -392,3 +392,36 @@ ini (dari section yang di-stack semua device sampai skor rubrik tinggi
 yang dikira berarti enak didengar). Skor rubrik tinggi adalah lantai,
 bukan langit-langit — L3 (telinga) tetap wajib sebelum menyebut sebuah
 piece selesai.
+
+## Export produksi (Tool 2 — engine daw_generative)
+
+Dijalankan **setelah** checklist pra-L3 (lihat §Penilaian) terpenuhi —
+langkah konkret di alur "piece dianggap selesai" yang menghasilkan WAV
+produksi bertimbre jujur (soundfont FluidR3_GM asli, bukan preview
+browser). Kontrak lengkap:
+`../midi-orchestration/references/engine-export.md`.
+
+1. Bila run punya drum: jalankan konverter
+   `../midi-orchestration/scripts/drums_to_engine.py` atas `drums.json`
+   run → hasilkan `runs/<run>/drums-engine.json` (format Tool 1 v2 TIDAK
+   diterima mentah oleh engine; WARNING konverter mencatat field yang
+   tidak terbawa).
+2. Bila repo induk `daw_generative` tersedia di mesin: pra-cek murah
+   `node scripts/conformance-audit.mjs <song.abc> [drums-engine.json]`
+   dari root repo induk — memeriksa ABC/drums lolos gate tanpa render
+   penuh.
+3. `POST /api/render` ke `http://127.0.0.1:<port>` dengan body
+   `{abc, drums?, mastering?}` — **port dibaca dari log `npm run dev`**
+   (auto-increment bila 5173 terpakai), bukan diasumsikan. Prasyarat
+   lingkungan (soundfont 3 path, fluidsynth, ffmpeg) dan error umum:
+   lihat `engine-export.md`.
+4. Simpan body respons ke `runs/<run>/render.wav` (ter-ignore git); catat
+   header `X-Conformance-Summary` dan profil `mastering` yang dipakai di
+   bagian "Export" `scorecard.md`.
+5. Bila server dev/soundfont/fluidsynth/ffmpeg **tidak tersedia** di
+   lingkungan yang menjalankan run: status export dicatat **PENDING** +
+   alasan konkret (mis. "soundfont tak ditemukan di 3 path yang
+   dicek") — **run itu sendiri TIDAK dianggap gagal**; `output.mid`
+   (Tool 1) tetap ada dan cukup untuk L3 telinga manusia, tapi WAV hasil
+   engine tetap **artefak produksi otoritatif** begitu lingkungan
+   tersedia.

@@ -84,6 +84,20 @@ Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`
 - **2 konsep kandidat berbeda secara struktural** ditulis sebagai material telanjang (≤1 kalimat intent per kandidat, tanpa pembelaan). Ini yang memenuhi tuntutan rubrik `vibes-mood` "minimal dua konsep berbeda secara struktural".
 - Kandidat + verdict selector ditulis ke `01-konsep-candidates.md`; `01-brief.md` memakai pemenang.
 
+## Gate instrumentasi — registry engine (wajib)
+
+- Instrumentasi run **WAJIB** dipilih dari registry instrumen engine
+  `daw_generative` — tabel id → nama → GM program (plus 4 palet siap
+  pakai) di `../../midi-orchestration/references/engine-export.md` — ATAU
+  disertai justifikasi eksplisit di `01-brief.md` bila memakai GM lain
+  (engine menerima GM 0-127 penuh; registry = menu default yang
+  direkomendasikan, bukan pagar keras).
+- Konsekuensi hilir: ABC final (Level 14 / modul `abc-notation`)
+  **WAJIB** menulis `%%MIDI program N` eksplisit per voice sesuai nomor
+  tabel registry — jangan mengandalkan name-matching otomatis engine
+  (hanya menebak keyword `sax`/`bass`/`guitar`/`piano`, jatuh ke piano
+  untuk selainnya) sebagai satu-satunya jalur penentuan timbre.
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**
