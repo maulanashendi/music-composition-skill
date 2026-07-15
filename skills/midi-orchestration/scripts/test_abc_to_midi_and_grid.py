@@ -256,5 +256,33 @@ class GridToMidiV2Tests(unittest.TestCase):
         self.assertEqual(grid_to_midi.lint_sections(short), [])
 
 
+class ProgramMapEngineRegistryTests(unittest.TestCase):
+    """E3: PROGRAM selaras registry engine daw_generative
+    (src/instruments/registry.js — lihat
+    skills/midi-orchestration/references/engine-export.md)."""
+
+    def test_keywords_shared_with_engine_registry_use_engine_gm_numbers(self):
+        expected = {
+            "sax": 66, "piano": 0, "guitar": 26, "bass": 32, "rhodes": 4,
+            "trumpet": 56, "vibraphone": 11, "guitar-clean": 27,
+            "synth-lead": 81,
+        }
+        for keyword, program in expected.items():
+            self.assertEqual(abc_to_midi.PROGRAM[keyword], program, keyword)
+
+    def test_legacy_keywords_preserved(self):
+        # Di luar cakupan registry engine — dipertahankan, bukan dihapus.
+        legacy = {"horns": 61, "upright": 32, "strings": 48, "pad": 89}
+        for keyword, program in legacy.items():
+            self.assertEqual(abc_to_midi.PROGRAM[keyword], program, keyword)
+
+    def test_program_for_prefers_compound_keyword_over_substring(self):
+        # 'guitar-clean' harus menang atas substring 'guitar' (urutan dict).
+        self.assertEqual(abc_to_midi.program_for("Guitar-Clean"), 27)
+        self.assertEqual(abc_to_midi.program_for("Jazz Guitar"), 26)
+        self.assertEqual(abc_to_midi.program_for("Synth-Lead"), 81)
+        self.assertEqual(abc_to_midi.program_for("Vibraphone"), 11)
+
+
 if __name__ == "__main__":
     unittest.main()

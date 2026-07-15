@@ -8,8 +8,16 @@ import re, sys, tempfile
 import pretty_midi
 from music21 import converter, harmony
 
-PROGRAM = {"sax":65,"horns":61,"trumpet":56,"rhodes":4,"piano":0,"bass":33,
-           "upright":32,"strings":48,"pad":89,"guitar":27}
+# Selaras registry instrumen engine daw_generative (src/instruments/
+# registry.js — lihat ../references/engine-export.md): keyword yang sama
+# menghasilkan nomor GM yang sama supaya preview MIDI Tool 1 dan WAV engine
+# tidak diam-diam beda timbre. Keyword majemuk (guitar-clean, synth-lead)
+# HARUS di depan keyword substring-nya karena program_for mencocokkan
+# substring berurutan. horns/upright/strings/pad tidak dikurasi registry
+# engine — dipertahankan dengan nilai lamanya.
+PROGRAM = {"guitar-clean":27,"synth-lead":81,"vibraphone":11,
+           "sax":66,"horns":61,"trumpet":56,"rhodes":4,"piano":0,"bass":32,
+           "upright":32,"strings":48,"pad":89,"guitar":26}
 
 def program_for(name):
     n=name.lower()
