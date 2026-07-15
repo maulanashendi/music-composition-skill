@@ -57,6 +57,11 @@ Output level ini
 * pola bass
 * karakter drum
 
+Sebutkan BPM brief secara eksplisit di artefak level ini dan cek keputusan
+ritmis (feel, syncopation, subdivisi) terhadap tabel BPM band di
+`../../vibes-mood/references/reasoning-theory.md` (lihat ground rule tempo
+di SKILL.md).
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**

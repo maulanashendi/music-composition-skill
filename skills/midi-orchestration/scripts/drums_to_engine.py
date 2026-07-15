@@ -139,7 +139,7 @@ def convert(spec):
 
     gm_map = spec["gm_map"]
     for voice, note in gm_map.items():
-        if not isinstance(note, int) or not 35 <= note <= 81:
+        if not isinstance(note, int) or isinstance(note, bool) or not 35 <= note <= 81:
             raise ValueError(
                 f"gm_map[{voice!r}] = {note!r} di luar rentang note perkusi "
                 "GM engine 35-81"
@@ -147,7 +147,7 @@ def convert(spec):
 
     base_velocity = spec["base_velocity"]
     for voice, vel in base_velocity.items():
-        if not isinstance(vel, int) or not 1 <= vel <= 127:
+        if not isinstance(vel, int) or isinstance(vel, bool) or not 1 <= vel <= 127:
             raise ValueError(
                 f"base_velocity[{voice!r}] = {vel!r} di luar rentang 1-127"
             )

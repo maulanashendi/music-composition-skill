@@ -126,6 +126,24 @@ class ValidationTests(unittest.TestCase):
             convert_quiet(spec)
         self.assertIn("base_velocity", str(ctx.exception))
 
+    def test_base_velocity_bool_raises(self):
+        """bool adalah subclass int di Python — True == 1 tak boleh lolos
+        sebagai velocity valid."""
+        spec = make_spec([{"bars": 1, "pattern": BAR_A}])
+        spec["base_velocity"]["kick"] = True
+        with self.assertRaises(ValueError) as ctx:
+            convert_quiet(spec)
+        self.assertIn("base_velocity", str(ctx.exception))
+
+    def test_gm_map_bool_raises(self):
+        """bool adalah subclass int di Python — True == 1 tak boleh lolos
+        sebagai note GM valid."""
+        spec = make_spec([{"bars": 1, "pattern": BAR_A}])
+        spec["gm_map"]["kick"] = True
+        with self.assertRaises(ValueError) as ctx:
+            convert_quiet(spec)
+        self.assertIn("gm_map", str(ctx.exception))
+
     def test_v2_pattern_list_length_mismatch_raises(self):
         spec = make_spec([{"bars": 3, "pattern": [BAR_A]}])
         with self.assertRaises(ValueError):

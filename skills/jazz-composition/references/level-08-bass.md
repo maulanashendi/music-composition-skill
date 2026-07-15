@@ -63,6 +63,11 @@ bertemu secara sengaja (mis. "beat 1 dan and-of-3 dikunci bersama kick;
 beat 2-4 bebas"). Bass line yang ditulis tanpa menyebut relasinya ke kick
 belum selesai di level ini.
 
+Sebutkan BPM brief secara eksplisit di artefak level ini dan cek pilihan
+device/harmonic-rhythm bass terhadap tabel BPM band di
+`../../vibes-mood/references/reasoning-theory.md` (lihat ground rule tempo
+di SKILL.md).
+
 ## Gate — ask, don't guess
 
 - Jika field wajib artefak level ini belum diputuskan brief/level sebelumnya — **tanya, jangan menebak.**

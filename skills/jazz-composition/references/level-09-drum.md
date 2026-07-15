@@ -39,6 +39,11 @@ Ini aturan doktrin, bukan enforced di kode (kode hanya memberi warning). Melangg
 - **`phrase_velocity`** dipakai untuk membentuk arc dinamika per bar (naik ke transition, turun saat reda) — bukan mengandalkan `humanize_velocity` acak. `humanize_velocity` dijaga kecil (single digit): perannya polish, bukan sumber variasi.
 - **`timing`** relasional per-role dipilih dari profil di `../../groove-rhythm/references/groove-profiles.md` (mis. `neo-soul-core`) — salin map-nya, jangan menurunkan angka tick ad hoc.
 
+Sebutkan BPM brief secara eksplisit di artefak level ini dan cek swing/timing
+drum terhadap tabel BPM band di
+`../../vibes-mood/references/reasoning-theory.md` (lihat ground rule tempo
+di SKILL.md).
+
 ## Gate — ask, don't guess
 
 - "Drum grid dan ABC gak pas persis bar-per-bar, tapi udah cukup dekat kok." (alasan yang ditolak, lihat RED-FLAGS.md) → "Cukup dekat" perlahan menjadi desync yang terdengar seiring lagu berjalan. Jumlah bar antara drum step-grid dan ABC harus persis sama, section demi section.
