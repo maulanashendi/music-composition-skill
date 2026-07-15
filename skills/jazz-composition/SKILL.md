@@ -184,6 +184,18 @@ Perbaiki:
 * drum setup
 * articulation
 
+**Bukti revisi (wajib sebelum run disebut selesai):** `14-review.md` dan
+bagian "Bukti revisi" di `scorecard.md` memuat **≥1 pasangan
+before/after** untuk **2 masalah terbesar** yang ditemukan
+L1/L2-rubrik/L2-blind/L2-cliche manapun. Setiap pasangan wajib: (a)
+kutip notasi/nilai **lama → baru** (bukan deskripsi umum "diperbaiki
+voicing-nya"); (b) 1 kalimat **efek yang diharapkan terdengar** dari
+perubahan itu. Pasangan harus **terhubung ke temuan nyata** yang
+tercatat — bukan revisi kosmetik berdiri sendiri; reviewer L2 berikutnya
+boleh menolak pasangan yang tidak menjawab temuan mana pun. Run tanpa
+satu pun revisi tercatat = red flag "first draft dianggap final" (lihat
+`../RED-FLAGS.md`).
+
 ## Checklist final
 
 Konsep
@@ -259,6 +271,51 @@ identitas, memorability, interaction, emotional specificity. Skor **0**
 pada salah satu = run **BELUM SELESAI**, terlepas dari skor kriteria
 lain — wajib revisi + re-review sebelum boleh disebut selesai. Skor
 tinggi di L2-rubrik per-level **tidak menyelamatkan** blocker yang gagal.
+
+### L2-blind — uji buta arc emosional
+
+Verifikasi independen bahwa arc emosional benar-benar **terbaca dari
+notasi**, bukan hanya konsisten dengan niat yang ditulis generator
+sendiri. Prosedur:
+
+1. Orkestrator menulis **3 opsi arc emosional**: 1 arc yang sebenarnya
+   (diambil dari artefak `01-brief.md`) + 2 distractor yang masuk akal,
+   ditulis **tanpa membocorkan** mana yang benar — ketiganya dengan
+   detail dan keyakinan setara. Aturan authoring distractor: **berbeda
+   arah arc, bukan berbeda genre** — ketiga opsi harus masuk akal untuk
+   gaya/instrumentasi yang sama, hanya arah emosionalnya yang berbeda.
+2. Spawn **reviewer segar** (subagent baru, tanpa histori generasi) yang
+   diberi **hanya**: `song.abc`, `drums.json`, output
+   `notation_facts.py`, dan 3 opsi arc di atas — **TANPA** brief asli,
+   **TANPA** artefak desain lain (form, harmony, dst.), **TANPA**
+   scorecard.
+3. Reviewer memilih **1 opsi** + alasan tertulis — harus berbasis apa
+   yang benar-benar terbaca dari notasi, bukan tebakan buta.
+4. **Salah pilih** = kriteria blocker "emotional specificity" (L2 global
+   #4) otomatis mendapat skor **0** — terhubung langsung ke aturan
+   fail-closed di atas.
+5. Hasil (benar/salah + alasan reviewer, apa adanya) dicatat **jujur** di
+   `scorecard.md` — termasuk bila hasilnya salah pilih.
+
+L2-blind (dan L2-cliche di bawah) dijalankan subagent LLM dan menilai apa
+yang bisa diverifikasi dari notasi/teks — keduanya **bukan** pengganti
+telinga manusia dan tidak boleh diklaim setara dengannya (lihat Modul 7
+`../vibes-mood/references/reasoning-theory.md`).
+
+### L2-cliche — audit originalitas
+
+Reviewer segar (subagent baru) diberi **notasi final + register cliché**
+(`references/cliche-register.md`) → menandai bagian yang **match**
+register **tanpa reinterpretasi yang terlihat**. Composer wajib merespons
+**tiap temuan** dengan salah satu:
+
+- **revisi** artefak/notasi terkait, atau
+- **justifikasi audible spesifik** — mekanisme konkret yang bisa didengar
+  kenapa device itu dipertahankan. Justifikasi generik ("ini disengaja")
+  tanpa mekanisme yang bisa didengar = **tidak diterima**; lihat
+  `../RED-FLAGS.md`.
+
+Temuan + respons dicatat di bagian L2-cliche `scorecard.md`.
 
 ### Checklist pra-L3 (fail-closed)
 

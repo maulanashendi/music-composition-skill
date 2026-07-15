@@ -262,6 +262,44 @@ kriteria ini = run **BELUM SELESAI**, terlepas dari skor kriteria lain —
 wajib revisi + re-review sebelum boleh disebut selesai. Skor tinggi di
 L2-rubrik per-level **tidak menyelamatkan** blocker yang gagal.
 
+### L2-blind — uji buta arc emosional
+
+Prosedur lengkap di `SKILL.md` §Penilaian (3 opsi arc → reviewer segar
+dengan diet informasi ketat → pilih 1 + alasan). Catat di sini, jujur:
+
+| Field | Isi |
+|---|---|
+| 3 opsi arc (verbatim, tanpa menandai yang benar) | |
+| Opsi yang dipilih reviewer segar | |
+| Arc sebenarnya (dari `01-brief.md`) | |
+| Hasil | benar / salah |
+| Alasan reviewer (apa adanya) | |
+
+**Salah pilih** = kriteria blocker #4 (emotional specificity) otomatis
+**0** — fail-closed, run belum selesai.
+
+### L2-cliche — audit originalitas
+
+Reviewer segar menandai match terhadap `cliche-register.md`; composer
+merespons tiap temuan (prosedur di `SKILL.md` §Penilaian):
+
+| Temuan (entri register + lokasi bar) | Respons (revisi / justifikasi audible) | Detail respons |
+|---|---|---|
+
+Temuan tanpa respons = run belum selesai. Justifikasi generik ("ini
+disengaja") tanpa mekanisme yang bisa didengar = tidak diterima.
+
+## Bukti revisi (wajib sebelum run disebut selesai)
+
+≥1 pasangan before/after untuk 2 masalah terbesar yang ditemukan
+L1/L2-rubrik/L2-blind/L2-cliche (lihat `SKILL.md` Tahap 15):
+
+| Temuan (sumber: L1/L2-rubrik/L2-blind/L2-cliche) | Before (kutipan notasi/nilai lama) | After (kutipan baru) | Efek yang diharapkan terdengar (1 kalimat) |
+|---|---|---|---|
+
+Run tanpa satu pun revisi tercatat = red flag "first draft dianggap
+final" (`RED-FLAGS.md`).
+
 ## L3 (telinga) — hanya diisi sekali, di akhir
 
 Diisi **setelah** `output.mid` ada, mengikuti
