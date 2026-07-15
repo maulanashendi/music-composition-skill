@@ -4,9 +4,9 @@ Status: **IN PROGRESS**. L1/L2/L3 diisi sesuai SOP setelah notasi, drum grid, da
 
 ## L1 mekanis lintas-level
 
-- [ ] Form, harmony, ABC, dan drum grid memiliki 48 bar yang sama.
-- [ ] `validate_abc.py` lulus.
-- [ ] `output.mid` berisi semua voice, tag tempo 76 BPM dan meter 4/4.
+- [x] Form, harmony, ABC, dan drum grid memiliki 48 bar yang sama.
+- [x] `validate_abc.py` lulus.
+- [x] `output.mid` berisi semua voice, tag tempo 76 BPM dan meter 4/4.
 
 ## L2 rubrik — reviewer segar
 
@@ -39,9 +39,9 @@ Belum tersedia—wajib merujuk temuan nyata reviewer/validator.
 
 | Field | Isi |
 |---|---|
-| Status | Belum dijalankan |
-| Path | — |
-| Conformance summary | — |
+| Status | Render berhasil (HTTP 200) |
+| Path | `render.wav` |
+| Conformance summary | `bars=48`, `totalNotes=861`, `tracks=4`, `pocket=neo-soul-core`, `pocketOk=true` |
 | Mastering | neo-soul |
 
 ## L3 (telinga)
