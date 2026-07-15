@@ -9,6 +9,11 @@ self-grading di `../../skills/jazz-composition/SKILL.md` (§Reviewer segar).
 L3 (telinga) masih belum diisi — butuh manusia, per
 `../../skills/jazz-composition/references/human-ear-protocol.md`.
 
+Verifikasi ulang L1 (2026-07-14): `validate_abc.py` mengembalikan `OK: 0 errors,
+0 warning(s)`; `music21` memuat 3 part; `drums.json` berjumlah 24 bar; dan
+`output.mid` memuat Sax 24, Rhodes 88, Bass 30, serta Drums 150 note, dengan
+tempo 78.000078 BPM dan meter 4/4.
+
 ## Validasi mesin lintas-level
 
 - [x] Label section unik: Intro, A1, B, Outro — tidak ada duplikat.

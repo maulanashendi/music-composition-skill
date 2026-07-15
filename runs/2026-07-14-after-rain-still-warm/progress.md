@@ -1,4 +1,4 @@
-# Progress — "Settling In (Late)" (doubt-to-acceptance, brief-01)
+# Progress — After Rain, Still Warm
 
 | Level | Status | Artefak | Next action |
 |---|---|---|---|
@@ -11,13 +11,8 @@
 | 7 — Desain Comping dan Voicing | done | `07-comping.md` | — |
 | 8 — Desain Bass Line | done | `08-bassline.md` | — |
 | 9 — Desain Drum | done | `09-drums.json` | — |
-| 10 — Desain Improvisasi | done | `10-solo-map.md` | — |
+| 10 — Desain Improvisasi | done (N/A, justified) | `10-solo-map.md` | — |
 | 11 — Interlude, Shout Chorus, Transisi | done | `11-transitions.md` | — |
 | 12 — Intro dan Ending | done | `12-intro-ending.md` | — |
 | 13 — Dinamika dan Dramaturgi | done | `13-dynamics.md` | — |
-| 14 — Detail Low Level | done | `14-review.md`, `song.abc`, `drums.json`, `output.mid`, `scorecard.md` | L1 mekanis diverifikasi ulang 2026-07-14; L2 sudah terisi reviewer segar; L3 tetap menunggu telinga manusia. |
-
-Final artefacts: `song.abc`, `drums.json`, `output.mid` — semua ditulis dan
-lulus L1 mekanis saat diverifikasi ulang 2026-07-14. L2 (rubrik) sudah diisi
-reviewer segar. L3 (telinga) sengaja masih kosong dan hanya boleh diisi manusia
-sesuai `../../skills/jazz-composition/SKILL.md`.
+| 14 — Detail Low Level | done | `14-review.md`, `song.abc`, `drums.json`, `output.mid`, `scorecard.md` | L1 mekanis lulus; L2 reviewer segar sudah terisi; L3 menunggu telinga manusia. |

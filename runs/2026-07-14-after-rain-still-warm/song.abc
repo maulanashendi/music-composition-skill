@@ -1,0 +1,13 @@
+X:1
+T:After Rain, Still Warm
+M:4/4
+L:1/8
+Q:1/4=74
+K:Dm
+%%pocket neo-soul-core
+V:1 name="Alto Sax"
+V:2 name="Rhodes"
+V:3 name="Electric Bass"
+[V:1] z8 | z8 | "Dm9" A2 d2 c2 A2 | "Bbmaj7" F2 A2 c2 d2 | "Gm9" g2 f2 d2 c2 | "A7alt" ^c2 e2 g2 a2 | "Fmaj7" a2 c'2 a2 f2 | "Cmaj7" e2 g2 a2 g2 | "Bbmaj7" f2 d2 c2 A2 | "A7alt" ^c2 e2 g2 a2 | "Dm9" d'2 c'2 a2 f2 | "Gm9" g2 f2 d2 c2 | "Bbmaj7" f2 a2 c'2 d'2 | "A7alt" ^c2 e2 g2 a2 | "Dm9" d'2 a2 f2 e2 | "Dm6/9" d8 |
+[V:2] [DFAc]8 | [DFAc]8 | [DFAc]8 | [B,DFA]8 | [GBdfa]8 | [^CEG^c]8 | [FAce]8 | [CEGB]8 | [B,DFA]8 | [^CEG^c]8 | [DFAc]8 | [GBdfa]8 | [B,DFA]8 | [^CEG^c]8 | [DFAc]8 | [DFAc]8 |
+[V:3] z8 | z8 | D,2 A,2 C2 ^C2 | B,,2 F,2 A,2 A,2 | G,2 D2 F2 ^F2 | A,2 E2 G2 ^C2 | F,2 C2 E2 E2 | C2 G,2 B,2 B,2 | B,,2 F,2 A,2 A,2 | A,2 E2 G2 ^C2 | D,2 A,2 C2 ^C2 | G,2 D2 F2 ^F2 | B,,2 F,2 A,2 A,2 | A,2 E2 G2 ^C2 | D,2 A,2 F2 E2 | D,8 |

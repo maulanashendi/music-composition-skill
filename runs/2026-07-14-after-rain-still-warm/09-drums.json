@@ -1,0 +1,17 @@
+{
+  "title": "After Rain, Still Warm drums",
+  "tempo_bpm": 74,
+  "beats_per_bar": 4,
+  "steps_per_bar": 16,
+  "swing": 0.56,
+  "humanize_velocity": 7,
+  "gm_map": {"kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51},
+  "base_velocity": {"kick": 88, "snare": 72, "rimshot": 55, "chh": 48, "ohh": 58, "ride": 54},
+  "sections": [
+    {"label": "Intro", "bars": 2, "pattern": {"chh": "................"}},
+    {"label": "A", "bars": 4, "pattern": {"kick": "x.......x...x...", "snare": "....x.......x...", "chh": "x.x.x.x.x.x.x.x."}},
+    {"label": "B", "bars": 4, "pattern": {"kick": "x..x....x.x.....", "snare": "....x.......x...", "chh": "x.x.x.x.x.x.x.x."}},
+    {"label": "C", "bars": 4, "pattern": {"kick": "x..x..x.x.x...x.", "snare": "....x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "ride": "x...x...x...x..."}},
+    {"label": "Outro", "bars": 2, "pattern": {"kick": "x...............", "rimshot": "....g..........."}}
+  ]
+}

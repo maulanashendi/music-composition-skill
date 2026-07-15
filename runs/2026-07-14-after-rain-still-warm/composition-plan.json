@@ -1,0 +1,35 @@
+{
+  "title": "After Rain, Still Warm",
+  "style": "neo-soul/chill-jazz instrumental",
+  "key": "Dm",
+  "tempo_bpm": 74,
+  "meter": "4/4",
+  "feel": "laid-back straight 16th; neo-soul-core pocket",
+  "default_note_length": "1/8",
+  "arc": {
+    "journey": "stillness after rain -> warmth -> restrained lift -> quiet landing",
+    "phases": [
+      {"feeling": "stillness", "sections": ["Intro"], "requires": "Rhodes only, no pulse"},
+      {"feeling": "warmth", "sections": ["A"], "requires": "motif and light groove"},
+      {"feeling": "lift", "sections": ["B", "C"], "requires": "register/density rise without hard climax"},
+      {"feeling": "landing", "sections": ["Outro"], "requires": "tonic, subtraction, silence"}
+    ]
+  },
+  "ensemble": [
+    {"name": "Alto Sax", "role": "lead", "instrument": "sax", "register": "mid-upper"},
+    {"name": "Rhodes", "role": "support", "instrument": "rhodes", "register": "mid"},
+    {"name": "Electric Bass", "role": "foundation", "instrument": "electric bass", "register": "low"},
+    {"name": "Drums", "role": "groove", "instrument": "drum kit", "register": "n/a"}
+  ],
+  "hook": {"description": "a minor-third rise answered by a stepwise fall", "rhythm": "four equal pulses with spacious framing", "contour": "A-d-c-A", "first_appears": "A, bar 3"},
+  "form": ["Intro", "A", "B", "C", "Outro"],
+  "sections": [
+    {"label": "Intro", "function": "establish warmth", "serves_phase": "stillness", "bars": 2},
+    {"label": "A", "function": "state the hook", "serves_phase": "warmth", "bars": 4},
+    {"label": "B", "function": "open the color", "serves_phase": "lift", "bars": 4},
+    {"label": "C", "function": "restrained peak", "serves_phase": "lift", "bars": 4},
+    {"label": "Outro", "function": "resolve and release", "serves_phase": "landing", "bars": 2}
+  ],
+  "ending": "Dm6/9 tonic sustain after a descending motif fragment",
+  "notes": ["Pitched material lives in song.abc; drums live only in drums.json."]
+}

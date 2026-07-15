@@ -2,6 +2,11 @@
 
 ## Validasi mesin lintas-level
 
+Verifikasi ulang L1 (2026-07-14): `validate_abc.py` mengembalikan `OK: 0 errors,
+0 warning(s)`; `music21` memuat 3 part; `drums.json` berjumlah 20 bar; dan
+`output.mid` memuat Tenor Sax 50, Rhodes 67, Bass 53, serta Drums 260 note,
+dengan tempo 80 BPM dan meter 7/8.
+
 No `composition-plan.json` was produced for this run (this SOP path used
 `jazz-composition`'s own numbered artefacts directly, not a separate
 machine-readable plan sidecar) — cross-artefact bar-count validation was

@@ -15,7 +15,7 @@
 | 11 — Interlude, Shout Chorus, Transisi | done | `11-transitions.md` | — |
 | 12 — Intro dan Ending | done | `12-intro-ending.md` | — |
 | 13 — Dinamika dan Dramaturgi | done | `13-dynamics.md` | — |
-| 14 — Detail Low Level | done | `14-review.md`, `song.abc`, `drums.json`, `output.mid` | L1 filled in `scorecard.md`; L2 (semua level) dan L3 masih menunggu reviewer/telinga segar — lihat `scorecard.md` |
+| 14 — Detail Low Level | done | `14-review.md`, `song.abc`, `drums.json`, `output.mid`, `scorecard.md` | L1 mekanis diverifikasi ulang 2026-07-14; L2 sudah terisi; L3 tetap menunggu telinga manusia — lihat `scorecard.md`. |
 
 Final artefak: `song.abc` (3 voices, 20 bars, 7/8, validated), `drums.json`
 (20 bars, 14 steps/bar, matches `09-drums.json` exactly), `output.mid`
