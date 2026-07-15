@@ -265,7 +265,7 @@ class ProgramMapEngineRegistryTests(unittest.TestCase):
         expected = {
             "sax": 66, "piano": 0, "guitar": 26, "bass": 32, "rhodes": 4,
             "trumpet": 56, "vibraphone": 11, "guitar-clean": 27,
-            "synth-lead": 81,
+            "synth-lead": 81, "bass-finger": 33, "synth-bass": 38,
         }
         for keyword, program in expected.items():
             self.assertEqual(abc_to_midi.PROGRAM[keyword], program, keyword)
@@ -282,6 +282,14 @@ class ProgramMapEngineRegistryTests(unittest.TestCase):
         self.assertEqual(abc_to_midi.program_for("Jazz Guitar"), 26)
         self.assertEqual(abc_to_midi.program_for("Synth-Lead"), 81)
         self.assertEqual(abc_to_midi.program_for("Vibraphone"), 11)
+
+    def test_program_for_bass_finger_and_synth_bass_not_shadowed_by_bass(self):
+        # 'bass-finger'/'synth-bass' (registry GM 33/38) HARUS menang atas
+        # substring 'bass' (registry bass32) — dua palet engine (neo-soul-warm,
+        # modern-chill) memakai id ini.
+        self.assertEqual(abc_to_midi.program_for("Bass-Finger"), 33)
+        self.assertEqual(abc_to_midi.program_for("Synth-Bass"), 38)
+        self.assertEqual(abc_to_midi.program_for("Upright Bass"), 32)
 
 
 if __name__ == "__main__":

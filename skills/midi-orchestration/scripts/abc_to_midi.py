@@ -16,7 +16,8 @@ from music21 import converter, harmony
 # substring berurutan. horns/upright/strings/pad tidak dikurasi registry
 # engine — dipertahankan dengan nilai lamanya.
 PROGRAM = {"guitar-clean":27,"synth-lead":81,"vibraphone":11,
-           "sax":66,"horns":61,"trumpet":56,"rhodes":4,"piano":0,"bass":32,
+           "sax":66,"horns":61,"trumpet":56,"rhodes":4,"piano":0,
+           "bass-finger":33,"synth-bass":38,"bass":32,
            "upright":32,"strings":48,"pad":89,"guitar":26}
 
 def program_for(name):
