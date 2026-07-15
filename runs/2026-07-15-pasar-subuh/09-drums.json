@@ -1,0 +1,79 @@
+{
+  "title": "Lampu Warung (Pasar Subuh)",
+  "tempo_bpm": 76,
+  "beats_per_bar": 4,
+  "steps_per_bar": 16,
+  "swing": 0.6,
+  "humanize_velocity": 5,
+  "gm_map": { "kick": 36, "snare": 38, "rimshot": 37, "chh": 42, "ohh": 46, "ride": 51 },
+  "base_velocity": { "kick": 78, "snare": 70, "rimshot": 55, "chh": 45, "ohh": 55, "ride": 52 },
+  "timing": { "kick": 0, "snare": 15, "rimshot": 25, "chh": -3 },
+  "sections": [
+    {
+      "label": "Intro (bar 1-4) - tacet, bass ostinato sendirian; bar 4 anticipation tick tunggal menjelang drum masuk",
+      "bars": 4,
+      "phrase_velocity": [1.0, 1.0, 1.0, 1.0],
+      "pattern": [
+        { "chh": "................" },
+        { "chh": "................" },
+        { "chh": "................" },
+        { "rimshot": "..............g." }
+      ]
+    },
+    {
+      "label": "Layer-Drum (bar 5-8) - base groove 2-bar (5-6), variation (7), transition ke Layer-Rhodes (8)",
+      "bars": 4,
+      "phrase_velocity": [0.85, 0.85, 0.9, 0.95],
+      "pattern": [
+        { "kick": "x.......x.......", "chh": "x...x...x...x..." },
+        { "kick": "x.......x.......", "chh": "x...x...x...x..." },
+        { "kick": "x.......x...x...", "chh": "x...x...x...x...", "rimshot": "........x......." },
+        { "kick": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "........x...x.g." }
+      ]
+    },
+    {
+      "label": "Layer-Rhodes (bar 9-12) - base groove 2-bar (9-10), variation (11), transition menuju dip (12)",
+      "bars": 4,
+      "phrase_velocity": [0.95, 0.95, 1.0, 0.85],
+      "pattern": [
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x..." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x..." },
+        { "kick": "x.......x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x.g." },
+        { "kick": "x...............", "chh": "x.......x......." , "rimshot": "....x..........." }
+      ]
+    },
+    {
+      "label": "Dip (bar 13-14) - held breath, minimal (2 bar, boleh identik sesuai pengecualian aturan hierarchy)",
+      "bars": 2,
+      "phrase_velocity": [0.6, 0.55],
+      "pattern": {
+        "kick": "x...............",
+        "chh": "x.......x......."
+      }
+    },
+    {
+      "label": "Sax+Call-Response/micro-apex (bar 15-20) - base (15-16), variation lebih aktif (17-18), ONE-OFF imperfection: kick downbeat sengaja hilang di bar 19 (micro-apex, biar nada tinggi sax berdiri sendiri), transition/fill ke coda (20)",
+      "bars": 6,
+      "phrase_velocity": [1.0, 1.0, 1.05, 1.1, 1.05, 1.15],
+      "pattern": [
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x..." },
+        { "kick": "x.......x.......", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x..." },
+        { "kick": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x...x...x..." , "ride": "x...x...x...x..." },
+        { "kick": "x...x...x...x...", "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x...x...x.X.", "ride": "x...x...x...x..." },
+        { "chh": "x.x.x.x.x.x.x.x.", "rimshot": "....x.......x...", "ride": "x...x...x...x..." },
+        { "kick": "x...x...x...x.x.", "snare": "....x.......x.X.", "chh": "x.x.x.x.x.x.x.xX", "ride": "x...x...x...x..x" }
+      ]
+    },
+    {
+      "label": "Coda (bar 21-24) - base hangat (21-22), swell tipis (23), fade final (24)",
+      "bars": 4,
+      "phrase_velocity": [0.9, 0.85, 0.8, 0.6],
+      "pattern": [
+        { "kick": "x.......x.......", "chh": "x...x...x...x...", "rimshot": "....x.......x..." },
+        { "kick": "x.......x.......", "chh": "x...x...x...x...", "rimshot": "....x.......x..." },
+        { "kick": "x.......x.......", "chh": "x.......x.......", "ride": "x.......x......." },
+        { "kick": "x...............", "chh": "x..............." }
+      ]
+    }
+  ]
+}

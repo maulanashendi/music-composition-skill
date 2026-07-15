@@ -1,0 +1,105 @@
+# 04-melody.abc — Level 4: Desain Melodi (catatan desain, bukan tune final)
+
+Melodi final tervalidasi hidup di `song.abc` (V:1 = sax). File ini adalah
+catatan desain kumulatif Tahap 5-8.
+
+## Tahap 5 — Motif inti (pemenang seleksi Kandidat B, lihat `04-melodi-candidates.md`)
+
+Identitas ritmis: repeated-note + syncopated call ("detak lampu") — nada
+diulang pendek dengan entri offbeat, rest terjadwal sebagai bagian motif
+(bukan filler).
+
+```
+X:1
+T:Motif inti - Detak Lampu
+M:4/4
+L:1/8
+K:DDor
+V:1
+[V:1] "Em7" z E E z G G z B |]
+```
+Fakta objektif (dari `notation_facts.py`, lihat kandidat): 4 pitch (E,E,G,G... B),
+rest-ratio tinggi, seluruh nada chord-tone Em7 (E,G,B).
+
+## Tahap 6 — Target tones per chord (bar 15-24)
+
+| Bar | Chord | Target tone | Peran |
+|---|---|---|---|
+| 15 | Em7 | B (5th) | landing call motif |
+| 16 | Fmaj7 | A (3rd) | jawaban Rhodes (call-response, bukan sax) |
+| 17 | G7 | D (5th) → B | motif dikembangkan, naik register |
+| 18 | Em7 | G | jawaban Rhodes kedua |
+| 19 | G7b9#5 | Ab (b9, register ekstrem tipis) | **micro-apex** — lihat Tahap 8 |
+| 20 | Em7\|Dm7 | D | resolusi lokal, turun/mereda |
+| 21-24 | G7→Cmaj9→Dm9→Dm6/9 | **B** (6th Dm6/9 final) | reprise + rekontekstualisasi |
+
+## Tahap 7 — Membangun melodi (call-response, interaksi lokal graft dari Level 1)
+
+Bar 15 (sax, call): `z E E z G G z B` (motif inti)
+Bar 16 (Rhodes, response — bukan sax; sax diam/bernapas): jawaban pendek 2 nada `z A z C` (chord-tone Fmaj7), mengisi ruang yang ditinggalkan sax.
+Bar 17 (sax, motif dikembangkan — interval diperbesar, register naik): `z G G z B B z D'` (G7 chord-tone: G,B,D — D dinaikkan satu oktaf sebagai intensifikasi bertahap, bukan lompatan acak).
+Bar 18 (Rhodes, response kedua, lebih aktif dari bar 16): `G z B z` (mengisi extra ruang, dialog makin rapat menuju micro-apex).
+
+## Tahap 8 — Outside material & micro-apex (bar 19)
+
+```
+X:2
+T:Bar 19 - micro-apex outside fragment
+M:4/4
+L:1/4
+K:DDor
+V:1
+[V:1] "G7b9#5" z2 _A4 |]
+```
+Fakta objektif (dikoreksi setelah menjalankan `notation_facts.py` — lihat
+gate cek-fakta di bawah): Ab (`_A`) dilaporkan **`chord-tone`**, BUKAN
+"outside", karena b9 memang bagian eksplisit simbol chord `G7b9#5` itu
+sendiri (chord tones: G, B, D#, F, Ab). Ketegangan bar ini datang dari
+**level chord**, bukan level nada: chord `G7b9#5` dilaporkan
+`chord-vs-key=borrowed` (chromatic departure dari D Dorian) — Ab
+memang bukan bagian skala D Dorian, tapi begitu chord itu dipilih
+sebagai chord aktif, Ab menjadi chord-tone sah di dalamnya, bukan nada
+"outside" tambahan di atas chord tersebut. Klaim awal draf ("nada
+outside") sudah direvisi jadi "chord-tone dari chord borrowed" supaya
+cocok fakta script (contoh nyata ketidakcocokan yang tertangkap gate
+Level 4, lihat `03-harmony.md` catatan serupa untuk pola RED-FLAGS).
+Ditempatkan sebagai **satu nada tinggi sesaat** (register ekstrem tipis)
+di bar 19, sesuai definisi micro-apex Level 13 (mekanisme non-volume).
+Durasi terbatas (satu ketuk saja setelah rest), resolusi nyata: turun ke
+G (chord-tone) di awal bar 20 pola Em7 (lihat Tahap 6).
+
+## Tahap 9 (lanjutan implisit) — Reprise ending dengan graft enclosure (Kandidat C)
+
+Bar 24 (Dm6/9 final): motif inti direprise dalam bentuk enclosure kromatik
+(graft dari Kandidat C, ditransposisi ke target tone B — nada ostinato yang
+direkontekstualisasi):
+
+```
+X:3
+T:Reprise ending - enclosure ke B (rekontekstualisasi)
+M:4/4
+L:1/4
+K:DDor
+V:1
+[V:1] "Dm6add9" C ^A, B2 |]
+```
+Bentuk enclosure: C (upper neighbor dari B) → A# (lower chromatic neighbor,
+ditulis `^A,` oktaf bawah) → B (target, kini **chord tone** Dm6/9 — lihat
+`03-harmony.md`). Ini transposisi bentuk enclosure Kandidat C (F-D#-E ke
+target E) satu step lebih tinggi (C-A#-B ke target B), menjaga koherensi
+motivic antara motif entrance (bar 15) dan motif ending (bar 24) sambil
+mewujudkan mekanisme rekontekstualisasi Level 1/12.
+
+Fakta objektif (`notation_facts.py`): C = `tension-diatonik` (bagian skala
+D Dorian, bukan chord-tone Dm6add9), A# = `outside` (kromatik penuh, bukan
+bagian skala), B = `chord-tone` (dikonfirmasi — ini bukti langsung
+rekontekstualisasi: nada yang sama, sekarang chord-tone). Label prosa di
+atas cocok 100% dengan fakta script.
+
+## Output level ini (ringkasan)
+- Motif: repeated-note "detak lampu" (bar 15), dikembangkan (bar 17), direprise sebagai enclosure kromatik (bar 24).
+- Kontur: datar-berulang → naik register (bar 17) → puncak tipis satu nada (bar 19) → turun/resolusi (bar 20) → enclosure tenang (bar 24).
+- Target tone: B konsisten sebagai landing utama (bar 15 Em7 5th, bar 24 Dm6/9 6th) — inilah yang membuat rekontekstualisasi terdengar (nada sama, fungsi berbeda).
+- Tension/resolution: outside Ab (bar 19, b9) → resolusi G (bar 20).
+- Ruang: rest terjadwal di tiap kemunculan motif (bukan legato penuh) — memberi napas untuk call-response Rhodes.
+- Identitas ritmis: syncopated repeated-note, konsisten dipertahankan dari entrance sampai reprise.

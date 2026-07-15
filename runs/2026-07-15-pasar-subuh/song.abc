@@ -1,0 +1,32 @@
+X:1
+T:Lampu Warung (Pasar Subuh)
+C:pasar-subuh run, 2026-07-15
+M:4/4
+L:1/8
+Q:1/4=76
+K:DDor
+%%pocket neo-soul-core
+V:1 name="Tenor Sax" clef=treble
+%%MIDI program 1 66
+V:2 name="Rhodes" clef=treble
+%%MIDI program 2 4
+V:3 name="Bass-Finger" clef=bass
+%%MIDI program 3 33
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] z8 | z8 | z8 | z8 |
+[V:1] z8 | z8 | "Em7" z E E z G G z B | "Fmaj7" z8 |
+[V:1] "G7" z G G z B B z d | "Em7" z8 | "G7b9#5" z4 _A4 | "Em7" G4 "Dm7" z2 D2 |
+[V:1] z8 | z8 | z8 | "Dm6add9" z2 C2 ^A,2 B2 |]
+[V:2] z8 | z8 | z8 | z8 |
+[V:2] z8 | z8 | z8 | z8 |
+[V:2] "Dm7" [FAc]8 | "Dm9" [FAce]8 | "Dm7" [FAc]8 | "Dm9" [FAce]8 |
+[V:2] "Dm7" z8 | "Dm7" z8 | "Em7" z8 | "Fmaj7" [CEA]8 |
+[V:2] "G7" z2 [G,DB]2 z2 [G,DB]2 | "Em7" z4 [G,DB]4 | z8 | "Em7" [G,DB]4 "Dm7" [FAc]4 |
+[V:2] "G7" [G,DB]8 | "CM9" [CEG]8 | "Dm9" [FAce]8 | "Dm6add9" [FAB]8 |]
+[V:3] "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 |
+[V:3] "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 |
+[V:3] "Dm7" D2 z2 B2 z2 | "Dm9" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Dm9" D2 z2 B2 z2 |
+[V:3] "Dm7" D2 z2 B2 z2 | "Dm7" D2 z2 B2 z2 | "Em7" E2 z2 B2 z2 | "Fmaj7" F2 z2 A2 ^F2 |
+[V:3] "G7" G2 z2 D2 z2 | "Em7" E2 z2 B2 z2 | "G7b9#5" G2 z2 z2 _A,2 | "Em7" G2 z2 "Dm7" D2 z2 |
+[V:3] "G7" G,2 z2 D2 C2 | "CM9" C2 z2 G2 ^C2 | "Dm9" D2 z2 F2 z2 | "Dm6add9" D2 z2 B4 |]
