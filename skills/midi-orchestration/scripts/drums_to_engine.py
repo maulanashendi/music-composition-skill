@@ -48,8 +48,10 @@ def _warn(message):
     print(f"WARNING: {message}", file=sys.stderr)
 
 
-def _normalize_row(voice, row):
-    """Kembalikan bentuk string engine untuk satu baris pattern; validasi karakter."""
+def _normalize_row(voice, row, steps_per_bar):
+    """Kembalikan bentuk string engine untuk satu baris pattern; validasi
+    karakter DAN panjang (harus persis steps_per_bar — engine /api/render
+    menolak dengan 422 kalau tidak, jadi cek di sini dulu, fail-fast)."""
     if isinstance(row, list):
         chars = []
         for step in row:
@@ -62,38 +64,48 @@ def _normalize_row(voice, row):
                     f"pattern voice {voice!r}: step {step!r} tidak valid — "
                     "hanya 'x'/'X'/'g'/'.'/'' yang dikenal skema engine"
                 )
-        return "".join(chars)
-    if not isinstance(row, str):
+        row = "".join(chars)
+    elif not isinstance(row, str):
         raise ValueError(
             f"pattern voice {voice!r}: harus string atau list, "
             f"dapat {type(row).__name__}"
         )
-    bad = set(row) - VALID_CHARS
-    if bad:
+    else:
+        bad = set(row) - VALID_CHARS
+        if bad:
+            raise ValueError(
+                f"pattern voice {voice!r}: karakter tidak dikenal {sorted(bad)!r} — "
+                "skema engine hanya menerima 'x'/'X'/'g'/'.'"
+            )
+    if len(row) != steps_per_bar:
         raise ValueError(
-            f"pattern voice {voice!r}: karakter tidak dikenal {sorted(bad)!r} — "
-            "skema engine hanya menerima 'x'/'X'/'g'/'.'"
+            f"pattern voice {voice!r}: panjang baris {len(row)} tidak sama "
+            f"dengan steps_per_bar = {steps_per_bar} — engine /api/render "
+            "akan menolak ini dengan 422"
         )
     return row
 
 
-def _normalize_pattern(pattern):
-    return {voice: _normalize_row(voice, row) for voice, row in pattern.items()}
+def _normalize_pattern(pattern, steps_per_bar):
+    return {
+        voice: _normalize_row(voice, row, steps_per_bar)
+        for voice, row in pattern.items()
+    }
 
 
-def _sections_from(section, index):
+def _sections_from(section, index, steps_per_bar):
     """Hasilkan section engine {bars, pattern} dari satu section Tool 1."""
     bars = section["bars"]
     pattern = section["pattern"]
     if isinstance(pattern, dict):  # v1: passthrough tanpa pemecahan
-        yield {"bars": bars, "pattern": _normalize_pattern(pattern)}
+        yield {"bars": bars, "pattern": _normalize_pattern(pattern, steps_per_bar)}
         return
     if len(pattern) != bars:  # v2 list — cermin validasi grid_to_midi.py
         raise ValueError(
             f"sections[{index}]: pattern list punya {len(pattern)} bar "
             f"tapi section['bars'] = {bars}; harus sama persis"
         )
-    per_bar = [_normalize_pattern(p) for p in pattern]
+    per_bar = [_normalize_pattern(p, steps_per_bar) for p in pattern]
     run_pattern, run_bars = per_bar[0], 1
     for pat in per_bar[1:]:
         if pat == run_pattern:
@@ -155,7 +167,7 @@ def convert(spec):
                 f"sections[{index}] field {field!r} dibuang: tidak dikenal "
                 "skema engine /api/render"
             )
-        sections.extend(_sections_from(section, index))
+        sections.extend(_sections_from(section, index, steps))
     engine["sections"] = sections
     return engine
 

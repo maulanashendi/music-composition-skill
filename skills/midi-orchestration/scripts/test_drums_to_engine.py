@@ -131,6 +131,29 @@ class ValidationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             convert_quiet(spec)
 
+    def test_v1_row_length_mismatch_steps_per_bar_raises_with_clear_message(self):
+        # steps_per_bar: 16 tapi baris voice cuma 8 char -> engine /api/render
+        # akan menolak dengan 422; konverter harus fail-fast di sini dulu.
+        spec = make_spec([{"bars": 1, "pattern": {"kick": "x......."}}])
+        spec["steps_per_bar"] = 16
+        with self.assertRaises(ValueError) as ctx:
+            convert_quiet(spec)
+        message = str(ctx.exception)
+        self.assertIn("kick", message)
+        self.assertIn("8", message)
+        self.assertIn("16", message)
+
+    def test_v2_bar_row_length_mismatch_steps_per_bar_raises(self):
+        # v2 list: satu bar punya baris voice dengan panjang salah.
+        bad_bar = {"kick": "x.......", "chh": "x.x.x.x."}  # 8 char, harus 16
+        spec = make_spec([{"bars": 1, "pattern": [bad_bar]}])
+        spec["steps_per_bar"] = 16
+        with self.assertRaises(ValueError) as ctx:
+            convert_quiet(spec)
+        message = str(ctx.exception)
+        self.assertIn("kick", message)
+        self.assertIn("16", message)
+
 
 class TemplateRegressionTests(unittest.TestCase):
     def test_current_template_asset_converts_to_valid_engine_schema(self):
