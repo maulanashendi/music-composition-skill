@@ -3,6 +3,12 @@ name: abc-notation
 description: Encode a finalized musical idea into valid, parseable ABC notation and validate it before it goes to MIDI. Use whenever someone has a locked composition idea — a composition-plan.json, a chord progression, a bassline, or a melody they've decided on — and wants it written as ABC, or when AI-generated ABC keeps failing to parse (bar-count mismatches, unclosed ties/slurs, wrong note lengths) and needs fixing or validating. Trigger on "write this as ABC," "turn this progression into ABC," "my ABC won't parse into MIDI," "validate this ABC," or handing over a composition plan to notate. This skill does the encoding and validation; it does not brainstorm musical ideas (that's jazz-composition) or render MIDI.
 ---
 
+> **LEGACY (2026-07-16).** Jalur output default paket ini kini **JSON** —
+> gunakan `../json-composition/SKILL.md`. Skill ABC ini dipertahankan hanya
+> untuk backward-compat (engine masih menerima `POST /api/render {abc,drums?}`),
+> BUKAN untuk komposisi baru. Jangan pakai untuk pekerjaan baru kecuali diminta
+> eksplisit menargetkan jalur ABC.
+
 # ABC Notation Writer
 
 Encode a **decided** musical idea into ABC notation that parses cleanly on the first or second try. The value of this skill is reliability: AI-generated ABC often looks fine but fails strict parsers (music21) on subtle structural errors. This skill writes a constrained, portable ABC subset and validates it before hand-off.

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "meta": { "title": "Contoh Neo-Soul", "key": "F major", "tempo": 72, "meter": "4/4" },
+  "sections": [{
+    "name": "A", "bars": 2,
+    "harmony": [
+      { "bar": 1, "beat": 1, "symbol": "Fmaj9" },
+      { "bar": 2, "beat": 1, "symbol": "Dm9" }
+    ],
+    "voices": [
+      { "role": "lead", "instrument": "rhodes", "notes": [
+        { "bar": 1, "beat": 1,    "pitch": "A4", "dur": 1,   "vel": 68, "artic": "legato" },
+        { "bar": 1, "beat": 2.52, "pitch": "C5", "dur": 0.5, "vel": 76, "artic": "accent" },
+        { "bar": 1, "beat": 3,    "pitch": "F5", "dur": 1.5, "vel": 80, "artic": "legato" },
+        { "bar": 2, "beat": 1,    "pitch": "E5", "dur": 1,   "vel": 70, "artic": "legato" },
+        { "bar": 2, "beat": 2,    "pitch": "D5", "dur": 2,   "vel": 66, "artic": "legato" }
+      ] },
+      { "role": "chords", "instrument": "rhodes", "notes": [
+        { "bar": 1, "beat": 1, "pitch": "A3", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 1, "beat": 1, "pitch": "C4", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 1, "beat": 1, "pitch": "E4", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 1, "beat": 1, "pitch": "G4", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 2, "beat": 1, "pitch": "F3", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 2, "beat": 1, "pitch": "A3", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 2, "beat": 1, "pitch": "C4", "dur": 4, "vel": 52, "artic": "legato" },
+        { "bar": 2, "beat": 1, "pitch": "E4", "dur": 4, "vel": 52, "artic": "legato" }
+      ] },
+      { "role": "bass", "instrument": "bass", "notes": [
+        { "bar": 1, "beat": 1, "pitch": "F2", "dur": 1, "vel": 84, "artic": "legato" },
+        { "bar": 1, "beat": 3, "pitch": "C3", "dur": 1, "vel": 78, "artic": "legato" },
+        { "bar": 2, "beat": 1, "pitch": "D2", "dur": 1, "vel": 84, "artic": "legato" },
+        { "bar": 2, "beat": 3, "pitch": "A2", "dur": 1, "vel": 78, "artic": "legato" }
+      ] },
+      { "role": "drums", "instrument": "jazz-kit", "notes": [
+        { "bar": 1, "beat": 1,    "pitch": "kick",  "dur": 0.5, "vel": 100, "artic": "normal" },
+        { "bar": 1, "beat": 2.02, "pitch": "snare", "dur": 0.5, "vel": 88,  "artic": "normal" },
+        { "bar": 1, "beat": 3,    "pitch": "kick",  "dur": 0.5, "vel": 92,  "artic": "normal" },
+        { "bar": 1, "beat": 4.02, "pitch": "snare", "dur": 0.5, "vel": 90,  "artic": "normal" },
+        { "bar": 2, "beat": 1,    "pitch": "kick",  "dur": 0.5, "vel": 100, "artic": "normal" },
+        { "bar": 2, "beat": 2.02, "pitch": "snare", "dur": 0.5, "vel": 88,  "artic": "normal" },
+        { "bar": 2, "beat": 3,    "pitch": "kick",  "dur": 0.5, "vel": 92,  "artic": "normal" },
+        { "bar": 2, "beat": 4.02, "pitch": "snare", "dur": 0.5, "vel": 90,  "artic": "normal" }
+      ] }
+    ]
+  }]
+}
