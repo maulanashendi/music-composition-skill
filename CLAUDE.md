@@ -15,8 +15,10 @@ order — the orchestrator decides when each is relevant):
 - `skills/vibes-mood/SKILL.md`
 - `skills/groove-rhythm/SKILL.md`
 - `skills/arrangement/SKILL.md`
-- `skills/abc-notation/SKILL.md`
+- `skills/json-composition/SKILL.md`
 - `skills/midi-orchestration/SKILL.md`
+
+(`skills/abc-notation/` is retained as a **legacy** path — JSON is now the default output.)
 
 See `README.md` for the architecture/positioning (this package is Tool 1,
 "the brain"; rendering to audio is a separate downstream engine) and
