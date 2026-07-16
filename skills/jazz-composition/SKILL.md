@@ -1,6 +1,6 @@
 ---
 name: jazz-composition
-description: The single entry point for making music with this package — greet any request to compose, write, arrange, or start a song or instrumental track, figure out where the person already is, and run the full SOP 14-level jazz composition pipeline yourself (not just routing to other skills — this skill IS the pipeline, from artistic concept down to note-level detail and DAW-ready MIDI). Use FIRST whenever someone wants to build a piece end-to-end, asks "how do I make this tune," "what's the process," "help me start a track," "arrange this," or hands over a mood, scene, brief, chord progression, composition-plan.json, or ABC without saying which step they want. Holds the big-picture map of how a composition is built layer by layer, and drills down into eight companion modules (harmony, melody-design, advanced-melody, vibes-mood, groove-rhythm, arrangement, abc-notation, midi-orchestration) for depth per level. Writes numbered artefacts to a persistent runs/ folder with per-level DoD gates and a three-layer scorecard (mechanical, rubric, ear).
+description: The single entry point for making music with this package — greet any request to compose, write, arrange, or start a song or instrumental track, figure out where the person already is, and run the full SOP 14-level jazz composition pipeline yourself (not just routing to other skills — this skill IS the pipeline, from artistic concept down to note-level detail and DAW-ready MIDI). Use FIRST whenever someone wants to build a piece end-to-end, asks "how do I make this tune," "what's the process," "help me start a track," "arrange this," or hands over a mood, scene, brief, chord progression, composition-plan.json, ABC, or composition JSON without saying which step they want. Holds the big-picture map of how a composition is built layer by layer, and drills down into eight companion modules (harmony, melody-design, advanced-melody, vibes-mood, groove-rhythm, arrangement, json-composition, midi-orchestration) for depth per level. Writes numbered artefacts to a persistent runs/ folder with per-level DoD gates and a three-layer scorecard (mechanical, rubric, ear).
 ---
 
 # Jazz Composition — orchestrator
@@ -14,7 +14,7 @@ detail low level, dan menghasilkan artefak run-folder yang bisa dilanjutkan
 ke arranger/MIDI.
 
 Delapan modul pendalaman (`harmony`, `melody-design`, `advanced-melody`,
-`vibes-mood`, `groove-rhythm`, `arrangement`, `abc-notation`,
+`vibes-mood`, `groove-rhythm`, `arrangement`, `json-composition`,
 `midi-orchestration`) dipanggil **per level, sesuai kebutuhan** — bukan
 dijalankan sebagai pipeline linear terpisah. Skill ini yang memutuskan
 kapan sebuah level butuh pendalaman modul tertentu.
@@ -78,7 +78,7 @@ mengeksekusinya secara berurutan.
 | 11 — Interlude, Shout Chorus, dan Transisi | `references/level-11-interlude-shout-transisi.md` | `../arrangement/SKILL.md` |
 | 12 — Intro dan Ending | `references/level-12-intro-ending.md` | `../arrangement/SKILL.md` |
 | 13 — Dinamika dan Dramaturgi | `references/level-13-dinamika-dramaturgi.md` | `../arrangement/SKILL.md` |
-| 14 — Detail Low Level | `references/level-14-detail.md` | — (ABC/MIDI encoding: `../abc-notation/SKILL.md`, `../midi-orchestration/SKILL.md`) |
+| 14 — Detail Low Level | `references/level-14-detail.md` | — (encoding ke `song.json`: `../json-composition/SKILL.md`, `../midi-orchestration/SKILL.md`; ABC = jalur legacy) |
 
 Modul `vibes-mood/SKILL.md` tidak terikat satu level saja — dipakai untuk
 menerjemahkan mood/vibe mentah dari brief (Level 1) ke parameter musik
@@ -92,8 +92,9 @@ Setiap tahap dianotasi dengan artefak run-folder yang harus dihasilkan
 levelnya sama (mis. Tahap 5–8 semuanya bagian dari desain melodi,
 `04-melody.abc`). `04-melody.abc` adalah **artefak catatan desain**
 (prosa + fragmen ABC ilustratif boleh, tidak wajib satu tune valid) —
-melodi final yang tervalidasi hidup di `song.abc`; lihat catatan detail
-di `references/run-folder-protocol.md`.
+melodi final yang tervalidasi hidup di `song.json` (drum jadi salah satu
+voice di dalamnya; `song.abc` + `drums.json` terpisah kini jalur
+**legacy**); lihat catatan detail di `references/run-folder-protocol.md`.
 
 > **Level 1-4 memakai protokol kandidat→seleksi.** Tahap 1 (konsep), 2 (bentuk),
 > 3 (harmoni), dan 5 (motif/melodi) **tidak** langsung menulis satu artefak lalu
@@ -285,8 +286,9 @@ sendiri. Prosedur:
    arah arc, bukan berbeda genre** — ketiga opsi harus masuk akal untuk
    gaya/instrumentasi yang sama, hanya arah emosionalnya yang berbeda.
 2. Spawn **reviewer segar** (subagent baru, tanpa histori generasi) yang
-   diberi **hanya**: `song.abc`, `drums.json`, output
-   `notation_facts.py`, dan 3 opsi arc di atas — **TANPA** brief asli,
+   diberi **hanya**: `song.json` (drum sudah jadi voice di dalamnya;
+   jalur legacy: `song.abc` + `drums.json`), output `notation_facts.py`,
+   dan 3 opsi arc di atas — **TANPA** brief asli,
    **TANPA** artefak desain lain (form, harmony, dst.), **TANPA**
    scorecard.
 3. Reviewer memilih **1 opsi** + alasan tertulis — harus berbasis apa
@@ -361,7 +363,7 @@ Alur konkret:
    `../groove-rhythm/references/rubric.md`; Level 4 →
    `../melody-design/references/rubric.md` dan/atau
    `../advanced-melody/references/rubric.md`; Level 1 → `vibes-mood`;
-   Level 2/6/7/10/11/12/13 → `arrangement`; Level 14 → `abc-notation`
+   Level 2/6/7/10/11/12/13 → `arrangement`; Level 14 → `json-composition`
    dan/atau `midi-orchestration` — lihat tabel "14 level" di atas untuk
    pemetaan level-ke-modul lengkap). Jangan beri histori percakapan
    generasi, brief asli di luar yang tertulis di artefak, atau alasan di
@@ -401,23 +403,29 @@ produksi bertimbre jujur (soundfont FluidR3_GM asli, bukan preview
 browser). Kontrak lengkap:
 `../midi-orchestration/references/engine-export.md`.
 
-1. Bila run punya drum: jalankan konverter
-   `../midi-orchestration/scripts/drums_to_engine.py` atas `drums.json`
-   run → hasilkan `runs/<run>/drums-engine.json` (format Tool 1 v2 TIDAK
-   diterima mentah oleh engine; WARNING konverter mencatat field yang
-   tidak terbawa).
+0. Artefak final Level 14 adalah `song.json` (lihat `../json-composition/SKILL.md`);
+   drum adalah **satu voice di dalamnya**, bukan file terpisah. Jalur
+   `song.abc` + `drums.json` + konverter `drums_to_engine.py` masih
+   didukung sebagai **legacy** (lihat `engine-export.md`) untuk run lama
+   yang belum migrasi.
+1. `python3 ../json-composition/scripts/validate_composition.py song.json`
+   wajib **0 violations** sebelum lanjut — ini gerbang mekanis Level 14
+   (lihat DoD di `references/level-14-detail.md`).
 2. Bila repo induk `daw_generative` tersedia di mesin: pra-cek murah
-   `node scripts/conformance-audit.mjs <song.abc> [drums-engine.json]`
-   dari root repo induk — memeriksa ABC/drums lolos gate tanpa render
-   penuh.
-3. `POST /api/render` ke `http://127.0.0.1:<port>` dengan body
-   `{abc, drums?, mastering?}` — **port dibaca dari log `npm run dev`**
-   (auto-increment bila 5173 terpakai), bukan diasumsikan. Prasyarat
+   `node scripts/conformance-audit.mjs <song.json>` dari root repo induk —
+   memeriksa komposisi lolos gate tanpa render penuh (jalur legacy:
+   `node scripts/conformance-audit.mjs <song.abc> [drums-engine.json]`).
+3. `POST /api/render` ke `http://127.0.0.1:<port>` dengan body berisi
+   komposisi JSON (`song.json`) — **port dibaca dari log `npm run dev`**
+   (auto-increment bila 5173 terpakai), bukan diasumsikan. Body legacy
+   `{abc, drums?, mastering?}` tetap didukung sebagai alternatif. Prasyarat
    lingkungan (soundfont 3 path, fluidsynth, ffmpeg) dan error umum:
    lihat `engine-export.md`.
 4. Simpan body respons ke `runs/<run>/render.wav` (ter-ignore git); catat
-   header `X-Conformance-Summary` dan profil `mastering` yang dipakai di
-   bagian "Export" `scorecard.md`.
+   header `X-Gate-Summary` (inScalePct, floorPass, rangeWarnings) —
+   sinyal Gate A objektif dari engine — dan profil `mastering` yang
+   dipakai di bagian "Export" `scorecard.md`. (Jalur legacy mencatat
+   `X-Conformance-Summary`.)
 5. Bila server dev/soundfont/fluidsynth/ffmpeg **tidak tersedia** di
    lingkungan yang menjalankan run: status export dicatat **PENDING** +
    alasan konkret (mis. "soundfont tak ditemukan di 3 path yang
