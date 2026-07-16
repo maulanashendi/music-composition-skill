@@ -15,6 +15,14 @@ This skill assumes the musical ideas are decided (by `jazz-composition`) and the
 
 See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this domain.
 
+## Primary path: JSON
+
+The **primary** output path is now composition JSON, written by `../json-composition/SKILL.md`. The interaction map below (lead/support/answer/silent per section) is still designed exactly the same way — it just gets *realized* differently: by **which notes/rests are written into the composition JSON voices**, not by editing ABC or running `abc_to_midi.py`. Concretely:
+
+- **exact-voicing** (`references/exact-voicing.md`): those exact pitches are now **written directly into the JSON `chords` voice** — the LLM writes the voicing itself, rather than converting scientific pitch notation into ABC octave marks.
+- **Drums** are no longer a separate `drums.json` step-grid — they are a `role:"drums"` voice in the same composition JSON, alongside the pitched voices. The pocket/feel that `%%pocket` plus the engine's `realize()` used to add automatically is now **baked into the explicit notes** the JSON writer produces — see `../json-composition/references/baking-feel.md`.
+- The ABC-conversion steps in this file (Step 5, and the `abc_to_midi.py`/`grid_to_midi.py` references below) remain for the **legacy ABC path** — kept, not deleted, for when ABC is the artifact in hand.
+
 ## Workflow
 
 ### Step 1 — Read the plan and the arc
@@ -39,7 +47,7 @@ Drums stay out of ABC (they're not pitched). Write them as a step-grid JSON — 
 
 For the actual pocket (per-role tick offsets, gate ratios) instead of inventing numbers ad hoc, read `references/groove-profiles.md` — it distills `references/advanced-microtiming.md` into a named, reusable profile (`neo-soul-core`) that both this grid and the downstream engine can implement consistently. Pick a profile; don't re-derive ticks per song. Declare the choice in the ABC itself as a directive, `%%pocket <id>` (e.g. `%%pocket neo-soul-core`) in the tune header before the first voice, so the downstream engine picks the matching groove profile — the brain's job is to *pick* a profile by name, never to write per-note tick numbers into the ABC.
 
-### Step 5 — Convert and merge
+### Step 5 — Convert and merge (legacy — jalur ABC saja)
 
 Read `references/midi-conversion.md` for the two bug-fixes that are mandatory (they were found by actually importing to a DAW):
 
@@ -59,7 +67,7 @@ Then merge (append the drum track to the pitched PrettyMIDI object and write onc
 
 Output the single merged `.mid`. Tell the person it imports to BandLab (or any DAW) as separate tracks they can voice, mute, or edit — the drum track lands on channel 10 so the DAW treats it as a kit. Note what serves the arc (where the subtraction is, where the peak is) so they hear the intent. Instrument sounds come from the DAW's patches; this is MIDI data, not finished audio.
 
-This package's converters (BandLab or any external DAW) are the **alternative** downstream path. The **primary** downstream for this whole package is the `daw_generative` engine, consumed as an external HTTP contract — `POST /api/render {abc, drums?, mastering?}` — which realizes the ABC + drum grid itself (FluidSynth rendering, mastering) and returns audio. Say which path the delivered artifact targets; the ABC and drum-grid JSON are the same regardless of which consumer renders them.
+This package's converters (BandLab or any external DAW) are the **alternative** downstream path. The **primary** downstream for this whole package is the `daw_generative` engine, consumed as an external HTTP contract — `POST /api/render`. On the JSON path (primary), the request body **is the composition JSON itself** (voices, including the `role:"drums"` voice, already carrying baked-in feel). The legacy alternative is the ABC body, `{abc, drums?, mastering?}`, for the ABC path described in Step 5 above. Say which path the delivered artifact targets; either way the engine realizes it (FluidSynth rendering, mastering) and returns audio.
 
 ## References
 
@@ -72,8 +80,8 @@ This package's converters (BandLab or any external DAW) are the **alternative** 
 - `../groove-rhythm/references/groove-meter.md` — meter, subdivision, and feel reference (swing, clave, odd meter, polyrhythm) beyond straightforward 4/4.
 - `references/rubric.md` — this module's scoring rubric (production/DAW-first, plus the DAW-plan validation row); run before Step 6 alongside the other modules' `references/rubric.md` and `skills/jazz-composition/references/scorecard-template.md` for the full cross-module audit.
 - `references/midi-conversion.md` — how the converters work, the two mandatory bug-fixes, GM program mapping, swing/humanization, and the sync/mono verification checks.
-- `scripts/abc_to_midi.py` — multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead).
-- `scripts/grid_to_midi.py` — drum step-grid → channel-10 MIDI with swing and velocity humanization.
+- `scripts/abc_to_midi.py` — multi-voice ABC → per-track MIDI (strips chord symbols, forces mono lead). (legacy — jalur ABC saja)
+- `scripts/grid_to_midi.py` — drum step-grid → channel-10 MIDI with swing and velocity humanization. (legacy — jalur ABC saja)
 - `assets/drum-grid-template.json` — starting point for a drum grid; match its bar counts to the ABC.
 
 ## Dependencies
