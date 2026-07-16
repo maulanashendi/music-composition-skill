@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "meta": { "title": "Min", "key": "F major", "tempo": 72, "meter": "4/4" },
+  "sections": [{
+    "name": "A", "bars": 1,
+    "harmony": [{ "bar": 1, "beat": 1, "symbol": "Fmaj9" }],
+    "voices": [{ "role": "lead", "instrument": "rhodes",
+      "notes": [{ "bar": 1, "beat": 1, "pitch": "A4", "dur": 1, "vel": 70, "artic": "legato" }] }]
+  }]
+}
