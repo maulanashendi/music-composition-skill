@@ -418,9 +418,10 @@ browser). Kontrak lengkap:
 3. `POST /api/render` ke `http://127.0.0.1:<port>` dengan body berisi
    komposisi JSON (`song.json`) — **port dibaca dari log `npm run dev`**
    (auto-increment bila 5173 terpakai), bukan diasumsikan. Body legacy
-   `{abc, drums?, mastering?}` tetap didukung sebagai alternatif. Prasyarat
-   lingkungan (soundfont 3 path, fluidsynth, ffmpeg) dan error umum:
-   lihat `engine-export.md`.
+   `{abc, drums?, mastering?}` tetap didukung sebagai alternatif. Bila body
+   tidak menyertakan `mastering`, engine default ke profil `neo-soul`.
+   Prasyarat lingkungan (soundfont 3 path, fluidsynth, ffmpeg) dan error
+   umum: lihat `engine-export.md`.
 4. Simpan body respons ke `runs/<run>/render.wav` (ter-ignore git); catat
    header `X-Gate-Summary` (inScalePct, floorPass, rangeWarnings) —
    sinyal Gate A objektif dari engine — dan profil `mastering` yang

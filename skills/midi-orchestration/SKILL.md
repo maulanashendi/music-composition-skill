@@ -1,13 +1,13 @@
 ---
 name: midi-orchestration
-description: Turn a validated ABC composition into a finished multi-track MIDI ready for a DAW like BandLab — designing a bar-by-bar interaction map (who leads, who supports, who answers, who stays silent) that serves the piece's dramatic arc, handling drums as a separate step-grid, and converting everything to clean per-instrument MIDI. Use whenever someone has ABC notation (or a composition-plan.json plus ABC) and wants it rendered to MIDI, wants an arrangement built from it, asks how instruments should interact across sections, or wants a DAW-ready multi-track file with drums. Trigger on "turn this ABC into MIDI," "arrange this for full band," "make a BandLab-ready file," "who should play when," or handing over validated ABC for production.
+description: Design a bar-by-bar interaction map (who leads, who supports, who answers, who stays silent) that serves the piece's dramatic arc, and realize it as a finished multi-track composition JSON — drums as a `role:"drums"` voice — ready for the `daw_generative` render engine. ABC→MIDI conversion (drums as a separate step-grid, per-instrument MIDI tracks for BandLab or any DAW) is supported as a legacy path. Use whenever someone has a decided composition (JSON or ABC) and wants an arrangement built from it, asks how instruments should interact across sections, wants the interaction map realized into JSON voices, or wants a DAW-ready multi-track file with drums. Trigger on "design the interaction map," "arrange this for full band," "realize this into composition JSON," "turn this ABC into MIDI," "make a BandLab-ready file," "who should play when," or handing over a decided composition for production.
 ---
 
 # ABC to MIDI Orchestration
 
-Take a **validated** ABC composition and produce a **DAW-ready multi-track MIDI**: one clean track per instrument, plus a drum track on channel 10. Along the way, design the **interaction map** — which instrument leads, supports, answers, or stays silent, bar by bar — so the arrangement breathes instead of everyone playing all the time.
+Take the **decided** composition and produce a **DAW-ready multi-track result**. Primarily this means realizing it as a composition JSON (written via `../json-composition/SKILL.md`): one voice per instrument plus a `role:"drums"` voice. The legacy alternative is a validated ABC composition converted to a multi-track MIDI (one clean track per instrument, plus a drum track on channel 10). Either way, the core craft is the same: design the **interaction map** — which instrument leads, supports, answers, or stays silent, bar by bar — so the arrangement breathes instead of everyone playing all the time.
 
-This skill assumes the musical ideas are decided (by `jazz-composition`) and the ABC is written and validated (by `abc-notation`). It does not invent chords or melodies. Its job is arrangement + conversion.
+This skill assumes the musical ideas are decided (by `jazz-composition`) and the composition is written and validated — as JSON (by `json-composition`), or, on the legacy path, as ABC (by `abc-notation`). It does not invent chords or melodies. Its job is arrangement + realization/conversion.
 
 ## The rule that keeps arrangements from sounding cluttered
 
@@ -19,7 +19,7 @@ See `../RED-FLAGS.md` for common excuse-vs-reality failure patterns in this doma
 
 The **primary** output path is now composition JSON, written by `../json-composition/SKILL.md`. The interaction map below (lead/support/answer/silent per section) is still designed exactly the same way — it just gets *realized* differently: by **which notes/rests are written into the composition JSON voices**, not by editing ABC or running `abc_to_midi.py`. Concretely:
 
-- **exact-voicing** (`references/exact-voicing.md`): those exact pitches are now **written directly into the JSON `chords` voice** — the LLM writes the voicing itself, rather than converting scientific pitch notation into ABC octave marks.
+- **Exact voicing**: those exact pitches are now **written directly into the JSON `chords` voice**, per `../json-composition/references/schema.md` — the LLM writes the voicing itself, rather than converting scientific pitch notation into ABC octave marks.
 - **Drums** are no longer a separate `drums.json` step-grid — they are a `role:"drums"` voice in the same composition JSON, alongside the pitched voices. The pocket/feel that `%%pocket` plus the engine's `realize()` used to add automatically is now **baked into the explicit notes** the JSON writer produces — see `../json-composition/references/baking-feel.md`.
 - The ABC-conversion steps in this file (Step 5, and the `abc_to_midi.py`/`grid_to_midi.py` references below) remain for the **legacy ABC path** — kept, not deleted, for when ABC is the artifact in hand.
 
@@ -37,11 +37,15 @@ For an ensemble or style that needs more than the four-role map (big band, duo/t
 
 The map drives how you write or adjust the ABC voices (a "silent" instrument gets rests; an "answer" instrument plays in the gaps the lead leaves) and how you shape the drum grid (drums also follow the arc — near-absent when lonely, full when warm).
 
-### Step 3 — Prepare the pitched ABC
+### Step 3 — Prepare the pitched ABC (legacy — jalur ABC saja)
+
+On the JSON path, this step's decisions — silent voices get rests, answering voices play in the lead's gaps, density matching each section's role, exact voicing — are written directly as notes/rests into the composition JSON's pitched voices, per `../json-composition/SKILL.md` and `../json-composition/references/schema.md`. The rest of this step describes the legacy ABC equivalent.
 
 Ensure the ABC reflects the interaction map: silent voices have rests for those bars, answering voices play in the lead's gaps, and the density matches each section's role. If the ABC needs changes, that's an `abc-notation` task — keep it validated (`validate_abc.py`) before converting. Every voice needs a `V:` header with a `name="..."` so the converter can map it to an instrument. When the ABC needs exact register/attack/voice-leading detail (lofi, neo-soul, smooth jazz, production-ready harmony), read `references/exact-voicing.md` — it uses scientific pitch notation (`C4` = middle C), so convert explicitly to ABC's octave marks before writing (see the note at the top of that file).
 
-### Step 4 — Design the drum grid (also serving the arc)
+### Step 4 — Design the drum grid (also serving the arc) (legacy — jalur ABC saja)
+
+On the JSON path, drums are written directly as notes in a `role:"drums"` voice in the composition JSON, following the same arc-driven density logic below, with feel baked into the explicit notes per `../json-composition/references/baking-feel.md` (not a separate step-grid). The rest of this step describes the legacy ABC/step-grid equivalent.
 
 Drums stay out of ABC (they're not pitched). Write them as a step-grid JSON — see `assets/drum-grid-template.json`. Critical: **the grid's total bars must match the ABC's total bars**, section for section, or the drums and the band drift out of sync. Build the grid section-by-section from the same plan so the bar counts line up. Let the drums follow the arc: minimal in quiet sections, full in the peak, fading at the end.
 
