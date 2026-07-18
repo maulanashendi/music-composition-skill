@@ -55,6 +55,8 @@ timing).
   augment/diminish rhythm, reharmonize under it) and assign each
   transformation a role (statement, build, climax, resolution).
   Preserve space — don't turn every repeat into a new tune.
+  Transformasi motif juga rumah bagi *response* dalam dialog
+  antar-instrumen — lihat `call-and-response.md`.
 - **Guide tones** (3rds and 7ths of each chord) are the melody's
   landing points; targeting them makes a line "sing" the changes
   without spelling every note.
