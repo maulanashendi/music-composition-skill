@@ -1,6 +1,6 @@
 ---
 name: jazz-composing
-description: Turn a brief, mood, or scene into a decided musical idea and encode it as plan.json (schemaVersion 2) — the fase Brief, Ideation, dan Plan dari Music Development Life Cycle (MDLC). Use this first whenever someone wants to compose, write, arrange, or start a jazz/neo-soul/chill-jazz piece, hands over a vibe/mood/scene without saying which MDLC phase they're in, or has a locked idea (chords, form, melody) that needs to become plan.json. This skill writes musical intent only — chord symbols, comping style+density, bass chord-tone-stack position, per-note melody pitch/duration/articulation, named groove-pattern references — never voicing pitches, velocity, off-grid timing, or humanization (that is pyengine's job downstream, see plan-verifying and rendering-audition). Genre-first: neo-soul/chill-jazz.
+description: Turn a brief, mood, or scene into a decided musical idea and encode it as plan.json (schemaVersion 2) — the fase Brief, Ideation, dan Plan dari Music Development Life Cycle (MDLC). Use this first whenever someone wants to compose, write, arrange, or start a jazz/neo-soul/chill-jazz piece, hands over a vibe/mood/scene without saying which MDLC phase they're in, or has a locked idea (chords, form, melody) that needs to become plan.json. This skill writes musical intent only — chord symbols, comping style+density, bass line (chord-tone-stack position via `degree`, OR explicit chromatic approach `pitch`, plus explicit `octave`, decimal `beat` for pickup/push, and `artic`), per-note melody pitch/duration/articulation, named groove-pattern references — never literal chord-voicing pitches, raw velocity numbers, or micro-timing/tick-offset humanization (that is pyengine's job downstream, see plan-verifying and rendering-audition). Writing an intentional decimal `beat` for a pickup/push is rhythmic intent, not micro-timing — that stays this skill's job. Genre-first: neo-soul/chill-jazz.
 ---
 
 # Jazz Composing — Brief, Ideation, Plan
@@ -17,14 +17,19 @@ jawab `../plan-verifying/SKILL.md` dan `../rendering-audition/SKILL.md`.
 **Baca `../../docs/DOCTRINE-NIAT-BUKAN-NOT.md` sebelum menulis
 `plan.json` apapun.** Ringkasnya: harmoni = simbol chord, comping =
 gaya+density, bass = posisi stack chord-tone (root-3-5-7-9-11-13, field
-`degree` — lihat catatan di bawah), melodi = pitch+durasi(+artikulasi)
-per not TANPA velocity/off-grid, drum = nama pattern dari groove
-library, feel/humanization = tidak ditulis sama sekali (milik
-`pyengine`, deterministik ber-`seed`). Skill ini **tidak pernah**
-menulis angka waktu absolut, velocity per-not, atau voicing pitch
-literal untuk voice `chords`. Kalau kamu merasa perlu menulis salah
-satu dari itu, berhenti — itu tanda kamu sedang bekerja di level yang
-salah.
+`degree`) untuk chord-tone, ATAU `pitch` eksplisit untuk approach tone
+kromatik yang bukan chord-tone — plus `octave` eksplisit (wajib, lihat
+catatan di bawah), `beat` desimal utk pickup/push, dan `artic` bila
+perlu — melodi = pitch+durasi(+artikulasi) per not, drum = nama pattern
+dari groove library, feel/humanization tick-offset/jitter = tidak
+ditulis sama sekali (milik `pyengine`, deterministik ber-`seed`). Skill
+ini **tidak pernah** menulis angka waktu absolut (tick/ms), velocity
+per-not numerik, atau voicing pitch literal untuk voice `chords`. Kalau
+kamu merasa perlu menulis salah satu dari itu, berhenti — itu tanda
+kamu sedang bekerja di level yang salah. **Catatan penting:** `beat`
+desimal (mis. `4.5` untuk pickup) BUKAN termasuk larangan "off-grid
+timing" di atas — itu niat ritmis yang sah dan memang tugas skill ini
+untuk memutuskan, bukan micro-timing/humanization milik `pyengine`.
 
 > **Koreksi istilah bass**: field `bass.notes[].degree` di `plan.json`
 > **bukan** scale degree (posisi di tangga nada terhadap tonal center),
@@ -35,6 +40,15 @@ salah.
 > berjalan, `degree: 5` = fifth chord berjalan). Pastikan `degree` yang
 > ditulis valid untuk chord-tone chord aktif di bar/beat tersebut —
 > cek `contract.md` untuk bound pastinya.
+>
+> **`degree` bukan satu-satunya field bass.** Untuk not non-chord-tone
+> (approach kromatik menuju root berikutnya) tulis `pitch` eksplisit
+> (mis. `"F#2"`) — bukan dipaksakan jadi `degree` terdekat. `bass` juga
+> menerima `beat` desimal (pickup/push, mis. `4.5`), `artic` (`ghost`,
+> `accent`, dst.), dan **wajib** `octave` eksplisit — tanpa itu register
+> `upright-bass` default engine cenderung terlalu tinggi (kasus nyata:
+> jatuh di C4-Bb4). Lihat `contract.md` §Register & oktaf dan
+> `references/bass-idiom-neo-soul.md` untuk idiom konkret neo-soul.
 
 ## Aturan dasar (berlaku semua fase di skill ini)
 
@@ -116,8 +130,12 @@ Petakan keputusan Ideation ke field `plan.json`:
   velocity/off-grid.
 - Comping = gaya+density (Fase 2 poin 6, bukan voicing pitch).
 - Bass = posisi stack chord-tone (`degree`: 1/3/5/7/9/11/13) per
-  bar/beat terhadap chord yang berlaku — **bukan** scale degree,
-  bukan pitch oktaf konkret (lihat catatan koreksi istilah di atas).
+  bar/beat terhadap chord yang berlaku untuk not chord-tone — **bukan**
+  scale degree (lihat catatan koreksi istilah di atas). Untuk approach
+  tone kromatik non-chord-tone tulis `pitch` eksplisit. **Wajib**
+  `octave` eksplisit di tiap not bass. `beat` boleh desimal utk
+  pickup/push, `artic` boleh dipakai (lihat
+  `references/bass-idiom-neo-soul.md`).
 - Drum = nama pattern groove (Fase 2 poin 5, bukan grid/hit konkret).
 - `grooves`/`meta.seed` sesuai `contract.md` — jangan menambahkan field
   yang tidak ada di `contract.md`.
@@ -155,4 +173,5 @@ aturan resume. Skill ini menulis sampai `plan.json` (artefak fase Plan);
 - `references/run-folder-protocol.md` — struktur run folder + aturan resume.
 - `references/candidate-selection-protocol.md` — protokol kandidat→seleksi Level 1-4.
 - `references/cliche-register.md` — register cliché neo-soul/AI-jazz + jalur reinterpretasi.
+- `references/bass-idiom-neo-soul.md` — idiom bassline neo-soul konkret (anchor, sinkopasi/push, ghost, octave-pop, approach kromatik, variasi antar-bar, space).
 - `../RED-FLAGS.md` — pola kegagalan umum lintas skill.
