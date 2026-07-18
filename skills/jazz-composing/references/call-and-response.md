@@ -76,13 +76,20 @@ pitch, or energy; number of cycles; exit cue"):
 
 Response hidup di **GAP** yang ditinggalkan call, titik. Dihitung dari
 field grid `plan.json` (`bar`/`beat`/`dur`), bukan timing off-grid
-(off-grid milik `pyengine`, lihat `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`):
+(off-grid milik `pyengine`, lihat `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`).
+Setiap not menempati interval half-open **[start, start+dur)** — batas
+akhirnya eksklusif, jadi dua not yang saling menyentuh persis di titik
+itu (satu berakhir tepat saat yang lain mulai) tidak tumpang tindih;
+keduanya sama-sama berlaku untuk arah call→response maupun
+response→call berikutnya:
 
 - Not pertama response mulai **pada atau setelah** akhir not terakhir
   frasa call (`bar_call_end.beat + dur_call_end` ≤ `bar_response_start.beat`,
   dihitung dalam grid section yang sama).
-- Not terakhir response **selesai sebelum** frasa call berikutnya
-  mulai.
+- Not terakhir response **berakhir pada atau sebelum (≤)** mulainya
+  frasa call berikutnya (`bar_response_end.beat + dur_response_end` ≤
+  `bar_call_next.beat`) — response boleh menyentuh batas itu tepat;
+  itu bukan overlap, sama seperti syarat pertama.
 
 Kalau kedua syarat itu tidak bisa dipenuhi dengan bar/beat yang
 sedang ditulis, section itu belum siap untuk call-and-response —
@@ -120,7 +127,8 @@ ruang:
 
 ## Pemetaan ke `plan.json`
 
-Contoh satu section (4 bar, building phase) dengan dua voice: `melody`
+Cuplikan bar 1 dari section 4-bar (building phase); siklus
+berikutnya (bar 2-4) mengikuti pola yang sama. Dua voice: `melody`
 (caller, `role: "lead"`, instrument `rhodes`) dan `response`
 (responder, `role: "guitar"`, instrument `acoustic-guitar`). Field
 persis (`bar`/`beat`/`pitch`/`dur`/`artic`) — cek `contract.md` untuk
@@ -148,7 +156,9 @@ yang diizinkan.
 
 Di sini call (`melody`) menempati beat 1-3 (berakhir tepat sebelum
 beat 4), meninggalkan gap 1 beat di beat 4 — `response` mengisi
-persis gap itu dan selesai sebelum bar 2 (call berikutnya) mulai.
+persis gap itu dan berakhir tepat saat bar 2 (call berikutnya) mulai
+(beat 4 + dur 1 = bar 2 beat 1) — menyentuh batas itu persis, legal
+sesuai aturan emas non-overlap di atas.
 Contour call naik (D5→F5→A5); response bisa dilanjutkan siklus
 berikutnya dengan kontur turun (mis. bar 2 call naik lagi lalu bar 3
 response transpose+invert) untuk memenuhi "response = transformasi,
