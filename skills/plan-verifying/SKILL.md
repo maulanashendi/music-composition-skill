@@ -62,6 +62,31 @@ menyesuaikan niat) atau terima sadar (dengan alasan tertulis — vibe yang
 sengaja menyimpang preset, misalnya). Warning yang diterima tanpa alasan
 tertulis dianggap belum ditinjau, bukan "aman".
 
+### Step 3b — Audit interplay (manual, hanya bila ada dialog)
+
+**Trigger**: jalankan hanya kalau plan.json memuat ≥2 voice pembawa
+`notes[]` melodis yang ditandai sebagai pasangan call-and-response —
+oleh run folder (interaction map/artefak ideation) atau penamaan voice
+(mis. `response`/`answer`). Tidak ada dialog → lewati step ini tanpa
+catatan.
+
+Cek mekanis (bukan penilaian musikal), pakai definisi aturan emas
+non-overlap di `../jazz-composing/references/call-and-response.md`
+(jangan duplikasi definisinya di sini): untuk tiap pasangan call/response,
+hitung interval `[start, start+dur)` tiap not pada sumbu bar+beat dari
+field grid. Pelanggaran = ada interval not response yang **beririsan**
+dengan interval not call (menyentuh batas tepat = bukan pelanggaran).
+Cek kedua: masih ada gap di section dialog yang tidak diisi voice manapun
+(responder tidak boleh mengisi semua gap). Boleh dibantu python ad-hoc
+(baca JSON, bandingkan interval) untuk hitungan ini — jangan tambahkan
+file script permanen ke repo.
+
+Pelanggaran setara WARNING wajib ditinjau (validator pyengine tidak
+menegakkan aturan ini): perbaikan = kembali ke `jazz-composing` untuk
+menggeser niat frasa (skill ini tidak menggeser not sendiri), atau
+diterima sadar dengan alasan tertulis di `verify-log.md` (mis. overlap
+1 not disengaja sebagai handoff).
+
 ### Step 4 — Ulangi sampai bersih
 
 Jalankan ulang Step 1 setelah tiap perbaikan. Berhenti hanya saat
@@ -72,7 +97,8 @@ sudah ditinjau di Step 3).
 
 Tulis `verify-log.md` ke run folder: jumlah iterasi, error yang
 ditemukan+diperbaiki (before/after ringkas), warning yang diterima +
-alasannya. Serahkan `plan.json` yang sudah bersih ke
+alasannya, dan hasil audit interplay Step 3b (dilewati / bersih /
+pelanggaran+resolusi). Serahkan `plan.json` yang sudah bersih ke
 `../rendering-audition/SKILL.md` untuk fase Audition.
 
 ## Metrik yang relevan (dari `docs/new-prd.md` §8 di repo `daw_generative`)

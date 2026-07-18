@@ -12,6 +12,7 @@ hanya menunjuk *kategori* field, bukan mengulang skema).
 | Nostalgia, hangat | Voicing warm register (niat: sebut "warm", bukan pitch), swing ringan | comping style, groove pattern name |
 | Tegang, mencari | Tension map naik, outside material (advanced-melody), harmonic rhythm lebih cepat | melody note choice per tension map, harmony symbol density |
 | Lega, menerima | Resolusi ke tonic, density turun, ruang (rest) lebih banyak | section-level density/instrumentation niat, ending technique |
+| Dialog, saling sahut, berbalas, hidup | Call-and-response lead↔responder, non-overlap, transformasi motif (lihat `call-and-response.md`) | voice kedua `role: "guitar"` (atau `lead` kedua) dengan `notes[]` di gap call |
 
 Baris di atas contoh awal — tambahkan baris baru HANYA dari temuan uji
 dengar nyata (lihat `cliche-register.md` untuk pola yang

@@ -36,7 +36,7 @@ If a section's density doesn't match its arc phase, the arrangement fights the e
 
 ### Teknik, dipakai hanya saat melayani arc
 
-- **Call-and-response** — pair a lead and an answer instrument; they alternate, never overlap. Best in building or mid sections where dialogue adds life.
+- **Call-and-response** — pair a lead and an answer instrument; they alternate, never overlap. Best in building or mid sections where dialogue adds life. Resep phrase-level (caller/responder, non-overlap, transformasi motif) + pemetaan `plan.json` ada di `call-and-response.md`.
 - **Subtraction** — drop a prominent voice (often the comp) for a section. The re-entry feels full again by contrast. Strongest right before a peak or as a breakdown.
 - **Tutti** — everyone hits together, often on-beat. Reserve for the peak; it loses impact if overused.
 - **Handoff** — the lead role passes from one instrument to another between sections, keeping the ear fresh.
@@ -70,7 +70,9 @@ The gate judges whether it serves the arc, not whether every cell is filled. Emp
   bertabrakan: bass (rendah, fondasi), keys (menengah, harmoni/comping),
   lead (menengah-atas, melodi), pad (lebar, perekat), drum (groove).
 - **Call and response** antara lead dan comp menciptakan dialog dan
-  menjaga ruang tetap hidup.
+  menjaga ruang tetap hidup (comp "menjawab" berarti density comping naik
+  sesaat — bukan frasa `notes[]` presisi; responder frasa konkret = voice
+  role guitar/lead kedua, lihat `call-and-response.md`).
 - **Subtraction** (menghilangkan satu instrumen untuk satu section) adalah
   salah satu gerakan aransemen terkuat — membuat entry kembali terasa kena.
 - Density harus mengikuti arc: intro jarang, tengah lebih penuh, ending
@@ -139,7 +141,7 @@ In sax-bass-drums or trumpet-bass-drums: bass and melody imply harmony; guide to
 
 ### Call and response
 
-Define: caller; response length; whether response copies rhythm, contour, pitch, or energy; number of cycles; exit cue. Responses can cross instrument roles: soloist to drums, bass to piano, horns to rhythm section.
+Define: caller; response length; whether response copies rhythm, contour, pitch, or energy; number of cycles; exit cue. Responses can cross instrument roles: soloist to drums, bass to piano, horns to rhythm section. Resep phrase-level + pemetaan `plan.json` ada di `call-and-response.md`.
 
 ### Breaks and stop-time
 

@@ -79,7 +79,9 @@ Level 1-2 di bawah):
 4. **Desain melodi** (niat-level, pitch+durasi saja) — baca
    `references/melody.md` untuk motif/kontur/target-tone (tahap 1-6),
    `references/advanced-melody.md` untuk outside material (tahap 7-8,
-   hanya bar yang tension map menandai butuh tegangan tinggi).
+   hanya bar yang tension map menandai butuh tegangan tinggi). Kalau
+   interaction map (poin 6) menandai peran answer/dialog, baca juga
+   `references/call-and-response.md` untuk resep phrase-level.
 5. **Ritme/groove** (niat-level, nama pattern saja) — baca
    `references/groove-vocabulary.md`. Pilih nama pattern dari groove
    library `pyengine` (lihat `contract.md` untuk daftar nama valid —
@@ -88,7 +90,9 @@ Level 1-2 di bawah):
 6. **Aransemen/instrumentasi** — baca `references/arrangement.md` untuk
    interaction map (siapa lead/support/answer/silent per section) dan
    comping/voicing **gaya** (bukan voicing pitch — lihat
-   `references/harmony.md` §"Yang TIDAK ditulis di sini").
+   `references/harmony.md` §"Yang TIDAK ditulis di sini"). Kalau ada
+   peran answer/dialog di peta, baca `references/call-and-response.md`
+   untuk resep phrase-level + pemetaan `plan.json`.
 
 Tulis kandidat Level 1-4 ke `NN-<level>-candidates.md` per
 `references/candidate-selection-protocol.md`; keputusan final tiap
@@ -147,6 +151,7 @@ aturan resume. Skill ini menulis sampai `plan.json` (artefak fase Plan);
 - `references/rhythm-groove.md`, `references/groove-vocabulary.md`, `references/groove-meter.md` — ritme, sinkopasi, nama pattern groove, meter/swing/clave.
 - `references/structure.md`, `references/loop-development.md` — bentuk lagu, dramaturgi, variasi antar-loop.
 - `references/arrangement.md` — interaction map, comping style (bukan voicing), ensemble interaction.
+- `references/call-and-response.md` — resep phrase-level dialog antar-voice (caller/responder, non-overlap, transformasi motif) + pemetaan `plan.json`.
 - `references/run-folder-protocol.md` — struktur run folder + aturan resume.
 - `references/candidate-selection-protocol.md` — protokol kandidat→seleksi Level 1-4.
 - `references/cliche-register.md` — register cliché neo-soul/AI-jazz + jalur reinterpretasi.
