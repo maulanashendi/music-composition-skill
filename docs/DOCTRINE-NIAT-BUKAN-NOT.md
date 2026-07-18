@@ -2,7 +2,11 @@
 
 **Status: doktrin aktif, menggantikan doktrin `json-composition` lama.**
 Doktrin lama (skill `json-composition`, kini diarsipkan —
-`archive/skills/json-composition/`) menyatakan **"the engine does NOT humanize this path"**: LLM wajib menulis `vel` per not, `beat` off-grid
+`archive/skills/json-composition/`) menyatakan hal yang sama lewat dua
+kalimat sumber berbeda (dikutip verbatim, bukan satu kutipan tunggal):
+"The engine does **not** humanize this path" (`skills/json-composition/SKILL.md:57`)
+dan "The engine does not humanize the JSON path." (`skills/json-composition/references/baking-feel.md:3`).
+Intinya: LLM wajib menulis `vel` per not, `beat` off-grid
 per not, dan `artic` per not secara eksplisit, karena tidak ada
 humanization di sisi engine untuk jalur JSON.
 
