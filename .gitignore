@@ -5,3 +5,4 @@ runs/*/audition/*.wav
 runs/*/audition/*.mid
 runs/*/release/*.wav
 runs/*/release/*.mid
+.worktrees/
