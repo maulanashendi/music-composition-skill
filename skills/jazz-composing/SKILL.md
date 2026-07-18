@@ -45,7 +45,8 @@ untuk memutuskan, bukan micro-timing/humanization milik `pyengine`.
 > (approach kromatik menuju root berikutnya) tulis `pitch` eksplisit
 > (mis. `"F#2"`) — bukan dipaksakan jadi `degree` terdekat. `bass` juga
 > menerima `beat` desimal (pickup/push, mis. `4.5`), `artic` (`ghost`,
-> `accent`, dst.), dan **wajib** `octave` eksplisit — tanpa itu register
+> `accent`, dst.), dan **wajib** `octave` eksplisit (wajib secara konvensi — validator TIDAK
+> menegakkan ini) — tanpa itu register
 > `upright-bass` default engine cenderung terlalu tinggi (kasus nyata:
 > jatuh di C4-Bb4). Lihat `contract.md` §Register & oktaf dan
 > `references/bass-idiom-neo-soul.md` untuk idiom konkret neo-soul.

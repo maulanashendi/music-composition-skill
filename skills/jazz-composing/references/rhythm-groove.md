@@ -8,10 +8,16 @@ sebelum menulis pola groove/bass/drum konkret di `groove-rhythm/SKILL.md`.
 > (feel family, kapan syncopation/anticipation dipakai) dan nama pattern
 > groove (lihat `groove-vocabulary.md`). Tick offset, swing ratio
 > numerik, dan walking-bass not-demi-not adalah kerja `pyengine` —
-> lihat `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`. Bass ditulis sebagai
-> posisi chord-tone stack per bar/beat (field `degree`: 1/3/5/7/9/11/13
-> — lihat koreksi istilah di `../SKILL.md`), bukan pitch oktaf konkret,
-> bukan pula scale degree tonal.
+> lihat `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`. Bass ditulis di
+> level niat: posisi chord-tone stack per bar/beat (field `degree`:
+> 1/3/5/7/9/11/13 — lihat koreksi istilah di `../SKILL.md`) untuk
+> chord tone; `pitch` eksplisit sah untuk approach tone kromatik yang
+> bukan chord-tone; `octave` eksplisit wajib secara konvensi (validator
+> tidak menegakkan ini, tapi tanpanya register jatuh salah); dan
+> `beat` desimal (pickup/push) sah sebagai niat ritmis. Yang tetap
+> terlarang: micro-timing/tick-offset mentah, velocity per-not
+> numerik, dan voicing pitches literal — bukan pula scale degree
+> tonal.
 
 ## Rhythm and subdivision
 

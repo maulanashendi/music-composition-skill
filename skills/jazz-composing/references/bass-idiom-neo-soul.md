@@ -63,7 +63,8 @@ sinkopasi, kepadatan not, atau ada/tidaknya approach tone, setiap
 
 ## Register — `octave` wajib
 
-Tanpa `octave` eksplisit, oktaf default engine bisa mendarat terlalu
+`octave` wajib secara konvensi — validator TIDAK menegakkan ini; tanpa
+`octave` eksplisit, oktaf default engine bisa mendarat terlalu
 tinggi untuk instrumen bass (lihat `contract.md` §Register & oktaf —
 tabel rentang per instrumen). Untuk `upright-bass`: root nyaman di
 oktaf **2**, sesekali oktaf **3** untuk not tinggi/approach
