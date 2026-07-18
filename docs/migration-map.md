@@ -111,3 +111,26 @@ sendirian tanpa root repo:
 |---|---|---|
 | `RED-FLAGS.md` | `skills/RED-FLAGS.md` | `git mv`; semua referensi lintas paket (SKILL.md orchestrator + `abc-notation`/`midi-orchestration`, plus mention di `CLAUDE.md`) diperbaiki ke kedalaman relatif baru. |
 | `tests/human-ear-protocol.md` | `skills/jazz-composition/references/human-ear-protocol.md` | `git mv`; referensi dari `skills/jazz-composition/SKILL.md` dan `references/scorecard-template.md` diperbaiki ke lokasi baru (sama-direktori untuk yang kedua). |
+
+---
+
+# Migration map — restrukturisasi MDLC ronde 2 (2026-07-18)
+
+Restrukturisasi kedua: dari `jazz-composition` (orchestrator SOP
+14-level) + 8 modul (hasil ronde 1 di atas) menjadi 3 skill MDLC. Lihat
+`docs/superpowers/plans/2026-07-18-mdlc-skills.md` di repo `daw_generative`
+untuk plan lengkapnya. Tabel di bawah — sumber → tujuan, sesuai Task 2-6
+plan itu (ringkas; detail per-file ada di badan plan):
+
+| Folder/file lama (ronde 1) | Tujuan ronde 2 | Task |
+|---|---|---|
+| `jazz-composition/references/run-folder-protocol.md`, `candidate-selection-protocol.md`, `cliche-register.md` | `jazz-composing/references/*` (1:1 + edit niat-level) | Task 3 |
+| `jazz-composition/references/human-ear-protocol.md`, `scorecard-template.md` | `rendering-audition/references/audition-protocol.md`, `scorecard-template.md` | Task 5 |
+| `jazz-composition/references/level-01..14-*.md` | Disintesis ke `jazz-composing/SKILL.md` workflow Brief-Ideation-Plan (level 5-14 note-level diarsipkan, bukan dipetakan 1:1 — kini domain `pyengine`) | Task 2 |
+| `harmony/`, `melody-design/`, `advanced-melody/`, `vibes-mood/`, `groove-rhythm/`, `arrangement/` | `jazz-composing/references/*` (niat-level; bagian note-level presisi diarsipkan) | Task 2-3 |
+| `json-composition/` (seluruh) | Diarsipkan; digantikan `contract.md` generated + `docs/DOCTRINE-NIAT-BUKAN-NOT.md` | Task 6 |
+| `midi-orchestration/` (SKILL.md + references) | `rendering-audition/references/engine-http-alternative.md` (sebagian); skrip `abc_to_midi.py`/`grid_to_midi.py` pindah ke `abc-notation/scripts/` | Task 5-6 |
+| Semua `skills/*/references/rubric.md` (8 file) | `rendering-audition/references/rubric-checklist.md` (konsolidasi) | Task 5 |
+
+Folder lama tidak dihapus dari sejarah — dipindah ke `archive/skills/`
+(Task 6), reversibel via git.
