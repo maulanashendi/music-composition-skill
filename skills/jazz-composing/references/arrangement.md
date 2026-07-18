@@ -70,7 +70,9 @@ The gate judges whether it serves the arc, not whether every cell is filled. Emp
   bertabrakan: bass (rendah, fondasi), keys (menengah, harmoni/comping),
   lead (menengah-atas, melodi), pad (lebar, perekat), drum (groove).
 - **Call and response** antara lead dan comp menciptakan dialog dan
-  menjaga ruang tetap hidup.
+  menjaga ruang tetap hidup (comp "menjawab" berarti density comping naik
+  sesaat — bukan frasa `notes[]` presisi; responder frasa konkret = voice
+  role guitar/lead kedua, lihat `call-and-response.md`).
 - **Subtraction** (menghilangkan satu instrumen untuk satu section) adalah
   salah satu gerakan aransemen terkuat — membuat entry kembali terasa kena.
 - Density harus mengikuti arc: intro jarang, tengah lebih penuh, ending

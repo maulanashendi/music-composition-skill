@@ -58,7 +58,7 @@ pitch, or energy; number of cycles; exit cue"):
 1. **Siapa caller & responder** — voice mana, instrument apa (lihat
    Anatomi di atas).
 2. **Panjang call, gap, dan response** dalam bar/beat. Contoh sehat:
-   call 2 bar yang menyisakan gap 1-2 beat di akhir bar kedua,
+   call 1-2 bar yang menyisakan gap 1-2 beat di akhir bar kedua,
    response mengisi gap itu (mis. 1-1.5 beat) sebelum call berikutnya
    mulai.
 3. **Apa yang di-copy response** — ritme, kontur, pitch, atau energi.

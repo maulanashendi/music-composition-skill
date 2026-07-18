@@ -89,3 +89,17 @@ Struktur mengikuti brief persis:
   instruksi eksplisit task (yang menunjuk file-file nyata), bukan
   CLAUDE.md yang tampak stale — tidak saya sentuh/perbaiki karena di
   luar scope Task 1.
+
+## Final-review fix pass
+
+- arrangement.md sekitar baris 72 (bullet "Call and response"): ditambah
+  klausa disambiguasi — comp "menjawab" = density comping naik sesaat,
+  bukan frasa notes[] presisi; responder frasa konkret adalah voice role
+  guitar/lead kedua (lihat call-and-response.md), supaya tidak lagi
+  kontradiktif dengan larangan role chords sebagai responder frasa di
+  call-and-response.md.
+- call-and-response.md §"Lima keputusan wajib" poin 2: "call 2 bar" ->
+  "call 1-2 bar" supaya konsisten dengan contoh JSON di file itu dan
+  examples/plan-call-response-8bar.json (call <=1 bar). Dicek tidak ada
+  penyebutan "2 bar" lain sebagai satu-satunya bentuk sehat.
+- Commit: 8c29ec6.
