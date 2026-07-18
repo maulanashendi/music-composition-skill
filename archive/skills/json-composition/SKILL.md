@@ -3,6 +3,12 @@ name: json-composition
 description: Encode a decided musical idea as authoring JSON and validate it before hand-off to the engine. Use whenever someone has a locked composition idea — a composition-plan.json, a chord progression, a bassline, or a melody they've decided on — and wants it written as the JSON authoring format (schemaVersion 1: meta + sections + harmony + voices + notes), or when authoring JSON keeps failing validation (bar/beat overflow, unknown instrument, empty voice) and needs fixing. Trigger on "write this as JSON," "turn this progression into composition JSON," "my composition JSON won't validate," "validate this composition JSON," or handing over a composition plan to notate for `/api/render`. This skill does the encoding, feel-baking, and validation; it does not brainstorm musical ideas (that's jazz-composition) or render MIDI.
 ---
 
+> **DIARSIPKAN 2026-07-18.** Skill ini digantikan `../jazz-composing/`
+> (niat) + `../plan-verifying/` (validasi) + `../rendering-audition/`
+> (render). Doktrin "the engine does not humanize this path" di bawah ini
+> **dibalik** — baca `../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`. Dipertahankan
+> di sini untuk rujukan historis; jangan dipakai untuk komposisi baru.
+
 # JSON Composition Writer
 
 Encode a **decided** musical idea into the authoring JSON contract (§4 of

@@ -267,7 +267,7 @@ memiliki pipeline itu.
 > (generated, `python -m pyengine gen-context`). Poin 1-6 di bawah
 > mendeskripsikan jalur **legacy** ABC/MIDI
 > (`skills/abc-notation/scripts/validate_abc.py` →
-> `skills/midi-orchestration/scripts/abc_to_midi.py` + `grid_to_midi.py`,
+> `skills/abc-notation/scripts/abc_to_midi.py` + `grid_to_midi.py`,
 > dulu `abc-notation-writer`/`abc-to-midi-orchestration`) yang masih ada
 > sebagai downstream terpisah menuju BandLab/DAW eksternal — bukan jalur
 > `plan.json`/`contract.md`. Jangan campur dua jalur ini: kalau kerja
@@ -283,7 +283,7 @@ Prinsip dan bentuk pengecekan tetap sama; berikut adaptasinya:
    `abc-notation-writer/SKILL.md` Step 4).
 2. **MIDI hasil merge** (menggantikan cek WAV stereo non-silent bila hilir
    BUKAN `daw_generative`): setelah `abc_to_midi.py` + `grid_to_midi.py` +
-   merge (`skills/midi-orchestration/references/midi-conversion.md`), cek
+   merge (`archive/skills/midi-orchestration/references/midi-conversion.md`), cek
    sync antar-track, lead mono (polifoni maks 1), dan tidak ada drone
    (chord-symbol ter-strip) — checklist ini sudah ada di
    `midi-conversion.md` dan WAJIB dijalankan, bukan diasumsikan lolos karena
@@ -320,7 +320,7 @@ manusia."*
 ## Kaitan dengan file lain di paket ini
 
 - Modul 1-2 dipakai bersamaan dengan `ideation-theory.md` §4b lama (kini
-  `skills/arrangement/references/form-and-dramaturgy.md` §11a) saat Step 1-2
+  `archive/skills/arrangement/references/form-and-dramaturgy.md` §11a) saat Step 1-2
   dari `jazz-composition/SKILL.md` (dulu `jazz-idea-generator/SKILL.md`).
 - Modul 3-5 dipakai saat Step 3 (generate candidates) dan mengikat bagaimana
   kandidat dibedakan secara struktural, bukan hanya kosmetik.

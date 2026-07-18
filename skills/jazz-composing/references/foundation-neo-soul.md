@@ -68,7 +68,7 @@ Urutan pengerjaan (selaras Modul 5 `reasoning-theory.md`, level menengah→kecil
    gerak melodi** — cek katalog sebab-akibat (`reasoning-theory.md` Modul 3)
    untuk mengapa tiap device.
 5. Voicing dengan inner-voice halus (detail konkret voicing/register/attack
-   ada di `skills/harmony/references/voicing-systems.md` — dulu
+   ada di `archive/skills/harmony/references/voicing-systems.md` — dulu
    `abc-to-midi-orchestration/references/exact-voicing.md` — dikerjakan
    di modul itu — di sini cukup putuskan *warna dan gerak*, bukan pitch
    pastinya).
@@ -119,7 +119,7 @@ saat lead istirahat · koordinasi dengan kick tanpa mirror tiap hit.
 
 **Pocket rule:** jangan humanize acak tiap nada — tetapkan relasi konsisten.
 Angka konkret pocket (offset tick per peran, gate ratio) sudah dibakukan di
-`skills/groove-rhythm/references/groove-profiles.md` (dulu
+`archive/skills/groove-rhythm/references/groove-profiles.md` (dulu
 `abc-to-midi-orchestration/references/groove-profiles.md`) sebagai profil
 `neo-soul-core` — otak komposisi di sini cukup **memilih profil itu**, bukan
 menghitung ulang ticks per not. Selesai bila groove tetap terasa disengaja
@@ -127,7 +127,7 @@ saat hanya drum + bass + voicing chord paling sederhana yang terdengar.
 
 **Doktrin drum paket ini (mengikat, tidak bisa disimpangi per-genre):**
 drum **SELALU** direpresentasikan sebagai step-grid JSON
-(`skills/midi-orchestration/assets/drum-grid-template.json`, dulu
+(`archive/skills/midi-orchestration/assets/drum-grid-template.json`, dulu
 `abc-to-midi-orchestration/assets/drum-grid-template.json`), **TIDAK
 PERNAH** sebagai voice ABC `clef=perc`/`%%MIDI drummap`. ABC di paket ini
 hanya untuk suara berpitch (lead, keys, bass) — lihat
