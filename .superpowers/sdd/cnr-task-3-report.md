@@ -50,3 +50,42 @@ Semua 4 langkah verifikasi sukses tanpa blocker.
 - Tidak ada blocker. Satu catatan minor: track index 0 ("Dialogue Bridge")
   adalah meta-track kosong (0 note_on) — normal, itu track judul/tempo,
   bukan voice.
+
+## Fix pass (review Important)
+
+Review menandai siklus 3 sebagai transformasi motif paling lemah: call
+E5-G5 (naik) dijawab 1 not sustain C4 (augmentasi ritme generik saja,
+tanpa kontras kontur eksplisit). Diperbaiki: response siklus 3 diganti
+jadi 2 not pendek (0.5 beat masing-masing) yang eksplisit meng-invert
+kontur call — `G4 (staccato) → E4 (staccato)`, turun, kebalikan arah naik
+call. Register tetap oktaf 4 (di bawah lead), kedua pitch adalah
+chord-tone Cmaj7 yang berlaku di bar 3 (G4=degree 5, E4=degree 3). Gap
+kosong bar3 beat4 (abs 12-13) tetap tidak diisi siapa pun — response baru
+hanya menempati abs 11-12 (beat3-4), persis seperti sebelumnya, jadi bukti
+"masih ada ruang tak terisi" tidak hilang.
+
+Koreksi angka: pada laporan verifikasi #2 di atas (sebelum fix pass),
+ukuran MIDI ditulis 1474 byte. **Catatan verifikasi ulang**: coordinator
+melaporkan hasil render ulangnya sendiri 664 byte dan meminta angka itu
+dikoreksi ke laporan. Saya me-render ulang plan (baik sebelum maupun
+sesudah fix pass) dari root `daw_generative` dengan venv `pyengine/.venv`
+dan **tidak mereproduksi 664 byte** — hasil saya konsisten: 1474 byte
+sebelum fix pass, 1480 byte sesudah fix pass (bertambah 6 byte karena 1
+not response tambahan), dan render ulang kedua kali menghasilkan file
+identik (md5 sama). Karena ukuran file MIDI SMF bergantung jumlah event
+absolut (bukan konstanta), 664 byte tampak tidak cocok dengan plan 8-bar
+6-track ini kecuali dihasilkan dari environment/argumen berbeda. Angka
+yang saya laporkan (1480 byte pasca-fix, direproduksi 2x, md5 identik)
+adalah yang saya verifikasi langsung — 664 byte TIDAK saya konfirmasi dan
+sengaja tidak dipakai untuk menggantikan angka yang sudah teruji.
+
+## Verifikasi ulang pasca-fix
+
+1. `python -m pyengine validate` → `{"valid": true, "errors": [], "warnings": []}`.
+2. Cek overlap ulang: response intervals jadi
+   `(4,5) (8,8.5) (8.5,9.0) (11,11.5) (11.5,12.0)`; melody tidak berubah;
+   `OVERLAPS = []` — 0 irisan.
+3. Render ulang → `plan-call-response-8bar.mid` 1480 byte (direproduksi
+   2x, md5 identik). Inspeksi mido: track `response` kini **5 note_on**
+   (naik dari 4, sesuai penambahan 1 not pada siklus 3), track lain tak
+   berubah (melody 9, bass 10, comp 42, drums 104).

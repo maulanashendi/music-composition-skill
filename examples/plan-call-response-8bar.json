@@ -47,7 +47,8 @@
           {"bar": 1, "beat": 4, "pitch": "A4", "dur": 1, "artic": "staccato"},
           {"bar": 2, "beat": 4, "pitch": "B4", "dur": 0.5, "artic": "ghost"},
           {"bar": 2, "beat": 4.5, "pitch": "G4", "dur": 0.5, "artic": "staccato"},
-          {"bar": 3, "beat": 3, "pitch": "C4", "dur": 1, "artic": "legato"}
+          {"bar": 3, "beat": 3, "pitch": "G4", "dur": 0.5, "artic": "staccato"},
+          {"bar": 3, "beat": 3.5, "pitch": "E4", "dur": 0.5, "artic": "staccato"}
         ]},
         "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
         "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
