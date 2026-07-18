@@ -39,7 +39,10 @@ justifikasi kenapa device itu absen — jangan diberi skor 0, karena 0 berarti
 
 Diisi oleh subagent reviewer segar tanpa konteks generasi (self-grading
 dilarang). Salin tabel per domain dari `rubric-checklist.md`, isi kolom
-skor + alasan untuk piece ini.
+skor + alasan untuk piece ini. Kalau tidak bisa spawn reviewer/subagent
+terpisah, ikuti fallback solo-agent eksplisit di `audition-protocol.md`
+§"Fallback solo-agent" — beri anotasi jujur di kolom alasan (mis.
+"self-assessment, bukan reviewer segar") alih-alih diam-diam self-grade.
 
 ### Vibe/Brief
 

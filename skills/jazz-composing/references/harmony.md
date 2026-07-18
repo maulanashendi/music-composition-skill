@@ -58,7 +58,10 @@ area, Chromatic departure. Contoh: `Dm7 = predominant`, `G7 = dominant`,
 ## Langkah 5 — Tambahkan warna
 
 Kerangka sederhana `Dm7 – G7 – Cmaj7` dapat dikembangkan menjadi
-`Dm9 – G13b9 – Cmaj9`, atau `Dm11 – Db13 – Cmaj9`.
+`Dm9 – G13(b9) – Cmaj9`, atau `Dm11 – Db13 – Cmaj9`. (Lihat catatan
+praktis di bawah soal simbol mana yang *saat ini* dijamin diterima
+`pyengine` — niat harmonik di sini tetap `maj9` di manapun relevan,
+terlepas dari status sinkronisasi parser.)
 
 ## Langkah 6 — Buat tension map
 
@@ -145,6 +148,28 @@ terbaca modal dan cool. Prinsip voice-leading yang perlu diingat:
 common tone ditahan, voice lain bergerak stepwise, memberi perubahan
 yang halus; lompatan paralel besar terbaca berani atau naif tergantung
 intent — ini konteks buat memilih gaya comping, bukan resep pitch.
+
+## Catatan praktis — simbol chord yang dijamin diterima engine
+
+Contoh simbol chord di dokumen ini (`maj7`, `maj9`, `m9`, `13(b9)`, slash
+chord, dst.) menyatakan **niat harmonik** — bukan janji bahwa string
+persis itu pasti lolos parser `pyengine` saat ini. Daftar bentuk yang
+**dijamin diterima** hidup di `contract.md` (di-generate via `pyengine
+gen-context`, sinkron dengan grammar+`music21`/override yang sedang
+dipakai), bukan di file niat-level ini — cek `contract.md` sebelum
+menganggap sebuah simbol pasti lolos. Contoh bentuk yang sah dari sisi
+casing/kualitas: `Cmaj7`, `Cmaj9`, `Dm9`, `G13(b9)`, `F7/A`, `Bbm7b5`.
+
+Kalau `pyengine validate` menolak simbol chord manapun di sini dengan
+error `chord_unparseable`, **jangan mengarang bentuk lain sendiri** —
+konsultasikan `plan-verifying/references/common-errors.md` (entri
+`chord_unparseable`) dan cek ulang `contract.md`. Kalau setelah itu
+tetap tidak ada bentuk yang lolos untuk warna harmonik yang dimaksud
+(mis. major-9 murni sempat begini untuk `maj9` sebelum override/grammar
+disinkronkan), itu gap di `pyengine` (bug grammar/parser vs. music21),
+bukan kesalahan notasi di sisi composer — laporkan balik ke pemilik
+`pyengine`, jangan menambal dengan singkatan ad-hoc yang tidak
+terdokumentasi di manapun.
 
 ## Yang TIDAK ditulis di sini (sudah pindah ke `pyengine`)
 

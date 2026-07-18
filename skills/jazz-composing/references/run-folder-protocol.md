@@ -33,6 +33,35 @@ skill ini); `verify-log.md` dan `output.mid`/`render.wav`/`scorecard.md`
 ditulis fase Verify/Audition oleh `../plan-verifying/` dan
 `../rendering-audition/` ke run folder yang sama.
 
+### Kontrak 11-field (artefak utama Level 1-4)
+
+Artefak utama tiap level ber-leverage tinggi (`02-konsep.md`,
+`03-bentuk.md`, `04-harmoni.md`, `05-melodi.md` — hasil setelah seleksi
+di `candidate-selection-protocol.md`, **bukan** artefak `*-candidates.md`
+yang punya kontrak 7-field ramping sendiri) menulis 11 field berikut,
+dalam urutan ini:
+
+| # | Field | Isi |
+|---|---|---|
+| 1 | Level | Nomor + nama level (mis. "Level 3 — Peta Harmoni") |
+| 2 | Aesthetic thesis | 1 kalimat efek musikal yang bisa didengar, konsisten dengan thesis Level 1 |
+| 3 | Immutable constraints | Batasan dari brief/level sebelumnya yang tidak boleh dilanggar keputusan level ini |
+| 4 | Assumptions | Asumsi eksplisit yang diambil karena brief tidak menentukan field ini |
+| 5 | Decision | Keputusan final level ini (pemenang seleksi dari `*-candidates.md`) |
+| 6 | Rationale | Kenapa keputusan ini melayani aesthetic thesis, berbasis efek terdengar |
+| 7 | Alternatives | Ringkasan kandidat yang tidak dipilih + kenapa kalah (rujuk `*-candidates.md` utk detail) |
+| 8 | Interaction with other levels | Bagaimana keputusan ini membatasi/membuka level berikutnya (mis. harmoni membatasi pilihan melodi) |
+| 9 | Risks | Risiko konkret keputusan ini (mis. statis, klise, sulit di-realize engine) |
+| 10 | Confidence | Tinggi/sedang/rendah + alasan singkat |
+| 11 | Next action | Apa yang harus dikerjakan level berikutnya sebagai konsekuensi keputusan ini |
+
+Field 1-4 boleh disalin/dirapikan dari `*-candidates.md` (Objective →
+Aesthetic thesis, Immutable constraints, Assumptions tetap sama); field
+5-11 baru ditulis di artefak utama setelah seleksi selesai. Kontrak ini
+berlaku hanya untuk keempat artefak utama di atas — Brief (`01-brief.md`),
+Groove (`06-groove.md`), dan Arrangement (`07-arrangement.md`) single-shot
+dan tidak wajib mengikuti 11 field ini.
+
 ### Artefak `NN-<level>-candidates.md` (hanya Level 1-4)
 
 Level 1-4 (konsep, bentuk, harmoni, melodi) memakai protokol

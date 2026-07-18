@@ -13,6 +13,11 @@ yang menilai kehadiran suatu device (klimaks, fills/setup, dst) butuh
 afforansi N/A: kalau device itu sengaja absen sesuai brief, isi skor N/A +
 1 kalimat justifikasi — bukan skor 0.
 
+**Solo-agent tanpa subagent terpisah:** pakai fallback eksplisit di
+`audition-protocol.md` §"Fallback solo-agent" (jeda konteks + self-review
+terstruktur dengan checklist yang sama + anotasi keterbatasan) —
+**jangan** diam-diam self-grade tanpa anotasi.
+
 Baris yang dulu ada di modul lama tapi sekarang **otomatis** dari
 `pyengine validate` (fase Verify) — vibe conformance, target tones/downbeat
 chord-tone — **dibuang** dari sini; itu sudah jadi warning otomatis di

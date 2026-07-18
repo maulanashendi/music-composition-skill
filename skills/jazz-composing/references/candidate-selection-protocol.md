@@ -23,7 +23,7 @@ Mengganti pola **generate-then-defend** (menulis satu artefak lalu membelanya) d
 
 ## Kontrak artefak ramping (`*-candidates.md`)
 
-Khusus keempat artefak `*-candidates.md` — **bukan** kontrak 11-field penuh artefak level lain:
+Khusus keempat artefak `*-candidates.md` — **bukan** kontrak 11-field penuh artefak level lain (definisi 11 field itu: `run-folder-protocol.md` §"Kontrak 11-field"):
 
 | Field | Isi |
 |---|---|

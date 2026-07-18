@@ -130,6 +130,47 @@ yang sesuai.
   lebih dekat ke shuffle neo-soul (lebih lambat/laid-back), cek
   `meta.vibe`/`tempoRange` section tidak salah tempel.
 
+## Fallback solo-agent (tanpa reviewer/subagent terpisah)
+
+Lapis 2 (LLM-judge) di atas mengasumsikan **subagent segar** yang tidak
+membaca konteks generasi — begitu juga skor L2 rubrik di
+`rubric-checklist.md`/`scorecard-template.md` ("self-grading dilarang").
+Itu default yang benar kalau agent bisa spawn subagent independen. Kalau
+**tidak bisa** (mis. dry-run 1-agent, atau composer pack di AI browser
+tanpa Claude Code/subagent), pakai fallback ini — pola yang sama dengan
+`../../jazz-composing/references/candidate-selection-protocol.md` §5:
+
+1. **Jeda konteks eksplisit** sebelum menilai: tulis 1-2 kalimat "lupakan
+   alasan kenapa saya membuat keputusan ini" sebelum membuka
+   `rubric-checklist.md`, supaya penilaian tidak otomatis membela pilihan
+   sendiri.
+2. **Self-review terstruktur** dengan checklist yang **sama persis**
+   (tidak disingkat/dilonggarkan) — isi tiap baris `rubric-checklist.md`
+   dan kriteria blocker L2-global seperti biasa, termasuk N/A dengan
+   justifikasi kalau device memang sengaja absen.
+3. **L2-blind** (uji buta arc): tanpa reviewer kedua, prosedur ini
+   **tidak bisa** dijalankan jujur (agent yang sama tahu jawabannya) —
+   tandai eksplisit **di-skip, bukan dipalsukan** di `scorecard.md`
+   §L2-blind, dengan alasan ("solo-agent, tidak ada reviewer independen").
+4. **Tandai keterbatasan di run folder**: baris skor L2 yang diisi lewat
+   fallback ini wajib diberi anotasi eksplisit "self-assessment, bukan
+   reviewer segar" di `scorecard.md` — jangan menulis seolah-olah
+   penilaian independen terjadi.
+5. **L3 (telinga manusia) tidak punya fallback** — ini satu-satunya lapis
+   yang memang butuh manusia sungguhan, sesuai §3 di atas. Bedakan dua
+   konteks:
+   - **Piece produksi** (composer benar-benar membuat lagu untuk dipakai):
+     L3 tetap **wajib**, tanpa pengecualian, sebelum piece disebut
+     selesai — kalau belum ada orang yang mendengarkan, status
+     `scorecard.md` §L3 wajib **PENDING** (bukan skor dikarang, bukan
+     diloncati sebagai "selesai").
+   - **Konteks non-produksi** (dry-run/gate/eksperimen skill/paket ini
+     sendiri): boleh mengklaim run "selesai sejauh yang bisa diverifikasi
+     mekanis" **hanya jika** L1 lolos dan L2 (termasuk fallback di atas)
+     terisi penuh dengan anotasi keterbatasan yang jujur, DAN status L3
+     dicatat eksplisit **PENDING** dengan alasan (bukan diklaim setara
+     "lolos uji dengar").
+
 ## Seperti apa "berhasil" dari waktu ke waktu
 
 Lapis 1-2 sudah menunjukkan with-skill menang skor rubrik pada eval historis
