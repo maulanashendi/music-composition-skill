@@ -18,6 +18,10 @@ Baris yang dulu ada di modul lama tapi sekarang **otomatis** dari
 chord-tone — **dibuang** dari sini; itu sudah jadi warning otomatis di
 `plan-verifying`, bukan kriteria manual lagi.
 
+**Catatan cakupan:** `json-composition/references/rubric.md` **dikecualikan**
+dari konsolidasi ini — jalur JSON lama (legacy, akan diarsipkan ke
+`archive/skills/`), bukan modul yang disatukan ke file ini.
+
 ## Vibe/Brief
 
 | Kriteria | Skor (0-2) | Alasan (1 kalimat) |
@@ -88,6 +92,7 @@ chord-tone — **dibuang** dari sini; itu sudah jadi warning otomatis di
 | Pitch name dan nilai MIDI konsisten satu sama lain di seluruh track | | |
 | Perubahan state produksi (layer masuk/keluar) memperkuat form, bukan menutupi section yang belum siap | | |
 | Voice leading halus di level not; register seimbang antar-instrumen; voicing tidak terlalu padat; ending terasa selesai | | |
+| `<slug>.mid` hasil `pyengine audition`/`release`: jumlah track, notes-per-track > 0 untuk semua voice, dan tag tempo/meter cocok — diverifikasi langsung dari file MIDI, bukan hanya exit status `pyengine validate` | | |
 
 ## Notasi (jalur legacy ABC — `abc-notation`)
 
