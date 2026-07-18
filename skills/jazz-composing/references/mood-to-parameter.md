@@ -256,14 +256,25 @@ menumpuk tanpa rest/tonic yang cukup untuk melepaskannya).
 Sumber asli (`compose-song`) menulis protokol ini untuk pipeline JS
 internalnya sendiri (`fromComposition`/`realize`/`toMidi`/`POST /api/render`
 milik repo `daw_generative`). Paket `music-composition-skill` ini **tidak**
-memiliki pipeline itu — hilir paket ini adalah engine `daw_generative`
-(pemakai eksternal, lewat kontrak `POST /api/render {abc, drums?,
-mastering?}`) **atau** konverter music21/`pretty_midi` milik paket ini sendiri
-(`skills/abc-notation/scripts/validate_abc.py` →
-`skills/midi-orchestration/scripts/abc_to_midi.py` +
-`grid_to_midi.py`, dulu `abc-notation-writer`/`abc-to-midi-orchestration`)
-menuju BandLab/DAW eksternal. Prinsip dan bentuk
-pengecekan tetap sama; berikut adaptasinya:
+memiliki pipeline itu.
+
+> **Catatan arsitektur (revisi `jazz-composing`).** Jalur utama paket ini
+> sekarang adalah `plan.json` (schemaVersion 2) → `pyengine` (lihat
+> `../SKILL.md` dan doktrin `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`).
+> Untuk jalur itu, validasi mekanis **bukan** `validate_abc.py`/skema
+> lama — itu tanggung jawab `pyengine validate` yang dijalankan
+> `../plan-verifying/`, merujuk field/enum/bounds di `contract.md`
+> (generated, `python -m pyengine gen-context`). Poin 1-6 di bawah
+> mendeskripsikan jalur **legacy** ABC/MIDI
+> (`skills/abc-notation/scripts/validate_abc.py` →
+> `skills/midi-orchestration/scripts/abc_to_midi.py` + `grid_to_midi.py`,
+> dulu `abc-notation-writer`/`abc-to-midi-orchestration`) yang masih ada
+> sebagai downstream terpisah menuju BandLab/DAW eksternal — bukan jalur
+> `plan.json`/`contract.md`. Jangan campur dua jalur ini: kalau kerja
+> sedang di `plan.json`, rujuk `contract.md` + `pyengine validate`; hanya
+> rujuk poin 1-6 kalau memang keluar lewat ABC.
+
+Prinsip dan bentuk pengecekan tetap sama; berikut adaptasinya:
 
 1. **Validasi mekanis** (wajib, mengganti "note-on velocity>0 di canonical
    Song"): `validate_abc.py` (struktur, durasi bar, tie/slur) dan, bila
