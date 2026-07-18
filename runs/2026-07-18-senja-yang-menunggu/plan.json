@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 2,
+  "meta": {"title": "Senja yang Menunggu", "vibe": "neo-soul", "key": "G minor", "seed": 78201},
+  "sections": [
+    {
+      "name": "intro", "bars": 4, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.22, "end": 0.35},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 2, "beat": 1, "symbol": "C9"},
+        {"bar": 3, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "shell", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]}
+      }
+    },
+    {
+      "name": "A", "bars": 8, "tempo": 76, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.35, "end": 0.55},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 2, "beat": 1, "symbol": "C9"},
+        {"bar": 3, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7"},
+        {"bar": 5, "beat": 1, "symbol": "Gm9"},
+        {"bar": 6, "beat": 1, "symbol": "C9"},
+        {"bar": 7, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 8, "beat": 1, "symbol": "Fmaj7"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 2, "pitch": "F5", "dur": 0.5, "artic": "legato"},
+          {"bar": 1, "beat": 2.5, "pitch": "G5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 2, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 2, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 3, "pitch": "A5", "dur": 1, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "F5", "dur": 1.5, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "C5", "dur": 4, "artic": "legato"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 5, "beat": 2, "pitch": "F5", "dur": 0.5, "artic": "legato"},
+          {"bar": 5, "beat": 2.5, "pitch": "A5", "dur": 0.5, "artic": "accent"},
+          {"bar": 5, "beat": 3, "pitch": "G5", "dur": 1, "artic": "tenuto"},
+          {"bar": 5, "beat": 4, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 2, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 6, "beat": 2.5, "pitch": "Bb5", "dur": 0.5, "artic": "accent"},
+          {"bar": 6, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 7, "beat": 1, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 2, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 8, "beat": 1, "pitch": "A4", "dur": 4, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 2}, {"bar": 3, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 2}, {"bar": 5, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 2}, {"bar": 6, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 2}, {"bar": 7, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "neo-soul-basic"}
+      }
+    },
+    {
+      "name": "A'", "bars": 8, "tempo": 78, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.5, "end": 0.68},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 2, "beat": 1, "symbol": "C9"},
+        {"bar": 3, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7"},
+        {"bar": 5, "beat": 1, "symbol": "Gm9"},
+        {"bar": 6, "beat": 1, "symbol": "C9"},
+        {"bar": 7, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 8, "beat": 1, "symbol": "Fmaj7"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "F5", "dur": 0.5, "artic": "legato"},
+          {"bar": 1, "beat": 1.5, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 1, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 1, "beat": 3, "pitch": "A5", "dur": 1, "artic": "tenuto"},
+          {"bar": 1, "beat": 4, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "E5", "dur": 0.5, "artic": "legato"},
+          {"bar": 2, "beat": 1.5, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 2, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 2, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "C5", "dur": 2, "artic": "legato"},
+          {"bar": 4, "beat": 3, "pitch": "A4", "dur": 2, "artic": "ghost"},
+          {"bar": 5, "beat": 1, "pitch": "F5", "dur": 0.5, "artic": "legato"},
+          {"bar": 5, "beat": 1.5, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 5, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 5, "beat": 3, "pitch": "Bb5", "dur": 1, "artic": "tenuto"},
+          {"bar": 5, "beat": 4, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 1, "pitch": "E5", "dur": 0.5, "artic": "legato"},
+          {"bar": 6, "beat": 1.5, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 6, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 6, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 7, "beat": 1, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 2, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "accent"},
+          {"bar": 8, "beat": 1, "pitch": "C5", "dur": 4, "artic": "legato"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "busy"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 1}, {"bar": 1, "beat": 2, "degree": 3, "dur": 1}, {"bar": 1, "beat": 3, "degree": 5, "dur": 1}, {"bar": 1, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 1}, {"bar": 2, "beat": 2, "degree": 3, "dur": 1}, {"bar": 2, "beat": 3, "degree": 5, "dur": 1}, {"bar": 2, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 1}, {"bar": 3, "beat": 2, "degree": 3, "dur": 1}, {"bar": 3, "beat": 3, "degree": 5, "dur": 1}, {"bar": 3, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 2}, {"bar": 4, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 1}, {"bar": 5, "beat": 2, "degree": 3, "dur": 1}, {"bar": 5, "beat": 3, "degree": 5, "dur": 1}, {"bar": 5, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 1}, {"bar": 6, "beat": 2, "degree": 3, "dur": 1}, {"bar": 6, "beat": 3, "degree": 5, "dur": 1}, {"bar": 6, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 1}, {"bar": 7, "beat": 2, "degree": 3, "dur": 1}, {"bar": 7, "beat": 3, "degree": 5, "dur": 1}, {"bar": 7, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "neo-soul-basic"}
+      }
+    },
+    {
+      "name": "B", "bars": 8, "tempo": 82, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.6, "end": 0.8},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Ebmaj7"},
+        {"bar": 2, "beat": 1, "symbol": "Dm7"},
+        {"bar": 3, "beat": 1, "symbol": "Cm7"},
+        {"bar": 4, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 5, "beat": 1, "symbol": "Ebmaj7"},
+        {"bar": 6, "beat": 1, "symbol": "F9"},
+        {"bar": 7, "beat": 1, "symbol": "F9"},
+        {"bar": 8, "beat": 1, "symbol": "F9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "Bb4", "dur": 2, "artic": "legato"},
+          {"bar": 1, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 2, "beat": 1, "pitch": "C5", "dur": 2, "artic": "legato"},
+          {"bar": 2, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "Eb5", "dur": 2, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "G5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "D5", "dur": 2, "artic": "legato"},
+          {"bar": 4, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 5, "beat": 1, "pitch": "G5", "dur": 2, "artic": "legato"},
+          {"bar": 5, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "tenuto"},
+          {"bar": 6, "beat": 1, "pitch": "A5", "dur": 1, "artic": "accent"},
+          {"bar": 6, "beat": 2, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 6, "beat": 2.5, "pitch": "A5", "dur": 0.5, "artic": "legato"},
+          {"bar": 6, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "accent"},
+          {"bar": 7, "beat": 1, "pitch": "G5", "dur": 1, "artic": "accent"},
+          {"bar": 7, "beat": 2, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "accent"},
+          {"bar": 8, "beat": 1, "pitch": "A5", "dur": 4, "artic": "accent"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "block", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 2}, {"bar": 3, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 2}, {"bar": 4, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 2}, {"bar": 5, "beat": 3, "degree": 3, "dur": 2},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 1}, {"bar": 6, "beat": 2, "degree": 3, "dur": 1}, {"bar": 6, "beat": 3, "degree": 5, "dur": 1}, {"bar": 6, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 1}, {"bar": 7, "beat": 2, "degree": 3, "dur": 1}, {"bar": 7, "beat": 3, "degree": 5, "dur": 1}, {"bar": 7, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "neo-soul-basic"}
+      }
+    },
+    {
+      "name": "interlude", "bars": 4, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.78, "end": 0.4},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 3, "beat": 1, "symbol": "F9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 2, "beat": 3, "pitch": "D5", "dur": 1, "artic": "ghost"},
+          {"bar": 4, "beat": 3, "pitch": "C5", "dur": 1, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "shell", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]}
+      }
+    },
+    {
+      "name": "A'' (klimaks)", "bars": 8, "tempo": 88, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.85, "end": 0.97},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 2, "beat": 1, "symbol": "C9"},
+        {"bar": 3, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7"},
+        {"bar": 5, "beat": 1, "symbol": "Gm9"},
+        {"bar": 6, "beat": 1, "symbol": "C9"},
+        {"bar": 7, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 8, "beat": 1, "symbol": "Fmaj7"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 1.5, "pitch": "F5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 2, "pitch": "G5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 2.5, "pitch": "Bb5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 2, "beat": 1, "pitch": "G5", "dur": 0.5, "artic": "accent"},
+          {"bar": 2, "beat": 1.5, "pitch": "Bb5", "dur": 0.5, "artic": "accent"},
+          {"bar": 2, "beat": 2, "pitch": "A5", "dur": 1, "artic": "accent"},
+          {"bar": 2, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "accent"},
+          {"bar": 3, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "Bb5", "dur": 2, "artic": "accent"},
+          {"bar": 4, "beat": 1, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 3, "pitch": "C5", "dur": 2, "artic": "legato"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 5, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 5, "beat": 3, "pitch": "G5", "dur": 2, "artic": "tenuto"},
+          {"bar": 6, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 2, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 7, "beat": 1, "pitch": "F5", "dur": 2, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 8, "beat": 1, "pitch": "C5", "dur": 4, "artic": "legato"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "busy"},
+        "pad": {"role": "pad", "instrument": "pad-strings", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 4, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "E5", "dur": 4, "artic": "legato"},
+          {"bar": 3, "beat": 1, "pitch": "F5", "dur": 4, "artic": "legato"},
+          {"bar": 4, "beat": 1, "pitch": "A4", "dur": 4, "artic": "legato"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 4, "artic": "legato"},
+          {"bar": 6, "beat": 1, "pitch": "G5", "dur": 4, "artic": "legato"},
+          {"bar": 7, "beat": 1, "pitch": "F5", "dur": 4, "artic": "legato"},
+          {"bar": 8, "beat": 1, "pitch": "C5", "dur": 4, "artic": "legato"}
+        ]},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 1}, {"bar": 1, "beat": 2, "degree": 3, "dur": 1}, {"bar": 1, "beat": 3, "degree": 5, "dur": 1}, {"bar": 1, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 1}, {"bar": 2, "beat": 2, "degree": 3, "dur": 1}, {"bar": 2, "beat": 3, "degree": 5, "dur": 1}, {"bar": 2, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 1}, {"bar": 3, "beat": 2, "degree": 3, "dur": 1}, {"bar": 3, "beat": 3, "degree": 5, "dur": 1}, {"bar": 3, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 2}, {"bar": 4, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 2}, {"bar": 5, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 2}, {"bar": 6, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 2}, {"bar": 7, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "neo-soul-basic"}
+      }
+    },
+    {
+      "name": "vamp", "bars": 8, "tempo": 84, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.7, "end": 0.6},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 3, "beat": 1, "symbol": "F9"},
+        {"bar": 5, "beat": 1, "symbol": "Gm9"},
+        {"bar": 7, "beat": 1, "symbol": "F9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "A5", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 1.5, "pitch": "G5", "dur": 0.5, "artic": "legato"},
+          {"bar": 1, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 3, "pitch": "D5", "dur": 1, "artic": "tenuto"},
+          {"bar": 1, "beat": 4, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 2, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 2, "pitch": "C5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "Eb5", "dur": 1, "artic": "tenuto"},
+          {"bar": 3, "beat": 4, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 4, "beat": 1, "pitch": "A5", "dur": 2, "artic": "accent"},
+          {"bar": 4, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 5, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 5, "beat": 3, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 6, "beat": 1, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 6, "beat": 2, "pitch": "Bb5", "dur": 1, "artic": "accent"},
+          {"bar": 6, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 7, "beat": 1, "pitch": "A5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 2, "pitch": "C5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "Eb5", "dur": 1, "artic": "tenuto"},
+          {"bar": 7, "beat": 4, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 8, "beat": 1, "pitch": "A5", "dur": 4, "artic": "tenuto"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "shell", "density": "sparse"},
+        "pad": {"role": "pad", "instrument": "pad-strings", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 8, "artic": "legato"},
+          {"bar": 3, "beat": 1, "pitch": "C5", "dur": 8, "artic": "legato"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 8, "artic": "legato"},
+          {"bar": 7, "beat": 1, "pitch": "C5", "dur": 8, "artic": "legato"}
+        ]},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 1}, {"bar": 1, "beat": 2, "degree": 3, "dur": 1}, {"bar": 1, "beat": 3, "degree": 5, "dur": 1}, {"bar": 1, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 1}, {"bar": 2, "beat": 2, "degree": 3, "dur": 1}, {"bar": 2, "beat": 3, "degree": 5, "dur": 1}, {"bar": 2, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 1}, {"bar": 3, "beat": 2, "degree": 3, "dur": 1}, {"bar": 3, "beat": 3, "degree": 5, "dur": 1}, {"bar": 3, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 1}, {"bar": 4, "beat": 2, "degree": 3, "dur": 1}, {"bar": 4, "beat": 3, "degree": 5, "dur": 1}, {"bar": 4, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 1}, {"bar": 5, "beat": 2, "degree": 3, "dur": 1}, {"bar": 5, "beat": 3, "degree": 5, "dur": 1}, {"bar": 5, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 1}, {"bar": 6, "beat": 2, "degree": 3, "dur": 1}, {"bar": 6, "beat": 3, "degree": 5, "dur": 1}, {"bar": 6, "beat": 4, "degree": 9, "dur": 1},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 1}, {"bar": 7, "beat": 2, "degree": 3, "dur": 1}, {"bar": 7, "beat": 3, "degree": 5, "dur": 1}, {"bar": 7, "beat": 4, "degree": 7, "dur": 1},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "neo-soul-basic"}
+      }
+    },
+    {
+      "name": "A reprise", "bars": 8, "tempo": 76, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.55, "end": 0.3},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm9"},
+        {"bar": 2, "beat": 1, "symbol": "C9"},
+        {"bar": 3, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7"},
+        {"bar": 5, "beat": 1, "symbol": "Gm9"},
+        {"bar": 6, "beat": 1, "symbol": "C9"},
+        {"bar": 7, "beat": 1, "symbol": "Bbmaj7"},
+        {"bar": 8, "beat": 1, "symbol": "Fmaj7"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 2, "artic": "legato"},
+          {"bar": 1, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 2, "beat": 1, "pitch": "E5", "dur": 2, "artic": "legato"},
+          {"bar": 2, "beat": 3, "pitch": "G5", "dur": 2, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "F5", "dur": 2, "artic": "legato"},
+          {"bar": 3, "beat": 3, "pitch": "D5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "C5", "dur": 4, "artic": "ghost"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 2, "artic": "legato"},
+          {"bar": 5, "beat": 3, "pitch": "F5", "dur": 2, "artic": "tenuto"},
+          {"bar": 6, "beat": 1, "pitch": "E5", "dur": 2, "artic": "legato"},
+          {"bar": 6, "beat": 3, "pitch": "G5", "dur": 2, "artic": "tenuto"},
+          {"bar": 7, "beat": 1, "pitch": "F5", "dur": 2, "artic": "legato"},
+          {"bar": 7, "beat": 3, "pitch": "A4", "dur": 2, "artic": "tenuto"},
+          {"bar": 8, "beat": 1, "pitch": "A4", "dur": 4, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 2}, {"bar": 5, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 2}, {"bar": 6, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "ballad-brush"}
+      }
+    },
+    {
+      "name": "outro", "bars": 4, "tempo": 72, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.3, "end": 0.12},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj7"},
+        {"bar": 2, "beat": 1, "symbol": "Ebmaj7"},
+        {"bar": 3, "beat": 1, "symbol": "F9"},
+        {"bar": 4, "beat": 1, "symbol": "Gm9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "alto-sax", "notes": [
+          {"bar": 2, "beat": 1, "pitch": "Bb4", "dur": 4, "artic": "ghost"},
+          {"bar": 4, "beat": 1, "pitch": "G4", "dur": 4, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "shell", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]}
+      }
+    }
+  ]
+}
