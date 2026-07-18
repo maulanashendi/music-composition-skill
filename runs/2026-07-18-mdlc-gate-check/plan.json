@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "meta": {"title": "Lampu Basah", "vibe": "ballad", "key": "D minor", "seed": 20260718},
+  "sections": [
+    {
+      "name": "intro", "bars": 4, "tempo": 64, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.30, "end": 0.45},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Dm9"},
+        {"bar": 3, "beat": 1, "symbol": "Gm9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2},
+          {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2},
+          {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 2},
+          {"bar": 3, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 2},
+          {"bar": 4, "beat": 3, "degree": 5, "dur": 2}
+        ]},
+        "drums": {"role": "drums", "pattern": "ballad-brush"}
+      }
+    },
+    {
+      "name": "head", "bars": 8, "tempo": 64, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.45, "end": 0.70},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 1, "symbol": "Gm9"},
+        {"bar": 3, "beat": 1, "symbol": "Cmaj7add9"},
+        {"bar": 4, "beat": 1, "symbol": "Fmaj7add9"},
+        {"bar": 5, "beat": 1, "symbol": "Dm9"},
+        {"bar": 6, "beat": 1, "symbol": "Gm9"},
+        {"bar": 7, "beat": 1, "symbol": "Cmaj7add9"},
+        {"bar": 8, "beat": 1, "symbol": "Fmaj7add9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 1.5, "artic": "legato"},
+          {"bar": 1, "beat": 3, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "G5", "dur": 1.5, "artic": "legato"},
+          {"bar": 2, "beat": 3, "pitch": "Bb4", "dur": 1, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "E5", "dur": 2, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "A4", "dur": 1, "artic": "legato"},
+          {"bar": 4, "beat": 2, "pitch": "C5", "dur": 1, "artic": "legato"},
+          {"bar": 4, "beat": 3, "pitch": "A4", "dur": 2, "artic": "tenuto"},
+          {"bar": 5, "beat": 1, "pitch": "D5", "dur": 1.5, "artic": "legato"},
+          {"bar": 5, "beat": 3, "pitch": "F5", "dur": 1, "artic": "accent"},
+          {"bar": 6, "beat": 1, "pitch": "Bb4", "dur": 1.5, "artic": "legato"},
+          {"bar": 6, "beat": 3, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 7, "beat": 1, "pitch": "E5", "dur": 4, "artic": "tenuto"},
+          {"bar": 8, "beat": 1, "pitch": "C5", "dur": 4, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 5, "beat": 1, "degree": 1, "dur": 2}, {"bar": 5, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 6, "beat": 1, "degree": 1, "dur": 2}, {"bar": 6, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 7, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 8, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "ballad-brush"}
+      }
+    },
+    {
+      "name": "outro", "bars": 4, "tempo": 64, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.70, "end": 0.30},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj7add9"},
+        {"bar": 2, "beat": 1, "symbol": "Cmaj7add9"},
+        {"bar": 3, "beat": 1, "symbol": "Gm9"},
+        {"bar": 4, "beat": 1, "symbol": "Dm9"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "A4", "dur": 4, "artic": "ghost"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "shell", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums", "pattern": "ballad-brush"}
+      }
+    }
+  ]
+}
