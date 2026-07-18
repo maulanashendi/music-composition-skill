@@ -320,8 +320,9 @@ manusia."*
 ## Kaitan dengan file lain di paket ini
 
 - Modul 1-2 dipakai bersamaan dengan `ideation-theory.md` §4b lama (kini
-  `archive/skills/arrangement/references/form-and-dramaturgy.md` §11a) saat Step 1-2
-  dari `jazz-composition/SKILL.md` (dulu `jazz-idea-generator/SKILL.md`).
+  konsep form & dramaturgi dari modul arrangement lama, setara §11a) saat
+  Step 1-2 dari `jazz-composition/SKILL.md` (dulu
+  `jazz-idea-generator/SKILL.md`).
 - Modul 3-5 dipakai saat Step 3 (generate candidates) dan mengikat bagaimana
   kandidat dibedakan secara struktural, bukan hanya kosmetik.
 - Modul 4 dan 6 bersama-sama menjadi isi konkret Step 5 (quality gate) —
