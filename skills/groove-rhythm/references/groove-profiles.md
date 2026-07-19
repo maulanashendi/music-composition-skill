@@ -94,16 +94,58 @@ change with tempo.
   `neo-soul-core` (or names a deviation and why), the engine renders it the
   same way every time.
 
+## `fusion-tight` profile
+
+The opposite pocket to `neo-soul-core`: a **tight 16th funk** feel where the
+backbeat sits *on* the grid, not behind it, and the whole band locks hard to a
+riff. Use for jazz-funk / fusion vamps (`style-cheatsheets.md` "Jazz-funk /
+fusion") where identity comes from the bass-and-drum riff lock, not from a
+laid-back drag. Tempo/PPQ examples below assume 108 BPM at 960 PPQ; the tick
+ranges do not change with tempo (recompute ms via `advanced-microtiming.md` §2).
+
+Reference layer: **hi-hat/16th grid**, with the kick and snare both anchored
+essentially on the grid — the "tight" character is *small* offsets everywhere,
+not a laid-back backbeat.
+
+| Role | Offset (ticks) | Approx ms @ 108 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | 0 to +3 | ~0 to +1.7 | Anchor — dead on the grid; drives the riff. |
+| Snare / backbeat | 0 to +6 | ~0 to +3.5 | On the grid, *not* behind it — this is what makes it "tight," the opposite of `neo-soul-core`'s +18..+24. |
+| Bass, riff notes (locked to kick) | −2 to +4 | ~−1.2 to +2.3 | Sits right on/around the kick — the low-end lock is the whole point. |
+| Bass, pickups (approach into a downbeat) | −8 to −3 | ~−4.6 to −1.7 | A little ahead — the push into the "1," smaller than neo-soul's pickup drag. |
+| Keys / clav, stabs | 0 to +5 | ~0 to +2.9 | Close to the grid; punchy comping locks with the backbeat rather than dragging. |
+| Lead, target/structural notes | 0 to +6 | ~0 to +3.5 | On the grid — clarity and drive over lay-back. |
+| Lead, pickups | earlier than the target's offset | — | Phrase-level push (`advanced-microtiming.md` §4), not a fixed tick. |
+
+**Hi-hat**, tiered: quarter/eighth accents strong and on the grid; in-between
+16ths ghost-level (velocity below 45), driving but not cluttered.
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Bass | ~0.55–0.75 | Shorter/punchier than neo-soul — funk bass is detached, leaves gaps for the kick. |
+| Keys / clav | ~0.40–0.65 | Short stabs; the tightness is in the silence between hits. |
+| Lead | ~0.80–0.95 | Still mostly sustained; use the low end for staccato riff-doubling. |
+
+**Ready-to-paste `drums.json` `timing` map** (single per-role ms value; kick as
+anchor at 0, snare on the grid, hi-hat a hair ahead for drive):
+
+```json
+"timing": { "kick": 0, "snare": 3, "rimshot": 3, "chh": -2 }
+```
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
 `jazz-idea-generator` — or a human directing the `midi-orchestration`
 module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
-currently only `neo-soul-core` is defined here — rather than invent new
-per-role tick numbers ad hoc. A genuinely different pocket (e.g. a tight
-acoustic-swing profile, per `advanced-microtiming.md` §9 "Tight acoustic or
-ensemble profile") is a candidate for a *new* named profile added to this
-file, not a one-off number set buried in a single composition's notes. Adding
+currently `neo-soul-core` (laid-back swung-16th) and `fusion-tight` (on-the-grid
+16th funk) are defined here — rather than invent new per-role tick numbers ad
+hoc. A genuinely different pocket (e.g. a tight acoustic-swing profile, per
+`advanced-microtiming.md` §9 "Tight acoustic or ensemble profile") is a
+candidate for a *new* named profile added to this file, not a one-off number set
+buried in a single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.
