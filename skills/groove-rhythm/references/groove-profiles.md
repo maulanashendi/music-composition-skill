@@ -380,6 +380,51 @@ than `neo-soul-core`'s 0.57 default, the high end approaches
 `classic-jazz-swing`'s crispness; pick within the range based on how
 triplet-y vs. straight-leaning the brief wants the hi-hat to feel.
 
+## `smooth-jazz-rnb` profile
+
+The pocket for smooth jazz (`vibes-mood/references/smooth-jazz-genre.md`
+§6, §7) — a **straight, ultra-precise 16th grid**, the tightest/most
+"radio-polished" profile in this file. It shares "straight, unswung" with
+`bossa-nova-straight`, but where bossa's identity is an intimate acoustic
+batida with a laid-back lead, here *nothing* lays back — the lead's
+expression comes from vocal-centric technique (bends, grace notes,
+controlled vibrato — `smooth-jazz-genre.md` §4), not from timing offset.
+Tempo/PPQ examples below assume 90 BPM at 960 PPQ (quarter note ≈ 666.7 ms,
+1 tick ≈ 0.694 ms); the tick ranges do not change with tempo (recompute ms
+via `advanced-microtiming.md` §2). `swing: 0.5` (no swing), same as
+`bossa-nova-straight`.
+
+Reference layer: **straight 16th grid**, defined by the hi-hat/shaker pair
+and locked to by everything else — the tightest lock of any profile here.
+
+| Role | Offset (ticks) | Approx ms @ 90 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | 0 to +2 | ~0 to +1.4 | Anchor — near-zero, radio precision. |
+| Hi-hat (velocity-layered straight 16ths) | 0 to +2 | ~0 to +1.4 | Tight to the grid; dynamic interest comes from velocity layering, not timing. |
+| Shaker (continuous 16ths, doubles hi-hat) | 0 to +2 | ~0 to +1.4 | Locked with the hi-hat, reinforcing the grid rather than adding motion. |
+| Snare/rimshot (verse: soft cross-stick) | −2 to +3 | ~−1.4 to +2.1 | Timbre (soft rimshot) carries the verse's restraint, not a timing pullback. |
+| Snare (chorus: layered, compressed full snare) | 0 to +4 | ~0 to +2.8 | Same tightness as the verse — the chorus lift is timbral/dynamic (§6), not a different pocket. |
+| E-piano/Rhodes "splay" comping (chord roll) | notes within the chord staggered ~5–15 ms apart, not a per-role grid offset | — | A distinct technique, not a swing/drag offset: chord tones are struck in a fast roll rather than simultaneously — see `smooth-jazz-genre.md` §6. |
+| Fretless bass (slides into target notes) | −2 to +3 on the arrival | — | The "slide" is a continuous pitch glide leading into the target, not an early attack (contrast with bossa's anticipation, which is a notated early pluck — `bossa-nova-genre.md` §2) — the landing note itself stays close to the grid. |
+| Lead sax/clean guitar (vocal-centric phrasing) | 0 to +6 | ~0 to +4.2 | Close to the grid — expression comes from bends/grace-notes/vibrato technique (`smooth-jazz-genre.md` §4), not timing offset. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| E-piano/Rhodes comping | ~0.55–0.75 | The chord rings after the roll settles. |
+| Fretless bass | ~0.85–1.0 | Long, legato — the sustain is part of the "swimming" tone (§5's pitch-shift/chorus processing). |
+| Lead sax/guitar | ~0.85–0.98 | Sustained, singable — matches the vocal-centric phrasing goal. |
+
+**Ready-to-paste `drums.json` `timing` map** (the tightest/most-zero of any
+profile in this file — precision is the point):
+
+```json
+"timing": { "kick": 0, "snare": 1, "rimshot": 1, "chh": 0 }
+```
+
+Set `swing: 0.5` (no swing, matching `bossa-nova-straight`).
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
@@ -391,11 +436,13 @@ per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"),
 `bossa-nova-straight` (unswung 16th rhythm section, laid-back/rubato lead
 only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
 `purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note lattice
-under a straight-16th hi-hat), and `dilla-boom-bap` (humanized 16th grid
-with a pushed-ahead kick and a dragged-behind snare) are defined here —
-rather than invent new per-role tick numbers ad hoc. A genuinely different
-pocket is a candidate for a *new* named profile added to this file, not a
-one-off number set buried in a single composition's notes. Adding
+under a straight-16th hi-hat), `dilla-boom-bap` (humanized 16th grid with a
+pushed-ahead kick and a dragged-behind snare), and `smooth-jazz-rnb`
+(ultra-precise straight 16th grid, expression carried by lead technique
+rather than timing) are defined here — rather than invent new per-role tick
+numbers ad hoc. A genuinely different pocket is a candidate for a *new*
+named profile added to this file, not a one-off number set buried in a
+single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.

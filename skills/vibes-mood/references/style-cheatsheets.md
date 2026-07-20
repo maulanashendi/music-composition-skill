@@ -26,6 +26,14 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** Rhodes/Wurli, fat bass (often syncopated riff), tight drums with ghost notes, vocal chops or lead synth.
 - **Identity comes from:** the bass-and-drum pocket and rich comping voicings.
 
+## Smooth jazz
+
+- **Tempo:** 65–115 BPM depending on sub-style — quiet storm/slow jam 65–78, mid-tempo radio edit (the sweet spot) 82–98, West Coast/sunshine up-tempo 100–115. **Feel:** straight, precise 16ths (R&B/pop grid) — never swung, never dragged.
+- **Harmony:** lush and consonant — maj9/add9/m11/9sus4; the "smooth slash chord" (`Fmaj7/G` for a smoother `G13sus4`) is the genre's signature move; pedal-bass and stepwise-bass tricks under a static-feeling chord color.
+- **Structure:** full pop-radio form — intro -> verse -> pre-chorus -> chorus (the hook) -> verse 2 -> chorus -> solo/bridge -> chorus -> fade-out outro.
+- **Instrumentation:** soprano/alto sax or clean chorused guitar as a vocal-like lead, FM/Rhodes e-piano comping, fretless bass (pitch-slides into targets), R&B drums/drum machine, shaker/wind-chimes percussion, warm synth pads.
+- **Identity comes from:** vocal-centric lead phrasing (bends, grace notes, controlled vibrato, deliberate space) plus the smooth slash chord and an ultra-polished straight grid — not harmonic complexity. Deep profile + differentiation table: `smooth-jazz-genre.md`.
+
 ## Bebop / hard bop
 
 - **Tempo:** 140–300 BPM (medium-up to fast). **Feel:** driving swing.
