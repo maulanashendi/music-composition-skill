@@ -135,17 +135,74 @@ anchor at 0, snare on the grid, hi-hat a hair ahead for drive):
 "timing": { "kick": 0, "snare": 3, "rimshot": 3, "chh": -2 }
 ```
 
+## `classic-jazz-swing` profile
+
+The acoustic-ensemble pocket for classic jazz (`vibes-mood/references/classic-jazz-genre.md`
+§7) — a straight-ahead 4-beat swing where the **ride cymbal's swung 8ths**
+are the reference layer, not a 16th grid, and attacks sit close to that grid
+rather than laid back. This is this package's applied case of
+`advanced-microtiming.md` §9 "Tight acoustic or ensemble profile": major
+attacks near the grid, articulation (mutes, growls, glissandi — see the
+genre file §7) carries the feel more than timing offset does. Tempo/PPQ
+examples below assume 132 BPM (medium swing) at 960 PPQ (quarter note ≈
+454.5 ms, 1 tick ≈ 0.47 ms); the tick ranges do not change with tempo
+(recompute ms via `advanced-microtiming.md` §2).
+
+Reference layer: **ride cymbal swung-8th pattern** (`1, 2-and, 3, 4-and`),
+triplet-subdivided; the walking bass and comping lock tightly to it rather
+than dragging behind.
+
+| Role | Offset (ticks) | Approx ms @ 132 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Ride (swung 8th pattern) | 0 to +4 | ~0 to +1.9 | Anchor — defines the swing subdivision everything else locks to. |
+| Kick (feathering, all 4 beats) | −2 to +2 | ~−0.9 to +0.9 | Barely audible — a felt pulse, not a hit; stays essentially on the grid. |
+| Hi-hat (chick on 2 & 4) | −3 to +3 | ~−1.4 to +1.4 | Tight, near the grid — this era does not lay the backbeat back. |
+| Bass, walking quarter notes | −6 to 0 | ~−2.8 to 0 | Slightly ahead of the grid — upright bass characteristically pushes the band forward, the opposite of `neo-soul-core`'s drag. |
+| Bass, chromatic approach tone | −10 to −4 | ~−4.7 to −1.9 | The anticipation into the next chord's downbeat. |
+| Piano stride (LH bass note, beats 1 & 3) | −4 to +2 | ~−1.9 to +0.9 | Locked close to the kick/bass. |
+| Guitar/piano comping chunk (Freddie Green, every beat) | −2 to +4 | ~−0.9 to +1.9 | Tight and percussive — the short gate (below) does more work than the offset. |
+| Horn section ensemble hits (shout-chorus stabs, block chords) | −2 to +5 | ~−0.9 to +2.4 | Section unity matters more than individual offset — tight as one voice. |
+| Lead, structural/target notes | 0 to +6 | ~0 to +2.8 | Close to the grid, articulation (fall-off, doit, shake) carries expression. |
+| Lead, pickups | earlier than the target's offset | — | Phrase-level push, not a fixed tick (`advanced-microtiming.md` §4). |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Bass | ~0.55–0.75 | Detached "boom" articulation — short of full sustain keeps walking lines clear. |
+| Piano/guitar comping chunk | ~0.25–0.45 | Very short and percussive — the Freddie Green/stride-chord "chunk" character lives in the silence between hits. |
+| Piano stride bass note | ~0.65–0.85 | Longer than the chunk — the left-hand bass note rings more than the chord it alternates with. |
+| Horns, legato phrasing | ~0.80–0.95 | Solo lines and soli sections — sustained. |
+| Horns, shout-chorus/staccato hits | ~0.45–0.65 | Ensemble punches — short and accented, not sustained. |
+
+**Ready-to-paste `drums.json` `timing` map** (kick near-silent anchor, hi-hat
+chick tight on the grid, snare/rimshot used for backbeat accents rather than
+a laid-back feel):
+
+```json
+"timing": { "kick": 0, "snare": 2, "rimshot": 2, "chh": -1 }
+```
+
+Set the grid's `swing` field high (~0.62–0.67) relative to
+`neo-soul-core`/`fusion-tight` — classic jazz's triplet swing is more
+pronounced than a lightly-swung 16th feel. The ride pattern itself is not
+one of the four standard drum-grid roles (`kick`/`snare`/`rimshot`/`chh`);
+program it as `ride` hits on the swung-8th steps per
+`../../midi-orchestration/references/midi-conversion.md`, with `swing`
+driving the "and" displacement.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
 `jazz-idea-generator` — or a human directing the `midi-orchestration`
 module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
-currently `neo-soul-core` (laid-back swung-16th) and `fusion-tight` (on-the-grid
-16th funk) are defined here — rather than invent new per-role tick numbers ad
-hoc. A genuinely different pocket (e.g. a tight acoustic-swing profile, per
-`advanced-microtiming.md` §9 "Tight acoustic or ensemble profile") is a
-candidate for a *new* named profile added to this file, not a one-off number set
-buried in a single composition's notes. Adding
+currently `neo-soul-core` (laid-back swung-16th), `fusion-tight` (on-the-grid
+16th funk), and `classic-jazz-swing` (tight acoustic-ensemble triplet swing,
+per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile") are
+defined here — rather than invent new per-role tick numbers ad hoc. A
+genuinely different pocket is a candidate for a *new* named profile added to
+this file, not a one-off number set buried in a single composition's notes.
+Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.

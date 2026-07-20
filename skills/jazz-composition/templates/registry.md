@@ -13,6 +13,7 @@ must match the `when_to_use` field inside the template file.
 | `neo-soul-midnight` | neo-soul | late-night, intimate, a doubt->acceptance arc, 68-80 BPM, Rhodes-led |
 | `lofi-jazzhop` | lofi jazz / jazzhop | loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket |
 | `fusion-vamp` | jazz-funk / fusion | riff-driven jazz-funk/fusion vamp, tight backbeat, builds and breakdowns, urgency->release arc, 96-124 BPM |
+| `classic-jazz-swing` | classic jazz / swing big band | big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM |
 
 <!--
 Adding a template? Append one row above AND create templates/<id>.json per

@@ -42,6 +42,14 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** nylon guitar or piano comp, soft bass on root-fifth, brushes/rim, breathy lead.
 - **Identity comes from:** the comping rhythm and the elegant, restrained harmony.
 
+## Classic jazz (Dixieland / swing big band)
+
+- **Tempo:** 60–230+ BPM depending on sub-style — slow drag blues at 60–90, medium swing 115–140 (the Lindy Hop sweet spot), up to burning Dixieland 240+. **Feel:** 4-beat walking swing, 2-beat Dixieland bounce, or shuffle swing — name which one.
+- **Harmony:** consonant and warm, not modern-dense — major 6th/6-9 as the tonic chord, dominant 7/9, diminished 7th passing chords, augmented dominant (V7#5); line clichés (`C -> Cmaj7 -> C7 -> C6`) for static harmony.
+- **Structure:** 32-bar AABA head -> soli -> solo break + solo -> shout chorus -> outro (big band); or multi-theme A-B-trio-hot chorus (Dixieland).
+- **Instrumentation:** Dixieland combo (cornet/trumpet, clarinet, trombone, banjo, tuba/bass, stride piano, drums) or 17-piece swing big band (5 reeds, 4 trumpets, 4 trombones, 4 rhythm).
+- **Identity comes from:** the solo break, shout-chorus climax, and horn-section call-and-response — not chord complexity. Deep profile: `classic-jazz-genre.md`.
+
 ## Jazz-funk / fusion
 
 - **Tempo:** 90–130 BPM. **Feel:** tight 16th funk, hard backbeat, riff-driven.
