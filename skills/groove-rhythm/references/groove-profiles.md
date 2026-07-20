@@ -191,18 +191,69 @@ program it as `ride` hits on the swung-8th steps per
 `../../midi-orchestration/references/midi-conversion.md`, with `swing`
 driving the "and" displacement.
 
+## `bossa-nova-straight` profile
+
+The pocket for bossa nova (`vibes-mood/references/bossa-nova-genre.md` §2,
+§8) — a **straight, unswung 16th grid** carried by the guitar batida,
+shaker, and cross-stick, with only the lead/vocal laid back or rubato on
+top. This is the genre's defining contrast and the thing most likely to get
+flattened into another profile by mistake: do not swing the rhythm section
+(that drifts toward `classic-jazz-swing`), and do not drag the *whole*
+ensemble behind the grid (that drifts toward `neo-soul-core`/lofi — see the
+differentiation table in the genre file §8). Tempo/PPQ examples below assume
+120 BPM (classic bossa) at 960 PPQ (quarter note ≈ 500 ms, 1 tick ≈ 0.52 ms);
+the tick ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2). `swing` should be set to **0.5** (no swing) —
+lower than every other named profile in this file.
+
+Reference layer: **straight 16th grid**, defined jointly by the guitar
+batida, shaker, and cross-stick — all three stay tight to it.
+
+| Role | Offset (ticks) | Approx ms @ 120 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Guitar batida (thumb bass note & finger chord) | 0 to +3 | ~0 to +1.6 | Anchor — dead straight, defines the grid other rhythm-section roles lock to. |
+| Shaker (constant 16th pulse) | 0 to +2 | ~0 to +1 | Tight to the grid — the high-frequency pulse that makes "straight" audible. |
+| Cross-stick (echoes the batida on the rim) | 0 to +3 | ~0 to +1.6 | Locked to the guitar's fingerpicking pattern, not offset from it. |
+| Surdo/kick (muted, beat 1 soft / beat 3 fuller) | −2 to +3 | ~−1 to +1.6 | Near-silent thud, no boom — offset is negligible, the character is in the mute/velocity, not timing. |
+| Bass, downbeat arrivals (beat 1: root) | −2 to +3 | ~−1 to +1.6 | On the grid with the rest of the rhythm section. |
+| Bass, anticipation (beat 3 -> 5th, pulled ahead into the next bar) | written a subdivision early | — | This is a **notated displacement**, not a microtiming offset — write the anticipated note itself an 1/8-1/16 early on the grid (`advanced-microtiming.md` §1's notated-vs-performance distinction), then apply the small ±tick range above to that written position. Do not simulate it with a large negative tick offset on the written beat. |
+| Lead/vocal, structural/target notes | +8 to +20 | ~+4 to +10 | Laid-back — the genre's one deliberately-behind-the-grid voice. |
+| Lead/vocal, rubato phrases | not tick-bound | — | May depart from the grid entirely at phrase level; the rhythm section does not follow it (`advanced-microtiming.md` §4). |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Guitar batida | ~0.35–0.55 | Short, percussive fingerpicked chunks — the "click" of nail-on-string matters as much as pitch. |
+| Bass | ~0.45–0.65 | Short pizzicato decay, never sustained. |
+| Lead/vocal, legato phrasing | ~0.85–0.98 | Sustained, breathy — contrasts with the clipped rhythm section underneath it. |
+
+**Ready-to-paste `drums.json` `timing` map** (all roles near zero — "straight"
+is the point; character comes from mute/velocity, not offset):
+
+```json
+"timing": { "kick": 0, "snare": 0, "rimshot": 1, "chh": 0 }
+```
+
+Set `swing: 0.5` in the grid (contrast with `neo-soul-core`'s 0.57 and
+`classic-jazz-swing`'s ~0.62–0.67 — bossa is the one profile in this file
+with no swing at all). Map surdo to the `kick` role at reduced
+`base_velocity` (heavily muted, no low-end boom) and shaker to `chh`, per
+`../../midi-orchestration/references/midi-conversion.md`.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
 `jazz-idea-generator` — or a human directing the `midi-orchestration`
 module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
 currently `neo-soul-core` (laid-back swung-16th), `fusion-tight` (on-the-grid
-16th funk), and `classic-jazz-swing` (tight acoustic-ensemble triplet swing,
-per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile") are
-defined here — rather than invent new per-role tick numbers ad hoc. A
-genuinely different pocket is a candidate for a *new* named profile added to
-this file, not a one-off number set buried in a single composition's notes.
-Adding
+16th funk), `classic-jazz-swing` (tight acoustic-ensemble triplet swing,
+per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"), and
+`bossa-nova-straight` (unswung 16th rhythm section, laid-back/rubato lead
+only) are defined here — rather than invent new per-role tick numbers ad
+hoc. A genuinely different pocket is a candidate for a *new* named profile
+added to this file, not a one-off number set buried in a single
+composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.

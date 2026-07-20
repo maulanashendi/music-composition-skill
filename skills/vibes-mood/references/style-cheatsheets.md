@@ -36,11 +36,11 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 
 ## Bossa nova / latin
 
-- **Tempo:** 100–140 BPM. **Feel:** even eighths, the bossa clave/comp pattern.
-- **Harmony:** rich maj7/m7/dom7 with a smooth descending or chromatic bass; frequent ii-V motion but gentle.
-- **Structure:** AABA or verse forms; understated dynamics.
-- **Instrumentation:** nylon guitar or piano comp, soft bass on root-fifth, brushes/rim, breathy lead.
-- **Identity comes from:** the comping rhythm and the elegant, restrained harmony.
+- **Tempo:** 80–160 BPM depending on sub-style — ballad 80–100, classic 110–130, samba-bossa up-tempo 135–160. **Feel:** rhythm section straight 16ths, **never swung**; lead/vocal laid-back or rubato on top; anticipation (melody/chord accents entering 1/16–1/8 early) drives momentum.
+- **Harmony:** avoid plain triads — maj7/maj9/6-9 (tonic), m9/m11/m6 (subdominant), dominant 9/13/altered (tension); smooth descending or chromatic bass motion; frequent gentle ii-V motion.
+- **Structure:** AABA (32 bar) or verse forms; understated dynamics (pp–mp), vamp tag ending on a 6/9 chord.
+- **Instrumentation:** nylon-string guitar batida (fingers, no pick), soft upright/fretless bass, cross-stick + shaker + muted surdo/kick, optional flute/sub-tone tenor sax/flugelhorn/Rhodes.
+- **Identity comes from:** the batida comping rhythm and the straight-grid-plus-laid-back-lead contrast — not swing, and not chord density alone. Deep profile + genre-differentiation table: `bossa-nova-genre.md`.
 
 ## Classic jazz (Dixieland / swing big band)
 
