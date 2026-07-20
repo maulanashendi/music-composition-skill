@@ -479,6 +479,49 @@ usually no subdivided grid to swing; if a sub-style genuinely needs one
 borrow `swing` from a closer-matching profile (e.g. `neo-soul-core`) rather
 than inventing new numbers here.
 
+## `cool-modal-floating` profile
+
+The pocket for cool & modal jazz (`vibes-mood/references/cool-modal-jazz-genre.md`
+§2, §6) — a **brushed, floating swing** that sits gently behind the beat
+without forcing hard accents. It sits between two extremes already in this
+file: gentler than `classic-jazz-swing`'s crisp, tight big-band precision,
+but far less extreme than `noir-jazz-rubato`'s dramatic drag — this is
+"relaxed," not "unmoored." Tempo/PPQ examples below assume 100 BPM (medium
+cool/modal-walk sweet spot) at 960 PPQ (quarter note ≈ 600 ms, 1 tick ≈
+0.625 ms); the tick ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2).
+
+Reference layer: **brushed ride/swish**, a continuous soft sweep rather
+than discrete hits — swing ratio ~0.58-0.60 (between `neo-soul-core`'s
+0.57 and `classic-jazz-swing`'s crisper ~0.62-0.67).
+
+| Role | Offset (ticks) | Approx ms @ 100 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Brushed ride/swish | 0 to +4 | ~0 to +2.5 | Anchor — a continuous soft texture, not a series of hard hits (see `noir-jazz-rubato`'s brushed-swirl reference layer for the same idea taken further). |
+| Feathered kick | −1 to +3 | ~−0.6 to +1.9 | Extremely light, blends into the upright bass's resonance rather than reading as a separate hit (`classic-jazz-swing` uses the same "feathering" concept, tighter). |
+| Pedal hi-hat (2 & 4) | −2 to +4 | ~−1.3 to +2.5 | Soft, not a hard backbeat marker. |
+| Upright bass (pedal point / walking) | +4 to +10 | ~+2.5 to +6.3 | Gently behind the beat — less drag than `soul-jazz-swing`'s thick backbeat, more than `classic-jazz-swing`'s tight upright bass. |
+| Piano, interactive comping (sparse punctuation) | +3 to +10 | ~+1.9 to +6.3 | Wider range than a metronomic comp — it responds to the horn's phrasing rather than sitting on a fixed grid position. |
+| Lead (Harmon trumpet / breathy sax, long tones) | 0 to +8 | ~0 to +5 | Close to the grid — expression comes from tone quality and articulation (`cool-modal-jazz-genre.md` §4), not timing offset, the same principle as `classic-jazz-swing`'s lead role. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Upright bass, pedal point | ~0.85–1.0 | Long, resonant — often held far past a single bar as a drone. |
+| Piano, interactive comping | ~0.30–0.50 | Short punctuation, not sustained chords — it comments, it doesn't carpet. |
+| Lead (trumpet/sax) | ~0.85–0.98 | Long sustained tones per §4's "focus on tone quality" — the genre favors held notes over busy lines. |
+
+**Ready-to-paste `drums.json` `timing` map** (soft and floating, between
+`classic-jazz-swing`'s near-zero precision and `soul-jazz-swing`'s heavier
+drag):
+
+```json
+"timing": { "kick": 0, "snare": 4, "rimshot": 4, "chh": 0 }
+```
+
+Set `swing` around **0.58–0.60**.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
@@ -493,10 +536,11 @@ only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
 under a straight-16th hi-hat), `dilla-boom-bap` (humanized 16th grid with a
 pushed-ahead kick and a dragged-behind snare), `smooth-jazz-rnb`
 (ultra-precise straight 16th grid, expression carried by lead technique
-rather than timing), and `noir-jazz-rubato` (extreme phrase-level drag, no
-subdivided grid to swing) are defined here — rather than invent new
-per-role tick numbers ad hoc. A genuinely different pocket is a candidate
-for a *new*
+rather than timing), `noir-jazz-rubato` (extreme phrase-level drag, no
+subdivided grid to swing), and `cool-modal-floating` (brushed, gently
+behind-the-beat swing between `classic-jazz-swing` and `noir-jazz-rubato`)
+are defined here — rather than invent new per-role tick numbers ad hoc. A
+genuinely different pocket is a candidate for a *new*
 named profile added to this file, not a one-off number set buried in a
 single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference

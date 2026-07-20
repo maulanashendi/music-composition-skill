@@ -50,13 +50,13 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** Harmon-muted trumpet or sub-tone sax as the primary voice, felt/dark piano or filtered Rhodes, sparse upright bass (pizzicato or arco), brushed snare/cymbal swirl, optional very-low-level environmental texture (rain/neon hum — use with real caution, see the deep profile's warning).
 - **Identity comes from:** the power of silence and extreme rubato drag — not harmonic complexity or groove density, the opposite pole from jazz-funk/hip-hop-jazz in this package. Deep profile: `noir-jazz-genre.md`.
 
-## Modal
+## Cool & modal jazz
 
-- **Tempo:** wide (slow ballad to medium). **Feel:** open, spacious.
-- **Harmony:** one or two chords held for many bars; motion from bass pedal, melody, and the mode's characteristic note (Dorian nat-6, Phrygian b2, Lydian #4).
-- **Structure:** long sections, gradual textural development; contrast by shifting mode or pedal.
-- **Instrumentation:** flexible; often piano/quartal comping, pedal bass, coloristic drums.
-- **Identity comes from:** the mode's color and slow-building texture, not changes.
+- **Tempo:** 55–175 BPM depending on sub-style — cool ballad/nocturne 55–72, medium cool/modal-walk sweet spot 100–125, up-tempo modal/West Coast 140–175 (stays "cool" even fast). **Feel:** brushed swing, floating/subdued pulse — bass and drums sit gently behind the beat without hard accents; odd meters (5/4, 7/4, 9/8) are idiomatic when played smoothly.
+- **Harmony:** modal stasis — one mode (usually Dorian, also Mixolydian/Phrygian) held for many bars, not a fast-moving progression; the "So What" voicing (stacked 4ths + a top major 3rd) and quartal voicings generally, motion from a bass pedal rather than chord changes.
+- **Structure:** intro (bass pedal) -> head (unison/simple-counterpoint modal melody) -> solo 1 -> solo 2 (comping stays static) -> head return -> outro (fading motif, suspended mute note).
+- **Instrumentation:** Harmon-muted trumpet, dry/breathy alto or tenor sax, optional baritone sax, upright bass (pedal point), brushed drums, sparse "interactive" piano comping or no chordal instrument at all (pianoless West Coast quartet).
+- **Identity comes from:** the mode's color, harmonic stasis, and the art of leaving notes out (statement -> rest -> development) — not chord changes or note density. Deep profile + four-genre comparison table: `cool-modal-jazz-genre.md`.
 
 ## Bossa nova / latin
 
