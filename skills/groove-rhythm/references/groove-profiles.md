@@ -425,6 +425,60 @@ profile in this file — precision is the point):
 
 Set `swing: 0.5` (no swing, matching `bossa-nova-straight`).
 
+## `noir-jazz-rubato` profile
+
+The pocket for noir jazz/dark jazz (`vibes-mood/references/noir-jazz-genre.md`
+§2, §6) — the most extreme drag in this file, by a wide margin. Where
+`neo-soul-core`'s laid-back snare sits +18 to +24 ticks behind the grid,
+here even the *tightest* voice (upright bass) sits further behind than
+that, and the lead voice (muted trumpet/sax) drags several times further
+still. Unlike every other profile in this file, there usually is no
+subdivided 16th/8th grid worth swinging — the composition is dominated by
+long sustained notes and silence (§2's "power of silence"), so this
+profile is phrase-level offset first, grid-swing second. Tempo/PPQ examples
+below assume 48 BPM (mid sweet-spot) at 960 PPQ (quarter note ≈ 1250 ms, 1
+tick ≈ 1.302 ms) — recompute ms from the actual tempo using
+`advanced-microtiming.md` §2, but as with `dilla-boom-bap`, the **ms values
+are this profile's canonical numbers** (from the source brief), the tick
+column is a derived convenience.
+
+Reference layer: **the brushed-snare swirl**, the one element that stays on
+the grid (offset 0) — every other voice is defined relative to it, not to a
+hi-hat/ride as in the faster profiles.
+
+| Role | Offset (ms, canonical) | Approx ticks @ 48 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Brushed snare swirl | 0 ms | 0 | The sole timekeeper — a continuous soft brush texture, not a discrete hit pattern. |
+| Soft felt kick | close to the swirl, no canonical offset given | ~0 | A near-inaudible heartbeat pulse; timbre (felt beater, no attack) carries the character, not offset. |
+| Upright bass | +5 to +10 ms | ≈ +4 to +8 | The *least* dragged melodic voice — still "heavy bottom," still behind the swirl. |
+| Piano chords (felt piano/Rhodes) | +15 to +30 ms | ≈ +12 to +23 | Deliberately avoids landing with the bass for a more natural, unstacked attack. |
+| Muted trumpet / sax (lead voice) | +30 to +60 ms | ≈ +23 to +46 | Extremely dragged — should feel unmoored from the drums entirely, "floating." This is roughly double `neo-soul-core`'s already-laid-back snare offset, and it is the *lead*, not a backing element. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Upright bass, pizzicato | ~0.60–0.85 | Plucked and left to ring, shorter than arco. |
+| Upright bass, arco | ~0.90–1.0 | Bowed, near-full sustain. |
+| Piano/Rhodes chords | ~0.90–1.0+ | Struck once and left to decay fully (§2) — the reverb tail (`noir-jazz-genre.md` §8) extends the perceived length beyond the note itself; that extension is a downstream mix effect, not a longer note. |
+| Muted trumpet/sax | ~0.90–1.0 | Long sustained tones, per §2/§7 of the genre file — short/staccato notes are the exception here, not the norm. |
+
+**Ready-to-paste `drums.json` `timing` map** (ms values used directly, per
+the source brief; the swirl itself has no single "hit" timing since it is
+a continuous texture rather than a discrete step-grid pattern — model it as
+a sustained low-velocity `chh`/`ride`-style layer rather than 16th hits):
+
+```json
+"timing": { "kick": 0, "snare": 0, "rimshot": 0, "chh": 0 }
+```
+
+No `swing` recommendation is given — at this tempo and density there is
+usually no subdivided grid to swing; if a sub-style genuinely needs one
+(e.g. the trip-hop-noir sub-genre's heavier downtempo drum loop, per
+`noir-jazz-genre.md` §1D), treat it as a separate, faster-grid layer and
+borrow `swing` from a closer-matching profile (e.g. `neo-soul-core`) rather
+than inventing new numbers here.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
@@ -437,10 +491,12 @@ per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"),
 only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
 `purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note lattice
 under a straight-16th hi-hat), `dilla-boom-bap` (humanized 16th grid with a
-pushed-ahead kick and a dragged-behind snare), and `smooth-jazz-rnb`
+pushed-ahead kick and a dragged-behind snare), `smooth-jazz-rnb`
 (ultra-precise straight 16th grid, expression carried by lead technique
-rather than timing) are defined here — rather than invent new per-role tick
-numbers ad hoc. A genuinely different pocket is a candidate for a *new*
+rather than timing), and `noir-jazz-rubato` (extreme phrase-level drag, no
+subdivided grid to swing) are defined here — rather than invent new
+per-role tick numbers ad hoc. A genuinely different pocket is a candidate
+for a *new*
 named profile added to this file, not a one-off number set buried in a
 single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference

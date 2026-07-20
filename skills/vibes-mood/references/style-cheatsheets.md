@@ -42,6 +42,14 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** horn(s) lead, piano comp, walking upright bass, ride-driven drums.
 - **Identity comes from:** the head's angular motif and the harmonic momentum.
 
+## Noir jazz / dark jazz
+
+- **Tempo:** 35–65 BPM, sweet spot 42–50 BPM — the slowest genre in this package. **Feel:** ultra-dragged/rubato; only a soft brushed-snare swirl stays on the grid, everything else (trumpet, piano, bass) sits far behind it. Dynamics stay ppp–pp throughout — no sudden swells.
+- **Harmony:** minor-major 7th as the signature tonic color (`Am(maj7)`), half-diminished tension, `maj7#11` Lydian color, altered dominants; semitone cluster voicings for friction; Hungarian minor/double harmonic minor for exotic melodic color.
+- **Structure:** cinematic "scenes," not verse/chorus — alleyway intro -> shadow/main theme -> confession/interlude (modulation) -> fog/ambient break (drums+bass drop out) -> resolution/outro (ritardando into silence).
+- **Instrumentation:** Harmon-muted trumpet or sub-tone sax as the primary voice, felt/dark piano or filtered Rhodes, sparse upright bass (pizzicato or arco), brushed snare/cymbal swirl, optional very-low-level environmental texture (rain/neon hum — use with real caution, see the deep profile's warning).
+- **Identity comes from:** the power of silence and extreme rubato drag — not harmonic complexity or groove density, the opposite pole from jazz-funk/hip-hop-jazz in this package. Deep profile: `noir-jazz-genre.md`.
+
 ## Modal
 
 - **Tempo:** wide (slow ballad to medium). **Feel:** open, spacious.
