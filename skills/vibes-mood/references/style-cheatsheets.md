@@ -50,10 +50,18 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** Dixieland combo (cornet/trumpet, clarinet, trombone, banjo, tuba/bass, stride piano, drums) or 17-piece swing big band (5 reeds, 4 trumpets, 4 trombones, 4 rhythm).
 - **Identity comes from:** the solo break, shout-chorus climax, and horn-section call-and-response — not chord complexity. Deep profile: `classic-jazz-genre.md`.
 
+## Soul jazz
+
+- **Tempo:** 65–145 BPM depending on sub-style — slow blues/gospel 65–85, mid-tempo cooker (the sweet spot) 90–115, up-tempo hard-soul 120–145. **Feel:** swung 8ths, bluesy and looser than big-band swing — a thick backbeat sitting slightly behind the grid, not tight and precise.
+- **Harmony:** deliberately sparse — dominant 7/9 blues harmony, 12-bar gospel-blues form, the gospel plagal cadence (`IV -> I`) as the signature resolution; not dense ii-V chains.
+- **Structure:** intro organ vamp -> head (blues/gospel) -> organ solo (with a Leslie-speed/drawbar dynamic arc) -> sax/guitar solo -> head return -> outro (held `7#9`/`6/9` with an organ glissando).
+- **Instrumentation:** Hammond B-3 + Leslie speaker (melody, harmony, and bass pedal), clean semi-hollow electric guitar (Wes-style thumb comping), acoustic drums (thick ride, sloshy hi-hat), optional tenor sax/trumpet front line.
+- **Identity comes from:** the Hammond B-3 carrying melody+harmony+bass at once, plus the gospel-tinged swung backbeat. Deep profile: `soul-jazz-genre.md`.
+
 ## Jazz-funk / fusion
 
-- **Tempo:** 90–130 BPM. **Feel:** tight 16th funk, hard backbeat, riff-driven.
-- **Harmony:** static vamps or short loops, dominant-9/13 and sus chords, occasional modal interchange; harmony often subservient to groove.
-- **Structure:** vamp with builds, breakdowns, and a hook riff; solo sections over the vamp.
-- **Instrumentation:** electric bass (slap/fingered riff), clav/Rhodes/synth, punchy drums, horn or synth lead.
-- **Identity comes from:** the bass-and-drum riff lock and dynamic builds.
+- **Tempo:** 75–140+ BPM depending on sub-style — slow down-tempo funk 75–90, mid-tempo pocket funk (classic "headhunters" vibe) 95–115, high-octane funk 120–140+. **Feel:** tight, straight 16th funk (never swung), hard backbeat, riff-driven; or the half-time `purdie-shuffle` hybrid pocket.
+- **Harmony:** static vamps or short loops (often 1–2 chords, e.g. a held m11), dominant-9/13/#9/sus chords, occasional modal interchange; harmony is subservient to groove, not the driver.
+- **Structure:** vamp with builds, breakdowns, and a hook riff; solo sections over the vamp; a shout-brass climax before fade-out (see the electric big-band blueprint in `jazz-funk-genre.md`).
+- **Instrumentation:** electric bass (slap/pop), Clavinet/Rhodes (wah/phaser), Minimoog/ARP/Prophet-5 synths, scratch/chank rhythm guitar, punchy drums + world percussion, phat brass or synth lead.
+- **Identity comes from:** the bass-and-drum riff lock and dynamic builds — not chord motion. Existing Tier-1 template: `jazz-composition/templates/fusion-vamp.json`. Deep profile + genre-differentiation matrix: `jazz-funk-genre.md`.

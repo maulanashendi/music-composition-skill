@@ -15,6 +15,7 @@ must match the `when_to_use` field inside the template file.
 | `fusion-vamp` | jazz-funk / fusion | riff-driven jazz-funk/fusion vamp, tight backbeat, builds and breakdowns, urgency->release arc, 96-124 BPM |
 | `classic-jazz-swing` | classic jazz / swing big band | big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM |
 | `bossa-nova-classic` | bossa nova | nylon guitar batida, straight 16ths (no swing) with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM |
+| `soul-jazz-organ-blues` | soul jazz | Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM |
 
 <!--
 Adding a template? Append one row above AND create templates/<id>.json per

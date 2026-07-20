@@ -241,6 +241,96 @@ with no swing at all). Map surdo to the `kick` role at reduced
 `base_velocity` (heavily muted, no low-end boom) and shaker to `chh`, per
 `../../midi-orchestration/references/midi-conversion.md`.
 
+## `soul-jazz-swing` profile
+
+The pocket for soul jazz (`vibes-mood/references/soul-jazz-genre.md` §8,
+§11) — a **bluesy, swung 8th grid**, looser and heavier than
+`classic-jazz-swing`'s precise big-band ride: the backbeat sits *behind*
+the grid (a "strutting" pocket) rather than tight on it, and the organ's
+bass pedal rings legato instead of the detached upright-bass articulation
+classic jazz uses. Tempo/PPQ examples below assume 100 BPM (mid-tempo
+cooker) at 960 PPQ (quarter note ≈ 600 ms, 1 tick ≈ 0.625 ms); the tick
+ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2).
+
+Reference layer: **ride cymbal swung 8ths**, looser swing ratio than
+`classic-jazz-swing` (use `swing` ≈ 0.60 in the drum grid, vs.
+`classic-jazz-swing`'s ~0.62-0.67 crispness and `neo-soul-core`'s 0.57).
+
+| Role | Offset (ticks) | Approx ms @ 100 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Ride (swung 8ths) | 0 to +5 | ~0 to +3.1 | Anchor — looser and heavier than a big-band ride, still the timekeeper. |
+| Snare / backbeat (thick, 2 & 4) | +6 to +14 | ~+3.8 to +8.8 | Sits *behind* the grid — this is the "strutting" pocket, the opposite of `classic-jazz-swing`'s tight −3..+3. |
+| Hi-hat, sloshy open accents (off-beat) | −2 to +6 | ~−1.3 to +3.8 | Wider gate than a closed chick (see gate table) — the "sloshy" character is as much about the open decay as the offset. |
+| Organ bass pedal / low drawbar (legato line) | −3 to +4 | ~−1.9 to +2.5 | Locked close to the kick, but rings — contrast with classic jazz's detached upright bass. |
+| Kick | 0 to +4 | ~0 to +2.5 | Present and felt, not feathered to near-silence like `classic-jazz-swing`'s big-band kick. |
+| Guitar comping (Wes-style thumb chords) | +4 to +10 | ~+2.5 to +6.3 | Laid slightly behind, like the snare — syncopated but unhurried. |
+| Horn section (call-and-response hits) | 0 to +6 | ~0 to +3.8 | Close to the grid — ensemble hits stay together even as the backbeat drags. |
+| Lead (organ/sax solo) | 0 to +8 | ~0 to +5 | Close to the grid with room to push expressively at solo peaks. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Organ bass pedal | ~0.85–1.0 | Legato, sustained — a ringing pedal tone, not a detached note. |
+| Guitar comping | ~0.40–0.60 | Short, bluesy chunks. |
+| Horns | ~0.75–0.95 | Mostly sustained; shorten only for deliberate accent hits. |
+
+**Ready-to-paste `drums.json` `timing` map** (looser/heavier than
+`classic-jazz-swing`'s near-zero kick/tight snare):
+
+```json
+"timing": { "kick": 0, "snare": 10, "rimshot": 10, "chh": 2 }
+```
+
+Set `swing: 0.60` in the grid.
+
+## `purdie-shuffle` profile
+
+The half-time funk-swing hybrid pocket, shared by soul jazz
+(`soul-jazz-genre.md` §1) and jazz-funk (`jazz-funk-genre.md` §1, §8) —
+Bernard Purdie's signature pattern. Unlike every other profile in this
+file, its identity comes from **two subdivision layers at once**: a
+straight-16th hi-hat timekeeper with a dense lattice of ghost-note snare
+hits articulating an underlying triplet feel beneath it
+(`advanced-microtiming.md` §4's "subdivision" and "primary swing carrier"
+distinction, applied literally to two simultaneous carriers). Tempo/PPQ
+examples below assume 96 BPM at 960 PPQ (quarter note ≈ 625 ms, 1 tick ≈
+0.65 ms); the tick ranges do not change with tempo.
+
+Reference layer: **hi-hat straight-16th grid** as the visible timekeeper;
+the snare ghost lattice sits on an independent triplet subdivision under
+it — do not force the ghosts onto the 16th grid or the "shuffle" character
+disappears.
+
+| Role | Offset (ticks) | Approx ms @ 96 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Hi-hat (straight 16th timekeeper) | 0 to +3 | ~0 to +2 | Anchor — stays visibly straight; it is the ghost lattice underneath that creates the shuffle, not the hi-hat itself. |
+| Snare, backbeat accent (half-time — primarily beat 3) | +2 to +8 | ~+1.3 to +5.2 | A half-time backbeat, not a 2-and-4 one — this is what makes it "half-time funk," not straight funk. |
+| Snare, ghost-note lattice (dense, between backbeats) | on a triplet subdivision, offset from the 16th grid rather than aligned to it | velocity < 35 | The defining texture — program these on the swung/triplet "and" positions produced by a high `swing` value (below), not on straight 16th slots. |
+| Kick (sparse, syncopated) | −4 to +4 | ~−2.6 to +2.6 | Mostly out of the way of the snare lattice; occasional pickup. |
+| Kick, pickup into a downbeat | −10 to −6 | ~−6.5 to −3.9 | Ahead of the grid, same anticipation logic as `neo-soul-core`'s bass pickups. |
+| Bass (electric, locked to kick syncopation) | −4 to +3 | ~−2.6 to +2 | Follows the kick's sparse syncopation rather than a steady walking/riff line. |
+| Comping keys/guitar | 0 to +6 | ~0 to +3.9 | Close to the grid; the shuffle character lives in the drums, not the comping. |
+
+**Gate:** snare ghosts are inherently short/grace-note-like (no separate
+gate value needed — they are struck and damped); bass ~0.55–0.75; lead/comp
+~0.80–0.95.
+
+**Ready-to-paste `drums.json` `timing` map**, with `swing` pushed high to
+approximate the triplet ghost lattice within a 16-step grid (the grid's
+swing parameter displaces "and" 16ths toward a triplet 2:1 ratio — see
+`../../midi-orchestration/references/midi-conversion.md`):
+
+```json
+"timing": { "kick": 0, "snare": 5, "rimshot": 5, "chh": 0 }
+```
+
+Set `swing: 0.66` (the highest swing value of any profile in this file —
+approximating a true triplet lattice) and program the ghost notes (`g` in
+the pattern grid) densely on the swung "and" positions, with the beat-3
+backbeat as the one loud accent.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
@@ -248,12 +338,14 @@ The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
 module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
 currently `neo-soul-core` (laid-back swung-16th), `fusion-tight` (on-the-grid
 16th funk), `classic-jazz-swing` (tight acoustic-ensemble triplet swing,
-per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"), and
+per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"),
 `bossa-nova-straight` (unswung 16th rhythm section, laid-back/rubato lead
-only) are defined here — rather than invent new per-role tick numbers ad
-hoc. A genuinely different pocket is a candidate for a *new* named profile
-added to this file, not a one-off number set buried in a single
-composition's notes. Adding
+only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
+and `purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note
+lattice under a straight-16th hi-hat) are defined here — rather than invent
+new per-role tick numbers ad hoc. A genuinely different pocket is a
+candidate for a *new* named profile added to this file, not a one-off
+number set buried in a single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.
