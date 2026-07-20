@@ -331,6 +331,55 @@ approximating a true triplet lattice) and program the ghost notes (`g` in
 the pattern grid) densely on the swung "and" positions, with the beat-3
 backbeat as the one loud accent.
 
+## `dilla-boom-bap` profile
+
+The pocket for hip-hop jazz/jazz rap (`vibes-mood/references/hiphop-jazz-genre.md`
+§2, §9) — a humanized 16th grid whose identity is a deliberate **push-pull**:
+the kick sits *ahead* of the grid while the snare drags well *behind* it.
+This is the one number in the table below that makes this profile genuinely
+different from `neo-soul-core`, not a restatement of it — `neo-soul-core`'s
+kick is an anchor near 0; here the kick is pushed negative. The source brief
+for this profile states its offsets directly in milliseconds (not derived
+from a tick table), so both are given; tempo/PPQ examples below assume 86
+BPM (the sweet-spot tempo) at 960 PPQ (quarter note ≈ 697.7 ms, 1 tick ≈
+0.727 ms) — recompute ms from the actual tempo using
+`advanced-microtiming.md` §2, but the **ms values themselves are the
+canonical numbers for this profile** (per the source brief); the tick
+column is a derived convenience at 86 BPM, not the authority.
+
+Reference layer: **16th grid**, swung 54%-62% (`swing` field), with the
+kick/snare push-pull layered on top of that swing.
+
+| Role | Offset (ms, canonical) | Approx ticks @ 86 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | −5 to −10 ms | ≈ −7 to −14 | Pushed *ahead* of the grid — the "eager"/pushing half of the push-pull; unlike every other profile in this file, this anchor role is intentionally negative. |
+| Snare | +10 to +25 ms | ≈ +14 to +34 | Dragged well behind the grid — the "laid-back"/Dilla-drag half of the push-pull. |
+| Hi-hat | swing 54%–62% (`swing` field, not a per-hit ms offset) | — | Apply as the grid's `swing` parameter, same mechanism as every other profile here — this removes the "digital drum machine" stiffness. |
+| Rhodes / keys (harmony loop) | +5 to +10 ms | ≈ +7 to +14 | Behind the grid, but less than the snare — flows relaxed on top of the drums without fighting the pocket. |
+| Vocal (rap) / lead horn | +15 to +30 ms | ≈ +21 to +41 | The most laid-back voice in the mix — a soloist/rapper who sounds unhurried, never rushing the beat. |
+| Sub-bass | locked to kick | ≈ same as kick | Follows the kick's pushed-ahead placement so the low end stays unified, not split between two competing anchors. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Kick | ~0.15–0.30 | Short, punchy — most of the perceived "weight" comes from the sub layer, not sustain. |
+| Snare | ~0.20–0.35 | Short crack/snap; layered rimshot/handclap (per the genre file §3) reinforces the transient rather than the tail. |
+| Rhodes/piano loop | ~0.75–0.95 | Sustained — the loop rings, especially when sample-chopped from a held chord. |
+| Sub-bass | ~0.70–0.90 | Long enough to feel felt under the loop without smearing into the next kick. |
+
+**Ready-to-paste `drums.json` `timing` map** (ms values used directly, since
+they are this profile's canonical numbers):
+
+```json
+"timing": { "kick": -7, "snare": 18, "rimshot": 18, "chh": 0 }
+```
+
+Set `swing` between **0.54 and 0.62** — the low end of this range is looser
+than `neo-soul-core`'s 0.57 default, the high end approaches
+`classic-jazz-swing`'s crispness; pick within the range based on how
+triplet-y vs. straight-leaning the brief wants the hi-hat to feel.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
@@ -341,11 +390,12 @@ currently `neo-soul-core` (laid-back swung-16th), `fusion-tight` (on-the-grid
 per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"),
 `bossa-nova-straight` (unswung 16th rhythm section, laid-back/rubato lead
 only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
-and `purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note
-lattice under a straight-16th hi-hat) are defined here — rather than invent
-new per-role tick numbers ad hoc. A genuinely different pocket is a
-candidate for a *new* named profile added to this file, not a one-off
-number set buried in a single composition's notes. Adding
+`purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note lattice
+under a straight-16th hi-hat), and `dilla-boom-bap` (humanized 16th grid
+with a pushed-ahead kick and a dragged-behind snare) are defined here —
+rather than invent new per-role tick numbers ad hoc. A genuinely different
+pocket is a candidate for a *new* named profile added to this file, not a
+one-off number set buried in a single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.

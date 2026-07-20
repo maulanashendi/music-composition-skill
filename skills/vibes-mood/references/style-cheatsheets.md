@@ -10,6 +10,14 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Instrumentation:** Rhodes/electric piano, soft upright or synth bass, brushed or sampled drums with dusty character, optional sax/guitar lead, warm pad.
 - **Identity comes from:** groove pocket, texture, and space — not chord density.
 
+## Hip-hop jazz / jazz rap
+
+- **Tempo:** 75–95 BPM, sweet spot 84–88 BPM. **Feel:** humanized/unquantized 16th grid with a deliberate **push-pull** — snare dragged +10 to +25 ms behind, kick pushed −5 to −10 ms ahead, 54–62% hi-hat swing. This push-pull is the genre's single most identifying trait — see the differentiation table in `hiphop-jazz-genre.md` §9 before defaulting to `neo-soul-core` or plain lofi.
+- **Harmony:** hypnotic 2–4 bar loop, not a developing progression — minor 9th/11th (night/urban) or major 7th/9th (warm/nostalgic) loops, rootless voicings (3rd/7th shells) so the bass alone holds the root.
+- **Structure:** filtered intro -> verse (drums+bass enter, rap flow, periodic drum drops) -> hook (muted horn riff + vocal chops) -> verse 2 -> breakdown (drums out) -> filtered-closed outro.
+- **Instrumentation:** heavy kick + sub-bass, gritty layered snare, dark/filtered hi-hats, Rhodes/piano loop (often sample-chopped), muted trumpet or smoky tenor sax lead, vinyl crackle/tape hiss/vocal chops as texture.
+- **Identity comes from:** the push-pull micro-timing and the sample-chop/hardware-emulation aesthetic — not the harmony, which overlaps heavily with lofi jazz and neo-soul. Deep profile + genre-differentiation table: `hiphop-jazz-genre.md`.
+
 ## Jazzhop / neo-soul
 
 - **Tempo:** 80–100 BPM. **Feel:** heavy swung-16th, deep pocket, syncopated.

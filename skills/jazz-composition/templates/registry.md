@@ -16,6 +16,7 @@ must match the `when_to_use` field inside the template file.
 | `classic-jazz-swing` | classic jazz / swing big band | big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM |
 | `bossa-nova-classic` | bossa nova | nylon guitar batida, straight 16ths (no swing) with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM |
 | `soul-jazz-organ-blues` | soul jazz | Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM |
+| `hiphop-jazz-boombap` | hip-hop jazz / jazz rap | golden-era boom-bap / jazz rap, sample-chopped Rhodes loop, Dilla push-pull timing, muted horn hook, 75-95 BPM |
 
 <!--
 Adding a template? Append one row above AND create templates/<id>.json per
