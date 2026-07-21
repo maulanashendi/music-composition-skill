@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "meta": {"title": "Dialogue Bridge", "vibe": "neo-soul", "key": "C major", "seed": 4041},
+  "sections": [
+    {
+      "name": "intro", "bars": 4, "tempo": 84, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.35, "end": 0.55},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 1, "symbol": "G13(b9)"},
+        {"bar": 3, "beat": 1, "symbol": "Cmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Cmaj7"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums"}
+      }
+    },
+    {
+      "name": "building", "bars": 4, "tempo": 84, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.55, "end": 0.8},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 1, "symbol": "G13(b9)"},
+        {"bar": 3, "beat": 1, "symbol": "Cmaj7"},
+        {"bar": 4, "beat": 1, "symbol": "Cmaj7"}
+      ],
+      "voices": {
+        "melody": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "D5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 2, "pitch": "F5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 3, "pitch": "A5", "dur": 1, "artic": "accent"},
+          {"bar": 2, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 2, "pitch": "G5", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 3, "pitch": "B5", "dur": 1, "artic": "accent"},
+          {"bar": 3, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 3, "beat": 2, "pitch": "G5", "dur": 1, "artic": "tenuto"},
+          {"bar": 4, "beat": 1, "pitch": "C5", "dur": 4, "artic": "legato"}
+        ]},
+        "response": {"role": "guitar", "instrument": "acoustic-guitar", "notes": [
+          {"bar": 1, "beat": 4, "pitch": "A4", "dur": 1, "artic": "staccato"},
+          {"bar": 2, "beat": 4, "pitch": "B4", "dur": 0.5, "artic": "ghost"},
+          {"bar": 2, "beat": 4.5, "pitch": "G4", "dur": 0.5, "artic": "staccato"},
+          {"bar": 3, "beat": 3, "pitch": "G4", "dur": 0.5, "artic": "staccato"},
+          {"bar": 3, "beat": 3.5, "pitch": "E4", "dur": 0.5, "artic": "staccato"}
+        ]},
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 5, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 4, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "drums": {"role": "drums"}
+      }
+    }
+  ]
+}

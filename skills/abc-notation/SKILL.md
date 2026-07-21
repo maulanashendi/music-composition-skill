@@ -3,13 +3,20 @@ name: abc-notation
 description: Encode a finalized musical idea into valid, parseable ABC notation and validate it before it goes to MIDI. Use whenever someone has a locked composition idea — a composition-plan.json, a chord progression, a bassline, or a melody they've decided on — and wants it written as ABC, or when AI-generated ABC keeps failing to parse (bar-count mismatches, unclosed ties/slurs, wrong note lengths) and needs fixing or validating. Trigger on "write this as ABC," "turn this progression into ABC," "my ABC won't parse into MIDI," "validate this ABC," or handing over a composition plan to notate. This skill does the encoding and validation; it does not brainstorm musical ideas (that's jazz-composition) or render MIDI.
 ---
 
-> **LEGACY (2026-07-16).** Jalur output default paket ini kini **JSON** —
-> gunakan `../json-composition/SKILL.md`. Skill ABC ini dipertahankan hanya
-> untuk backward-compat (engine masih menerima `POST /api/render {abc,drums?}`),
-> BUKAN untuk komposisi baru. Jangan pakai untuk pekerjaan baru kecuali diminta
-> eksplisit menargetkan jalur ABC.
+> **LEGACY (2026-07-16, path diperbarui 2026-07-18).** Jalur output default
+> paket ini kini `plan.json` — baca `../jazz-composing/SKILL.md`.
+> `../json-composition/` (default sebelumnya) sudah diarsipkan ke
+> `archive/skills/json-composition/`, digantikan `plan.json` + doktrin
+> baru. Skill ABC ini dipertahankan hanya untuk backward-compat (engine
+> masih menerima `POST /api/render {abc,drums?}`), BUKAN untuk komposisi
+> baru. Jangan pakai untuk pekerjaan baru kecuali diminta eksplisit
+> menargetkan jalur ABC.
 
 # ABC Notation Writer
+
+> Jalur ini tetap legacy (lihat banner yang sudah ada). Jalur default kini
+> plan.json — baca `../jazz-composing/SKILL.md` dan
+> `../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`.
 
 Encode a **decided** musical idea into ABC notation that parses cleanly on the first or second try. The value of this skill is reliability: AI-generated ABC often looks fine but fails strict parsers (music21) on subtle structural errors. This skill writes a constrained, portable ABC subset and validates it before hand-off.
 
@@ -71,7 +78,8 @@ Output the validated `.abc` file, note the validator result, and flag anything h
 - `references/abc-syntax.md` — full ABC syntax for lead sheets and compact scores: headers, notes/octaves, durations, chord symbols, ties/slurs, repeats, tuplets, multi-voice. The syntax authority.
 - `references/common-failures.md` — the specific ways AI-generated ABC breaks music21 and how to fix each; read before writing.
 - `references/drums-and-abc.md` — why drums stay out of ABC and how to hand them off as a step-grid. Drums are **always** a step-grid JSON in this package, never an ABC `%%MIDI drummap` voice — that split is load-bearing, not a style choice.
-- For exact register/attack/voice-leading precision (which pitches, not just which chord symbol), that's a production-stage decision made in `midi-orchestration`'s `references/exact-voicing.md` — this skill notates what's already decided, it doesn't decide voicings.
+- For exact register/attack/voice-leading precision (which pitches, not just which chord symbol), that's a production-stage decision, formerly documented in `midi-orchestration`'s `references/exact-voicing.md` (now archived and renamed — `archive/skills/harmony/references/voicing-systems.md`) and migrated to `../jazz-composing/references/harmony.md` — this skill notates what's already decided, it doesn't decide voicings.
 - `scripts/validate_abc.py` — structural + duration validator. Run on every file before hand-off.
 - `scripts/test_validate_abc.py` — the validator's own test suite (for maintaining the validator, not per-composition use).
+- `scripts/abc_to_midi.py`, `scripts/grid_to_midi.py` — converters ABC/drum-grid → MIDI (moved from the now-archived `midi-orchestration`; still used by this legacy path).
 - `assets/lead-sheet-template.abc` — a minimal valid starting point to copy.

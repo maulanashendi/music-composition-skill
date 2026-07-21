@@ -1,3 +1,8 @@
 .venv-eval/
 __pycache__/
 runs/*/render.wav
+runs/*/audition/*.wav
+runs/*/audition/*.mid
+runs/*/release/*.wav
+runs/*/release/*.mid
+.worktrees/
