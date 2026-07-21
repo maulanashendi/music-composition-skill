@@ -1,0 +1,81 @@
+{
+  "id": "hiphop-jazz-boombap",
+  "when_to_use": "golden-era boom-bap / jazz rap, sample-chopped Rhodes loop, Dilla push-pull timing, muted horn hook, 75-95 BPM",
+  "style": "hip-hop jazz / jazz rap",
+  "defaults": {
+    "key_options": ["D minor", "F major", "A minor"],
+    "tempo_range": [84, 88],
+    "meter": "4/4",
+    "feel": "humanized 16th grid, kick pushed ahead, snare dragged behind, 54-62% hi-hat swing"
+  },
+  "groove_profile": "dilla-boom-bap",
+  "harmony_palette": {
+    "diatonic_core": ["Dm9", "G13", "Cmaj9", "Fmaj9", "Em7", "Am9"],
+    "signature_moves": [
+      "golden-era loop: Dm9 -> G13 -> Cmaj9 -> A7(b9,b13)",
+      "chill descending loop: Fmaj9 -> Em7 -> Dm9 -> Cmaj9",
+      "dark urban minor: Am9 -> D9 -> Fmaj7 -> E7alt",
+      "rootless shells: voice only 3rd+7th+extensions, never the root (see hiphop-jazz-genre.md SS4) - bass alone holds root"
+    ],
+    "cadence_options": [
+      "loop turnaround: land on an altered dominant (A7b9b13 or E7alt) that spins back to bar 1",
+      "no functional final cadence needed - the loop simply drops out at the outro (see arrangement_defaults)"
+    ],
+    "avoid": [
+      "voicing the root on Rhodes/piano while bass also plays it - creates low-end mud (see rootless voicings, hiphop-jazz-genre.md SS4)",
+      "quantized/on-grid drums - this genre's identity is the push-pull, not precision (see groove_profile)"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "muted-horn-riff",
+      "rhythm": "a short 1-2 bar phrase landing at the end of a 4-bar loop, not a continuous line",
+      "contour": "a smoky, unhurried phrase (Harmon-muted trumpet or tenor sax) resolving into the next loop's downbeat",
+      "first_appears": "Hook/Chorus, answering the Rhodes loop"
+    },
+    {
+      "name": "vocal-chop-accent",
+      "rhythm": "a short sampled vocal landing used as a rhythmic accent, not a melodic statement",
+      "contour": "a single word/syllable placed on an off-beat or loop turnaround",
+      "first_appears": "Hook/Chorus, layered under the horn riff"
+    }
+  ],
+  "melody_phrasing": {
+    "intro": {
+      "note_lengths": "sparse, filtered - the loop is muffled (low-pass engaged), no lead yet",
+      "contour": "n/a until the filter opens",
+      "placement": "n/a"
+    },
+    "verse": {
+      "note_lengths": "the rap flow or lead line sits back, unhurried, few sustained notes",
+      "contour": "conversational, rhythm-forward rather than pitch-forward",
+      "placement": "laid-back per the dilla-boom-bap vocal/lead offset - the most dragged voice in the mix"
+    },
+    "hook": {
+      "note_lengths": "short muted-horn phrase (1-2 bar) plus vocal-chop accents",
+      "contour": "smoky, understated - never a long virtuosic line",
+      "placement": "laid-back, landing at the end of the 4-bar loop"
+    },
+    "breakdown": {
+      "note_lengths": "sparse - drums drop out, only the loop and a soloist (flute/sax) remain",
+      "contour": "open space, a contrast moment before the hook returns",
+      "placement": "rubato-adjacent, loosest placement in the arrangement"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "standard boom-bap 1-bar pattern (see hiphop-jazz-genre.md SS6): kick on 1 and the 'and' of 2/3, snare on 3 with a ghost note, hi-hat steady 8ths",
+    "mid_energy": "hi-hat fills to steady 16ths, ghost snares thicken, occasional kick pickup",
+    "high_energy": "denser ghost-note snare pattern, hi-hat opens on accents, still never quantized - push-pull stays audible even at the densest point"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["rhodes-loop", "drums", "sub-bass", "vocal-lead", "muted-horn"],
+    "layout_rules": "intro states the filtered Rhodes loop alone with vinyl crackle/ambience; filter opens and drums+sub-bass enter together for Verse 1; drums drop briefly every 8 bars for a breath; hook brings in the muted-horn riff and vocal chops over the same loop; verse 2 swaps sub-bass for a sampled-upright character; bridge strips to loop+sub+solo only; outro re-engages the low-pass filter and fades under rising vinyl crackle"
+  },
+  "anti_boredom_rules": [
+    "drums must never sound quantized - the push-pull (kick ahead, snare behind) must be audible at every energy level",
+    "the harmonic loop stays 2-4 bars and hypnotic - do not develop it into a longer progression; vary texture/filtering/layering instead (see hiphop-jazz-genre.md SS8, SS10)",
+    "at least one full drum drop (breakdown) must occur before the final hook/outro",
+    "the muted-horn-riff hook must recur varied by register or response phrase, never copy-pasted identically",
+    "keep the root off the harmony instrument at all times - rootless voicings only, bass alone holds root"
+  ]
+}

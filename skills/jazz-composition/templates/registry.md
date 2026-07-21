@@ -13,6 +13,13 @@ must match the `when_to_use` field inside the template file.
 | `neo-soul-midnight` | neo-soul | late-night, intimate, a doubt->acceptance arc, 68-80 BPM, Rhodes-led |
 | `lofi-jazzhop` | lofi jazz / jazzhop | loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket |
 | `fusion-vamp` | jazz-funk / fusion | riff-driven jazz-funk/fusion vamp, tight backbeat, builds and breakdowns, urgency->release arc, 96-124 BPM |
+| `classic-jazz-swing` | classic jazz / swing big band | big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM |
+| `bossa-nova-classic` | bossa nova | nylon guitar batida, straight 16ths (no swing) with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM |
+| `soul-jazz-organ-blues` | soul jazz | Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM |
+| `hiphop-jazz-boombap` | hip-hop jazz / jazz rap | golden-era boom-bap / jazz rap, sample-chopped Rhodes loop, Dilla push-pull timing, muted horn hook, 75-95 BPM |
+| `smooth-jazz-radio` | smooth jazz | radio-friendly smooth jazz, vocal-centric sax/guitar lead, smooth slash chord, full pop-verse-chorus form, 65-115 BPM |
+| `noir-jazz-scene` | noir jazz / dark jazz | cinematic noir/dark jazz, muted trumpet over dark piano, extreme rubato drag, ppp-pp dynamics, scene-form arc, 35-65 BPM |
+| `cool-modal-quintet` | cool & modal jazz | modal jazz over a static Dorian vamp or a pianoless West Coast cool quartet, brushed floating swing, statement-rest-development melody, 55-175 BPM |
 
 <!--
 Adding a template? Append one row above AND create templates/<id>.json per
