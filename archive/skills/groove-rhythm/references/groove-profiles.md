@@ -94,16 +94,455 @@ change with tempo.
   `neo-soul-core` (or names a deviation and why), the engine renders it the
   same way every time.
 
+## `fusion-tight` profile
+
+The opposite pocket to `neo-soul-core`: a **tight 16th funk** feel where the
+backbeat sits *on* the grid, not behind it, and the whole band locks hard to a
+riff. Use for jazz-funk / fusion vamps (`style-cheatsheets.md` "Jazz-funk /
+fusion") where identity comes from the bass-and-drum riff lock, not from a
+laid-back drag. Tempo/PPQ examples below assume 108 BPM at 960 PPQ; the tick
+ranges do not change with tempo (recompute ms via `advanced-microtiming.md` §2).
+
+Reference layer: **hi-hat/16th grid**, with the kick and snare both anchored
+essentially on the grid — the "tight" character is *small* offsets everywhere,
+not a laid-back backbeat.
+
+| Role | Offset (ticks) | Approx ms @ 108 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | 0 to +3 | ~0 to +1.7 | Anchor — dead on the grid; drives the riff. |
+| Snare / backbeat | 0 to +6 | ~0 to +3.5 | On the grid, *not* behind it — this is what makes it "tight," the opposite of `neo-soul-core`'s +18..+24. |
+| Bass, riff notes (locked to kick) | −2 to +4 | ~−1.2 to +2.3 | Sits right on/around the kick — the low-end lock is the whole point. |
+| Bass, pickups (approach into a downbeat) | −8 to −3 | ~−4.6 to −1.7 | A little ahead — the push into the "1," smaller than neo-soul's pickup drag. |
+| Keys / clav, stabs | 0 to +5 | ~0 to +2.9 | Close to the grid; punchy comping locks with the backbeat rather than dragging. |
+| Lead, target/structural notes | 0 to +6 | ~0 to +3.5 | On the grid — clarity and drive over lay-back. |
+| Lead, pickups | earlier than the target's offset | — | Phrase-level push (`advanced-microtiming.md` §4), not a fixed tick. |
+
+**Hi-hat**, tiered: quarter/eighth accents strong and on the grid; in-between
+16ths ghost-level (velocity below 45), driving but not cluttered.
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Bass | ~0.55–0.75 | Shorter/punchier than neo-soul — funk bass is detached, leaves gaps for the kick. |
+| Keys / clav | ~0.40–0.65 | Short stabs; the tightness is in the silence between hits. |
+| Lead | ~0.80–0.95 | Still mostly sustained; use the low end for staccato riff-doubling. |
+
+**Ready-to-paste `drums.json` `timing` map** (single per-role ms value; kick as
+anchor at 0, snare on the grid, hi-hat a hair ahead for drive):
+
+```json
+"timing": { "kick": 0, "snare": 3, "rimshot": 3, "chh": -2 }
+```
+
+## `classic-jazz-swing` profile
+
+The acoustic-ensemble pocket for classic jazz (`vibes-mood/references/classic-jazz-genre.md`
+§7) — a straight-ahead 4-beat swing where the **ride cymbal's swung 8ths**
+are the reference layer, not a 16th grid, and attacks sit close to that grid
+rather than laid back. This is this package's applied case of
+`advanced-microtiming.md` §9 "Tight acoustic or ensemble profile": major
+attacks near the grid, articulation (mutes, growls, glissandi — see the
+genre file §7) carries the feel more than timing offset does. Tempo/PPQ
+examples below assume 132 BPM (medium swing) at 960 PPQ (quarter note ≈
+454.5 ms, 1 tick ≈ 0.47 ms); the tick ranges do not change with tempo
+(recompute ms via `advanced-microtiming.md` §2).
+
+Reference layer: **ride cymbal swung-8th pattern** (`1, 2-and, 3, 4-and`),
+triplet-subdivided; the walking bass and comping lock tightly to it rather
+than dragging behind.
+
+| Role | Offset (ticks) | Approx ms @ 132 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Ride (swung 8th pattern) | 0 to +4 | ~0 to +1.9 | Anchor — defines the swing subdivision everything else locks to. |
+| Kick (feathering, all 4 beats) | −2 to +2 | ~−0.9 to +0.9 | Barely audible — a felt pulse, not a hit; stays essentially on the grid. |
+| Hi-hat (chick on 2 & 4) | −3 to +3 | ~−1.4 to +1.4 | Tight, near the grid — this era does not lay the backbeat back. |
+| Bass, walking quarter notes | −6 to 0 | ~−2.8 to 0 | Slightly ahead of the grid — upright bass characteristically pushes the band forward, the opposite of `neo-soul-core`'s drag. |
+| Bass, chromatic approach tone | −10 to −4 | ~−4.7 to −1.9 | The anticipation into the next chord's downbeat. |
+| Piano stride (LH bass note, beats 1 & 3) | −4 to +2 | ~−1.9 to +0.9 | Locked close to the kick/bass. |
+| Guitar/piano comping chunk (Freddie Green, every beat) | −2 to +4 | ~−0.9 to +1.9 | Tight and percussive — the short gate (below) does more work than the offset. |
+| Horn section ensemble hits (shout-chorus stabs, block chords) | −2 to +5 | ~−0.9 to +2.4 | Section unity matters more than individual offset — tight as one voice. |
+| Lead, structural/target notes | 0 to +6 | ~0 to +2.8 | Close to the grid, articulation (fall-off, doit, shake) carries expression. |
+| Lead, pickups | earlier than the target's offset | — | Phrase-level push, not a fixed tick (`advanced-microtiming.md` §4). |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Bass | ~0.55–0.75 | Detached "boom" articulation — short of full sustain keeps walking lines clear. |
+| Piano/guitar comping chunk | ~0.25–0.45 | Very short and percussive — the Freddie Green/stride-chord "chunk" character lives in the silence between hits. |
+| Piano stride bass note | ~0.65–0.85 | Longer than the chunk — the left-hand bass note rings more than the chord it alternates with. |
+| Horns, legato phrasing | ~0.80–0.95 | Solo lines and soli sections — sustained. |
+| Horns, shout-chorus/staccato hits | ~0.45–0.65 | Ensemble punches — short and accented, not sustained. |
+
+**Ready-to-paste `drums.json` `timing` map** (kick near-silent anchor, hi-hat
+chick tight on the grid, snare/rimshot used for backbeat accents rather than
+a laid-back feel):
+
+```json
+"timing": { "kick": 0, "snare": 2, "rimshot": 2, "chh": -1 }
+```
+
+Set the grid's `swing` field high (~0.62–0.67) relative to
+`neo-soul-core`/`fusion-tight` — classic jazz's triplet swing is more
+pronounced than a lightly-swung 16th feel. The ride pattern itself is not
+one of the four standard drum-grid roles (`kick`/`snare`/`rimshot`/`chh`);
+program it as `ride` hits on the swung-8th steps per
+`../../midi-orchestration/references/midi-conversion.md`, with `swing`
+driving the "and" displacement.
+
+## `bossa-nova-straight` profile
+
+The pocket for bossa nova (`vibes-mood/references/bossa-nova-genre.md` §2,
+§8) — a **straight, unswung 16th grid** carried by the guitar batida,
+shaker, and cross-stick, with only the lead/vocal laid back or rubato on
+top. This is the genre's defining contrast and the thing most likely to get
+flattened into another profile by mistake: do not swing the rhythm section
+(that drifts toward `classic-jazz-swing`), and do not drag the *whole*
+ensemble behind the grid (that drifts toward `neo-soul-core`/lofi — see the
+differentiation table in the genre file §8). Tempo/PPQ examples below assume
+120 BPM (classic bossa) at 960 PPQ (quarter note ≈ 500 ms, 1 tick ≈ 0.52 ms);
+the tick ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2). `swing` should be set to **0.5** (no swing) —
+lower than every other named profile in this file.
+
+Reference layer: **straight 16th grid**, defined jointly by the guitar
+batida, shaker, and cross-stick — all three stay tight to it.
+
+| Role | Offset (ticks) | Approx ms @ 120 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Guitar batida (thumb bass note & finger chord) | 0 to +3 | ~0 to +1.6 | Anchor — dead straight, defines the grid other rhythm-section roles lock to. |
+| Shaker (constant 16th pulse) | 0 to +2 | ~0 to +1 | Tight to the grid — the high-frequency pulse that makes "straight" audible. |
+| Cross-stick (echoes the batida on the rim) | 0 to +3 | ~0 to +1.6 | Locked to the guitar's fingerpicking pattern, not offset from it. |
+| Surdo/kick (muted, beat 1 soft / beat 3 fuller) | −2 to +3 | ~−1 to +1.6 | Near-silent thud, no boom — offset is negligible, the character is in the mute/velocity, not timing. |
+| Bass, downbeat arrivals (beat 1: root) | −2 to +3 | ~−1 to +1.6 | On the grid with the rest of the rhythm section. |
+| Bass, anticipation (beat 3 -> 5th, pulled ahead into the next bar) | written a subdivision early | — | This is a **notated displacement**, not a microtiming offset — write the anticipated note itself an 1/8-1/16 early on the grid (`advanced-microtiming.md` §1's notated-vs-performance distinction), then apply the small ±tick range above to that written position. Do not simulate it with a large negative tick offset on the written beat. |
+| Lead/vocal, structural/target notes | +8 to +20 | ~+4 to +10 | Laid-back — the genre's one deliberately-behind-the-grid voice. |
+| Lead/vocal, rubato phrases | not tick-bound | — | May depart from the grid entirely at phrase level; the rhythm section does not follow it (`advanced-microtiming.md` §4). |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Guitar batida | ~0.35–0.55 | Short, percussive fingerpicked chunks — the "click" of nail-on-string matters as much as pitch. |
+| Bass | ~0.45–0.65 | Short pizzicato decay, never sustained. |
+| Lead/vocal, legato phrasing | ~0.85–0.98 | Sustained, breathy — contrasts with the clipped rhythm section underneath it. |
+
+**Ready-to-paste `drums.json` `timing` map** (all roles near zero — "straight"
+is the point; character comes from mute/velocity, not offset):
+
+```json
+"timing": { "kick": 0, "snare": 0, "rimshot": 1, "chh": 0 }
+```
+
+Set `swing: 0.5` in the grid (contrast with `neo-soul-core`'s 0.57 and
+`classic-jazz-swing`'s ~0.62–0.67 — bossa is the one profile in this file
+with no swing at all). Map surdo to the `kick` role at reduced
+`base_velocity` (heavily muted, no low-end boom) and shaker to `chh`, per
+`../../midi-orchestration/references/midi-conversion.md`.
+
+## `soul-jazz-swing` profile
+
+The pocket for soul jazz (`vibes-mood/references/soul-jazz-genre.md` §8,
+§11) — a **bluesy, swung 8th grid**, looser and heavier than
+`classic-jazz-swing`'s precise big-band ride: the backbeat sits *behind*
+the grid (a "strutting" pocket) rather than tight on it, and the organ's
+bass pedal rings legato instead of the detached upright-bass articulation
+classic jazz uses. Tempo/PPQ examples below assume 100 BPM (mid-tempo
+cooker) at 960 PPQ (quarter note ≈ 600 ms, 1 tick ≈ 0.625 ms); the tick
+ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2).
+
+Reference layer: **ride cymbal swung 8ths**, looser swing ratio than
+`classic-jazz-swing` (use `swing` ≈ 0.60 in the drum grid, vs.
+`classic-jazz-swing`'s ~0.62-0.67 crispness and `neo-soul-core`'s 0.57).
+
+| Role | Offset (ticks) | Approx ms @ 100 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Ride (swung 8ths) | 0 to +5 | ~0 to +3.1 | Anchor — looser and heavier than a big-band ride, still the timekeeper. |
+| Snare / backbeat (thick, 2 & 4) | +6 to +14 | ~+3.8 to +8.8 | Sits *behind* the grid — this is the "strutting" pocket, the opposite of `classic-jazz-swing`'s tight −3..+3. |
+| Hi-hat, sloshy open accents (off-beat) | −2 to +6 | ~−1.3 to +3.8 | Wider gate than a closed chick (see gate table) — the "sloshy" character is as much about the open decay as the offset. |
+| Organ bass pedal / low drawbar (legato line) | −3 to +4 | ~−1.9 to +2.5 | Locked close to the kick, but rings — contrast with classic jazz's detached upright bass. |
+| Kick | 0 to +4 | ~0 to +2.5 | Present and felt, not feathered to near-silence like `classic-jazz-swing`'s big-band kick. |
+| Guitar comping (Wes-style thumb chords) | +4 to +10 | ~+2.5 to +6.3 | Laid slightly behind, like the snare — syncopated but unhurried. |
+| Horn section (call-and-response hits) | 0 to +6 | ~0 to +3.8 | Close to the grid — ensemble hits stay together even as the backbeat drags. |
+| Lead (organ/sax solo) | 0 to +8 | ~0 to +5 | Close to the grid with room to push expressively at solo peaks. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Organ bass pedal | ~0.85–1.0 | Legato, sustained — a ringing pedal tone, not a detached note. |
+| Guitar comping | ~0.40–0.60 | Short, bluesy chunks. |
+| Horns | ~0.75–0.95 | Mostly sustained; shorten only for deliberate accent hits. |
+
+**Ready-to-paste `drums.json` `timing` map** (looser/heavier than
+`classic-jazz-swing`'s near-zero kick/tight snare):
+
+```json
+"timing": { "kick": 0, "snare": 10, "rimshot": 10, "chh": 2 }
+```
+
+Set `swing: 0.60` in the grid.
+
+## `purdie-shuffle` profile
+
+The half-time funk-swing hybrid pocket, shared by soul jazz
+(`soul-jazz-genre.md` §1) and jazz-funk (`jazz-funk-genre.md` §1, §8) —
+Bernard Purdie's signature pattern. Unlike every other profile in this
+file, its identity comes from **two subdivision layers at once**: a
+straight-16th hi-hat timekeeper with a dense lattice of ghost-note snare
+hits articulating an underlying triplet feel beneath it
+(`advanced-microtiming.md` §4's "subdivision" and "primary swing carrier"
+distinction, applied literally to two simultaneous carriers). Tempo/PPQ
+examples below assume 96 BPM at 960 PPQ (quarter note ≈ 625 ms, 1 tick ≈
+0.65 ms); the tick ranges do not change with tempo.
+
+Reference layer: **hi-hat straight-16th grid** as the visible timekeeper;
+the snare ghost lattice sits on an independent triplet subdivision under
+it — do not force the ghosts onto the 16th grid or the "shuffle" character
+disappears.
+
+| Role | Offset (ticks) | Approx ms @ 96 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Hi-hat (straight 16th timekeeper) | 0 to +3 | ~0 to +2 | Anchor — stays visibly straight; it is the ghost lattice underneath that creates the shuffle, not the hi-hat itself. |
+| Snare, backbeat accent (half-time — primarily beat 3) | +2 to +8 | ~+1.3 to +5.2 | A half-time backbeat, not a 2-and-4 one — this is what makes it "half-time funk," not straight funk. |
+| Snare, ghost-note lattice (dense, between backbeats) | on a triplet subdivision, offset from the 16th grid rather than aligned to it | velocity < 35 | The defining texture — program these on the swung/triplet "and" positions produced by a high `swing` value (below), not on straight 16th slots. |
+| Kick (sparse, syncopated) | −4 to +4 | ~−2.6 to +2.6 | Mostly out of the way of the snare lattice; occasional pickup. |
+| Kick, pickup into a downbeat | −10 to −6 | ~−6.5 to −3.9 | Ahead of the grid, same anticipation logic as `neo-soul-core`'s bass pickups. |
+| Bass (electric, locked to kick syncopation) | −4 to +3 | ~−2.6 to +2 | Follows the kick's sparse syncopation rather than a steady walking/riff line. |
+| Comping keys/guitar | 0 to +6 | ~0 to +3.9 | Close to the grid; the shuffle character lives in the drums, not the comping. |
+
+**Gate:** snare ghosts are inherently short/grace-note-like (no separate
+gate value needed — they are struck and damped); bass ~0.55–0.75; lead/comp
+~0.80–0.95.
+
+**Ready-to-paste `drums.json` `timing` map**, with `swing` pushed high to
+approximate the triplet ghost lattice within a 16-step grid (the grid's
+swing parameter displaces "and" 16ths toward a triplet 2:1 ratio — see
+`../../midi-orchestration/references/midi-conversion.md`):
+
+```json
+"timing": { "kick": 0, "snare": 5, "rimshot": 5, "chh": 0 }
+```
+
+Set `swing: 0.66` (the highest swing value of any profile in this file —
+approximating a true triplet lattice) and program the ghost notes (`g` in
+the pattern grid) densely on the swung "and" positions, with the beat-3
+backbeat as the one loud accent.
+
+## `dilla-boom-bap` profile
+
+The pocket for hip-hop jazz/jazz rap (`vibes-mood/references/hiphop-jazz-genre.md`
+§2, §9) — a humanized 16th grid whose identity is a deliberate **push-pull**:
+the kick sits *ahead* of the grid while the snare drags well *behind* it.
+This is the one number in the table below that makes this profile genuinely
+different from `neo-soul-core`, not a restatement of it — `neo-soul-core`'s
+kick is an anchor near 0; here the kick is pushed negative. The source brief
+for this profile states its offsets directly in milliseconds (not derived
+from a tick table), so both are given; tempo/PPQ examples below assume 86
+BPM (the sweet-spot tempo) at 960 PPQ (quarter note ≈ 697.7 ms, 1 tick ≈
+0.727 ms) — recompute ms from the actual tempo using
+`advanced-microtiming.md` §2, but the **ms values themselves are the
+canonical numbers for this profile** (per the source brief); the tick
+column is a derived convenience at 86 BPM, not the authority.
+
+Reference layer: **16th grid**, swung 54%-62% (`swing` field), with the
+kick/snare push-pull layered on top of that swing.
+
+| Role | Offset (ms, canonical) | Approx ticks @ 86 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | −5 to −10 ms | ≈ −7 to −14 | Pushed *ahead* of the grid — the "eager"/pushing half of the push-pull; unlike every other profile in this file, this anchor role is intentionally negative. |
+| Snare | +10 to +25 ms | ≈ +14 to +34 | Dragged well behind the grid — the "laid-back"/Dilla-drag half of the push-pull. |
+| Hi-hat | swing 54%–62% (`swing` field, not a per-hit ms offset) | — | Apply as the grid's `swing` parameter, same mechanism as every other profile here — this removes the "digital drum machine" stiffness. |
+| Rhodes / keys (harmony loop) | +5 to +10 ms | ≈ +7 to +14 | Behind the grid, but less than the snare — flows relaxed on top of the drums without fighting the pocket. |
+| Vocal (rap) / lead horn | +15 to +30 ms | ≈ +21 to +41 | The most laid-back voice in the mix — a soloist/rapper who sounds unhurried, never rushing the beat. |
+| Sub-bass | locked to kick | ≈ same as kick | Follows the kick's pushed-ahead placement so the low end stays unified, not split between two competing anchors. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Kick | ~0.15–0.30 | Short, punchy — most of the perceived "weight" comes from the sub layer, not sustain. |
+| Snare | ~0.20–0.35 | Short crack/snap; layered rimshot/handclap (per the genre file §3) reinforces the transient rather than the tail. |
+| Rhodes/piano loop | ~0.75–0.95 | Sustained — the loop rings, especially when sample-chopped from a held chord. |
+| Sub-bass | ~0.70–0.90 | Long enough to feel felt under the loop without smearing into the next kick. |
+
+**Ready-to-paste `drums.json` `timing` map** (ms values used directly, since
+they are this profile's canonical numbers):
+
+```json
+"timing": { "kick": -7, "snare": 18, "rimshot": 18, "chh": 0 }
+```
+
+Set `swing` between **0.54 and 0.62** — the low end of this range is looser
+than `neo-soul-core`'s 0.57 default, the high end approaches
+`classic-jazz-swing`'s crispness; pick within the range based on how
+triplet-y vs. straight-leaning the brief wants the hi-hat to feel.
+
+## `smooth-jazz-rnb` profile
+
+The pocket for smooth jazz (`vibes-mood/references/smooth-jazz-genre.md`
+§6, §7) — a **straight, ultra-precise 16th grid**, the tightest/most
+"radio-polished" profile in this file. It shares "straight, unswung" with
+`bossa-nova-straight`, but where bossa's identity is an intimate acoustic
+batida with a laid-back lead, here *nothing* lays back — the lead's
+expression comes from vocal-centric technique (bends, grace notes,
+controlled vibrato — `smooth-jazz-genre.md` §4), not from timing offset.
+Tempo/PPQ examples below assume 90 BPM at 960 PPQ (quarter note ≈ 666.7 ms,
+1 tick ≈ 0.694 ms); the tick ranges do not change with tempo (recompute ms
+via `advanced-microtiming.md` §2). `swing: 0.5` (no swing), same as
+`bossa-nova-straight`.
+
+Reference layer: **straight 16th grid**, defined by the hi-hat/shaker pair
+and locked to by everything else — the tightest lock of any profile here.
+
+| Role | Offset (ticks) | Approx ms @ 90 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Kick | 0 to +2 | ~0 to +1.4 | Anchor — near-zero, radio precision. |
+| Hi-hat (velocity-layered straight 16ths) | 0 to +2 | ~0 to +1.4 | Tight to the grid; dynamic interest comes from velocity layering, not timing. |
+| Shaker (continuous 16ths, doubles hi-hat) | 0 to +2 | ~0 to +1.4 | Locked with the hi-hat, reinforcing the grid rather than adding motion. |
+| Snare/rimshot (verse: soft cross-stick) | −2 to +3 | ~−1.4 to +2.1 | Timbre (soft rimshot) carries the verse's restraint, not a timing pullback. |
+| Snare (chorus: layered, compressed full snare) | 0 to +4 | ~0 to +2.8 | Same tightness as the verse — the chorus lift is timbral/dynamic (§6), not a different pocket. |
+| E-piano/Rhodes "splay" comping (chord roll) | notes within the chord staggered ~5–15 ms apart, not a per-role grid offset | — | A distinct technique, not a swing/drag offset: chord tones are struck in a fast roll rather than simultaneously — see `smooth-jazz-genre.md` §6. |
+| Fretless bass (slides into target notes) | −2 to +3 on the arrival | — | The "slide" is a continuous pitch glide leading into the target, not an early attack (contrast with bossa's anticipation, which is a notated early pluck — `bossa-nova-genre.md` §2) — the landing note itself stays close to the grid. |
+| Lead sax/clean guitar (vocal-centric phrasing) | 0 to +6 | ~0 to +4.2 | Close to the grid — expression comes from bends/grace-notes/vibrato technique (`smooth-jazz-genre.md` §4), not timing offset. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| E-piano/Rhodes comping | ~0.55–0.75 | The chord rings after the roll settles. |
+| Fretless bass | ~0.85–1.0 | Long, legato — the sustain is part of the "swimming" tone (§5's pitch-shift/chorus processing). |
+| Lead sax/guitar | ~0.85–0.98 | Sustained, singable — matches the vocal-centric phrasing goal. |
+
+**Ready-to-paste `drums.json` `timing` map** (the tightest/most-zero of any
+profile in this file — precision is the point):
+
+```json
+"timing": { "kick": 0, "snare": 1, "rimshot": 1, "chh": 0 }
+```
+
+Set `swing: 0.5` (no swing, matching `bossa-nova-straight`).
+
+## `noir-jazz-rubato` profile
+
+The pocket for noir jazz/dark jazz (`vibes-mood/references/noir-jazz-genre.md`
+§2, §6) — the most extreme drag in this file, by a wide margin. Where
+`neo-soul-core`'s laid-back snare sits +18 to +24 ticks behind the grid,
+here even the *tightest* voice (upright bass) sits further behind than
+that, and the lead voice (muted trumpet/sax) drags several times further
+still. Unlike every other profile in this file, there usually is no
+subdivided 16th/8th grid worth swinging — the composition is dominated by
+long sustained notes and silence (§2's "power of silence"), so this
+profile is phrase-level offset first, grid-swing second. Tempo/PPQ examples
+below assume 48 BPM (mid sweet-spot) at 960 PPQ (quarter note ≈ 1250 ms, 1
+tick ≈ 1.302 ms) — recompute ms from the actual tempo using
+`advanced-microtiming.md` §2, but as with `dilla-boom-bap`, the **ms values
+are this profile's canonical numbers** (from the source brief), the tick
+column is a derived convenience.
+
+Reference layer: **the brushed-snare swirl**, the one element that stays on
+the grid (offset 0) — every other voice is defined relative to it, not to a
+hi-hat/ride as in the faster profiles.
+
+| Role | Offset (ms, canonical) | Approx ticks @ 48 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Brushed snare swirl | 0 ms | 0 | The sole timekeeper — a continuous soft brush texture, not a discrete hit pattern. |
+| Soft felt kick | close to the swirl, no canonical offset given | ~0 | A near-inaudible heartbeat pulse; timbre (felt beater, no attack) carries the character, not offset. |
+| Upright bass | +5 to +10 ms | ≈ +4 to +8 | The *least* dragged melodic voice — still "heavy bottom," still behind the swirl. |
+| Piano chords (felt piano/Rhodes) | +15 to +30 ms | ≈ +12 to +23 | Deliberately avoids landing with the bass for a more natural, unstacked attack. |
+| Muted trumpet / sax (lead voice) | +30 to +60 ms | ≈ +23 to +46 | Extremely dragged — should feel unmoored from the drums entirely, "floating." This is roughly double `neo-soul-core`'s already-laid-back snare offset, and it is the *lead*, not a backing element. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Upright bass, pizzicato | ~0.60–0.85 | Plucked and left to ring, shorter than arco. |
+| Upright bass, arco | ~0.90–1.0 | Bowed, near-full sustain. |
+| Piano/Rhodes chords | ~0.90–1.0+ | Struck once and left to decay fully (§2) — the reverb tail (`noir-jazz-genre.md` §8) extends the perceived length beyond the note itself; that extension is a downstream mix effect, not a longer note. |
+| Muted trumpet/sax | ~0.90–1.0 | Long sustained tones, per §2/§7 of the genre file — short/staccato notes are the exception here, not the norm. |
+
+**Ready-to-paste `drums.json` `timing` map** (ms values used directly, per
+the source brief; the swirl itself has no single "hit" timing since it is
+a continuous texture rather than a discrete step-grid pattern — model it as
+a sustained low-velocity `chh`/`ride`-style layer rather than 16th hits):
+
+```json
+"timing": { "kick": 0, "snare": 0, "rimshot": 0, "chh": 0 }
+```
+
+No `swing` recommendation is given — at this tempo and density there is
+usually no subdivided grid to swing; if a sub-style genuinely needs one
+(e.g. the trip-hop-noir sub-genre's heavier downtempo drum loop, per
+`noir-jazz-genre.md` §1D), treat it as a separate, faster-grid layer and
+borrow `swing` from a closer-matching profile (e.g. `neo-soul-core`) rather
+than inventing new numbers here.
+
+## `cool-modal-floating` profile
+
+The pocket for cool & modal jazz (`vibes-mood/references/cool-modal-jazz-genre.md`
+§2, §6) — a **brushed, floating swing** that sits gently behind the beat
+without forcing hard accents. It sits between two extremes already in this
+file: gentler than `classic-jazz-swing`'s crisp, tight big-band precision,
+but far less extreme than `noir-jazz-rubato`'s dramatic drag — this is
+"relaxed," not "unmoored." Tempo/PPQ examples below assume 100 BPM (medium
+cool/modal-walk sweet spot) at 960 PPQ (quarter note ≈ 600 ms, 1 tick ≈
+0.625 ms); the tick ranges do not change with tempo (recompute ms via
+`advanced-microtiming.md` §2).
+
+Reference layer: **brushed ride/swish**, a continuous soft sweep rather
+than discrete hits — swing ratio ~0.58-0.60 (between `neo-soul-core`'s
+0.57 and `classic-jazz-swing`'s crisper ~0.62-0.67).
+
+| Role | Offset (ticks) | Approx ms @ 100 BPM/960 PPQ | Notes |
+|---|---:|---:|---|
+| Brushed ride/swish | 0 to +4 | ~0 to +2.5 | Anchor — a continuous soft texture, not a series of hard hits (see `noir-jazz-rubato`'s brushed-swirl reference layer for the same idea taken further). |
+| Feathered kick | −1 to +3 | ~−0.6 to +1.9 | Extremely light, blends into the upright bass's resonance rather than reading as a separate hit (`classic-jazz-swing` uses the same "feathering" concept, tighter). |
+| Pedal hi-hat (2 & 4) | −2 to +4 | ~−1.3 to +2.5 | Soft, not a hard backbeat marker. |
+| Upright bass (pedal point / walking) | +4 to +10 | ~+2.5 to +6.3 | Gently behind the beat — less drag than `soul-jazz-swing`'s thick backbeat, more than `classic-jazz-swing`'s tight upright bass. |
+| Piano, interactive comping (sparse punctuation) | +3 to +10 | ~+1.9 to +6.3 | Wider range than a metronomic comp — it responds to the horn's phrasing rather than sitting on a fixed grid position. |
+| Lead (Harmon trumpet / breathy sax, long tones) | 0 to +8 | ~0 to +5 | Close to the grid — expression comes from tone quality and articulation (`cool-modal-jazz-genre.md` §4), not timing offset, the same principle as `classic-jazz-swing`'s lead role. |
+
+**Gate (note-off / sustain ratio, fraction of nominal note length):**
+
+| Role | Gate ratio | Notes |
+|---|---:|---|
+| Upright bass, pedal point | ~0.85–1.0 | Long, resonant — often held far past a single bar as a drone. |
+| Piano, interactive comping | ~0.30–0.50 | Short punctuation, not sustained chords — it comments, it doesn't carpet. |
+| Lead (trumpet/sax) | ~0.85–0.98 | Long sustained tones per §4's "focus on tone quality" — the genre favors held notes over busy lines. |
+
+**Ready-to-paste `drums.json` `timing` map** (soft and floating, between
+`classic-jazz-swing`'s near-zero precision and `soul-jazz-swing`'s heavier
+drag):
+
+```json
+"timing": { "kick": 0, "snare": 4, "rimshot": 4, "chh": 0 }
+```
+
+Set `swing` around **0.58–0.60**.
+
 ## Choosing vs. deriving
 
 The composing brain (`jazz-composition`/`vibes-mood` at idea stage — dulu
 `jazz-idea-generator` — or a human directing the `midi-orchestration`
 module, dulu `abc-to-midi-orchestration`) should **select** a named profile —
-currently only `neo-soul-core` is defined here — rather than invent new
-per-role tick numbers ad hoc. A genuinely different pocket (e.g. a tight
-acoustic-swing profile, per `advanced-microtiming.md` §9 "Tight acoustic or
-ensemble profile") is a candidate for a *new* named profile added to this
-file, not a one-off number set buried in a single composition's notes. Adding
+currently `neo-soul-core` (laid-back swung-16th), `fusion-tight` (on-the-grid
+16th funk), `classic-jazz-swing` (tight acoustic-ensemble triplet swing,
+per `advanced-microtiming.md` §9 "Tight acoustic or ensemble profile"),
+`bossa-nova-straight` (unswung 16th rhythm section, laid-back/rubato lead
+only), `soul-jazz-swing` (bluesy swung 8ths, backbeat laid behind the grid),
+`purdie-shuffle` (half-time funk-swing hybrid, a triplet ghost-note lattice
+under a straight-16th hi-hat), `dilla-boom-bap` (humanized 16th grid with a
+pushed-ahead kick and a dragged-behind snare), `smooth-jazz-rnb`
+(ultra-precise straight 16th grid, expression carried by lead technique
+rather than timing), `noir-jazz-rubato` (extreme phrase-level drag, no
+subdivided grid to swing), and `cool-modal-floating` (brushed, gently
+behind-the-beat swing between `classic-jazz-swing` and `noir-jazz-rubato`)
+are defined here — rather than invent new per-role tick numbers ad hoc. A
+genuinely different pocket is a candidate for a *new*
+named profile added to this file, not a one-off number set buried in a
+single composition's notes. Adding
 a profile means adding a new table section here (same shape: reference
 layer, per-role offset table, gate table), so it stays a shared, reusable
 contract instead of drifting per song.
