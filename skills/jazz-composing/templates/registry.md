@@ -14,7 +14,7 @@ must match the `when_to_use` field inside the template file.
 | `lofi-jazzhop` | lofi jazz / jazzhop | loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket |
 | `fusion-vamp` | jazz-funk / fusion | riff-driven jazz-funk/fusion vamp, tight backbeat, builds and breakdowns, urgency->release arc, 96-124 BPM |
 | `classic-jazz-swing` | classic jazz / swing big band | big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM |
-| `bossa-nova-classic` | bossa nova | nylon guitar batida, straight 16ths (no swing) with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM |
+| `bossa-nova-classic` | bossa nova | intimate to flowing bossa nova, nylon guitar batida, straight 16ths with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM |
 | `soul-jazz-organ-blues` | soul jazz | Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM |
 | `hiphop-jazz-boombap` | hip-hop jazz / jazz rap | golden-era boom-bap / jazz rap, sample-chopped Rhodes loop, Dilla push-pull timing, muted horn hook, 75-95 BPM |
 | `smooth-jazz-radio` | smooth jazz | radio-friendly smooth jazz, vocal-centric sax/guitar lead, smooth slash chord, full pop-verse-chorus form, 65-115 BPM |

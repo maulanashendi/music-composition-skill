@@ -190,7 +190,7 @@ patch, not something this package's scripts implement, same framing as
   chorus) on off-beat 16ths.
 
 Groove detail (tick offsets, gate ratios) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `smooth-jazz-rnb` profile — select it by name.
 
 ## 7. Differentiating smooth jazz from this package's other genres

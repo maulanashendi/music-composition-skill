@@ -3,14 +3,29 @@
   "when_to_use": "riff-driven jazz-funk/fusion vamp, tight backbeat, builds and breakdowns, urgency->release arc, 96-124 BPM",
   "style": "jazz-funk / fusion",
   "defaults": {
-    "key_options": ["E minor", "G minor", "C minor", "A dorian"],
-    "tempo_range": [96, 124],
+    "key_options": [
+      "E minor",
+      "G minor",
+      "C minor",
+      "A dorian"
+    ],
+    "tempo_range": [
+      96,
+      124
+    ],
     "meter": "4/4",
     "feel": "tight 16th funk, hard backbeat, locked to the riff"
   },
   "groove_profile": "fusion-tight",
   "harmony_palette": {
-    "diatonic_core": ["Em9", "Em7", "A13", "Gsus13", "Cmaj7#11", "Dsus4"],
+    "diatonic_core": [
+      "Em9",
+      "Em7",
+      "A13",
+      "Gsus13",
+      "Cmaj7#11",
+      "Dsus4"
+    ],
     "signature_moves": [
       "static vamp: one dominant/sus chord held while bass+drums drive the riff",
       "modal interchange stab: Em9 -> Ebmaj7#11 -> Em9 (chromatic upper-structure hit)",
@@ -69,7 +84,12 @@
     "high_energy": "full 16th drive, snare accents and fills, big band hits punctuating the vamp; a breakdown drop then a downbeat re-entry"
   },
   "arrangement_defaults": {
-    "entrance_order": ["bass", "drums", "keys", "lead"],
+    "entrance_order": [
+      "bass",
+      "drums",
+      "keys",
+      "lead"
+    ],
     "layout_rules": "bass riff states the vamp first; drums lock in; build by adding layers, release by stripping to the bass riff (breakdown) then re-entering full band on a downbeat hit"
   },
   "anti_boredom_rules": [
@@ -78,5 +98,14 @@
     "the riff hook must recur, varied by register, layering, or an upper-structure stab - never dead-identical for the whole tune",
     "velocity is never flat across a voice within a bar (ghost notes low, riff accents high)",
     "harmony stays subservient to groove, but use at least one signature_move stab so it is not one unchanging chord"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": null,
+    "tempo_range_effective": null,
+    "blockers": [
+      "engine belum punya profil groove 'fusion-tight' di GROOVE_LIBRARY",
+      "engine belum punya vibe preset untuk gaya ini di VIBE_PRESETS"
+    ]
+  }
 }

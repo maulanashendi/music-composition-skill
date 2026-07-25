@@ -3,14 +3,28 @@
   "when_to_use": "big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM",
   "style": "classic jazz / swing big band",
   "defaults": {
-    "key_options": ["F major", "Bb major", "Eb major"],
-    "tempo_range": [115, 180],
+    "key_options": [
+      "F major",
+      "Bb major",
+      "Eb major"
+    ],
+    "tempo_range": [
+      115,
+      180
+    ],
     "meter": "4/4",
     "feel": "4-beat straight-ahead swing, ride-driven, walking bass pushing slightly ahead of the beat"
   },
   "groove_profile": "classic-jazz-swing",
   "harmony_palette": {
-    "diatonic_core": ["F6", "Bb7", "F7", "Gm7", "C7", "F6/9"],
+    "diatonic_core": [
+      "F6",
+      "Bb7",
+      "F7",
+      "Gm7",
+      "C7",
+      "F6/9"
+    ],
     "signature_moves": [
       "major line cliche: F -> Fmaj7 -> F7 -> F6",
       "auxiliary diminished: F6 -> F#dim7 -> F6",
@@ -69,7 +83,13 @@
     "high_energy": "press-rolls and fills into section arrivals, snare accents doubling ensemble hits, full band-locked hits at the shout chorus"
   },
   "arrangement_defaults": {
-    "entrance_order": ["piano", "bass", "drums", "reeds", "brass"],
+    "entrance_order": [
+      "piano",
+      "bass",
+      "drums",
+      "reeds",
+      "brass"
+    ],
     "layout_rules": "stride piano or drum roll-off opens alone; reeds state the head with brass answering; reed section soli in block chords; brass solo opens with an unaccompanied solo break, other horns lay in background riffs under the solo; full ensemble tutti for the shout chorus; tag ending strips back to a held chord plus a final unison hit"
   },
   "anti_boredom_rules": [
@@ -78,5 +98,16 @@
     "assign horn articulation (fall-off, doit, shake, growl, glissando) deliberately per phrase - never uniform legato",
     "the riff-and-answer hook must recur varied by section/register, never copy-pasted identically",
     "velocity is never flat within a bar - ghost/background riffs stay low, ensemble hits and shout-chorus stabs sit high"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": "medium-swing",
+    "tempo_range_effective": [
+      115,
+      132
+    ],
+    "blockers": [
+      "engine belum punya profil groove 'classic-jazz-swing' di GROOVE_LIBRARY"
+    ]
+  }
 }

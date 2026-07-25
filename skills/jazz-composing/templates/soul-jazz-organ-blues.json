@@ -3,14 +3,28 @@
   "when_to_use": "Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM",
   "style": "soul jazz",
   "defaults": {
-    "key_options": ["F major", "Bb major", "G major"],
-    "tempo_range": [90, 115],
+    "key_options": [
+      "F major",
+      "Bb major",
+      "G major"
+    ],
+    "tempo_range": [
+      90,
+      115
+    ],
     "meter": "4/4",
     "feel": "bluesy swung 8ths, thick backbeat laid behind the grid, organ bass pedal legato"
   },
   "groove_profile": "soul-jazz-swing",
   "harmony_palette": {
-    "diatonic_core": ["F7", "F9", "Bb7", "Gm7", "C7(#9)", "D7(#9)"],
+    "diatonic_core": [
+      "F7",
+      "F9",
+      "Bb7",
+      "Gm7",
+      "C7(#9)",
+      "D7(#9)"
+    ],
     "signature_moves": [
       "gospel plagal cadence: Bb/F -> F7 (IV/I -> I)",
       "12-bar gospel-blues turnaround: Gm7 -> C7(#9) -> F7 D7 -> Gm7 C7",
@@ -67,7 +81,12 @@
     "high_energy": "ride pushes harder, snare accents thicken under the organ/sax solo peak, hi-hat sloshier"
   },
   "arrangement_defaults": {
-    "entrance_order": ["organ", "drums", "guitar", "horns"],
+    "entrance_order": [
+      "organ",
+      "drums",
+      "guitar",
+      "horns"
+    ],
     "layout_rules": "organ states the intro vamp alone (Leslie slow/chorale); horns state the head with organ comping underneath; organ solo builds by pulling drawbars and switching Leslie to fast tremolo at the peak; sax/guitar solo trades the foreground while organ returns to comping; head returns with full band; outro holds a 7#9 or 6/9 chord with an upward organ glissando"
   },
   "anti_boredom_rules": [
@@ -76,5 +95,16 @@
     "the backbeat stays laid behind the grid at every energy level - if it tightens onto the grid the piece has drifted toward classic-jazz-swing",
     "the call-and-response-riff hook must recur, varied by section or instrument, never copy-pasted identically",
     "velocity is never flat across a voice within a bar (comping fills low, riff/solo peaks high)"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": "medium-swing",
+    "tempo_range_effective": [
+      100,
+      115
+    ],
+    "blockers": [
+      "engine belum punya profil groove 'soul-jazz-swing' di GROOVE_LIBRARY"
+    ]
+  }
 }

@@ -3,14 +3,28 @@
   "when_to_use": "golden-era boom-bap / jazz rap, sample-chopped Rhodes loop, Dilla push-pull timing, muted horn hook, 75-95 BPM",
   "style": "hip-hop jazz / jazz rap",
   "defaults": {
-    "key_options": ["D minor", "F major", "A minor"],
-    "tempo_range": [84, 88],
+    "key_options": [
+      "D minor",
+      "F major",
+      "A minor"
+    ],
+    "tempo_range": [
+      84,
+      88
+    ],
     "meter": "4/4",
     "feel": "humanized 16th grid, kick pushed ahead, snare dragged behind, 54-62% hi-hat swing"
   },
   "groove_profile": "dilla-boom-bap",
   "harmony_palette": {
-    "diatonic_core": ["Dm9", "G13", "Cmaj9", "Fmaj9", "Em7", "Am9"],
+    "diatonic_core": [
+      "Dm9",
+      "G13",
+      "Cmaj9",
+      "Fmaj9",
+      "Em7",
+      "Am9"
+    ],
     "signature_moves": [
       "golden-era loop: Dm9 -> G13 -> Cmaj9 -> A7(b9,b13)",
       "chill descending loop: Fmaj9 -> Em7 -> Dm9 -> Cmaj9",
@@ -68,7 +82,13 @@
     "high_energy": "denser ghost-note snare pattern, hi-hat opens on accents, still never quantized - push-pull stays audible even at the densest point"
   },
   "arrangement_defaults": {
-    "entrance_order": ["rhodes-loop", "drums", "sub-bass", "vocal-lead", "muted-horn"],
+    "entrance_order": [
+      "rhodes-loop",
+      "drums",
+      "sub-bass",
+      "vocal-lead",
+      "muted-horn"
+    ],
     "layout_rules": "intro states the filtered Rhodes loop alone with vinyl crackle/ambience; filter opens and drums+sub-bass enter together for Verse 1; drums drop briefly every 8 bars for a breath; hook brings in the muted-horn riff and vocal chops over the same loop; verse 2 swaps sub-bass for a sampled-upright character; bridge strips to loop+sub+solo only; outro re-engages the low-pass filter and fades under rising vinyl crackle"
   },
   "anti_boredom_rules": [
@@ -77,5 +97,16 @@
     "at least one full drum drop (breakdown) must occur before the final hook/outro",
     "the muted-horn-riff hook must recur varied by register or response phrase, never copy-pasted identically",
     "keep the root off the harmony instrument at all times - rootless voicings only, bass alone holds root"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": "neo-soul",
+    "tempo_range_effective": [
+      84,
+      88
+    ],
+    "blockers": [
+      "engine belum punya profil groove 'dilla-boom-bap' di GROOVE_LIBRARY"
+    ]
+  }
 }

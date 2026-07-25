@@ -123,7 +123,7 @@ Reference by name; pick and adapt, do not restate verbatim in every song.
 **Drums:** ride cymbal swung (swung 8ths); snare gives a thick backbeat on
 2 and 4; hi-hat occasionally opens (sloshy) on off-beat accents. Groove
 detail (tick offsets, gate ratios) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `soul-jazz-swing` profile — select it by name.
 
 **Guitar comping:** play 7th/9th chords with the thumb (Wes Montgomery

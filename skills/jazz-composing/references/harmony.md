@@ -1,6 +1,6 @@
 # Harmony — peta harmoni jazz (niat-level)
 
-> Diringkas dari `../../harmony/SKILL.md` (konsolidasi sebelum
+> Diringkas dari `../../../archive/skills/harmony/SKILL.md` (konsolidasi sebelum
 > restrukturisasi MDLC). Semua isi di sini beroperasi di level **simbol
 > chord** — tonal center, harmonic rhythm, fungsi harmonik, tension map,
 > teknik reharmonisasi — jadi tetap niat-level, bukan not. Dipakai di

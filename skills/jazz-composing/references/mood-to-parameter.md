@@ -48,7 +48,7 @@ dua mood berbeda dalam satu section yang sama.
 
 Dipakai lintas-level oleh orchestrator `jazz-composition` (Level 4 melodi,
 Level 5 groove, Level 8 bass, Level 9 drum — lihat ground rule tempo di
-`../../jazz-composition/SKILL.md`): setiap keputusan materi ritmis dicek
+`../../../archive/skills/jazz-composition/SKILL.md`): setiap keputusan materi ritmis dicek
 terhadap band BPM brief, bukan diputuskan seolah tempo hanya dekorasi.
 Prinsip arah: **makin cepat BPM, makin jarang subdivisi rapat dipakai dan
 makin panjang frase dalam bar.**
@@ -65,10 +65,10 @@ Keterangan:
 - **Napas minimum** = panjang minimum jeda/rest sebelum frase melodi
   berikutnya, dalam beat; konversi ke detik via `60/BPM × jumlah beat`.
 - Kolom **Harmonic rhythm wajar** dirinci sebagai rumus durasi absolut per
-  chord di `../../harmony/SKILL.md` (Langkah 2, sub-bagian "Durasi absolut
+  chord di `../../../archive/skills/harmony/SKILL.md` (Langkah 2, sub-bagian "Durasi absolut
   per chord") — angka di sini ringkasan arah, bukan pengganti rumusnya.
 - Kolom **Swing feel** dirinci sebagai breakpoint operasional di
-  `../../groove-rhythm/references/groove-meter.md` §3 — band tabel ini
+  `./groove-meter.md` §3 — band tabel ini
   interpolasi kasarnya.
 
 ## Modul 2 — Deklarasi hierarki teori (gate)

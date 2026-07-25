@@ -243,7 +243,7 @@ character as the notes themselves:
 | Glissando / smear | A continuous pitch slide (a trombone signature) |
 
 Groove detail (tick offsets, gate ratios) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `classic-jazz-swing` profile — select it by name; do not re-derive
 per-note timing here.
 

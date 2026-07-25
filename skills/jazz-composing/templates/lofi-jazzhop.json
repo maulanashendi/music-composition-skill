@@ -3,14 +3,29 @@
   "when_to_use": "loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket",
   "style": "lofi jazz / jazzhop",
   "defaults": {
-    "key_options": ["D minor", "A minor", "Bb major", "Eb major"],
-    "tempo_range": [75, 95],
+    "key_options": [
+      "D minor",
+      "A minor",
+      "Bb major",
+      "Eb major"
+    ],
+    "tempo_range": [
+      75,
+      95
+    ],
     "meter": "4/4",
     "feel": "swung-16th, deep pocket, dusty and relaxed"
   },
   "groove_profile": "neo-soul-core",
   "harmony_palette": {
-    "diatonic_core": ["Dm9", "Gm11", "Bbmaj7", "Am7", "Cmaj9", "Fmaj7#11"],
+    "diatonic_core": [
+      "Dm9",
+      "Gm11",
+      "Bbmaj7",
+      "Am7",
+      "Cmaj9",
+      "Fmaj7#11"
+    ],
     "signature_moves": [
       "2-4 chord loop with tasteful reharm on repeats (change the top voice, keep the bass)",
       "borrowed color: Dm9 -> Bbmaj7 -> Ebmaj7#11 (bVI) -> A7alt",
@@ -69,7 +84,12 @@
     "high_energy": "still restrained - add a light open-hat accent and a short fill at the loop point, never busy"
   },
   "arrangement_defaults": {
-    "entrance_order": ["keys", "bass", "drums", "lead"],
+    "entrance_order": [
+      "keys",
+      "bass",
+      "drums",
+      "lead"
+    ],
     "layout_rules": "develop the single loop by subtraction/addition, not by adding sections; strip to keys+bass for a breakdown; lead enters late and lays out often to keep the pocket the focus"
   },
   "anti_boredom_rules": [
@@ -78,5 +98,14 @@
     "no 2-bar loop repeats more than 4 times without a change",
     "velocity is never flat across a voice within a bar (dusty ghosts low, hits higher)",
     "keep space - do not fill every beat; the pocket is the identity"
-  ]
+  ],
+  "engine_support": {
+    "renderable": true,
+    "engine_vibe": "neo-soul",
+    "tempo_range_effective": [
+      75,
+      95
+    ],
+    "blockers": []
+  }
 }

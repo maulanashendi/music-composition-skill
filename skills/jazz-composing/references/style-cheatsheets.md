@@ -88,4 +88,4 @@ Read only the entry for the target style. Each gives typical harmony, tempo, fee
 - **Harmony:** static vamps or short loops (often 1–2 chords, e.g. a held m11), dominant-9/13/#9/sus chords, occasional modal interchange; harmony is subservient to groove, not the driver.
 - **Structure:** vamp with builds, breakdowns, and a hook riff; solo sections over the vamp; a shout-brass climax before fade-out (see the electric big-band blueprint in `jazz-funk-genre.md`).
 - **Instrumentation:** electric bass (slap/pop), Clavinet/Rhodes (wah/phaser), Minimoog/ARP/Prophet-5 synths, scratch/chank rhythm guitar, punchy drums + world percussion, phat brass or synth lead.
-- **Identity comes from:** the bass-and-drum riff lock and dynamic builds — not chord motion. Existing Tier-1 template: `jazz-composition/templates/fusion-vamp.json`. Deep profile + genre-differentiation matrix: `jazz-funk-genre.md`.
+- **Identity comes from:** the bass-and-drum riff lock and dynamic builds — not chord motion. Existing Tier-1 template: `templates/fusion-vamp.json`. Deep profile + genre-differentiation matrix: `jazz-funk-genre.md`.
