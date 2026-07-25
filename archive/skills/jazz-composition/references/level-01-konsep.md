@@ -84,6 +84,29 @@ Level ini memakai protokol kandidat→seleksi (`candidate-selection-protocol.md`
 - **2 konsep kandidat berbeda secara struktural** ditulis sebagai material telanjang (≤1 kalimat intent per kandidat, tanpa pembelaan). Ini yang memenuhi tuntutan rubrik `vibes-mood` "minimal dua konsep berbeda secara struktural".
 - Kandidat + verdict selector ditulis ke `01-konsep-candidates.md`; `01-brief.md` memakai pemenang.
 
+## Template gaya (opsional — seed konsep, bukan pintasan)
+
+Setelah brief mood/gaya jelas, **baca `../templates/registry.md`** (index tipis
+Tier 0) dan cocokkan vibe brief dengan satu baris. Bila ada yang cocok:
+
+- Muat **hanya** satu `../templates/<id>.json` (Tier 1) — jangan muat semua.
+- Pakai untuk **menyemai** kandidat konsep/plan: `defaults` (key/tempo/meter/
+  feel), `harmony_palette`, satu `hook_archetype`, `groove_profile`,
+  `melody_phrasing`, `drum_skeleton`, `arrangement_defaults`, dan
+  `anti_boredom_rules`.
+
+Template adalah **starting kit, bukan lagu jadi**. Ia menyemai keputusan; ia
+**tidak** melewati protokol kandidat→seleksi maupun gate/scorecard/L2 mana pun.
+Protokol kandidat tetap jalan — kini memilih **di antara opsi template**
+(mis. dua `hook_archetypes`, beberapa `signature_moves`), bukan dari nol.
+`anti_boredom_rules` template ikut jadi checklist "tidak membosankan" yang
+diverifikasi di L2/scorecard.
+
+Bila **tidak ada** baris registry yang benar-benar cocok, **komposisi tanpa
+template** dan sebut alasannya di `01-brief.md` — match paksaan lebih buruk
+daripada tanpa template. Mekanisme lengkap + kontrak field: `../templates/README.md`
+dan `../templates/schema.md`.
+
 ## Gate instrumentasi — registry engine (wajib)
 
 - Instrumentasi run **WAJIB** dipilih dari registry instrumen engine

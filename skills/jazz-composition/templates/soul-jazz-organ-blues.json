@@ -1,0 +1,80 @@
+{
+  "id": "soul-jazz-organ-blues",
+  "when_to_use": "Hammond B-3 organ trio/quintet, gospel-blues 12-bar, organ solo with a Leslie/drawbar dynamic arc, 65-145 BPM",
+  "style": "soul jazz",
+  "defaults": {
+    "key_options": ["F major", "Bb major", "G major"],
+    "tempo_range": [90, 115],
+    "meter": "4/4",
+    "feel": "bluesy swung 8ths, thick backbeat laid behind the grid, organ bass pedal legato"
+  },
+  "groove_profile": "soul-jazz-swing",
+  "harmony_palette": {
+    "diatonic_core": ["F7", "F9", "Bb7", "Gm7", "C7(#9)", "D7(#9)"],
+    "signature_moves": [
+      "gospel plagal cadence: Bb/F -> F7 (IV/I -> I)",
+      "12-bar gospel-blues turnaround: Gm7 -> C7(#9) -> F7 D7 -> Gm7 C7",
+      "diminished passing chord: Bb7 -> Bbdim7 -> F7"
+    ],
+    "cadence_options": [
+      "gospel plagal: IV -> I, or IV/I -> I",
+      "outro hold: land on 7#9 or 6/9, sustained with an organ glissando (palm smear)"
+    ],
+    "avoid": [
+      "dense ii-V chains or bebop-level harmonic motion - soul jazz stays on 12-bar gospel-blues, deliberately sparse (see soul-jazz-genre.md SS5-6)",
+      "a tight, precise big-band ride feel - the backbeat should sit behind the grid, not on it (see soul-jazz-swing groove profile)"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "organ-vamp-pedal",
+      "rhythm": "a repeating bass-pedal figure the organ states alone before the band enters",
+      "contour": "root-5th pedal under a simple chordal comp, Leslie set slow (chorale)",
+      "first_appears": "Intro, organ alone"
+    },
+    {
+      "name": "call-and-response-riff",
+      "rhythm": "a 2-bar horn riff answered by a 2-bar organ comp fill",
+      "contour": "tenor sax/trumpet state a bluesy unison phrase, organ answers with a gospel-tinged chordal fill",
+      "first_appears": "Head, bars 1-4"
+    }
+  ],
+  "melody_phrasing": {
+    "head": {
+      "note_lengths": "clear, bluesy, mid-length phrases",
+      "contour": "singable unison/harmony line over the 12-bar form, gospel-inflected",
+      "placement": "laid slightly behind the grid, matching the backbeat"
+    },
+    "organ-solo": {
+      "note_lengths": "phrases lengthen and thicken as the solo builds",
+      "contour": "drawbars pulled out gradually, runs get faster and denser toward the peak",
+      "placement": "pushes forward at the peak as the Leslie switches to fast tremolo"
+    },
+    "sax-guitar-solo": {
+      "note_lengths": "shorter, bluesier phrases, call-and-response with organ comping",
+      "contour": "blues/gospel scale based (SS7), sub-tone or thumb-picked depending on instrument",
+      "placement": "laid-back, unhurried"
+    },
+    "head-return": {
+      "note_lengths": "back to the head's clear phrasing",
+      "contour": "full band restates the theme",
+      "placement": "laid slightly behind the grid, matching the backbeat"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "ride swung 8ths, thick snare backbeat on 2 and 4 laid behind the grid, hi-hat mostly closed",
+    "mid_energy": "hi-hat opens (sloshy) on off-beat accents, kick more present under the organ pedal",
+    "high_energy": "ride pushes harder, snare accents thicken under the organ/sax solo peak, hi-hat sloshier"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["organ", "drums", "guitar", "horns"],
+    "layout_rules": "organ states the intro vamp alone (Leslie slow/chorale); horns state the head with organ comping underneath; organ solo builds by pulling drawbars and switching Leslie to fast tremolo at the peak; sax/guitar solo trades the foreground while organ returns to comping; head returns with full band; outro holds a 7#9 or 6/9 chord with an upward organ glissando"
+  },
+  "anti_boredom_rules": [
+    "the organ solo must have a dynamic arc - drawbars and Leslie speed change across the solo, it cannot stay one static registration the whole time",
+    "keep harmony on the sparse 12-bar gospel-blues vocabulary - do not drift into dense ii-V chains (see harmony_palette avoid)",
+    "the backbeat stays laid behind the grid at every energy level - if it tightens onto the grid the piece has drifted toward classic-jazz-swing",
+    "the call-and-response-riff hook must recur, varied by section or instrument, never copy-pasted identically",
+    "velocity is never flat across a voice within a bar (comping fills low, riff/solo peaks high)"
+  ]
+}

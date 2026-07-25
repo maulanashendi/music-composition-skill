@@ -1,0 +1,82 @@
+{
+  "id": "classic-jazz-swing",
+  "when_to_use": "big band swing, dancehall energy, head->soli->solo break->shout chorus arc, 115-180 BPM",
+  "style": "classic jazz / swing big band",
+  "defaults": {
+    "key_options": ["F major", "Bb major", "Eb major"],
+    "tempo_range": [115, 180],
+    "meter": "4/4",
+    "feel": "4-beat straight-ahead swing, ride-driven, walking bass pushing slightly ahead of the beat"
+  },
+  "groove_profile": "classic-jazz-swing",
+  "harmony_palette": {
+    "diatonic_core": ["F6", "Bb7", "F7", "Gm7", "C7", "F6/9"],
+    "signature_moves": [
+      "major line cliche: F -> Fmaj7 -> F7 -> F6",
+      "auxiliary diminished: F6 -> F#dim7 -> F6",
+      "backdoor slide: Gb7 -> F6",
+      "rhythm-changes turnaround: Gm7 -> C7 -> F6 D7 -> Gm7 C7"
+    ],
+    "cadence_options": [
+      "ii-V-I with a 6th-chord landing: Gm7 -> C7 -> F6",
+      "chromatic turnaround: F6 -> F#dim7 -> Gm7 -> G#dim7",
+      "big-band tag ending: held dominant chord (vibrato) into a staccato unison hit"
+    ],
+    "avoid": [
+      "altered/upper-structure extensions everywhere - this era resolves with 6th chords and diminished passing chords, not modern-jazz density (see classic-jazz-genre.md SS5)",
+      "a static vamp with no functional resolution - classic jazz harmony moves"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "riff-and-answer",
+      "rhythm": "a 2-bar brass riff stated staccato, answered by a 2-bar legato reed phrase",
+      "contour": "brass riff outlines the 6th chord, sax answer descends through the line cliche",
+      "first_appears": "Head A1, brass states it, reeds answer"
+    },
+    {
+      "name": "solo-break-lick",
+      "rhythm": "an acrobatic unaccompanied phrase filling a 2-4 bar solo break, band silent",
+      "contour": "arpeggiate up through the chord, chromatic enclosure into the landing note",
+      "first_appears": "the top of the Solo section, right after the band cuts out on beat 1"
+    }
+  ],
+  "melody_phrasing": {
+    "head": {
+      "note_lengths": "clear, mid-length phrases with room to breathe",
+      "contour": "singable, riff-based, outlines the 6th/dominant chords plainly",
+      "placement": "on the beat, confident"
+    },
+    "soli": {
+      "note_lengths": "fast, closely-spaced block-chord runs, precisely together",
+      "contour": "the whole reed section moves as one voice in four-way-close harmony",
+      "placement": "tight to the grid - ensemble unity over individual expression"
+    },
+    "solo-break": {
+      "note_lengths": "dense and virtuosic inside the break, then normal phrase length once the band re-enters",
+      "contour": "an acrobatic unaccompanied run resolving right as the band explodes back in",
+      "placement": "free within the break bars, locked back to the grid the instant the band re-enters"
+    },
+    "shout-chorus": {
+      "note_lengths": "short, hit-based, heavily syncopated",
+      "contour": "full-ensemble tutti stabs at maximum dynamic, optional half-step modulation for extra lift",
+      "placement": "on the grid, unison ensemble hits"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "feathered kick on all 4 beats (barely audible), hi-hat chick on 2 and 4, ride swinging 8ths throughout",
+    "mid_energy": "ride pattern drives harder, occasional rimshot backbeat accents, kick adds light syncopated pickups",
+    "high_energy": "press-rolls and fills into section arrivals, snare accents doubling ensemble hits, full band-locked hits at the shout chorus"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["piano", "bass", "drums", "reeds", "brass"],
+    "layout_rules": "stride piano or drum roll-off opens alone; reeds state the head with brass answering; reed section soli in block chords; brass solo opens with an unaccompanied solo break, other horns lay in background riffs under the solo; full ensemble tutti for the shout chorus; tag ending strips back to a held chord plus a final unison hit"
+  },
+  "anti_boredom_rules": [
+    "the solo break (band silent, soloist alone for 2-4 bars) must happen at least once before the shout chorus - it is structural, not optional",
+    "the shout chorus must be denser and louder than the head - confirm the arc actually builds soli -> solo -> shout",
+    "assign horn articulation (fall-off, doit, shake, growl, glissando) deliberately per phrase - never uniform legato",
+    "the riff-and-answer hook must recur varied by section/register, never copy-pasted identically",
+    "velocity is never flat within a bar - ghost/background riffs stay low, ensemble hits and shout-chorus stabs sit high"
+  ]
+}

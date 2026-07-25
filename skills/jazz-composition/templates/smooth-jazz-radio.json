@@ -1,0 +1,81 @@
+{
+  "id": "smooth-jazz-radio",
+  "when_to_use": "radio-friendly smooth jazz, vocal-centric sax/guitar lead, smooth slash chord, full pop-verse-chorus form, 65-115 BPM",
+  "style": "smooth jazz",
+  "defaults": {
+    "key_options": ["C major", "G major", "A minor"],
+    "tempo_range": [82, 98],
+    "meter": "4/4",
+    "feel": "straight, ultra-precise 16ths, no swing, expression carried by lead phrasing not timing"
+  },
+  "groove_profile": "smooth-jazz-rnb",
+  "harmony_palette": {
+    "diatonic_core": ["Cmaj9", "Am11", "Fmaj7", "Dm7/G", "Gmaj9", "Bm7"],
+    "signature_moves": [
+      "smooth slash chord: Fmaj7/G or Dm7/G in place of a plain G7 (see smooth-jazz-genre.md SS3)",
+      "pedal bass: Cmaj9 -> Dm7/C -> Fmaj7/C -> Cmaj9",
+      "stepwise bass descent: Cmaj9 -> G/B -> Am11 -> C/G -> Fmaj7",
+      "sub-V backdoor resolution: Bbmaj7/C -> Fmaj7/G -> Cmaj9"
+    ],
+    "cadence_options": [
+      "pre-chorus lift into the smooth slash chord before the chorus downbeat",
+      "chorus hook resolves cleanly to the tonic maj9 - avoid a raw dominant 7 landing"
+    ],
+    "avoid": [
+      "a plain dominant 7th chord where a 9sus4 or smooth slash chord would be smoother (see smooth-jazz-genre.md SS3)",
+      "altered/bluesy dissonance - this genre stays consonant and easy on the ear, unlike soul jazz or jazz-funk"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "vocal-centric-hook",
+      "rhythm": "a clear, singable 2-4 bar phrase with deliberate rests between statements",
+      "contour": "a scoop/bend into the target note, a held note with controlled vibrato added only at the tail",
+      "first_appears": "Chorus, sax/guitar in a higher register than the verse"
+    },
+    {
+      "name": "ad-lib-outro-figure",
+      "rhythm": "loose, vocal-style ad-libs around the tonic, not a scalar improvisation",
+      "contour": "short call-and-answer with a keyboard chop, unhurried",
+      "first_appears": "Outro, over the repeating chorus hook as the mix fades"
+    }
+  ],
+  "melody_phrasing": {
+    "verse": {
+      "note_lengths": "relaxed, lower register, generous space between phrases (1-2 bar rests)",
+      "contour": "gentle, singable, understated - sets up the chorus lift",
+      "placement": "on the grid, no drag or push - expression is tonal (bends, grace notes), not timing"
+    },
+    "pre-chorus": {
+      "note_lengths": "phrases tighten slightly, less space than the verse",
+      "contour": "rises gently, tracking the harmony's shift to slash chords",
+      "placement": "on the grid, building"
+    },
+    "chorus": {
+      "note_lengths": "the fullest, most continuous phrasing of the form - this is the hook",
+      "contour": "higher register, the clearest and most memorable melodic statement",
+      "placement": "on the grid, confident, controlled vibrato only at note tails"
+    },
+    "solo": {
+      "note_lengths": "structured and singable - avoid fast/dense technical runs (see smooth-jazz-genre.md SS8)",
+      "contour": "stays melodic and hook-adjacent rather than harmonically exploratory",
+      "placement": "on the grid"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "soft cross-stick/rimshot on the backbeat, hi-hat velocity-layered straight 16ths, shaker doubling",
+    "mid_energy": "kick adds light R&B syncopation, hi-hat dynamics widen, shaker steady",
+    "high_energy": "snare switches from rimshot to a layered, compressed full snare at the chorus; pad/synth-strings thicken underneath, still straight and precise - never swung"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["nylon-guitar-or-epiano", "pad", "drums-light", "bass", "lead", "full-band"],
+    "layout_rules": "intro is guitar or e-piano solo over a pad, drums thin (shaker/cross-stick only); verse 1 brings the full R&B drum groove and a low-register lead theme; pre-chorus shifts harmony to slash chords and builds tension; chorus lifts the lead register, switches snare to full/layered, adds pad/synth-strings; bridge/solo keeps the melody structured and singable; outro repeats the chorus hook under a fading vocal-style ad-lib"
+  },
+  "anti_boredom_rules": [
+    "the melody must leave deliberate space (1-2 bar rests between phrases) - constant note-filling is a genre violation, not a stylistic choice (see smooth-jazz-genre.md SS4)",
+    "the chorus must be audibly lifted from the verse - register change + snare timbre change + harmonic thickening, not a copy-pasted repeat",
+    "use the smooth slash chord at least once per pass through the form - do not resolve every dominant with a plain V7",
+    "the solo section stays structured/singable - no dense technical runs (see melody_phrasing.solo)",
+    "the drum grid never swings, at any energy level - straight 16ths throughout (see groove_profile)"
+  ]
+}

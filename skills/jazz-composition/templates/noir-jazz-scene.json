@@ -1,0 +1,81 @@
+{
+  "id": "noir-jazz-scene",
+  "when_to_use": "cinematic noir/dark jazz, muted trumpet over dark piano, extreme rubato drag, ppp-pp dynamics, scene-form arc, 35-65 BPM",
+  "style": "noir jazz / dark jazz",
+  "defaults": {
+    "key_options": ["A minor", "C minor", "D minor"],
+    "tempo_range": [42, 50],
+    "meter": "4/4",
+    "feel": "ultra-dragged/rubato - only the brushed-snare swirl stays near the grid, everything else floats behind it"
+  },
+  "groove_profile": "noir-jazz-rubato",
+  "harmony_palette": {
+    "diatonic_core": ["Am(maj7)", "Am7", "Am6", "Dm9", "Bm7b5", "Fmaj7(#11)"],
+    "signature_moves": [
+      "the detective's walk (minor line cliche): Am(maj7) -> Am7 -> Am6 -> Fmaj7(#11) -> E7(b9,b13)",
+      "the rainy alleyway (modal interchange): Cm9 -> Fm9 -> Abmaj7(#11) -> G7alt",
+      "cluster friction voicing: semitone pairs placed mid-chord (see noir-jazz-genre.md SS4)"
+    ],
+    "cadence_options": [
+      "altered dominant resolution: E7(b9,b13) -> Am(maj7)",
+      "no hard cadence needed - a scene can simply decay into silence rather than resolve (see arrangement_defaults)"
+    ],
+    "avoid": [
+      "plain major triads or bright major 7ths - swap for maj7#11 or m(maj7) so the mood doesn't read as cheerful (see noir-jazz-genre.md SS4, common pitfalls)",
+      "dense, fast harmonic rhythm - this genre holds a chord for a full 2+ bars minimum, letting it decay (see noir-jazz-genre.md SS2)"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "mournful-3-note-call",
+      "rhythm": "a short 3-note muted-trumpet phrase over 1-2 bars, then silence",
+      "contour": "a slow bend/glissando into a blue note (b5 or b3) from below",
+      "first_appears": "Scene 2 (The Shadow), bars 1-2, answered by a single low piano chord in bars 3-4"
+    },
+    {
+      "name": "decaying-chord-signature",
+      "rhythm": "one struck chord left to ring and fully decay across an entire phrase",
+      "contour": "Am(maj7) or a cluster voicing, no restrike until it has fully decayed",
+      "first_appears": "Scene 1 (The Alleyway), the first piano entrance"
+    }
+  ],
+  "melody_phrasing": {
+    "alleyway-intro": {
+      "note_lengths": "near silence - a single bass pluck every 2 bars, one chord left to decay over 4 bars",
+      "contour": "n/a - establishing space before any melody enters",
+      "placement": "sparse, no lead yet"
+    },
+    "shadow-theme": {
+      "note_lengths": "short mournful phrases, long sustained notes, generous silence between them",
+      "contour": "blue-note bends into the target pitch, per the muted-trumpet technique (noir-jazz-genre.md SS7)",
+      "placement": "extremely dragged - +30 to +60ms behind the brushed-snare swirl (see groove_profile)"
+    },
+    "confession-interlude": {
+      "note_lengths": "sparse duet phrasing between sax and piano",
+      "contour": "sub-tone tenor sax in a low register, breath-forward rather than pitch-forward",
+      "placement": "same extreme drag as shadow-theme, trumpet silent"
+    },
+    "resolution-outro": {
+      "note_lengths": "the theme restates, then thins to a single bass pluck and one final decaying chord",
+      "contour": "molto ritardando - the tempo itself slows into the fade",
+      "placement": "drag increases further as the tempo slows, ending in total silence"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "constant soft brushed-snare swirl only, no kick, ride occasionally fading in on the '1'",
+    "mid_energy": "swirl continues, a near-inaudible soft-felt kick added on 1 and the 'and' of 3, ride fades on 1 and 3",
+    "high_energy": "not applicable in the usual sense - noir jazz's ceiling is Scene 2/3's full trio, not a louder drum pattern; density comes from adding voices (sax duet), never from a harder-hitting drum layer"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["upright-bass", "piano", "brushed-drums", "muted-trumpet", "tenor-sax"],
+    "layout_rules": "Scene 1 (Alleyway/Intro): bass alone, then one piano chord left to decay; Scene 2 (Shadow/Main Theme): brushed swirl enters softly, muted trumpet states the theme over the line-cliche progression; Scene 3 (Confession/Interlude): trumpet drops out, sub-tone tenor sax duets with piano, brief modulation; Scene 4 (Fog/Ambient Break): drums and bass stop entirely, only piano reverb tail and a single delayed trumpet note remain; Scene 5 (Resolution/Outro): full ensemble restates the theme, tempo slows naturally, ends on a single bass pluck and a decaying chord"
+  },
+  "anti_boredom_rules": [
+    "every chord must be left to decay fully before the next is struck - no dense harmonic rhythm, minimum ~2 bars per chord (see noir-jazz-genre.md SS2)",
+    "cut roughly half the melody notes a first draft would include - space is a requirement, not an option (see common pitfalls)",
+    "at least one full scene (Scene 4/fog break) must drop drums and bass entirely, leaving only piano reverb tail and a single held/delayed note",
+    "dynamics stay ppp-pp throughout - no sudden swell or forte moment anywhere in the arrangement",
+    "the mournful-3-note-call hook must recur, varied by register or answering instrument, never copy-pasted identically",
+    "if an ambient/foley texture is used at all, it must sit -18 to -24 dB under the music and be band-passed 400 Hz-5 kHz (see noir-jazz-genre.md SS3) - and it is always acceptable to omit it entirely"
+  ]
+}

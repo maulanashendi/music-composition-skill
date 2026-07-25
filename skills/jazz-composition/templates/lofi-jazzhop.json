@@ -1,0 +1,82 @@
+{
+  "id": "lofi-jazzhop",
+  "when_to_use": "loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket",
+  "style": "lofi jazz / jazzhop",
+  "defaults": {
+    "key_options": ["D minor", "A minor", "Bb major", "Eb major"],
+    "tempo_range": [75, 95],
+    "meter": "4/4",
+    "feel": "swung-16th, deep pocket, dusty and relaxed"
+  },
+  "groove_profile": "neo-soul-core",
+  "harmony_palette": {
+    "diatonic_core": ["Dm9", "Gm11", "Bbmaj7", "Am7", "Cmaj9", "Fmaj7#11"],
+    "signature_moves": [
+      "2-4 chord loop with tasteful reharm on repeats (change the top voice, keep the bass)",
+      "borrowed color: Dm9 -> Bbmaj7 -> Ebmaj7#11 (bVI) -> A7alt",
+      "gospel passing: Gm11 -> G#dim7 -> Am9",
+      "chromatic bass walkup under a held upper voicing"
+    ],
+    "cadence_options": [
+      "loop-point turnaround: Am7 -> D9 -> Gm11 (back to top)",
+      "plagal settle: Gm11 -> Dm9 (no dominant)",
+      "deceptive: A7alt -> Bbmaj7 instead of Dm"
+    ],
+    "avoid": [
+      "chord density as a substitute for pocket - identity is groove+texture+space (see style-cheatsheets Lofi jazz)",
+      "the exact same voicing looped with zero reharm for the whole tune (see ../references/cliche-register.md)"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "short-motif-loop",
+      "rhythm": "a 2-bar motif that lands on the '&' of 2, leaving space after",
+      "contour": "a small falling gesture (3rd down) that answers itself an octave apart on the repeat",
+      "first_appears": "A, over the bare loop"
+    },
+    {
+      "name": "top-voice-hook",
+      "rhythm": "sustained top note of the comp voicing, re-struck on the reharm",
+      "contour": "the color tone (9th or #11) held so the reharm underneath changes its meaning",
+      "first_appears": "the second loop, when the reharm hits"
+    }
+  ],
+  "melody_phrasing": {
+    "settle": {
+      "note_lengths": "sparse, mostly space; let the loop breathe",
+      "contour": "small gestures around the tonic and the color tone",
+      "placement": "deep in the pocket, behind the beat"
+    },
+    "develop": {
+      "note_lengths": "add one phrase per loop; build by addition",
+      "contour": "reach a little higher, introduce the reharm color tone",
+      "placement": "in the pocket"
+    },
+    "lift": {
+      "note_lengths": "the fullest the tune gets - still restrained",
+      "contour": "hold the highest color tone over the loop's reharm",
+      "placement": "in the pocket, a touch more forward"
+    },
+    "dissolve": {
+      "note_lengths": "strip back by subtraction to almost nothing",
+      "contour": "settle onto the tonic or the loop's most stable tone",
+      "placement": "loosen, drift"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "dusty kick on 1 and the 'a' of 2, laid-back snare on 2 and 4, sparse hat, lots of space",
+    "mid_energy": "add swung 16th hat ghosts (vel < 45), a syncopated kick echoing the bass riff",
+    "high_energy": "still restrained - add a light open-hat accent and a short fill at the loop point, never busy"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["keys", "bass", "drums", "lead"],
+    "layout_rules": "develop the single loop by subtraction/addition, not by adding sections; strip to keys+bass for a breakdown; lead enters late and lays out often to keep the pocket the focus"
+  },
+  "anti_boredom_rules": [
+    "each loop repeat must differ from the last by subtraction, addition, OR reharm - never an identical bar-for-bar copy",
+    "the reharm must land at least once so a held top voice changes meaning",
+    "no 2-bar loop repeats more than 4 times without a change",
+    "velocity is never flat across a voice within a bar (dusty ghosts low, hits higher)",
+    "keep space - do not fill every beat; the pocket is the identity"
+  ]
+}

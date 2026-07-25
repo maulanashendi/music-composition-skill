@@ -115,6 +115,13 @@ Form:
 Instrumentasi:
 Referensi karakter:
 
+> Setelah gaya/mood jelas, cek `templates/registry.md` (index tipis) — bila ada
+> template gaya yang cocok, muat **satu** `templates/<id>.json` untuk menyemai
+> defaults/palet chord/hook/groove/aturan-variasi konsep ini. Template =
+> starting kit, bukan pintasan: kandidat→seleksi dan semua gate tetap jalan.
+> Prosedur di `references/level-01-konsep.md` §"Template gaya"; mekanisme +
+> anti-bloat 3-tier di `templates/README.md`.
+
 **Tahap 2 — Buat form kosong** → artefak `02-form.md`
 
 Intro 8 bar

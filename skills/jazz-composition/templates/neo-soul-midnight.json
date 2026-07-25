@@ -1,0 +1,82 @@
+{
+  "id": "neo-soul-midnight",
+  "when_to_use": "late-night, intimate, a doubt->acceptance arc, 68-80 BPM, Rhodes-led",
+  "style": "neo-soul",
+  "defaults": {
+    "key_options": ["F major", "Eb major", "Db major"],
+    "tempo_range": [68, 80],
+    "meter": "4/4",
+    "feel": "relaxed swung-16th, snare and keys a touch behind the beat"
+  },
+  "groove_profile": "neo-soul-core",
+  "harmony_palette": {
+    "diatonic_core": ["Fmaj9", "Am7", "Dm9", "Gm11", "Bbmaj7#11", "Csus13"],
+    "signature_moves": [
+      "backdoor: Bbm7 -> Eb7 -> Fmaj9",
+      "chromatic slide: Dm9 -> Db7#11 -> Cm9 -> B7#11",
+      "modal borrow: Gm11 -> Bbm6 -> Fmaj9",
+      "static-bass reharm: hold F in the bass, move Fmaj9 -> Fm(maj9) -> Ebmaj9"
+    ],
+    "cadence_options": [
+      "Gm11 -> C7alt -> Fmaj9",
+      "tritone sub turnaround: Gm11 -> Gb13 -> Fmaj9",
+      "plagal settle: Bbmaj7#11 -> Fmaj9 (no dominant)"
+    ],
+    "avoid": [
+      "plain ii-V-I with no reharm or extension (see ../references/cliche-register.md)",
+      "the same voicing block copy-pasted every bar"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "rise-and-settle",
+      "rhythm": "syncopated 16th pickup into a held target note across the barline",
+      "contour": "rise a 6th from the 5th, then settle down to the 3rd",
+      "first_appears": "Intro, bare over Rhodes"
+    },
+    {
+      "name": "call-and-answer",
+      "rhythm": "two short answering phrases, the second landing a beat later than the first",
+      "contour": "a falling 4th answered by a rising 2nd that lands on the 9th",
+      "first_appears": "A1, stated then fragmented"
+    }
+  ],
+  "melody_phrasing": {
+    "doubt": {
+      "note_lengths": "short phrases with long gaps between them",
+      "contour": "gentle rise then fall, stopping on the 6th (unresolved)",
+      "placement": "slightly behind the beat"
+    },
+    "hope": {
+      "note_lengths": "lines lengthen, fewer gaps",
+      "contour": "climb, each phrase reaching a little higher",
+      "placement": "closer to on the beat as energy tightens"
+    },
+    "peak": {
+      "note_lengths": "hold the peak note; let it ring",
+      "contour": "sustain the high target tone over open harmony",
+      "placement": "on the beat, confident"
+    },
+    "acceptance": {
+      "note_lengths": "sparse, resolving, more space",
+      "contour": "descend gently to the tonic",
+      "placement": "loosen, drift behind the beat again"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "kick on 1 and the '&' of 3, snare laid-back on 2 and 4, hi-hat sparse quarter notes",
+    "mid_energy": "add off-beat hi-hat 16ths as ghosts (vel < 45), an occasional kick pickup before beat 1",
+    "high_energy": "busier hi-hat 16ths, snare ghost notes around the backbeat, a fill leading into the peak section"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["keys", "bass", "lead", "drums"],
+    "layout_rules": "keys+bass state the intro alone; drums enter with the first full A; drop drums (or go to brushed/sparse) for the bridge; lead lays out during the keys turnaround so the comp breathes"
+  },
+  "anti_boredom_rules": [
+    "the chosen hook must reappear at least twice, always varied (register, rhythm, or harmonization) - never an identical copy",
+    "at least one section drops one instrument for contrast",
+    "no 2-bar loop repeats more than 4 times without a fill, reharm, or dynamic shift",
+    "velocity is never flat across a voice within a bar (ghost notes low, targets/accents high)",
+    "use at least one signature_move from the palette somewhere - do not stay purely diatonic for the whole tune"
+  ]
+}

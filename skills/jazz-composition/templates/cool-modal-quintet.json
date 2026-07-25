@@ -1,0 +1,81 @@
+{
+  "id": "cool-modal-quintet",
+  "when_to_use": "modal jazz over a static Dorian vamp or a pianoless West Coast cool quartet, brushed floating swing, statement-rest-development melody, 55-175 BPM",
+  "style": "cool & modal jazz",
+  "defaults": {
+    "key_options": ["D dorian", "E dorian", "C dorian"],
+    "tempo_range": [100, 125],
+    "meter": "4/4",
+    "feel": "brushed swing, floating and gently behind the beat, no hard accents"
+  },
+  "groove_profile": "cool-modal-floating",
+  "harmony_palette": {
+    "diatonic_core": ["Dm7", "Ebm7", "Em7", "Am7"],
+    "signature_moves": [
+      "So What voicing on Dm7: stacked 4ths E-A-D-G capped with a top major 3rd (B)",
+      "modal stepwise shift: D Dorian (Dm7) -> Eb Dorian (Ebm7), a half-step up for the bridge",
+      "minor stepwise cell: Dm7 (D Dorian) -> Em7 (E Phrygian/Dorian)",
+      "pianoless contrapuntal option: drop the chordal instrument, use two independent horn lines (guide tones + low counter-melody) instead of voicings"
+    ],
+    "cadence_options": [
+      "no functional cadence needed - a modal section simply shifts to the next mode or returns to the top (see arrangement_defaults)",
+      "bridge resolution: the half-step-up mode shift resolves by returning to the home Dorian, not by a dominant-tonic cadence"
+    ],
+    "avoid": [
+      "fast ii-V-I chord changes - harmony here is a static canvas for melodic exploration, not a vehicle to navigate (see cool-modal-jazz-genre.md SS3)",
+      "comping a chord on every beat - use interactive/sparse punctuation instead (see groove_profile notes)"
+    ]
+  },
+  "hook_archetypes": [
+    {
+      "name": "three-note-motif",
+      "rhythm": "a simple 3-note statement, then 1-2 bars of silence, then the motif returns with a rhythmic displacement or one changed final note",
+      "contour": "stays within the mode's characteristic color (e.g. the natural 6th in Dorian)",
+      "first_appears": "Head, stated by the lead horn alone over the bass pedal"
+    },
+    {
+      "name": "guide-tone-line",
+      "rhythm": "long held notes tracing the mode's guide tones",
+      "contour": "smooth, minimal movement - a line meant to be sung, not run through quickly",
+      "first_appears": "Intro, over the bass pedal point before the full head enters"
+    }
+  ],
+  "melody_phrasing": {
+    "intro-pedal": {
+      "note_lengths": "very sparse - the bass pedal carries the section almost alone",
+      "contour": "n/a or a bare guide-tone fragment from the lead",
+      "placement": "brushed and soft, no strong downbeat emphasis"
+    },
+    "head": {
+      "note_lengths": "short 2-3 note statements followed by 1-2 bars of rest (see cool-modal-jazz-genre.md SS4)",
+      "contour": "unison or simple two-part counterpoint between horns, calm and unhurried",
+      "placement": "close to the grid, expression carried by tone quality not timing"
+    },
+    "solo": {
+      "note_lengths": "motivic development - repeat and vary a short motif rather than running scales continuously",
+      "contour": "explores the mode's color (Dorian nat-6, Phrygian b2) at length, not chord-outlining",
+      "placement": "close to the grid, comping stays sparse and reactive underneath"
+    },
+    "outro": {
+      "note_lengths": "the head motif repeats, thinning out",
+      "contour": "fades (morendo), ending on a suspended Harmon-mute note",
+      "placement": "slows/relaxes further as the piece fades"
+    }
+  },
+  "drum_skeleton": {
+    "low_energy": "brushed swish continuous, feathered kick barely audible, pedal hi-hat soft on 2 and 4",
+    "mid_energy": "brush swish slightly more present, occasional soft ride accent, still no hard hits",
+    "high_energy": "even at the fastest tempo range (140-175 BPM, up-tempo modal/West Coast) the drums stay brushed and unaccented - density increases via contrapuntal horn activity, never via harder drum hits (see cool-modal-jazz-genre.md SS2)"
+  },
+  "arrangement_defaults": {
+    "entrance_order": ["upright-bass", "brushed-drums", "piano-sparse", "lead-horn", "second-horn"],
+    "layout_rules": "intro is bass pedal point alone under brushed drums, piano enters sporadically with So What voicings; head is unison/counterpoint horn melody over the static mode; bridge shifts the mode a half-step up; solo section explores the mode with sparse interactive comping underneath; outro repeats and fades the head motif to a single suspended mute note"
+  },
+  "anti_boredom_rules": [
+    "leave real silence - at least 1-2 bars of rest after every short melodic statement, per the statement-rest-development cycle (see melody_phrasing.head)",
+    "harmony stays modal/static within a section - the only sanctioned harmonic 'event' is the half-step mode shift at the bridge, not a chord progression",
+    "piano comping (if present) stays sparse/interactive - never a chord on every beat",
+    "the three-note-motif hook must return varied by rhythmic displacement or a changed final note, never repeated identically",
+    "drums never harden into an accented backbeat, at any tempo or energy level - brushed and floating throughout (see groove_profile)"
+  ]
+}
