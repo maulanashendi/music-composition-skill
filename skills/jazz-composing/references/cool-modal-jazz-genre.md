@@ -173,7 +173,7 @@ patch, not something this package's scripts implement, same framing as
   foundation.
 
 Groove detail (tick offsets, gate ratios) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `cool-modal-floating` profile — select it by name.
 
 ## 7. Vintage production intent (downstream — not this package's job)

@@ -1,0 +1,5 @@
+# Rujukan yang DIKETAHUI rusak dan SENGAJA belum diperbaiki.
+# Format: <path berkas relatif thd root bundle> :: <rujukan> :: <alasan>
+# Gerbang yang merah permanen adalah gerbang mati -- pengecualian dideklarasikan
+# di sini supaya TERLIHAT, bukan disembunyikan dgn melonggarkan test.
+skills/rendering-audition/references/engine-http-alternative.md :: ../abc-notation/SKILL.md :: kedalaman relatif salah (seharusnya ../../abc-notation/SKILL.md); berkas ini punya perubahan pemilik repo yang belum di-commit, jadi tak disentuh

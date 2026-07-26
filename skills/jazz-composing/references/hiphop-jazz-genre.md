@@ -60,7 +60,7 @@ technique**, not sloppiness:
 
 Groove detail (tick offsets, gate ratios, and how this compares numerically
 to `neo-soul-core`) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `dilla-boom-bap` profile — select it by name; do not re-derive per-note
 timing here.
 
@@ -149,7 +149,7 @@ This is the *written* pattern (which 16th-note slots sound) — the
 `dilla-boom-bap` groove profile's ms/tick offsets (§2) are then applied on
 top of it, per `advanced-microtiming.md` §1's notated-vs-performance
 distinction. Program the pattern via
-`../../midi-orchestration/assets/drum-grid-template.json`'s step-grid
+`../../../archive/skills/midi-orchestration/assets/drum-grid-template.json`'s step-grid
 format (`kick`/`snare`/`chh`/`ohh` roles), not as literal note events here.
 
 ## 7. Melody, horns & call-and-response

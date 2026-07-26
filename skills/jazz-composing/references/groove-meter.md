@@ -78,7 +78,7 @@ Swing is not a fixed dotted-eighth/sixteenth ratio. It combines:
 The ratio tends to become more even at faster tempos and may vary by era and player. In ABC, normally notate equal eighths and mark swing as a performance direction.
 
 Breakpoint operasional untuk prosa di atas (cek terhadap BPM brief —
-lihat juga tabel BPM band `../../vibes-mood/references/reasoning-theory.md`):
+lihat juga tabel BPM band):
 
 | BPM | Swing ratio |
 |---|---|

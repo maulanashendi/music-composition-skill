@@ -3,14 +3,28 @@
   "when_to_use": "radio-friendly smooth jazz, vocal-centric sax/guitar lead, smooth slash chord, full pop-verse-chorus form, 65-115 BPM",
   "style": "smooth jazz",
   "defaults": {
-    "key_options": ["C major", "G major", "A minor"],
-    "tempo_range": [82, 98],
+    "key_options": [
+      "C major",
+      "G major",
+      "A minor"
+    ],
+    "tempo_range": [
+      82,
+      98
+    ],
     "meter": "4/4",
     "feel": "straight, ultra-precise 16ths, no swing, expression carried by lead phrasing not timing"
   },
   "groove_profile": "smooth-jazz-rnb",
   "harmony_palette": {
-    "diatonic_core": ["Cmaj9", "Am11", "Fmaj7", "Dm7/G", "Gmaj9", "Bm7"],
+    "diatonic_core": [
+      "Cmaj9",
+      "Am11",
+      "Fmaj7",
+      "Dm7/G",
+      "Gmaj9",
+      "Bm7"
+    ],
     "signature_moves": [
       "smooth slash chord: Fmaj7/G or Dm7/G in place of a plain G7 (see smooth-jazz-genre.md SS3)",
       "pedal bass: Cmaj9 -> Dm7/C -> Fmaj7/C -> Cmaj9",
@@ -68,7 +82,14 @@
     "high_energy": "snare switches from rimshot to a layered, compressed full snare at the chorus; pad/synth-strings thicken underneath, still straight and precise - never swung"
   },
   "arrangement_defaults": {
-    "entrance_order": ["nylon-guitar-or-epiano", "pad", "drums-light", "bass", "lead", "full-band"],
+    "entrance_order": [
+      "nylon-guitar-or-epiano",
+      "pad",
+      "drums-light",
+      "bass",
+      "lead",
+      "full-band"
+    ],
     "layout_rules": "intro is guitar or e-piano solo over a pad, drums thin (shaker/cross-stick only); verse 1 brings the full R&B drum groove and a low-register lead theme; pre-chorus shifts harmony to slash chords and builds tension; chorus lifts the lead register, switches snare to full/layered, adds pad/synth-strings; bridge/solo keeps the melody structured and singable; outro repeats the chorus hook under a fading vocal-style ad-lib"
   },
   "anti_boredom_rules": [
@@ -77,5 +98,14 @@
     "use the smooth slash chord at least once per pass through the form - do not resolve every dominant with a plain V7",
     "the solo section stays structured/singable - no dense technical runs (see melody_phrasing.solo)",
     "the drum grid never swings, at any energy level - straight 16ths throughout (see groove_profile)"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": null,
+    "tempo_range_effective": null,
+    "blockers": [
+      "engine belum punya profil groove 'smooth-jazz-rnb' di GROOVE_LIBRARY",
+      "engine belum punya vibe preset untuk gaya ini di VIBE_PRESETS"
+    ]
+  }
 }

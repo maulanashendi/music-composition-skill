@@ -5,7 +5,7 @@ translated and restructured into this package's conventions). This deepens
 the existing "Jazz-funk / fusion" entry in `style-cheatsheets.md` the same
 way `neo-soul-genre.md`, `classic-jazz-genre.md`, and `bossa-nova-genre.md`
 deepen theirs. It also carries the Tier-1 composition-plan template for this
-family — `jazz-composition/templates/fusion-vamp.json` already exists and
+family — `templates/fusion-vamp.json` already exists and
 needs no changes; this file explains where it sits and what other groove
 options this genre has beyond it.
 
@@ -163,7 +163,7 @@ the tempo has shifted, while the underlying groove foundation stays stable.
   `purdie-shuffle` groove profile instead of `fusion-tight` (documented
   once in `groove-profiles.md`, shared with soul jazz).
 
-**Existing Tier-1 template:** `jazz-composition/templates/fusion-vamp.json`
+**Existing Tier-1 template:** `templates/fusion-vamp.json`
 (registry id `fusion-vamp`) already encodes this genre's vamp-and-breakdown
 recipe — static Em11 vamp, unison-riff and stab hooks, `fusion-tight`
 groove, urgency->build->peak->release arc. Select it directly; it needs no

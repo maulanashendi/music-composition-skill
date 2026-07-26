@@ -34,6 +34,24 @@ degree valid: [1, 3, 5, 7, 9, 11, 13] (index posisi dlm stack root-3-5-7-9-11-13
 `<Root>maj9`, `<Root>maj11`, `<Root>maj13` (mis. `Cmaj9`, `Fmaj11`) DIDUKUNG -- dinormalisasi otomatis ke kapitalisasi music21 (`Maj9`/`Maj11`/`Maj13`), pitch identik. Bentuk `<Root>M9`/`<Root>M11`/`<Root>M13` (mis. `CM9`) juga diterima langsung.
 Override simbol eksplisit lain (ambigu/gagal music21): Dm9, G13(b9).
 
+## Bentuk berkurung DITERIMA
+Notasi lead-sheet berkurung dinormalisasi otomatis: `A7(b9)`, `C7(#9)`, `G7(b13)`, `G7(13)`, `Fmaj7(#11)`, `Abmaj7(#11)` -- kurungnya dilepas sebelum diserahkan ke music21, jadi bentuk berkurung dan tanpa kurung sama-sama sah.
+
+## Keluarga sufiks chord yang DIDUKUNG (root apa pun)
+Sufiks berikut punya realisasi eksplisit di engine dan berlaku untuk root apa pun -- pakai ini alih-alih mengarang varian lain, karena simbol di luar daftar ini DAN di luar apa yang music21 kenali akan DITOLAK validator:
+- `<Root>m(maj9)` -> stack interval [0, 3, 7, 11, 14] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>m(maj7)` -> stack interval [0, 3, 7, 11] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>mmaj9` -> stack interval [0, 3, 7, 11, 14] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>mmaj7` -> stack interval [0, 3, 7, 11] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>sus13` -> stack interval [0, 5, 7, 10, 14, 21] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>13sus` -> stack interval [0, 5, 7, 10, 14, 21] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>9sus4` -> stack interval [0, 5, 7, 10, 14] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>9sus` -> stack interval [0, 5, 7, 10, 14] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>7alt` -> stack interval [0, 4, 8, 10, 15, 18] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>alt` -> stack interval [0, 4, 8, 10, 15, 18] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>6/9` -> stack interval [0, 4, 7, 9, 14] (dari root, urut 1-3-5-7-9-11-13)
+- `<Root>69` -> stack interval [0, 4, 7, 9, 14] (dari root, urut 1-3-5-7-9-11-13)
+
 ## Batas ukuran plan.json (LIMITS, ditegakkan validator)
 - `maxSections`: 32
 - `maxTotalBars`: 512

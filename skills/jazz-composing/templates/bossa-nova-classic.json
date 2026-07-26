@@ -3,14 +3,28 @@
   "when_to_use": "intimate to flowing bossa nova, nylon guitar batida, straight 16ths with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM",
   "style": "bossa nova",
   "defaults": {
-    "key_options": ["C major", "F major", "A minor"],
-    "tempo_range": [80, 160],
+    "key_options": [
+      "C major",
+      "F major",
+      "A minor"
+    ],
+    "tempo_range": [
+      80,
+      160
+    ],
     "meter": "4/4",
     "feel": "rhythm section dead straight 16ths (no swing), lead/vocal laid-back or rubato, bass anticipation into chord changes"
   },
   "groove_profile": "bossa-nova-straight",
   "harmony_palette": {
-    "diatonic_core": ["Cmaj9", "Am9", "Dm9", "G13", "C6/9", "Bm7b5"],
+    "diatonic_core": [
+      "Cmaj9",
+      "Am9",
+      "Dm9",
+      "G13",
+      "C6/9",
+      "Bm7b5"
+    ],
     "signature_moves": [
       "Jobim chromatic descent: Cmaj7 -> C#dim7 -> Dm7 -> D#dim7 -> C/E -> A7(b9,b13)",
       "major-dominant II (Ipanema formula): Fmaj7 -> G7(13) -> Gm9 -> C7(b9)",
@@ -68,7 +82,14 @@
     "high_energy": "optional pandeiro/agogo layered in for the up-tempo samba-bossa zone (135-160 BPM), still straight 16ths, never swung"
   },
   "arrangement_defaults": {
-    "entrance_order": ["guitar", "shaker", "bass", "lead", "counter-melody", "pad"],
+    "entrance_order": [
+      "guitar",
+      "shaker",
+      "bass",
+      "lead",
+      "counter-melody",
+      "pad"
+    ],
     "layout_rules": "guitar batida opens solo; shaker enters bar 3, bass enters bar 5 on root-5th; lead enters at Verse A1 sotto voce; counter-melody (flute/Rhodes) and string pad enter at Verse A2, very soft; bridge modulates and thickens harmony; re-head (A3) is the fullest texture; solo interlude sits over the verse changes; outro strips to a vamped tag ending on a 6/9 chord left to ring"
   },
   "anti_boredom_rules": [
@@ -77,5 +98,14 @@
     "use at least one signature_move (chromatic descent, backdoor+tritone sub, or minor line cliche) - do not stay on the plain I-VI-ii-V the whole tune",
     "the bridge must modulate or otherwise contrast harmonically - it cannot just repeat the verse progression",
     "keep dynamics restrained (pp-mp for most of the form) - a bossa arrangement that gets loud/dense everywhere has lost the genre's restraint"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": null,
+    "tempo_range_effective": null,
+    "blockers": [
+      "engine belum punya profil groove 'bossa-nova-straight' di GROOVE_LIBRARY",
+      "engine belum punya vibe preset untuk gaya ini di VIBE_PRESETS"
+    ]
+  }
 }

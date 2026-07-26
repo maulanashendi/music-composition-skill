@@ -1,7 +1,7 @@
 # Advanced Melody — chromatic vocabulary, enclosure, outside playing (niat-level)
 
-> Diringkas dari `../../advanced-melody/SKILL.md` dan
-> `../../advanced-melody/references/rubric.md`. Tetap niat-level:
+> Diringkas dari `../../../archive/skills/advanced-melody/SKILL.md` dan
+> `../../../archive/skills/advanced-melody/references/rubric.md`. Tetap niat-level:
 > keputusan di sini adalah *kapan dan di bar mana* memakai outside
 > note, bukan timing presisi not tersebut — lihat
 > `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`.
@@ -77,13 +77,13 @@ biasa.
 
 Chromatic vocabulary tahap 7-8 juga tunduk pada gate tempo
 densitas-vs-BPM yang sama (BPM brief eksplisit + cek IOI/napas
-terhadap tabel BPM band di `../../vibes-mood/references/reasoning-theory.md`)
+terhadap tabel BPM band)
 — bukan gate terpisah.
 
 ## Rubrik kualitas
 
 Kriteria berikut dipakai subagent reviewer segar tanpa konteks generasi
-(fase Review, dipegang `../rendering-audition/SKILL.md`) — skor + alasan
+(fase Review, dipegang `../../rendering-audition/SKILL.md`) — skor + alasan
 1 kalimat per kriteria, skala 0-2 (0 = tidak ada/kontradiktif, 1 = ada
 tapi lemah/tidak konsisten, 2 = jelas dan konsisten sepanjang artefak):
 

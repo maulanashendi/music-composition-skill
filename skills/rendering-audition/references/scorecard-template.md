@@ -1,6 +1,6 @@
 # Template `scorecard.md`
 
-Setiap run folder (lihat `../jazz-composing/references/run-folder-protocol.md`)
+Setiap run folder (lihat `../../jazz-composing/references/run-folder-protocol.md`)
 memiliki satu `scorecard.md` yang mengumpulkan penilaian tiga lapis (L1
 mekanis, L2 rubrik, L3 telinga) untuk fase-fase MDLC (Brief, Ideation, Plan,
 Verify, Audition, Review, Release), ditulis dalam bahasa Indonesia. Salin
@@ -118,7 +118,7 @@ reviewer segar dengan diet informasi ketat → pilih 1 + alasan.
 ### L2-cliche — audit originalitas
 
 Reviewer segar menandai match terhadap
-`../jazz-composing/references/cliche-register.md`; composer merespons tiap
+`../../jazz-composing/references/cliche-register.md`; composer merespons tiap
 temuan:
 
 | Temuan (entri register + lokasi bar) | Respons (revisi / justifikasi audible) | Detail respons |
@@ -136,7 +136,7 @@ L1/L2-rubrik/L2-blind/L2-cliche:
 |---|---|---|---|
 
 Run tanpa satu pun revisi tercatat = red flag "first draft dianggap
-final" (`../RED-FLAGS.md`).
+final" (`../../RED-FLAGS.md`).
 
 ## Audition/Release (Fase Audition — pyengine)
 

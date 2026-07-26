@@ -5,7 +5,7 @@
 > contoh baru yang kamu tulis mengikuti pola file ini — itu kerja
 > `pyengine`, lihat `../../../docs/DOCTRINE-NIAT-BUKAN-NOT.md`.
 
-Diringkas dari `../../melody-design/references/melody-fundamentals.md`
+Diringkas dari `../../../archive/skills/melody-design/references/melody-fundamentals.md`
 (vocabulary kerja murni melodi — phrasing, motif/hook, guide tones).
 Dipakai di Fase Ideation poin 4 (Desain Melodi) dari `../SKILL.md`,
 tahap 1-6 (motif/kontur/target-tone/broken-chord). Untuk chromatic
@@ -37,8 +37,7 @@ yang dipetakan ke pilihan groove/pattern bernama (Fase Ideation poin 5,
 lihat `references/groove-vocabulary.md`) — bukan tick offset numerik
 yang ditulis langsung ke `plan.json`. Tension-release sebagai
 dramaturgi lintas-section (dominant held, bass contrary motion,
-instrumen ditambah, dsb.) dibahas di
-`../../arrangement/references/form-and-dramaturgy.md` §11a — di sini
+instrumen ditambah, dsb.) dibahas di §11a — di sini
 fokusnya murni pada bagaimana melodi diucapkan (interval, kontur,
 timing).
 

@@ -1,10 +1,12 @@
 # Style template — field contract
 
 The field contract for a `templates/<id>.json` file. A template seeds a
-`composition-plan.json` (see `../assets/composition-plan-template.json`); every
-field here maps to a plan decision the orchestrator would otherwise make from
-scratch. Read `README.md` first for the 3-tier disclosure model and why
-templates live at the plan layer, not `song.json`.
+`plan.json` (schemaVersion 2); every field here maps to a plan decision the
+orchestrator would otherwise make from scratch. The canonical example of a
+`plan.json` lives in the engine module at `backend/modules/engine/examples/
+plan-neo-soul-8bar.json` and is injected into the LLM prompt during Ideation.
+Read `README.md` first for the 3-tier disclosure model and how templates fit
+into the MDLC workflow.
 
 ## Shape
 
@@ -68,15 +70,15 @@ templates live at the plan layer, not `song.json`.
 - `when_to_use` — one line. **Must be identical** to this template's line in
   `registry.md` (the registry is the copy the orchestrator reads first).
 - `style` — string label, e.g. `neo-soul`, `lofi jazz`, `fusion`. Should match
-  a `../../vibes-mood/references/style-cheatsheets.md` entry when one exists.
+  a `../references/style-cheatsheets.md` entry when one exists.
 - `defaults` — starting values the orchestrator may adopt or override per brief:
   - `key_options` — array of candidate keys (`"F major"`, `"C# minor"`), plan
     picks one. Not a single locked key — the brief may steer it.
   - `tempo_range` — `[min, max]` BPM. Plan picks a concrete BPM inside it.
   - `meter` — default meter string `"n/d"`.
-  - `feel` — prose feel descriptor, copied into `composition-plan.json.feel`.
+  - `feel` — prose feel descriptor, copied into `plan.json.meta.feel`.
 - `groove_profile` — **a profile name** from
-  `../../groove-rhythm/references/groove-profiles.md` (currently
+  `../../../archive/skills/groove-rhythm/references/groove-profiles.md` (currently
   `neo-soul-core`). Reference by name only — never inline the tick/gate
   numbers. If a template needs a genuinely new pocket, add a named profile to
   `groove-profiles.md` first, then reference it here.
@@ -89,12 +91,12 @@ templates live at the plan layer, not `song.json`.
   - `avoid` — clichés to steer around; point at
     `../references/cliche-register.md` rather than restating it.
 - `hook_archetypes` — 2–3 hook shapes to choose from, each `{name, rhythm,
-  contour, first_appears}` mapping to `composition-plan.json.hook`. The plan
+  contour, first_appears}` mapping to `plan.json.meta.hook`. The plan
   picks one and develops it — this is the "has a hook" guarantee.
 - `melody_phrasing` — phrasing defaults **keyed by arc-phase**
-  (`doubt`/`hope`/`peak`/`acceptance` — match the phases the plan's `arc`
+  (`doubt`/`hope`/`peak`/`acceptance` — match the phases the plan's `meta.arc`
   actually uses), each `{note_lengths, contour, placement}`. Maps to each
-  `sections[].phrasing`.
+  `plan.json.sections[].phrasing`.
 - `drum_skeleton` — drum density **keyed by section energy**
   (`low_energy`/`mid_energy`/`high_energy`), prose describing the pattern. The
   concrete GM `kick`/`snare`/`hihat`/`ride` events are written at Level 9 /
@@ -109,8 +111,9 @@ templates live at the plan layer, not `song.json`.
 
 ## What a template does NOT store
 
-- **No actual note events.** Pitches/velocities live in `song.json` at Level
-  14, not here. A template that hardcodes notes defeats its own purpose.
+- **No actual note events.** Pitches/velocities are rendered by the engine
+  from the plan, not stored here. A template that hardcodes notes defeats its
+  own purpose.
 - **No groove tick numbers.** Those live in `groove-profiles.md`; reference the
   profile name.
 - **No cliché-register contents.** Point at `cliche-register.md`.

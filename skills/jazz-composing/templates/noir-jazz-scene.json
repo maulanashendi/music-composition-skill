@@ -3,14 +3,28 @@
   "when_to_use": "cinematic noir/dark jazz, muted trumpet over dark piano, extreme rubato drag, ppp-pp dynamics, scene-form arc, 35-65 BPM",
   "style": "noir jazz / dark jazz",
   "defaults": {
-    "key_options": ["A minor", "C minor", "D minor"],
-    "tempo_range": [42, 50],
+    "key_options": [
+      "A minor",
+      "C minor",
+      "D minor"
+    ],
+    "tempo_range": [
+      42,
+      50
+    ],
     "meter": "4/4",
     "feel": "ultra-dragged/rubato - only the brushed-snare swirl stays near the grid, everything else floats behind it"
   },
   "groove_profile": "noir-jazz-rubato",
   "harmony_palette": {
-    "diatonic_core": ["Am(maj7)", "Am7", "Am6", "Dm9", "Bm7b5", "Fmaj7(#11)"],
+    "diatonic_core": [
+      "Am(maj7)",
+      "Am7",
+      "Am6",
+      "Dm9",
+      "Bm7b5",
+      "Fmaj7(#11)"
+    ],
     "signature_moves": [
       "the detective's walk (minor line cliche): Am(maj7) -> Am7 -> Am6 -> Fmaj7(#11) -> E7(b9,b13)",
       "the rainy alleyway (modal interchange): Cm9 -> Fm9 -> Abmaj7(#11) -> G7alt",
@@ -67,7 +81,13 @@
     "high_energy": "not applicable in the usual sense - noir jazz's ceiling is Scene 2/3's full trio, not a louder drum pattern; density comes from adding voices (sax duet), never from a harder-hitting drum layer"
   },
   "arrangement_defaults": {
-    "entrance_order": ["upright-bass", "piano", "brushed-drums", "muted-trumpet", "tenor-sax"],
+    "entrance_order": [
+      "upright-bass",
+      "piano",
+      "brushed-drums",
+      "muted-trumpet",
+      "tenor-sax"
+    ],
     "layout_rules": "Scene 1 (Alleyway/Intro): bass alone, then one piano chord left to decay; Scene 2 (Shadow/Main Theme): brushed swirl enters softly, muted trumpet states the theme over the line-cliche progression; Scene 3 (Confession/Interlude): trumpet drops out, sub-tone tenor sax duets with piano, brief modulation; Scene 4 (Fog/Ambient Break): drums and bass stop entirely, only piano reverb tail and a single delayed trumpet note remain; Scene 5 (Resolution/Outro): full ensemble restates the theme, tempo slows naturally, ends on a single bass pluck and a decaying chord"
   },
   "anti_boredom_rules": [
@@ -77,5 +97,14 @@
     "dynamics stay ppp-pp throughout - no sudden swell or forte moment anywhere in the arrangement",
     "the mournful-3-note-call hook must recur, varied by register or answering instrument, never copy-pasted identically",
     "if an ambient/foley texture is used at all, it must sit -18 to -24 dB under the music and be band-passed 400 Hz-5 kHz (see noir-jazz-genre.md SS3) - and it is always acceptable to omit it entirely"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": "ballad",
+    "tempo_range_effective": null,
+    "blockers": [
+      "engine belum punya profil groove 'noir-jazz-rubato' di GROOVE_LIBRARY",
+      "tempo_range [42, 50] tak beririsan dgn vibe 'ballad' [55, 75]"
+    ]
+  }
 }

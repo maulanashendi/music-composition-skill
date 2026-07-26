@@ -3,14 +3,26 @@
   "when_to_use": "modal jazz over a static Dorian vamp or a pianoless West Coast cool quartet, brushed floating swing, statement-rest-development melody, 55-175 BPM",
   "style": "cool & modal jazz",
   "defaults": {
-    "key_options": ["D dorian", "E dorian", "C dorian"],
-    "tempo_range": [100, 125],
+    "key_options": [
+      "D dorian",
+      "E dorian",
+      "C dorian"
+    ],
+    "tempo_range": [
+      100,
+      125
+    ],
     "meter": "4/4",
     "feel": "brushed swing, floating and gently behind the beat, no hard accents"
   },
   "groove_profile": "cool-modal-floating",
   "harmony_palette": {
-    "diatonic_core": ["Dm7", "Ebm7", "Em7", "Am7"],
+    "diatonic_core": [
+      "Dm7",
+      "Ebm7",
+      "Em7",
+      "Am7"
+    ],
     "signature_moves": [
       "So What voicing on Dm7: stacked 4ths E-A-D-G capped with a top major 3rd (B)",
       "modal stepwise shift: D Dorian (Dm7) -> Eb Dorian (Ebm7), a half-step up for the bridge",
@@ -68,7 +80,13 @@
     "high_energy": "even at the fastest tempo range (140-175 BPM, up-tempo modal/West Coast) the drums stay brushed and unaccented - density increases via contrapuntal horn activity, never via harder drum hits (see cool-modal-jazz-genre.md SS2)"
   },
   "arrangement_defaults": {
-    "entrance_order": ["upright-bass", "brushed-drums", "piano-sparse", "lead-horn", "second-horn"],
+    "entrance_order": [
+      "upright-bass",
+      "brushed-drums",
+      "piano-sparse",
+      "lead-horn",
+      "second-horn"
+    ],
     "layout_rules": "intro is bass pedal point alone under brushed drums, piano enters sporadically with So What voicings; head is unison/counterpoint horn melody over the static mode; bridge shifts the mode a half-step up; solo section explores the mode with sparse interactive comping underneath; outro repeats and fades the head motif to a single suspended mute note"
   },
   "anti_boredom_rules": [
@@ -77,5 +95,16 @@
     "piano comping (if present) stays sparse/interactive - never a chord on every beat",
     "the three-note-motif hook must return varied by rhythmic displacement or a changed final note, never repeated identically",
     "drums never harden into an accented backbeat, at any tempo or energy level - brushed and floating throughout (see groove_profile)"
-  ]
+  ],
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": "medium-swing",
+    "tempo_range_effective": [
+      100,
+      125
+    ],
+    "blockers": [
+      "engine belum punya profil groove 'cool-modal-floating' di GROOVE_LIBRARY"
+    ]
+  }
 }

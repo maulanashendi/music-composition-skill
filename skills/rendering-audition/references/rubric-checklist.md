@@ -58,7 +58,7 @@ dari konsolidasi ini — jalur JSON lama (legacy, akan diarsipkan ke
 | Nada panjang/berulang/aksen/akhir-frasa cocok dengan harmoni, atau sengaja menantangnya dengan alasan | | |
 | Range dan tessitura sesuai instrumen lead | | |
 | Klimaks tidak dilemahkan oleh titik tinggi yang sudah berulang sebelumnya; head tetap memorable setelah nada dekoratif dihapus | | |
-| Kepadatan ritmis melodi proporsional dengan tempo brief (BPM disebut eksplisit; IOI tercepat dan rest ratio cocok dengan tabel BPM band `../../vibes-mood/references/reasoning-theory.md`) | | |
+| Kepadatan ritmis melodi proporsional dengan tempo brief (BPM disebut eksplisit; IOI tercepat dan rest ratio cocok dengan tabel BPM band) | | |
 | Outside material/chromatic vocabulary hanya dipakai pada bar yang tension map memang menandai butuh tegangan tinggi, bukan ditaburkan merata | | |
 | Setiap enclosure/approach note punya target diatonis yang jelas dan tercapai | | |
 | Chromatic vocabulary tidak menutupi motif inti — identitas ritmis/interval tetap terdengar | | |

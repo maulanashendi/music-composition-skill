@@ -56,7 +56,7 @@ Pick one before choosing instrumentation:
   and low-intensity throughout.
 
 Groove detail (canonical ms offsets, gate ratios) lives in
-`../../groove-rhythm/references/groove-profiles.md` under the
+`../../../archive/skills/groove-rhythm/references/groove-profiles.md` under the
 `noir-jazz-rubato` profile — select it by name; do not re-derive per-note
 timing here. Note that this profile is dominated by rubato/phrase-level
 placement rather than a subdivided swing grid — unlike every faster genre
