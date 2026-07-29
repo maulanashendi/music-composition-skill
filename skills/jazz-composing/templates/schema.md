@@ -1,131 +1,153 @@
 # Style template — field contract
 
-The field contract for a `templates/<id>.json` file. A template seeds a
-`plan.json` (schemaVersion 2); every field here maps to a plan decision the
-orchestrator would otherwise make from scratch. The canonical example of a
-`plan.json` lives in the engine module at `backend/modules/engine/examples/
-plan-neo-soul-8bar.json` and is injected into the LLM prompt during Ideation.
-Read `README.md` first for the 3-tier disclosure model and how templates fit
-into the MDLC workflow.
+A style template is a composition recipe that seeds `plan.json`. It stores
+musical decisions and constraints, not rendered notes or engine timing values.
 
-## Shape
+## Required shape
 
 ```json
 {
   "id": "neo-soul-midnight",
-  "when_to_use": "one line — the same text that goes in registry.md",
+  "when_to_use": "one line matching registry.md",
   "style": "neo-soul",
   "defaults": {
     "key_options": ["F major", "Eb major"],
     "tempo_range": [68, 80],
     "meter": "4/4",
-    "feel": "relaxed swung-16th, slightly behind the beat"
+    "feel": "relaxed swung-sixteenth pocket"
   },
   "groove_profile": "neo-soul-core",
+  "template_version": "1.0.0",
+  "palette_reference_key": "F major",
+  "form_archetype": ["intro", "A1", "A2", "bridge", "peak", "outro"],
   "harmony_palette": {
-    "diatonic_core": ["Fmaj9", "Dm9", "Gm11", "Bbmaj7#11", "Am7"],
-    "signature_moves": [
-      "backdoor: Bbm7 -> Eb7 -> Fmaj9",
-      "chromatic slide: Dm9 -> Db7#11 -> Cm9"
-    ],
-    "cadence_options": ["Gm11 -> C7alt -> Fmaj9", "tritone sub turnaround"],
-    "avoid": ["plain ii-V-I with no reharm (see cliche-register)"]
+    "diatonic_core": ["Fmaj9", "Dm9", "Gm11"],
+    "signature_moves": ["Bbm7 -> Eb7 -> Fmaj9"],
+    "cadence_options": ["Bbmaj7#11 -> Fmaj9"],
+    "avoid": ["plain repeated voicings"]
   },
   "hook_archetypes": [
     {
       "name": "rise-and-settle",
-      "rhythm": "syncopated pickup into a held target note",
-      "contour": "rise a 6th, then settle to the 3rd",
-      "first_appears": "Intro, bare"
+      "rhythm": "syncopated pickup into a held target",
+      "contour": "rise then settle",
+      "first_appears": "intro"
     }
   ],
   "melody_phrasing": {
-    "doubt":      { "note_lengths": "short phrases, long gaps", "contour": "gentle rise then fall, stop on the 6th", "placement": "behind the beat" },
-    "hope":       { "note_lengths": "lines lengthen", "contour": "climb, reach higher each phrase", "placement": "on the beat" },
-    "peak":       { "note_lengths": "sustained peak note", "contour": "hold the high target", "placement": "on the beat" },
-    "acceptance": { "note_lengths": "sparse, resolving", "contour": "descend to tonic", "placement": "loosen, behind" }
+    "doubt": {
+      "note_lengths": "short phrases with long gaps",
+      "contour": "gentle rise then fall",
+      "placement": "behind the beat"
+    }
   },
   "drum_skeleton": {
-    "low_energy":  "kick on 1 & 3, snare laid-back on 2 & 4, hat sparse",
-    "mid_energy":  "add off-beat hats (ghost, vel < 45), occasional kick pickup",
-    "high_energy": "busier hat 16ths, snare accents, fill into the peak"
+    "low_energy": "role behavior",
+    "mid_energy": "role behavior",
+    "high_energy": "role behavior"
   },
   "arrangement_defaults": {
     "entrance_order": ["keys", "bass", "lead", "drums"],
-    "layout_rules": "drop drums for the bridge; lead lays out during the keys turnaround"
+    "layout_rules": "section and interaction rules"
   },
-  "anti_boredom_rules": [
-    "hook must reappear >=2x, always varied, never identical",
-    ">=1 section drops one instrument for contrast",
-    "no 2-bar loop repeats >4x without a fill or reharm",
-    "velocity is never flat across a voice within a bar"
-  ]
+  "anti_boredom_rules": ["variation constraint"],
+  "bass_behavior": {
+    "role": "musical function",
+    "rhythmic_relationship": "relationship to drums and ensemble",
+    "density": "sparse, medium, or continuous",
+    "articulation": "attack and duration behavior"
+  },
+  "groove_intent": {
+    "feel": "musician-readable pocket description",
+    "kick": "kick behavior",
+    "snare": "snare behavior",
+    "hihat": "hat or subdivision behavior",
+    "ensemble_relationship": "how the roles create the pocket"
+  },
+  "differentiation": {
+    "nearest_templates": ["lofi-jazzhop"],
+    "distinguishing_traits": [
+      "difference one",
+      "difference two",
+      "difference three"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
+  "engine_support": {
+    "renderable": false,
+    "engine_vibe": null,
+    "tempo_range_effective": null,
+    "blockers": []
+  }
 }
 ```
 
-## Field contract
+## Composition fields
 
-- `id` — string, kebab-case, unique. Matches the filename (`<id>.json`) and the
-  registry row.
-- `when_to_use` — one line. **Must be identical** to this template's line in
-  `registry.md` (the registry is the copy the orchestrator reads first).
-- `style` — string label, e.g. `neo-soul`, `lofi jazz`, `fusion`. Should match
-  a `../references/style-cheatsheets.md` entry when one exists.
-- `defaults` — starting values the orchestrator may adopt or override per brief:
-  - `key_options` — array of candidate keys (`"F major"`, `"C# minor"`), plan
-    picks one. Not a single locked key — the brief may steer it.
-  - `tempo_range` — `[min, max]` BPM. Plan picks a concrete BPM inside it.
-  - `meter` — default meter string `"n/d"`.
-  - `feel` — prose feel descriptor, copied into `plan.json.meta.feel`.
-- `groove_profile` — **a profile name** from
-  `../../../archive/skills/groove-rhythm/references/groove-profiles.md` (currently
-  `neo-soul-core`). Reference by name only — never inline the tick/gate
-  numbers. If a template needs a genuinely new pocket, add a named profile to
-  `groove-profiles.md` first, then reference it here.
-- `harmony_palette` — the style's chord **vocabulary**, not one progression:
-  - `diatonic_core` — the everyday chords the style leans on.
-  - `signature_moves` — the substitutions/turnarounds that give the style its
-    identity; each written as a short chord chain. This is where "chord choices
-    are appropriate" is enforced.
-  - `cadence_options` — how phrases and sections resolve.
-  - `avoid` — clichés to steer around; point at
-    `../references/cliche-register.md` rather than restating it.
-- `hook_archetypes` — 2–3 hook shapes to choose from, each `{name, rhythm,
-  contour, first_appears}` mapping to `plan.json.meta.hook`. The plan
-  picks one and develops it — this is the "has a hook" guarantee.
-- `melody_phrasing` — phrasing defaults **keyed by arc-phase**
-  (`doubt`/`hope`/`peak`/`acceptance` — match the phases the plan's `meta.arc`
-  actually uses), each `{note_lengths, contour, placement}`. Maps to each
-  `plan.json.sections[].phrasing`.
-- `drum_skeleton` — drum density **keyed by section energy**
-  (`low_energy`/`mid_energy`/`high_energy`), prose describing the pattern. The
-  concrete GM `kick`/`snare`/`hihat`/`ride` events are written at Level 9 /
-  Level 14 — this is the character, not the note grid.
-- `arrangement_defaults` — `entrance_order` (voice names, first→last) and
-  `layout_rules` (who sits out where). Seeds the interaction map; the actual
-  map is still designed at Level 6.
-- `anti_boredom_rules` — an array of **constraints** the finished piece must
-  satisfy. These are requirements, not content — they connect directly to
-  `../../RED-FLAGS.md` and the per-module rubrics. This is the mechanism for
-  "not boring": variation is required, not hoped for.
+- `template_version`: semantic version of the composition recipe.
+- `palette_reference_key`: canonical key in which chord names are written. It
+  must also appear in `defaults.key_options`; the orchestrator transposes the
+  palette when another key is selected.
+- `form_archetype`: ordered structural intention. It must show development but
+  does not lock bar counts.
+- `bass_behavior`: direct statement of bass function, rhythm, density, and
+  articulation.
+- `groove_intent`: musical pocket description. It must remain understandable to
+  a musician and must not contain engine tick offsets.
+- `differentiation`: explicit boundary against the closest templates. Use at
+  least three substantive differences.
+- `composition_status`: composition review state. `listening_reviewed` must stay
+  false until rendered or human-performed material has been reviewed.
 
-## What a template does NOT store
+## Existing recipe fields
 
-- **No actual note events.** Pitches/velocities are rendered by the engine
-  from the plan, not stored here. A template that hardcodes notes defeats its
-  own purpose.
-- **No groove tick numbers.** Those live in `groove-profiles.md`; reference the
-  profile name.
-- **No cliché-register contents.** Point at `cliche-register.md`.
-- **No single locked progression.** Store a palette + signature moves so every
-  song built from the template can differ.
+- `id`: unique kebab-case id matching filename and registry row.
+- `when_to_use`: exact copy of the registry description.
+- `style`: human-facing style identity.
+- `defaults`: candidate keys, tempo range, meter, and feel.
+- `groove_profile`: named reference to the groove knowledge layer.
+- `harmony_palette`: vocabulary, signature moves, cadences, and avoid rules.
+- `hook_archetypes`: reusable hook shapes, not fixed note events.
+- `melody_phrasing`: phrase behavior keyed by the template's arc phases.
+- `drum_skeleton`: drum behavior at three energy levels.
+- `arrangement_defaults`: entrance order and section interaction rules.
+- `anti_boredom_rules`: mandatory variation constraints.
+
+## Engine status is separate
+
+`engine_support` records downstream implementation readiness only. It must not
+be used as evidence that a composition recipe is musically valid. Conversely,
+a template may be composition-valid while `renderable` remains false.
+
+## Canonical outline
+
+Each template must have
+`../examples/composition-outlines/<template-id>.md` containing:
+
+- Tempo
+- Key
+- Form
+- Harmony
+- Hook
+- Bass behavior
+- Drum intent
+- Arrangement development
+- Ending
 
 ## Validation
 
-There is no separate validator script for templates yet; the orchestrator
-sanity-checks a template against this contract when it loads it. A template is
-well-formed when: `id` matches filename and registry row; `groove_profile`
-names a profile that exists in `groove-profiles.md`; `harmony_palette` holds a
-vocabulary (not a single progression); at least one `hook_archetype` exists;
-`melody_phrasing` keys cover the arc-phases the template targets; and
-`anti_boredom_rules` is non-empty.
+Run:
+
+```bash
+python scripts/validate_composition_templates.py \
+  --report composition-validation-report.md
+```
+
+The validator checks registry consistency, required recipe fields, canonical
+outlines, differentiation, and known contradiction regressions. It does not
+run an engine or claim listening approval.

@@ -17,6 +17,18 @@
     "feel": "tight 16th funk, hard backbeat, locked to the riff"
   },
   "groove_profile": "fusion-tight",
+  "template_version": "1.0.0",
+  "palette_reference_key": "E minor",
+  "form_archetype": [
+    "bass-riff-intro",
+    "vamp-A",
+    "build",
+    "breakdown",
+    "solo-peak",
+    "release",
+    "final-vamp",
+    "abrupt-stop"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "Em9",
@@ -28,60 +40,60 @@
     ],
     "signature_moves": [
       "static vamp: one dominant/sus chord held while bass+drums drive the riff",
-      "modal interchange stab: Em9 -> Ebmaj7#11 -> Em9 (chromatic upper-structure hit)",
-      "sus-to-dom release: Gsus13 -> G13 at the section's arrival",
+      "modal interchange stab: Em9 -> Ebmaj7#11 -> Em9",
+      "sus-to-dom release: Gsus13 -> G13 at the section arrival",
       "quartal upper-structure over a pedal bass"
     ],
     "cadence_options": [
       "vamp turnaround: Em9 -> A13 -> back to the riff",
       "breakdown then release: strip to bass riff, then full band hits the downbeat together",
-      "no functional cadence - the release is dynamic (band re-enters), not harmonic"
+      "no functional cadence - release is dynamic, not harmonic"
     ],
     "avoid": [
-      "letting harmony wander - here harmony is subservient to the groove (see style-cheatsheets Jazz-funk/fusion)",
-      "a laid-back drag - this pocket is on the grid; do not borrow neo-soul lay-back (see ../references/cliche-register.md)"
+      "letting harmony wander - harmony is subservient to groove",
+      "a laid-back drag - this pocket is on the grid"
     ]
   },
   "hook_archetypes": [
     {
       "name": "unison-riff",
-      "rhythm": "a syncopated 16th riff hit by bass and lead (or keys) in unison/octaves",
-      "contour": "an angular gesture around the root and b7, snapping back to the root on the '1'",
+      "rhythm": "a syncopated 16th riff hit by bass and lead or keys in unison or octaves",
+      "contour": "angular gesture around root and b7, snapping to root on beat 1",
       "first_appears": "Intro, bass alone, then band joins in unison"
     },
     {
       "name": "stab-hook",
-      "rhythm": "a full-band accent stab on an off-beat that punctuates the vamp",
-      "contour": "an upper-structure chord hit (Ebmaj7#11 over E) as a splash of color",
-      "first_appears": "the first build, marking the section change"
+      "rhythm": "a full-band offbeat accent that punctuates the vamp",
+      "contour": "upper-structure chord hit as a splash of color",
+      "first_appears": "first build, marking the section change"
     }
   ],
   "melody_phrasing": {
     "urgency": {
-      "note_lengths": "short, driving, riff-locked; little space",
-      "contour": "angular, tight around root/b7, insistent repetition",
+      "note_lengths": "short, driving, riff-locked with little space",
+      "contour": "angular and insistent around root and b7",
       "placement": "on the grid, forward and tight"
     },
     "build": {
-      "note_lengths": "phrases climb and lengthen; add register",
-      "contour": "reach higher each pass, tension rising over the static vamp",
+      "note_lengths": "phrases climb and lengthen",
+      "contour": "reach higher each pass over the static vamp",
       "placement": "on the grid, pushing"
     },
     "peak": {
-      "note_lengths": "held high notes / screaming lead over the fullest vamp",
-      "contour": "sustain the top tension tone; the band is at full drive",
+      "note_lengths": "held high notes over the fullest vamp",
+      "contour": "sustain the top tension tone",
       "placement": "on the grid, confident"
     },
     "release": {
-      "note_lengths": "open up - space returns after the breakdown/hit",
-      "contour": "resolve down to the root, let the riff settle",
-      "placement": "on the grid, relaxing the push"
+      "note_lengths": "space returns after the breakdown and hit",
+      "contour": "resolve down to root and let riff settle",
+      "placement": "on the grid with reduced push"
     }
   },
   "drum_skeleton": {
-    "low_energy": "tight kick locked to the bass riff, hard snare on 2 and 4 on the grid, steady 16th hats",
-    "mid_energy": "busier kick syncopation doubling the riff, ghost snares between backbeats, hat opening on accents",
-    "high_energy": "full 16th drive, snare accents and fills, big band hits punctuating the vamp; a breakdown drop then a downbeat re-entry"
+    "low_energy": "tight kick locked to bass riff, hard snare on 2 and 4 on grid, steady 16th hats",
+    "mid_energy": "busier kick syncopation doubling riff, ghost snares between backbeats, hat openings on accents",
+    "high_energy": "full 16th drive, fills and large ensemble hits, followed by breakdown and downbeat re-entry"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -90,15 +102,45 @@
       "keys",
       "lead"
     ],
-    "layout_rules": "bass riff states the vamp first; drums lock in; build by adding layers, release by stripping to the bass riff (breakdown) then re-entering full band on a downbeat hit"
+    "layout_rules": "bass states riff first; drums lock in; layers build over the vamp; breakdown strips to bass riff; full band re-enters on a downbeat hit; solo peak remains riff-centered; final vamp ends with an abrupt ensemble stop"
   },
   "anti_boredom_rules": [
-    "the vamp must build and break down - it cannot stay one static texture the whole tune",
-    "include at least one breakdown (strip to bass riff or fewer layers) followed by a full-band release hit",
-    "the riff hook must recur, varied by register, layering, or an upper-structure stab - never dead-identical for the whole tune",
-    "velocity is never flat across a voice within a bar (ghost notes low, riff accents high)",
-    "harmony stays subservient to groove, but use at least one signature_move stab so it is not one unchanging chord"
+    "the vamp must build and break down",
+    "include at least one bass-riff breakdown followed by full-band release",
+    "riff returns varied by register, layering, or upper-structure stab",
+    "velocity is never flat across a voice within a bar",
+    "use at least one signature harmonic stab without letting harmony overtake groove"
   ],
+  "bass_behavior": {
+    "role": "primary unison riff and harmonic anchor",
+    "rhythmic_relationship": "tightly doubles kick and selected lead attacks",
+    "density": "continuous syncopated riff with breakdown exposure",
+    "articulation": "short precise electric attacks"
+  },
+  "groove_intent": {
+    "feel": "tight on-grid sixteenth-note funk",
+    "kick": "precisely doubles the bass riff",
+    "snare": "hard on beats 2 and 4",
+    "hihat": "steady straight sixteenths with accent openings",
+    "ensemble_relationship": "bass, drums, and lead converge on unison riffs and release hits"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "smooth-jazz-radio",
+      "hiphop-jazz-boombap"
+    ],
+    "distinguishing_traits": [
+      "riff-centered rather than melody-centered form",
+      "tight on-grid funk instead of laid-back push-pull",
+      "dynamic breakdown and abrupt full-band release define the arc"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": false,
     "engine_vibe": null,

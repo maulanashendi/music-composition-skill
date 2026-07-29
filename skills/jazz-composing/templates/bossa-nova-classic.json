@@ -16,6 +16,18 @@
     "feel": "rhythm section dead straight 16ths (no swing), lead/vocal laid-back or rubato, bass anticipation into chord changes"
   },
   "groove_profile": "bossa-nova-straight",
+  "template_version": "1.0.0",
+  "palette_reference_key": "C major",
+  "form_archetype": [
+    "guitar-intro",
+    "A1",
+    "A2",
+    "B-bridge",
+    "A3",
+    "solo",
+    "A4",
+    "tag-ending"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "Cmaj9",
@@ -36,50 +48,50 @@
       "tag ending: vamp the last 2 bars 3x, land on a strummed 6/9 left to ring"
     ],
     "avoid": [
-      "plain triads (C, Dm, G) - always use at minimum a 7th/9th/6-9 (see classic-jazz-genre.md vocabulary contrast in bossa-nova-genre.md SS4)",
-      "swinging the rhythm section - see bossa-nova-genre.md SS2/SS8, this is a straight-grid genre"
+      "plain triads - always use at minimum a seventh, ninth, or 6/9",
+      "swinging the rhythm section - this is a straight-grid genre"
     ]
   },
   "hook_archetypes": [
     {
       "name": "one-note-samba",
-      "rhythm": "a single held or lightly repeated melody note while the harmony underneath moves chromatically",
-      "contour": "flat/minimal pitch motion on the lead, all the motion happens in the chord line",
+      "rhythm": "a single held or lightly repeated melody note while harmony moves chromatically",
+      "contour": "flat or minimal pitch motion on the lead; motion occurs in the chord line",
       "first_appears": "Verse A1, over the Jobim chromatic descent"
     },
     {
       "name": "call-and-batida-response",
       "rhythm": "2 bars of lead melody, then 2 bars of lead silence filled by a denser guitar batida",
-      "contour": "the guitar's response quotes the melody's rhythm, not its pitch",
+      "contour": "the guitar response quotes the melody's rhythm, not its pitch",
       "first_appears": "Verse A1, bars 3-4"
     }
   ],
   "melody_phrasing": {
     "intro": {
-      "note_lengths": "sparse or absent - the batida states the groove alone",
-      "contour": "n/a until the lead enters",
-      "placement": "n/a"
+      "note_lengths": "sparse or absent - batida states the groove alone",
+      "contour": "none until lead enters",
+      "placement": "not applicable"
     },
     "verse": {
-      "note_lengths": "sotto voce, mid-length phrases, target extended tones (9th/11th/13th) on chord changes",
-      "contour": "gentle, close-interval movement, minimal leaps",
-      "placement": "laid-back, behind the straight rhythm-section grid"
+      "note_lengths": "sotto voce, mid-length phrases targeting extended tones on chord changes",
+      "contour": "gentle close-interval movement with minimal leaps",
+      "placement": "laid-back behind the straight rhythm-section grid"
     },
     "bridge": {
-      "note_lengths": "slightly longer, more harmonically active phrases",
-      "contour": "follows the denser altered-dominant harmony, still restrained",
-      "placement": "laid-back, dynamics lift slightly (pp to mp)"
+      "note_lengths": "slightly longer and more harmonically active phrases",
+      "contour": "follows denser altered-dominant harmony while remaining restrained",
+      "placement": "laid-back, with a small dynamic lift"
     },
     "solo": {
-      "note_lengths": "freer, more chromatic passing tones over the verse changes",
-      "contour": "sub-tone tenor sax or flute style - breathy, understated virtuosity, not aggressive",
+      "note_lengths": "freer with chromatic passing tones over verse changes",
+      "contour": "breathy and understated rather than aggressive",
       "placement": "rubato phrase edges over an unwaveringly straight rhythm section"
     }
   },
   "drum_skeleton": {
     "low_energy": "thin cross-stick echoing the batida, shaker constant 16ths, surdo muted on beat 1",
-    "mid_energy": "cross-stick and shaker unchanged (bossa density is stable, not additive like funk/neo-soul), surdo adds a soft accent on beat 3",
-    "high_energy": "optional pandeiro/agogo layered in for the up-tempo samba-bossa zone (135-160 BPM), still straight 16ths, never swung"
+    "mid_energy": "cross-stick and shaker remain stable, surdo adds a soft accent on beat 3",
+    "high_energy": "optional pandeiro or agogo for 135-160 BPM, still straight 16ths and never swung"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -90,15 +102,45 @@
       "counter-melody",
       "pad"
     ],
-    "layout_rules": "guitar batida opens solo; shaker enters bar 3, bass enters bar 5 on root-5th; lead enters at Verse A1 sotto voce; counter-melody (flute/Rhodes) and string pad enter at Verse A2, very soft; bridge modulates and thickens harmony; re-head (A3) is the fullest texture; solo interlude sits over the verse changes; outro strips to a vamped tag ending on a 6/9 chord left to ring"
+    "layout_rules": "guitar batida opens solo; shaker enters bar 3; bass enters bar 5; lead enters A1 sotto voce; counter-melody and soft pad enter A2; bridge thickens and contrasts harmonically; A3 is fullest; solo uses verse changes; outro strips to a three-pass tag ending on a ringing 6/9 chord"
   },
   "anti_boredom_rules": [
-    "the rhythm section must never swing, at any energy level - straight 16ths throughout (see groove_profile)",
-    "only the lead/vocal lays back or goes rubato - if the guitar/bass/percussion also drag, the arrangement has drifted into lofi/neo-soul territory",
-    "use at least one signature_move (chromatic descent, backdoor+tritone sub, or minor line cliche) - do not stay on the plain I-VI-ii-V the whole tune",
-    "the bridge must modulate or otherwise contrast harmonically - it cannot just repeat the verse progression",
-    "keep dynamics restrained (pp-mp for most of the form) - a bossa arrangement that gets loud/dense everywhere has lost the genre's restraint"
+    "the rhythm section never swings",
+    "only the lead or vocal lays back or goes rubato",
+    "use at least one signature harmonic move",
+    "the bridge must contrast harmonically",
+    "dynamics remain restrained for most of the form"
   ],
+  "bass_behavior": {
+    "role": "anticipated root-fifth acoustic foundation",
+    "rhythmic_relationship": "supports batida with root on beat 1, chord tone near beat 3, and anticipation into changes",
+    "density": "steady but economical",
+    "articulation": "short warm acoustic notes with clear separation"
+  },
+  "groove_intent": {
+    "feel": "straight-sixteenth bossa pulse with a laid-back lead",
+    "kick": "soft surdo-like pulse rather than a drum-kit backbeat",
+    "snare": "cross-stick echoes guitar batida",
+    "hihat": "shaker maintains even subdivisions",
+    "ensemble_relationship": "guitar, bass, and percussion remain straight while lead phrases float behind"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "smooth-jazz-radio",
+      "classic-jazz-swing"
+    ],
+    "distinguishing_traits": [
+      "nylon-guitar batida as rhythmic center",
+      "straight rhythm section with only the lead laying back",
+      "chromatic AABA harmony and restrained saudade dynamic"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": false,
     "engine_vibe": null,

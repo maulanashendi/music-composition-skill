@@ -17,6 +17,17 @@
     "feel": "swung-16th, deep pocket, dusty and relaxed"
   },
   "groove_profile": "neo-soul-core",
+  "template_version": "1.0.0",
+  "palette_reference_key": "D minor",
+  "form_archetype": [
+    "intro",
+    "loop-A",
+    "A-variation",
+    "breakdown",
+    "lift",
+    "dissolve",
+    "outro"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "Dm9",
@@ -99,6 +110,36 @@
     "velocity is never flat across a voice within a bar (dusty ghosts low, hits higher)",
     "keep space - do not fill every beat; the pocket is the identity"
   ],
+  "bass_behavior": {
+    "role": "fat low-end anchor under a short loop",
+    "rhythmic_relationship": "echoes selected kick syncopations without continuous doubling",
+    "density": "sparse and repetitive with occasional chromatic walkups",
+    "articulation": "rounded sustain, shortened before crowded kick moments"
+  },
+  "groove_intent": {
+    "feel": "dusty swung-sixteenth pocket with deliberate space",
+    "kick": "soft anchors and one syncopated echo",
+    "snare": "laid-back on beats 2 and 4",
+    "hihat": "sparse with low-velocity ghost subdivisions",
+    "ensemble_relationship": "texture changes around a stable pocket rather than increasing rhythmic density"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "neo-soul-midnight",
+      "hiphop-jazz-boombap"
+    ],
+    "distinguishing_traits": [
+      "single short loop developed through subtraction and addition",
+      "texture and filtering are primary form devices",
+      "lead enters late and remains secondary to pocket"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": true,
     "engine_vibe": "neo-soul",

@@ -16,6 +16,17 @@
     "feel": "relaxed swung-16th, snare and keys a touch behind the beat"
   },
   "groove_profile": "neo-soul-core",
+  "template_version": "1.0.0",
+  "palette_reference_key": "F major",
+  "form_archetype": [
+    "intro",
+    "A1-doubt",
+    "A2-hope",
+    "bridge",
+    "peak",
+    "acceptance",
+    "outro"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "Fmaj9",
@@ -98,6 +109,36 @@
     "velocity is never flat across a voice within a bar (ghost notes low, targets/accents high)",
     "use at least one signature_move from the palette somewhere - do not stay purely diatonic for the whole tune"
   ],
+  "bass_behavior": {
+    "role": "warm melodic foundation with pedal and approach motion",
+    "rhythmic_relationship": "locks major arrivals with kick and uses selective anticipations",
+    "density": "sparse-to-medium, increasing toward the peak",
+    "articulation": "rounded sustain with clean note endings"
+  },
+  "groove_intent": {
+    "feel": "laid-back swung-sixteenth neo-soul pocket",
+    "kick": "sparse anchors plus occasional pickup before arrivals",
+    "snare": "behind beats 2 and 4",
+    "hihat": "sparse at first, then ghosted swung sixteenths",
+    "ensemble_relationship": "keys and snare sit behind while bass selectively anticipates"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "lofi-jazzhop",
+      "smooth-jazz-radio"
+    ],
+    "distinguishing_traits": [
+      "emotional doubt-to-acceptance arc",
+      "reharmonization drives section development",
+      "Rhodes-led hook grows from sparse phrasing to a sustained peak"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": true,
     "engine_vibe": "neo-soul",

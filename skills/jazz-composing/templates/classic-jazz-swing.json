@@ -16,6 +16,18 @@
     "feel": "4-beat straight-ahead swing, ride-driven, walking bass pushing slightly ahead of the beat"
   },
   "groove_profile": "classic-jazz-swing",
+  "template_version": "1.0.0",
+  "palette_reference_key": "F major",
+  "form_archetype": [
+    "roll-off-intro",
+    "head-A1",
+    "head-A2",
+    "reed-soli",
+    "solo-break",
+    "solo",
+    "shout-chorus",
+    "tag-ending"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "F6",
@@ -99,6 +111,36 @@
     "the riff-and-answer hook must recur varied by section/register, never copy-pasted identically",
     "velocity is never flat within a bar - ghost/background riffs stay low, ensemble hits and shout-chorus stabs sit high"
   ],
+  "bass_behavior": {
+    "role": "continuous walking foundation",
+    "rhythmic_relationship": "pushes slightly ahead while ride defines the quarter-note flow",
+    "density": "continuous quarter notes except ensemble breaks",
+    "articulation": "short upright notes with chromatic approaches"
+  },
+  "groove_intent": {
+    "feel": "ride-led four-beat swing with ensemble precision",
+    "kick": "feathered four-to-the-bar with light pickups",
+    "snare": "mostly accents and ensemble support rather than a heavy backbeat",
+    "hihat": "foot close on beats 2 and 4",
+    "ensemble_relationship": "walking bass and ride propel while horns alternate riff, soli, and tutti roles"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "soul-jazz-organ-blues",
+      "cool-modal-quintet"
+    ],
+    "distinguishing_traits": [
+      "functional moving harmony with sixth-chord landings",
+      "big-band head-soli-solo-break-shout architecture",
+      "walking bass and ride rather than organ pedal or brushed modal space"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": false,
     "engine_vibe": "medium-swing",

@@ -16,6 +16,16 @@
     "feel": "bluesy swung 8ths, thick backbeat laid behind the grid, organ bass pedal legato"
   },
   "groove_profile": "soul-jazz-swing",
+  "template_version": "1.0.0",
+  "palette_reference_key": "F major",
+  "form_archetype": [
+    "organ-vamp-intro",
+    "12-bar-head",
+    "organ-solo",
+    "sax-or-guitar-solo",
+    "head-return",
+    "outro"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "F7",
@@ -36,7 +46,7 @@
     ],
     "avoid": [
       "dense ii-V chains or bebop-level harmonic motion - soul jazz stays on 12-bar gospel-blues, deliberately sparse (see soul-jazz-genre.md SS5-6)",
-      "a tight, precise big-band ride feel - the backbeat should sit behind the grid, not on it (see soul-jazz-swing groove profile)"
+      "a tight, precise big-band ride feel - the backbeat should sit behind the grid, not on it"
     ]
   },
   "hook_archetypes": [
@@ -66,7 +76,7 @@
     },
     "sax-guitar-solo": {
       "note_lengths": "shorter, bluesier phrases, call-and-response with organ comping",
-      "contour": "blues/gospel scale based (SS7), sub-tone or thumb-picked depending on instrument",
+      "contour": "blues/gospel scale based, sub-tone or thumb-picked depending on instrument",
       "placement": "laid-back, unhurried"
     },
     "head-return": {
@@ -77,8 +87,8 @@
   },
   "drum_skeleton": {
     "low_energy": "ride swung 8ths, thick snare backbeat on 2 and 4 laid behind the grid, hi-hat mostly closed",
-    "mid_energy": "hi-hat opens (sloshy) on off-beat accents, kick more present under the organ pedal",
-    "high_energy": "ride pushes harder, snare accents thicken under the organ/sax solo peak, hi-hat sloshier"
+    "mid_energy": "hi-hat opens on off-beat accents, kick more present under the organ pedal",
+    "high_energy": "ride pushes harder, snare accents thicken under the organ or sax solo peak, hi-hat becomes sloshier"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -87,15 +97,45 @@
       "guitar",
       "horns"
     ],
-    "layout_rules": "organ states the intro vamp alone (Leslie slow/chorale); horns state the head with organ comping underneath; organ solo builds by pulling drawbars and switching Leslie to fast tremolo at the peak; sax/guitar solo trades the foreground while organ returns to comping; head returns with full band; outro holds a 7#9 or 6/9 chord with an upward organ glissando"
+    "layout_rules": "organ states the intro vamp alone with Leslie slow; horns state the head with organ comping; organ solo builds by pulling drawbars and switching Leslie to fast at the peak; sax or guitar trades the foreground while organ returns to comping; head returns with full band; outro holds a 7#9 or 6/9 chord with an upward organ glissando"
   },
   "anti_boredom_rules": [
-    "the organ solo must have a dynamic arc - drawbars and Leslie speed change across the solo, it cannot stay one static registration the whole time",
-    "keep harmony on the sparse 12-bar gospel-blues vocabulary - do not drift into dense ii-V chains (see harmony_palette avoid)",
-    "the backbeat stays laid behind the grid at every energy level - if it tightens onto the grid the piece has drifted toward classic-jazz-swing",
-    "the call-and-response-riff hook must recur, varied by section or instrument, never copy-pasted identically",
-    "velocity is never flat across a voice within a bar (comping fills low, riff/solo peaks high)"
+    "the organ solo must have a dynamic arc - drawbars and Leslie speed change across the solo",
+    "keep harmony on the sparse 12-bar gospel-blues vocabulary",
+    "the backbeat stays behind the grid at every energy level",
+    "the call-and-response riff returns varied by section or instrument",
+    "velocity is never flat across a voice within a bar"
   ],
+  "bass_behavior": {
+    "role": "organ-pedal low-end foundation",
+    "rhythmic_relationship": "locks with kick while sustaining gospel-blues root and fifth motion",
+    "density": "continuous but simple, adding passing tones only near peaks",
+    "articulation": "legato organ pedal or low drawbar tone"
+  },
+  "groove_intent": {
+    "feel": "bluesy swung-eighth pocket with a thick laid-back backbeat",
+    "kick": "supports organ pedal and becomes more present at higher energy",
+    "snare": "heavy behind-grid backbeat on 2 and 4",
+    "hihat": "closed early, sloshier on offbeat accents later",
+    "ensemble_relationship": "organ pedal and drums create the pocket while horns and organ trade calls and responses"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "classic-jazz-swing",
+      "neo-soul-midnight"
+    ],
+    "distinguishing_traits": [
+      "gospel-blues twelve-bar foundation",
+      "Hammond registration and Leslie speed form the main dynamic arc",
+      "organ pedal replaces walking bass and supports a heavy behind-grid backbeat"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": false,
     "engine_vibe": "medium-swing",
