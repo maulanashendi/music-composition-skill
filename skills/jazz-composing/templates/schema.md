@@ -3,6 +3,17 @@
 A style template is a composition recipe that seeds `plan.json`. It stores
 musical decisions and constraints, not rendered notes or engine timing values.
 
+## Creative-first language rule
+
+Prose fields (`when_to_use`, `harmony_palette.signature_moves`, hook
+descriptions, `melody_phrasing`, `drum_skeleton`, `arrangement_defaults`,
+`anti_boredom_rules`) must state **creative intention + executable musical
+direction**, not just a mechanical instruction. Weak: `drop drums for the
+bridge`. Strong: `drop drums for the bridge so the harmony feels suddenly
+exposed, then let the return restore certainty rather than merely add volume`.
+Technical anchors (intervals, beat placement, energy levels) stay explicit —
+the consequence is added, not substituted.
+
 ## Required shape
 
 ```json
@@ -14,7 +25,7 @@ musical decisions and constraints, not rendered notes or engine timing values.
     "key_options": ["F major", "Eb major"],
     "tempo_range": [68, 80],
     "meter": "4/4",
-    "feel": "relaxed swung-sixteenth pocket"
+    "feel": "relaxed swung-sixteenth pocket, private rather than sleepy"
   },
   "groove_profile": "neo-soul-core",
   "template_version": "1.0.0",
@@ -22,35 +33,37 @@ musical decisions and constraints, not rendered notes or engine timing values.
   "form_archetype": ["intro", "A1", "A2", "bridge", "peak", "outro"],
   "harmony_palette": {
     "diatonic_core": ["Fmaj9", "Dm9", "Gm11"],
-    "signature_moves": ["Bbm7 -> Eb7 -> Fmaj9"],
-    "cadence_options": ["Bbmaj7#11 -> Fmaj9"],
-    "avoid": ["plain repeated voicings"]
+    "signature_moves": [
+      "backdoor: Bbm7 -> Eb7 -> Fmaj9, used when doubt should soften into acceptance"
+    ],
+    "cadence_options": ["Bbmaj7#11 -> Fmaj9, a plagal settle rather than a won cadence"],
+    "avoid": ["plain repeated voicings with no textural consequence"]
   },
   "hook_archetypes": [
     {
-      "name": "rise-and-settle",
-      "rhythm": "syncopated pickup into a held target",
-      "contour": "rise then settle",
+      "name": "unfinished-rise",
+      "rhythm": "syncopated pickup into a held target, followed by enough silence to make the phrase feel withheld",
+      "contour": "rise then settle, as though confidence arrives late",
       "first_appears": "intro"
     }
   ],
   "melody_phrasing": {
     "doubt": {
-      "note_lengths": "short phrases with long gaps",
+      "note_lengths": "short phrases with long gaps, as though each statement is reconsidered",
       "contour": "gentle rise then fall",
       "placement": "behind the beat"
     }
   },
   "drum_skeleton": {
-    "low_energy": "role behavior",
+    "low_energy": "role behavior and the emotional weight it protects",
     "mid_energy": "role behavior",
     "high_energy": "role behavior"
   },
   "arrangement_defaults": {
     "entrance_order": ["keys", "bass", "lead", "drums"],
-    "layout_rules": "section and interaction rules"
+    "layout_rules": "section and interaction rules stated as dramaturgy, not just an instrument checklist"
   },
-  "anti_boredom_rules": ["variation constraint"],
+  "anti_boredom_rules": ["a variation constraint stated with the musical consequence it protects"],
   "bass_behavior": {
     "role": "musical function",
     "rhythmic_relationship": "relationship to drums and ensemble",

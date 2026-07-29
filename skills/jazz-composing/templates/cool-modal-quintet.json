@@ -1,6 +1,6 @@
 {
   "id": "cool-modal-quintet",
-  "when_to_use": "modal jazz over a static Dorian vamp, brushed floating swing, statement-rest-development melody, 100-125 BPM; optional pianoless counterpoint arrangement",
+  "when_to_use": "cool or modal jazz where a small motif gains meaning through silence, patient modal color, and restrained horn conversation rather than chord traffic, 100-125 BPM",
   "style": "cool modal jazz",
   "defaults": {
     "key_options": [
@@ -35,60 +35,60 @@
       "Am7"
     ],
     "signature_moves": [
-      "So What voicing on Dm7: stacked 4ths E-A-D-G capped with a top major 3rd (B)",
-      "modal stepwise shift: D Dorian (Dm7) -> Eb Dorian (Ebm7), a half-step up for the bridge",
-      "minor stepwise cell: Dm7 (D Dorian) -> Em7 (E Phrygian/Dorian)",
-      "optional pianoless counterpoint variant: omit piano and use two independent horn lines (guide tones plus low counter-melody) over the same modal form"
+      "So What voicing on Dm7: stacked 4ths capped by a major 3rd, creating openness that invites melodic interpretation instead of defining it",
+      "modal half-step shift: D Dorian -> Eb Dorian for the bridge, making the same melodic temperament feel suddenly suspended in different light",
+      "minor stepwise cell: Dm7 -> Em7, used as a small change of floor rather than a functional progression",
+      "pianoless counterpoint: remove the chordal instrument and let two horn lines imply the mode through guide tones and independent motion"
     ],
     "cadence_options": [
-      "no functional cadence needed - a modal section shifts to the next mode or returns to the top",
-      "bridge resolution: the half-step-up mode returns directly to the home Dorian rather than using a dominant-tonic cadence"
+      "no functional cadence; let a modal section change meaning through motif, register, or ensemble density before shifting modes",
+      "bridge resolution by returning from the half-step-up mode to home Dorian, heard as recognition rather than dominant-tonic closure"
     ],
     "avoid": [
-      "fast ii-V-I chord changes - harmony is a static canvas for melodic exploration (see cool-modal-jazz-genre.md SS3)",
-      "comping a chord on every beat - use sparse interactive punctuation instead"
+      "fast ii-V-I movement; the mode is a field for listening and melodic development, not a route to navigate",
+      "comping on every beat; punctuation should respond to phrases and silence, not fill the canvas"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "three-note-motif",
-      "rhythm": "a simple 3-note statement, then 1-2 bars of silence, then the motif returns with rhythmic displacement or one changed final note",
-      "contour": "stays within the mode's characteristic color, such as the natural 6th in Dorian",
-      "first_appears": "Head, stated by the lead horn alone over the bass pedal"
+      "name": "three-notes-then-air",
+      "rhythm": "state three notes, leave 1-2 bars of real silence, then return with one displacement or changed ending so the rest becomes part of the theme",
+      "contour": "remain close to the mode's defining color, such as the Dorian natural 6th, and let one later version avoid the expected target",
+      "first_appears": "Head, lead horn alone over the bass pedal before the ensemble begins interpreting it"
     },
     {
-      "name": "guide-tone-line",
-      "rhythm": "long held notes tracing the mode's guide tones",
-      "contour": "smooth, minimal movement - a line meant to be sung, not run through quickly",
-      "first_appears": "Intro, over the bass pedal point before the full head enters"
+      "name": "line-across-still-water",
+      "rhythm": "long held guide tones separated by breath, with no need to mark every barline",
+      "contour": "smooth minimal movement that feels sung across the static mode rather than generated from chord changes",
+      "first_appears": "Intro, above the pedal point before the full head enters"
     }
   ],
   "melody_phrasing": {
     "intro-pedal": {
-      "note_lengths": "very sparse - the bass pedal carries the section almost alone",
-      "contour": "a bare guide-tone fragment from the lead",
-      "placement": "soft and unaccented over brushes"
+      "note_lengths": "very sparse; allow the bass pedal and brush texture to make the first statement before the lead commits",
+      "contour": "either absent or one bare guide-tone fragment that suggests the mode without summarizing it",
+      "placement": "soft and unaccented, with no strong downbeat claim"
     },
     "head": {
-      "note_lengths": "short 2-3 note statements followed by 1-2 bars of rest",
-      "contour": "unison or simple two-part counterpoint between horns, calm and unhurried",
-      "placement": "close to the grid, expression carried by tone quality rather than timing"
+      "note_lengths": "2-3 note statements followed by 1-2 bars of rest, treating silence as the second half of every phrase",
+      "contour": "unison or simple counterpoint between horns, calm enough that interval character remains audible",
+      "placement": "close to the grid, with expression carried by tone and spacing rather than timing distortion"
     },
     "solo": {
-      "note_lengths": "motivic development - repeat and vary a short motif rather than running scales continuously",
-      "contour": "explores the mode's characteristic color at length, not chord outlining",
-      "placement": "close to the grid, comping sparse and reactive underneath"
+      "note_lengths": "repeat, rotate, and thin one short motif rather than running scales continuously",
+      "contour": "explore the mode's characteristic tones until their emotional function changes, instead of outlining nonexistent chord traffic",
+      "placement": "close to the grid while comping remains sparse and reactive"
     },
     "outro": {
-      "note_lengths": "the head motif repeats and thins out",
-      "contour": "morendo, ending on a suspended Harmon-muted note",
-      "placement": "relaxes further as the piece fades"
+      "note_lengths": "return to the head motif, then increase the silence between fragments until only one suspended tone remains",
+      "contour": "thin toward a mute-held note whose lack of resolution feels intentional",
+      "placement": "relax further as the piece recedes"
     }
   },
   "drum_skeleton": {
-    "low_energy": "continuous brushed swish, feathered kick barely audible, soft pedal hi-hat on 2 and 4",
-    "mid_energy": "brush swish slightly more present, occasional soft ride accent, still no hard hits",
-    "high_energy": "within the 100-125 BPM range, brushes become more active and ride accents answer the horns, but drums remain unaccented; energy increases through contrapuntal horn activity, not harder hits"
+    "low_energy": "continuous brush swish, barely audible feathered kick, and soft pedal hi-hat on 2 and 4 create a floor that seems to float",
+    "mid_energy": "make the brush texture slightly more present and add rare soft ride observations, preserving the absence of hard accents",
+    "high_energy": "increase ensemble and contrapuntal activity rather than drum force; even the fullest point remains brushed, light, and uncommanding"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -98,14 +98,14 @@
       "lead-horn",
       "second-horn"
     ],
-    "layout_rules": "bass pedal and brushes open; piano adds sparse So What voicings; the head uses unison or light horn counterpoint over the static mode; the bridge shifts a half-step up; solos develop motifs with sparse interactive comping; the optional pianoless variant removes piano but keeps the same form and uses two independent horn lines; the outro reduces the head motif to one suspended muted note"
+    "layout_rules": "begin with the bass pedal and brushes as an open landscape. Piano enters only with occasional quartal punctuation. Lead horn states the motif without accompaniment trying to explain it; second horn arrives later as a listener who has found a different answer. Shift the bridge mode by a half-step so the same restraint feels newly unsettled. During solos, comping should react to spaces rather than provide constant support. End by returning the motif, then allowing silence to outgrow it."
   },
   "anti_boredom_rules": [
-    "leave 1-2 bars of real silence after short melodic statements",
-    "harmony stays modal/static within a section - the sanctioned harmonic event is the half-step mode shift at the bridge",
-    "piano comping, when present, stays sparse and interactive",
-    "the three-note motif returns with rhythmic displacement or a changed final note, never identically",
-    "drums remain brushed and floating throughout the stated 100-125 BPM range"
+    "leave 1-2 bars of real silence after short melodic statements; the silence must remain audible even when the ensemble is present",
+    "keep harmony modal and static within a section; development must come from motif, counterpoint, register, timbre, and the sanctioned mode shift",
+    "piano comping, when present, must answer or frame a phrase rather than occupy every beat",
+    "the three-note hook must return with rhythmic displacement, a changed final note, altered speaker, or different amount of silence",
+    "drums never harden into an accented backbeat; energy must be created by attention and interaction rather than impact"
   ],
   "bass_behavior": {
     "role": "modal pedal and sparse melodic anchor",

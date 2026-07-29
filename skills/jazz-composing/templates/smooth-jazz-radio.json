@@ -1,6 +1,6 @@
 {
   "id": "smooth-jazz-radio",
-  "when_to_use": "radio-friendly smooth jazz, vocal-centric sax/guitar lead, smooth slash chord, full pop-verse-chorus form, 65-115 BPM",
+  "when_to_use": "radio-friendly smooth jazz where polished restraint makes one vocal-like lead melody feel inevitable, with clear verse-to-chorus lift and consonant R&B harmony, 82-98 BPM",
   "style": "smooth jazz",
   "defaults": {
     "key_options": [
@@ -40,60 +40,60 @@
       "Bm7"
     ],
     "signature_moves": [
-      "smooth slash chord: Fmaj7/G or Dm7/G in place of a plain G7",
-      "pedal bass: Cmaj9 -> Dm7/C -> Fmaj7/C -> Cmaj9",
-      "stepwise bass descent: Cmaj9 -> G/B -> Am11 -> C/G -> Fmaj7",
-      "sub-V backdoor resolution: Bbmaj7/C -> Fmaj7/G -> Cmaj9"
+      "smooth slash chord: Fmaj7/G or Dm7/G instead of a plain G7, creating lift without introducing roughness",
+      "pedal bass: Cmaj9 -> Dm7/C -> Fmaj7/C -> Cmaj9, letting harmony open above a stable emotional floor",
+      "stepwise bass descent: Cmaj9 -> G/B -> Am11 -> C/G -> Fmaj7, giving a polished phrase quiet forward motion",
+      "sub-V backdoor resolution: Bbmaj7/C -> Fmaj7/G -> Cmaj9, adding one sophisticated turn while preserving ease"
     ],
     "cadence_options": [
-      "pre-chorus lift into the smooth slash chord before the chorus downbeat",
-      "chorus hook resolves cleanly to tonic maj9"
+      "pre-chorus lift into a smooth slash chord so the chorus downbeat feels prepared rather than forced",
+      "chorus hook resolves cleanly to tonic maj9, allowing the melody to sound complete without a raw dominant landing"
     ],
     "avoid": [
-      "a plain dominant 7th where a 9sus4 or smooth slash chord would be smoother",
-      "altered or bluesy dissonance - keep consonant and easy on the ear"
+      "plain dominant 7th where a 9sus4 or slash chord would preserve the style's polished continuity",
+      "altered or blues-heavy dissonance that makes the lead struggle against the harmony rather than sing through it"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "vocal-centric-hook",
-      "rhythm": "a clear singable 2-4 bar phrase with deliberate rests",
-      "contour": "scoop or bend into target note, controlled vibrato only at the tail",
-      "first_appears": "Chorus, sax or guitar in a higher register than verse"
+      "name": "headline-melody",
+      "rhythm": "a clear 2-4 bar phrase with deliberate rests, shaped so a listener can remember its breath pattern after one chorus",
+      "contour": "scoop or bend into one target, hold it cleanly, and add controlled vibrato only at the tail like a vocalist finishing a word",
+      "first_appears": "Chorus, in a higher register than the verse so the lift is heard before it is analyzed"
     },
     {
-      "name": "ad-lib-outro-figure",
-      "rhythm": "loose vocal-style ad-libs around tonic, not scalar improvisation",
-      "contour": "short call-and-answer with keyboard chop",
-      "first_appears": "Outro over the repeating chorus hook"
+      "name": "afterglow-adlib",
+      "rhythm": "loose vocal-style fragments around the tonic, each leaving space for a keyboard chop or band response",
+      "contour": "short calls that echo the chorus hook without turning into scalar improvisation",
+      "first_appears": "Outro, after the main hook is familiar enough to survive being partially omitted"
     }
   ],
   "melody_phrasing": {
     "verse": {
-      "note_lengths": "relaxed lower-register phrases with 1-2 bar rests",
-      "contour": "gentle and understated",
-      "placement": "on grid; expression comes from tone and ornaments"
+      "note_lengths": "relaxed lower-register phrases with 1-2 bar rests, creating trust through restraint",
+      "contour": "gentle and singable, withholding the widest interval and highest target for the chorus",
+      "placement": "on the grid; expression comes from tone and articulation, not drag"
     },
     "pre-chorus": {
-      "note_lengths": "phrases tighten slightly",
-      "contour": "rises gently with slash-chord harmony",
-      "placement": "on grid, building"
+      "note_lengths": "slightly tighter phrases with less silence, signaling that the melody is gathering itself",
+      "contour": "rise gently with the slash-chord movement, avoiding a premature peak",
+      "placement": "on the grid, increasingly directed"
     },
     "chorus": {
-      "note_lengths": "fullest and most continuous phrasing",
-      "contour": "higher-register memorable statement",
-      "placement": "on grid with controlled vibrato at note tails"
+      "note_lengths": "the most continuous and memorable phrasing of the form, balanced by rests that preserve singability",
+      "contour": "move into a higher register and make one held target the unmistakable center of the hook",
+      "placement": "on the grid, confident, with vibrato only at note tails"
     },
     "solo": {
-      "note_lengths": "structured and singable, avoiding dense runs",
-      "contour": "melodic and hook-adjacent",
-      "placement": "on grid"
+      "note_lengths": "structured, vocal-like phrases that could plausibly become a second melody; avoid dense technical runs",
+      "contour": "remain near hook intervals and shapes, expanding expression rather than harmonic complexity",
+      "placement": "on the grid"
     }
   },
   "drum_skeleton": {
-    "low_energy": "soft cross-stick backbeat, velocity-layered straight 16th hi-hat, steady shaker",
-    "mid_energy": "kick adds light R&B syncopation, hi-hat dynamics widen, shaker stays steady",
-    "high_energy": "chorus switches to layered full snare and thicker pad, remaining straight and precise"
+    "low_energy": "soft cross-stick backbeat, velocity-shaped straight 16th hats, and steady shaker create polish without drawing focus from the lead",
+    "mid_energy": "add light R&B kick syncopation and widen hat dynamics so the groove feels more open before the chorus",
+    "high_energy": "switch to a layered full snare at the chorus and support harmonic thickening, while keeping the grid straight and the surface controlled"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -104,14 +104,14 @@
       "lead",
       "full-band"
     ],
-    "layout_rules": "intro uses guitar or e-piano over pad; verse brings R&B groove and lower-register lead; pre-chorus adds slash-chord tension; chorus lifts lead register, snare timbre, and pad thickness; bridge or solo stays singable; outro repeats chorus hook under fading vocal-style ad-libs"
+    "layout_rules": "begin with a polished but incomplete frame: guitar or e-piano, soft pad, and minimal drums. Verse lead enters low and unhurried so the chorus still has somewhere to go. Pre-chorus harmony should begin lifting before the arrangement fully opens. At the chorus, raise the lead register, deepen the snare, and widen the pad together so the form feels inevitable rather than merely louder. Keep the solo melodic enough to sound like another chorus thought. In the outro, let ad-libs circle the known hook while the arrangement gradually recedes."
   },
   "anti_boredom_rules": [
-    "melody leaves 1-2 bar rests between phrases",
-    "chorus audibly lifts through register, snare timbre, and harmonic thickness",
-    "use a smooth slash chord at least once per form pass",
-    "solo remains structured and singable",
-    "drum grid never swings"
+    "the melody must preserve 1-2 bar spaces between major statements; constant filling removes the vocal illusion",
+    "the chorus must lift through register, snare character, harmony, and support layers rather than simple duplication of the verse",
+    "use a smooth slash chord at least once per form pass and let it prepare a melodic or sectional arrival",
+    "the solo must remain singable and hook-adjacent, offering a new emotional angle rather than technical proof",
+    "the drum grid remains straight at every energy level; all expressive contrast must come from density, timbre, harmony, and phrasing"
   ],
   "bass_behavior": {
     "role": "legato supporting counterline under a vocal-style lead",

@@ -1,6 +1,6 @@
 {
   "id": "lofi-jazzhop",
-  "when_to_use": "loop-based, dusty and warm, developed by subtraction/addition, 75-95 BPM, Rhodes+fat bass pocket",
+  "when_to_use": "dusty loop-based jazzhop where familiar material reveals a new shade on each return, 75-95 BPM, Rhodes and grounded bass with late-arriving lead",
   "style": "lofi jazz / jazzhop",
   "defaults": {
     "key_options": [
@@ -38,61 +38,61 @@
       "Fmaj7#11"
     ],
     "signature_moves": [
-      "2-4 chord loop with tasteful reharm on repeats (change the top voice, keep the bass)",
-      "borrowed color: Dm9 -> Bbmaj7 -> Ebmaj7#11 (bVI) -> A7alt",
-      "gospel passing: Gm11 -> G#dim7 -> Am9",
-      "chromatic bass walkup under a held upper voicing"
+      "begin with a reassuring 2-4 chord loop, then let one repeat reveal doubt through a small reharm; preserve the bass foundation while changing the upper color",
+      "borrowed color: Dm9 -> Bbmaj7 -> Ebmaj7#11 (bII color) -> A7alt, used as a brief window into a colder room before the loop returns",
+      "gospel passing: Gm11 -> G#dim7 -> Am9, allowing one upward step to feel like a small recovery",
+      "chromatic bass walkup under a held upper voicing, creating forward motion without making the loop leave its emotional center"
     ],
     "cadence_options": [
-      "loop-point turnaround: Am7 -> D9 -> Gm11 (back to top)",
-      "plagal settle: Gm11 -> Dm9 (no dominant)",
-      "deceptive: A7alt -> Bbmaj7 instead of Dm"
+      "secondary ii-V into Gm11: Am7 -> D9 -> Gm11 when the loop needs a gentle hinge rather than a final cadence",
+      "plagal settle: Gm11 -> Dm9 with no dominant when the return should feel familiar and unforced",
+      "deceptive: A7alt -> Bbmaj7 instead of Dm when comfort should be delayed for one more pass"
     ],
     "avoid": [
-      "chord density as a substitute for pocket - identity is groove+texture+space (see style-cheatsheets Lofi jazz)",
-      "the exact same voicing looped with zero reharm for the whole tune (see ../references/cliche-register.md)"
+      "chord density as a substitute for pocket; identity comes from groove, texture, silence, and the meaning of each return (see style-cheatsheets Lofi jazz)",
+      "the exact same voicing looped with zero reharm, response, subtraction, or register change for the whole tune (see ../references/cliche-register.md)"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "short-motif-loop",
-      "rhythm": "a 2-bar motif that lands on the '&' of 2, leaving space after",
-      "contour": "a small falling gesture (3rd down) that answers itself an octave apart on the repeat",
-      "first_appears": "A, over the bare loop"
+      "name": "half-remembered-fragment",
+      "rhythm": "a brief 2-bar thought that lands on the '&' of 2, then stops as though it has forgotten the rest of the sentence",
+      "contour": "fall by a 3rd; on a later repeat, answer from another octave so the memory feels familiar but more distant",
+      "first_appears": "over the first bare loop, before the arrangement feels complete"
     },
     {
-      "name": "top-voice-hook",
-      "rhythm": "sustained top note of the comp voicing, re-struck on the reharm",
-      "contour": "the color tone (9th or #11) held so the reharm underneath changes its meaning",
-      "first_appears": "the second loop, when the reharm hits"
+      "name": "color-that-changes",
+      "rhythm": "a sustained top color is re-struck only when the reharm arrives, making the harmonic change feel discovered rather than announced",
+      "contour": "hold the 9th or #11 so the harmony underneath changes its emotional meaning while the melodic identity stays still",
+      "first_appears": "the second loop, after the listener has learned the original harmony"
     }
   ],
   "melody_phrasing": {
     "settle": {
-      "note_lengths": "sparse, mostly space; let the loop breathe",
-      "contour": "small gestures around the tonic and the color tone",
-      "placement": "deep in the pocket, behind the beat"
+      "note_lengths": "the lead is reluctant to speak: use sparse fragments, long rests, and only enough notes to make the silence feel intentional",
+      "contour": "circle close to the tonic and one fragile color tone, avoiding a complete melodic statement",
+      "placement": "deep in the pocket, as though the phrase arrives after listening to the loop"
     },
     "develop": {
-      "note_lengths": "add one phrase per loop; build by addition",
-      "contour": "reach a little higher, introduce the reharm color tone",
-      "placement": "in the pocket"
+      "note_lengths": "each loop remembers one additional detail; add only one meaningful phrase, extension, or answer at a time",
+      "contour": "reach slightly higher and let the reharm color enter the melody without turning it into a dramatic climax",
+      "placement": "in the pocket, with slightly clearer intention than the settle phase"
     },
     "lift": {
-      "note_lengths": "the fullest the tune gets - still restrained",
-      "contour": "hold the highest color tone over the loop's reharm",
-      "placement": "in the pocket, a touch more forward"
+      "note_lengths": "this is the most exposed point, not necessarily the busiest; allow one phrase to last longer than expected",
+      "contour": "hold the highest color tone across the reharm so the harmony changes its meaning underneath",
+      "placement": "a touch more forward while remaining restrained"
     },
     "dissolve": {
-      "note_lengths": "strip back by subtraction to almost nothing",
-      "contour": "settle onto the tonic or the loop's most stable tone",
-      "placement": "loosen, drift"
+      "note_lengths": "phrases lose pieces of themselves until only a trace remains",
+      "contour": "return toward the tonic or the loop's safest tone, but avoid making the ending feel fully explained",
+      "placement": "loosen and drift, as though the loop continues after the listener leaves"
     }
   },
   "drum_skeleton": {
-    "low_energy": "dusty kick on 1 and the 'a' of 2, laid-back snare on 2 and 4, sparse hat, lots of space",
-    "mid_energy": "add swung 16th hat ghosts (vel < 45), a syncopated kick echoing the bass riff",
-    "high_energy": "still restrained - add a light open-hat accent and a short fill at the loop point, never busy"
+    "low_energy": "the drummer protects the empty space: dusty kick on 1 and the 'a' of 2, laid-back snare on 2 and 4, sparse hat",
+    "mid_energy": "add subtle swung-16th hat ghosts and one syncopated kick echo that answers the bass phrase rather than merely thickening the bar",
+    "high_energy": "remain restrained; open one hat accent and place a short fill at the loop boundary, then immediately return to the pocket"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -101,14 +101,15 @@
       "drums",
       "lead"
     ],
-    "layout_rules": "develop the single loop by subtraction/addition, not by adding sections; strip to keys+bass for a breakdown; lead enters late and lays out often to keep the pocket the focus"
+    "layout_rules": "let the listener enter while the Rhodes loop is already breathing. Bass makes the room feel grounded; drums arrive as quiet confirmation; lead appears only after the pocket feels trustworthy. Reuse the same loop across contrasting arrangement states, developing through subtraction, addition, selective reharm, and foreground exchange. Strip to keys and bass when the music needs to feel most exposed. The lead should disappear often enough that its return feels remembered rather than scheduled."
   },
   "anti_boredom_rules": [
-    "each loop repeat must differ from the last by subtraction, addition, OR reharm - never an identical bar-for-bar copy",
-    "the reharm must land at least once so a held top voice changes meaning",
-    "no 2-bar loop repeats more than 4 times without a change",
-    "velocity is never flat across a voice within a bar (dusty ghosts low, hits higher)",
-    "keep space - do not fill every beat; the pocket is the identity"
+    "each loop repeat must reveal or conceal one detail through subtraction, addition, reharm, articulation, register, or instrumentation; changes must feel motivated rather than decorative",
+    "the reharm must occur at least once beneath a sustained color so a familiar idea acquires a different emotional meaning",
+    "no 2-bar loop may repeat more than 4 times without a perceptible textural, harmonic, melodic, or arrangement change",
+    "do not let every voice behave with the same intensity; foreground and background must exchange roles across the form",
+    "protect the empty space around the motif; silence is part of the hook, not unused capacity",
+    "the final return must omit or alter one element the listener has learned to expect"
   ],
   "bass_behavior": {
     "role": "fat low-end anchor under a short loop",

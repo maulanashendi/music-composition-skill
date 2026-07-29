@@ -1,6 +1,6 @@
 {
   "id": "bossa-nova-classic",
-  "when_to_use": "intimate to flowing bossa nova, nylon guitar batida, straight 16ths with a laid-back lead, saudade-leaning AABA arc, 80-160 BPM",
+  "when_to_use": "intimate bossa nova where a calm surface carries quiet saudade, nylon-guitar batida and straight 16ths supporting a voice that never needs to raise itself, 80-160 BPM",
   "style": "bossa nova",
   "defaults": {
     "key_options": [
@@ -38,60 +38,60 @@
       "Bm7b5"
     ],
     "signature_moves": [
-      "Jobim chromatic descent: Cmaj7 -> C#dim7 -> Dm7 -> D#dim7 -> C/E -> A7(b9,b13)",
-      "major-dominant II (Ipanema formula): Fmaj7 -> G7(13) -> Gm9 -> C7(b9)",
-      "minor line cliche (saudade): Am9 -> Bm7b5 -> E7(b9,b13) -> Am(maj7) Am6",
-      "backdoor + tritone sub: Cmaj9 -> Fm9 Bb13 -> Cmaj7 -> Db13"
+      "Jobim chromatic descent: Cmaj7 -> C#dim7 -> Dm7 -> D#dim7 -> C/E -> A7(b9,b13), allowing the floor to move while the melody remains composed",
+      "major-dominant II: Fmaj7 -> G7(13) -> Gm9 -> C7(b9), brightening the surface before saudade returns underneath",
+      "minor line cliche: Am9 -> Bm7b5 -> E7(b9,b13) -> Am(maj7) -> Am6, used when tenderness should reveal its ache without becoming theatrical",
+      "backdoor and tritone color: Cmaj9 -> Fm9 Bb13 -> Cmaj7 -> Db13, creating one elegant detour before the song resumes its calm posture"
     ],
     "cadence_options": [
-      "I - VI - ii - V: Cmaj9 -> A7(b9) -> Dm9 -> G13 G7(b13)",
-      "tag ending: vamp the last 2 bars 3x, land on a strummed 6/9 left to ring"
+      "I-VI-ii-V: Cmaj9 -> A7(b9) -> Dm9 -> G13 G7(b13), shaped as a continuous breath rather than a hard turnaround",
+      "tag ending: repeat the last 2 bars three times, each pass more spacious, then let a final 6/9 chord ring without explanation"
     ],
     "avoid": [
-      "plain triads - always use at minimum a seventh, ninth, or 6/9",
-      "swinging the rhythm section - this is a straight-grid genre"
+      "plain triads where extended harmony is part of the style vocabulary (see bossa-nova-genre.md SS4)",
+      "swinging the rhythm section; only the lead may loosen against the straight grid (see bossa-nova-genre.md SS2/SS8)"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "one-note-samba",
-      "rhythm": "a single held or lightly repeated melody note while harmony moves chromatically",
-      "contour": "flat or minimal pitch motion on the lead; motion occurs in the chord line",
-      "first_appears": "Verse A1, over the Jobim chromatic descent"
+      "name": "still-note-moving-room",
+      "rhythm": "one held or lightly repeated melody note while the harmony moves beneath it, making restraint feel more expressive than motion",
+      "contour": "minimal pitch movement; the emotional change is carried by the chromatic chord line under the stable voice",
+      "first_appears": "Verse A1 over the first chromatic descent, after the batida has established calm"
     },
     {
-      "name": "call-and-batida-response",
-      "rhythm": "2 bars of lead melody, then 2 bars of lead silence filled by a denser guitar batida",
-      "contour": "the guitar response quotes the melody's rhythm, not its pitch",
-      "first_appears": "Verse A1, bars 3-4"
+      "name": "phrase-and-batida-reply",
+      "rhythm": "2 bars of lead melody followed by 2 bars of silence in which guitar rhythm becomes slightly more articulate",
+      "contour": "the guitar answers the melody's rhythmic shape without copying its pitches, like a quiet acknowledgment",
+      "first_appears": "Verse A1, bars 3-4, once the listener understands that silence is part of the conversation"
     }
   ],
   "melody_phrasing": {
     "intro": {
-      "note_lengths": "sparse or absent - batida states the groove alone",
-      "contour": "none until lead enters",
-      "placement": "not applicable"
+      "note_lengths": "sparse or absent; let the batida introduce the emotional temperature before any voice explains it",
+      "contour": "n/a until the lead enters",
+      "placement": "n/a"
     },
     "verse": {
-      "note_lengths": "sotto voce, mid-length phrases targeting extended tones on chord changes",
-      "contour": "gentle close-interval movement with minimal leaps",
+      "note_lengths": "sotto voce, mid-length phrases with breath between them; target extensions should feel discovered inside ordinary speech",
+      "contour": "gentle close-interval movement, with leaps reserved for one line that briefly exposes deeper feeling",
       "placement": "laid-back behind the straight rhythm-section grid"
     },
     "bridge": {
-      "note_lengths": "slightly longer and more harmonically active phrases",
-      "contour": "follows denser altered-dominant harmony while remaining restrained",
-      "placement": "laid-back, with a small dynamic lift"
+      "note_lengths": "slightly longer phrases as the harmony becomes more active, but never enough to break the intimate scale",
+      "contour": "follow altered dominants and modulation with restrained upward motion, allowing one color to linger",
+      "placement": "laid-back, with a small lift from pp toward mp"
     },
     "solo": {
-      "note_lengths": "freer with chromatic passing tones over verse changes",
-      "contour": "breathy and understated rather than aggressive",
-      "placement": "rubato phrase edges over an unwaveringly straight rhythm section"
+      "note_lengths": "freer phrase edges and selective chromatic passing tones, balanced by audible breath and understatement",
+      "contour": "sub-tone tenor or flute-like lines that suggest virtuosity without displaying it",
+      "placement": "rubato phrase edges over an unwavering straight rhythm section"
     }
   },
   "drum_skeleton": {
-    "low_energy": "thin cross-stick echoing the batida, shaker constant 16ths, surdo muted on beat 1",
-    "mid_energy": "cross-stick and shaker remain stable, surdo adds a soft accent on beat 3",
-    "high_energy": "optional pandeiro or agogo for 135-160 BPM, still straight 16ths and never swung"
+    "low_energy": "thin cross-stick shadows the batida, shaker holds constant 16ths, and muted surdo on beat 1 gives the song a floor without calling attention to itself",
+    "mid_energy": "keep the same fundamental density; let a soft surdo accent on beat 3 and slightly clearer percussion interaction create flow rather than expansion",
+    "high_energy": "for up-tempo samba-bossa, add pandeiro or agogo as a brighter surface while preserving straight 16ths and emotional restraint"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -102,14 +102,14 @@
       "counter-melody",
       "pad"
     ],
-    "layout_rules": "guitar batida opens solo; shaker enters bar 3; bass enters bar 5; lead enters A1 sotto voce; counter-melody and soft pad enter A2; bridge thickens and contrasts harmonically; A3 is fullest; solo uses verse changes; outro strips to a three-pass tag ending on a ringing 6/9 chord"
+    "layout_rules": "guitar opens as if the song has already been quietly underway. Shaker and bass enter without announcing a new section; they simply make the room more complete. Lead arrives sotto voce and should never compete with the batida. Counter-melody and pad enter only after the first statement has earned additional color. Let the bridge deepen harmony rather than volume. Re-head with the fullest but still restrained texture, then remove layers during the tag until the final 6/9 chord feels like a thought left in the air."
   },
   "anti_boredom_rules": [
-    "the rhythm section never swings",
-    "only the lead or vocal lays back or goes rubato",
-    "use at least one signature harmonic move",
-    "the bridge must contrast harmonically",
-    "dynamics remain restrained for most of the form"
+    "the rhythm section must remain straight at every energy level; looseness belongs to the lead, not the foundation",
+    "lead phrases and guitar responses must alternate foreground so intimacy is created through listening, not continuous filling",
+    "use at least one signature_move and make it coincide with a meaningful melodic hold, breath, or change of register",
+    "the bridge must create genuine harmonic distance from the verse without becoming louder or stylistically heavier",
+    "dynamics remain restrained for most of the form; the emotional peak should come from harmony, register, or exposure rather than force"
   ],
   "bass_behavior": {
     "role": "anticipated root-fifth acoustic foundation",

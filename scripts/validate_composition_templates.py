@@ -129,7 +129,10 @@ def validate_template(template: dict[str, Any], path: Path, outlines_dir: Path, 
         tempo_range = defaults.get("tempo_range")
         result.check("cool_tempo_range", tempo_range == [100, 125], "cool-modal-quintet must use the selected 100-125 BPM design center")
         result.check("cool_no_stale_fast_range", not contains_number(template, 140) and not contains_number(template, 175), "cool-modal-quintet still contains the stale 140-175 BPM range")
-        result.check("cool_primary_identity", "optional pianoless" in template.get("when_to_use", "").lower(), "pianoless counterpoint must be an optional arrangement, not a competing primary identity")
+        identity_text = " ".join([template.get("when_to_use", ""), template.get("style", "")]).lower()
+        result.check("cool_no_competing_identity", "west coast" not in identity_text, "the pianoless west-coast quartet must not be presented as a second competing primary identity")
+        pianoless_mentions = [v for v in json.dumps(template).lower().split('"') if "pianoless" in v]
+        result.check("cool_primary_identity", bool(pianoless_mentions) and any("optional" in v for v in pianoless_mentions), "pianoless counterpoint must be explicitly framed as optional somewhere in the template")
 
     if template_id == "hiphop-jazz-boombap":
         low = drums.get("low_energy", "").lower()

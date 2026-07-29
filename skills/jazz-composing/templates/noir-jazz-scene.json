@@ -1,6 +1,6 @@
 {
   "id": "noir-jazz-scene",
-  "when_to_use": "cinematic noir/dark jazz, muted trumpet over dark piano, extreme rubato drag, ppp-pp dynamics, scene-form arc, 35-65 BPM",
+  "when_to_use": "cinematic noir jazz where silence, decay, and one mournful call carry more narrative weight than harmonic motion, muted trumpet over dark piano, 42-50 BPM",
   "style": "cinematic noir jazz / dark-jazz scene score",
   "defaults": {
     "key_options": [
@@ -35,59 +35,59 @@
       "Fmaj7(#11)"
     ],
     "signature_moves": [
-      "the detective's walk: Am(maj7) -> Am7 -> Am6 -> Fmaj7(#11) -> E7(b9,b13)",
-      "the rainy alleyway: Cm9 -> Fm9 -> Abmaj7(#11) -> G7alt",
-      "cluster friction voicing: semitone pairs placed mid-chord"
+      "the detective's walk: Am(maj7) -> Am7 -> Am6 -> Fmaj7(#11) -> E7(b9,b13), letting one tonic identity deteriorate step by step",
+      "the rainy alleyway: Cm9 -> Fm9 -> Abmaj7(#11) -> G7alt, moving through shadowed rooms without increasing harmonic speed",
+      "cluster friction voicing: place semitone tension inside the chord so discomfort is heard as proximity, not volume (see noir-jazz-genre.md SS4)"
     ],
     "cadence_options": [
-      "altered dominant resolution: E7(b9,b13) -> Am(maj7)",
-      "a scene may decay into silence rather than resolve"
+      "altered dominant resolution: E7(b9,b13) -> Am(maj7), arriving at a tonic that still carries damage inside it",
+      "no hard cadence when the truest ending is decay, unanswered space, or a scene disappearing before resolution"
     ],
     "avoid": [
-      "plain major triads or bright major sevenths",
-      "dense fast harmonic rhythm - hold chords for at least two bars"
+      "plain bright major colors; replace them with maj7#11 or m(maj7) so even consonance retains a shadow",
+      "dense or fast harmonic rhythm; every chord needs enough time to become atmosphere and then become absence"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "mournful-3-note-call",
-      "rhythm": "a short 3-note muted-trumpet phrase over 1-2 bars, then silence",
-      "contour": "slow bend or glissando into b5 or b3 from below",
-      "first_appears": "Scene 2, answered by one low piano chord"
+      "name": "three-notes-in-the-rain",
+      "rhythm": "a short 3-note muted-trumpet call across 1-2 bars, followed by silence long enough for the answer to feel uncertain",
+      "contour": "bend or slide upward into b5 or b3 from below, then let the final tone weaken rather than resolve",
+      "first_appears": "Scene 2, answered only by one low piano chord several beats later"
     },
     {
-      "name": "decaying-chord-signature",
-      "rhythm": "one struck chord left to ring across an entire phrase",
-      "contour": "minor-major seventh or cluster voicing with no restrike until decay",
-      "first_appears": "Scene 1, first piano entrance"
+      "name": "room-after-the-chord",
+      "rhythm": "strike one chord and let its full decay become the phrase; do not restrike until the silence itself has changed character",
+      "contour": "use Am(maj7) or a close cluster whose inner friction remains audible after the attack disappears",
+      "first_appears": "Scene 1, the first piano entrance after the bass has already established emptiness"
     }
   ],
   "melody_phrasing": {
     "alleyway-intro": {
-      "note_lengths": "near silence - one bass pluck every two bars and one chord over four bars",
-      "contour": "none before melody enters",
-      "placement": "sparse"
+      "note_lengths": "near silence: one bass pluck every 2 bars and one chord allowed to decay across several bars",
+      "contour": "n/a; the absence of melody establishes the world before any character enters",
+      "placement": "sparse, no lead yet"
     },
     "shadow-theme": {
-      "note_lengths": "short mournful phrases and long sustained notes separated by silence",
-      "contour": "blue-note bends into target pitch",
-      "placement": "extremely dragged behind brushed swirl"
+      "note_lengths": "short mournful calls, occasional long notes, and more silence than statement",
+      "contour": "blue-note bends enter the target from below, with the final pitch allowed to remain emotionally compromised",
+      "placement": "extremely dragged behind the brushed swirl"
     },
     "confession-interlude": {
-      "note_lengths": "sparse duet between sax and piano",
-      "contour": "low sub-tone tenor, breath-forward",
-      "placement": "same extreme drag; trumpet silent"
+      "note_lengths": "sparse duet phrases where sax and piano rarely speak at the same moment",
+      "contour": "low sub-tone tenor lines, breath-forward and reluctant, with piano answers that reveal rather than decorate",
+      "placement": "the same deep drag, with trumpet absent so the scene acquires a different witness"
     },
     "resolution-outro": {
-      "note_lengths": "theme restates then thins to one bass pluck and decaying chord",
-      "contour": "molto ritardando",
-      "placement": "drag increases into silence"
+      "note_lengths": "restate only enough of the theme for recognition, then remove notes until one bass pluck and one final chord remain",
+      "contour": "let the last statement descend or thin, avoiding a heroic final interval",
+      "placement": "drag increases as the scene loses momentum and disappears into silence"
     }
   },
   "drum_skeleton": {
-    "low_energy": "constant soft brushed-snare swirl only, no kick, occasional ride fade on beat 1",
-    "mid_energy": "swirl continues, near-inaudible felt kick on 1 and the '&' of 3, ride fades on 1 and 3",
-    "high_energy": "the ceiling is a full quiet trio, not a louder pattern; density increases by adding voices only"
+    "low_energy": "constant soft brushed-snare swirl only, no kick, with an occasional ride bloom on beat 1 that fades before becoming pulse",
+    "mid_energy": "keep the swirl fragile; add a near-inaudible felt kick and sparse ride responses so the scene gains presence without confidence",
+    "high_energy": "do not become louder; the ceiling is a fuller trio texture, with tension created by additional witnesses and closer interaction rather than harder hits"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -97,15 +97,15 @@
       "muted-trumpet",
       "tenor-sax"
     ],
-    "layout_rules": "Scene 1: bass and one decaying piano chord; Scene 2: brush swirl and muted-trumpet theme over line cliche; Scene 3: trumpet exits and sub-tone tenor duets with piano; Scene 4: drums and bass stop, leaving reverb and one delayed note; Scene 5: quiet ensemble restates theme and slows into one bass pluck plus decaying chord"
+    "layout_rules": "Scene 1 begins with absence: bass, then one decaying piano chord. Scene 2 introduces the brushed swirl and muted-trumpet call, making the first melody feel like evidence. Scene 3 removes trumpet and gives tenor sax the confession, with piano answering from a distance. Scene 4 must empty the frame completely by dropping drums and bass, leaving only a tail and one delayed tone. Scene 5 permits the ensemble to restate the theme, but the ending must reduce everything back to one pluck, one chord, and no explanation."
   },
   "anti_boredom_rules": [
-    "every chord decays fully before the next, with about two bars minimum",
-    "cut roughly half the melody notes a first draft would include",
-    "one full scene drops drums and bass entirely",
-    "dynamics remain ppp-pp throughout",
-    "mournful three-note call returns varied by register or answering instrument",
-    "ambient texture, if used, remains far below the music and may be omitted"
+    "leave every chord enough time to decay into a new texture before the next attack; harmonic patience is the primary source of tension",
+    "remove roughly half the melody a conventional first draft would include; silence must carry narrative information",
+    "one full scene must drop drums and bass entirely so the listener feels the floor disappear",
+    "dynamics remain ppp-pp; narrative escalation must come from proximity, register, timbre, and the order of entrances",
+    "the three-note call must return with a changed register, answer, silence length, or speaker",
+    "ambient texture is optional and subordinate; it must never become the event that the instruments should create"
   ],
   "bass_behavior": {
     "role": "sparse narrative anchor",
