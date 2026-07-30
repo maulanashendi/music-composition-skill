@@ -11,6 +11,43 @@ never bypasses the full MDLC workflow (Ideation → Verification → Rendering)
 or any gate/scorecard/quality review. The candidate→selection protocol still
 runs — it now selects *from a template's options* instead of from scratch.
 
+## The creative-first rule
+
+A template must do more than describe genre mechanics. It must give the
+orchestrator a reason to choose those mechanics.
+
+Write each prose decision as:
+
+> **creative intention + executable musical direction**
+
+Examples:
+
+- Weak: `hold the 9th over the reharm`.
+- Strong: `hold the 9th over the reharm so a familiar phrase briefly feels less
+  certain without becoming dramatic`.
+- Weak: `drop drums for the bridge`.
+- Strong: `drop drums for the bridge so the harmony feels exposed, as though the
+  room has suddenly become larger`.
+
+The creative clause should describe an audible consequence: memory, tension,
+relief, hesitation, intimacy, momentum, distance, warmth, exposure, or another
+musically useful perception. The executable clause should still specify rhythm,
+contour, harmony, density, interaction, entrance, dropout, or variation.
+
+Do not add new JSON fields merely to carry poetic prose — use the existing
+field contract (`schema.md`) and improve the language inside it. Keep these
+fields concise and operational: `id`, `style`, `defaults.key_options`,
+`defaults.tempo_range`, `defaults.meter`, `groove_profile`,
+`template_version`, `palette_reference_key`, `form_archetype`,
+`engine_support`. Use richer creative language in `when_to_use`,
+`defaults.feel`, `harmony_palette.signature_moves`/`cadence_options`,
+`hook_archetypes`, `melody_phrasing`, `drum_skeleton`,
+`arrangement_defaults.layout_rules`, `anti_boredom_rules`, `bass_behavior`,
+`groove_intent`, and `differentiation.distinguishing_traits`.
+
+A useful test: remove the style label. If the remaining prose could describe
+any other template unchanged, the recipe is still too generic.
+
 ## Where a template sits in `plan.json`
 
 A **template seeds the musical intent, not the concrete notes.** The canonical
@@ -59,6 +96,8 @@ Cost per compose = thin registry + one selected template file. Not N templates.
 - `registry.md` — Tier 0 index. Read this first, always.
 - `schema.md` — the field contract for a template JSON (types, what each field
   means, how it maps to `plan.json`).
+- `composition-validation.md` — the desk-review checklist and its relationship
+  to `scripts/validate_composition_templates.py`.
 - `<id>.json` — one file per template (Tier 1).
 
 ## Engine support (`engine_support`)

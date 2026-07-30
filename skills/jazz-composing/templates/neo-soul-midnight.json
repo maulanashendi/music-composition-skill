@@ -1,6 +1,6 @@
 {
   "id": "neo-soul-midnight",
-  "when_to_use": "late-night, intimate, a doubt->acceptance arc, 68-80 BPM, Rhodes-led",
+  "when_to_use": "late-night neo-soul where guarded phrases slowly become honest, 68-80 BPM, Rhodes-led with elastic pocket and intimate call-and-response",
   "style": "neo-soul",
   "defaults": {
     "key_options": [
@@ -16,6 +16,17 @@
     "feel": "relaxed swung-16th, snare and keys a touch behind the beat"
   },
   "groove_profile": "neo-soul-core",
+  "template_version": "1.0.0",
+  "palette_reference_key": "F major",
+  "form_archetype": [
+    "intro",
+    "A1-doubt",
+    "A2-hope",
+    "bridge",
+    "peak",
+    "acceptance",
+    "outro"
+  ],
   "harmony_palette": {
     "diatonic_core": [
       "Fmaj9",
@@ -26,61 +37,61 @@
       "Csus13"
     ],
     "signature_moves": [
-      "backdoor: Bbm7 -> Eb7 -> Fmaj9",
-      "chromatic slide: Dm9 -> Db7#11 -> Cm9 -> B7#11",
-      "modal borrow: Gm11 -> Bbm6 -> Fmaj9",
-      "static-bass reharm: hold F in the bass, move Fmaj9 -> Fm(maj9) -> Ebmaj9"
+      "backdoor: Bbm7 -> Eb7 -> Fmaj9, used when uncertainty should soften into acceptance rather than resolve triumphantly",
+      "chromatic slide: Dm9 -> Db7#11 -> Cm9 -> B7#11, creating a brief downward pull as though the harmony loses its footing",
+      "modal borrow: Gm11 -> Bbm6 -> Fmaj9, letting one darker color pass through an otherwise warm room",
+      "static-bass reharm: hold F in the bass while Fmaj9 -> Fm(maj9) -> Ebmaj9 changes the emotional meaning above it"
     ],
     "cadence_options": [
-      "Gm11 -> C7alt -> Fmaj9",
-      "tritone sub turnaround: Gm11 -> Gb13 -> Fmaj9",
-      "plagal settle: Bbmaj7#11 -> Fmaj9 (no dominant)"
+      "Gm11 -> C7alt -> Fmaj9 for the clearest moment of arrival after a withheld phrase",
+      "tritone sub turnaround: Gm11 -> Gb13 -> Fmaj9 when the return should feel smooth but slightly unexpected",
+      "plagal settle: Bbmaj7#11 -> Fmaj9 with no dominant when acceptance should feel chosen, not forced"
     ],
     "avoid": [
-      "plain ii-V-I with no reharm or extension (see ../references/cliche-register.md)",
-      "the same voicing block copy-pasted every bar"
+      "plain ii-V-I with no reharm, melodic consequence, or change of emotional weight (see ../references/cliche-register.md)",
+      "the same voicing block copy-pasted every bar; repeated harmony must breathe through density, register, response, or reharm"
     ]
   },
   "hook_archetypes": [
     {
-      "name": "rise-and-settle",
-      "rhythm": "syncopated 16th pickup into a held target note across the barline",
-      "contour": "rise a 6th from the 5th, then settle down to the 3rd",
-      "first_appears": "Intro, bare over Rhodes"
+      "name": "unfinished-rise",
+      "rhythm": "a syncopated 16th pickup into a held target across the barline, followed by enough silence to make the phrase feel withheld",
+      "contour": "rise a 6th from the 5th, then settle to the 3rd as though confidence arrives only after hesitation",
+      "first_appears": "Intro, bare over Rhodes before the full pocket feels secure"
     },
     {
-      "name": "call-and-answer",
-      "rhythm": "two short answering phrases, the second landing a beat later than the first",
-      "contour": "a falling 4th answered by a rising 2nd that lands on the 9th",
-      "first_appears": "A1, stated then fragmented"
+      "name": "late-answer",
+      "rhythm": "two short answering phrases, with the second arriving one beat later so the reply feels considered rather than automatic",
+      "contour": "a falling 4th answered by a rising 2nd that lands on the 9th, turning resignation into a small opening",
+      "first_appears": "A1, stated clearly once, then fragmented between lead and keys"
     }
   ],
   "melody_phrasing": {
     "doubt": {
-      "note_lengths": "short phrases with long gaps between them",
-      "contour": "gentle rise then fall, stopping on the 6th (unresolved)",
-      "placement": "slightly behind the beat"
+      "note_lengths": "short phrases with long gaps, as though each statement is reconsidered before the next begins",
+      "contour": "rise gently, fall back, and stop on the 6th so the thought remains emotionally unfinished",
+      "placement": "slightly behind the beat, listening before speaking"
     },
     "hope": {
-      "note_lengths": "lines lengthen, fewer gaps",
-      "contour": "climb, each phrase reaching a little higher",
-      "placement": "closer to on the beat as energy tightens"
+      "note_lengths": "lines lengthen and the silences narrow, but every phrase still leaves room for an answer",
+      "contour": "climb a little higher on each pass, allowing brighter extensions to enter without becoming declarative",
+      "placement": "closer to the beat as intention strengthens"
     },
     "peak": {
-      "note_lengths": "hold the peak note; let it ring",
-      "contour": "sustain the high target tone over open harmony",
-      "placement": "on the beat, confident"
+      "note_lengths": "let one exposed peak note last longer than expected instead of filling the section with more notes",
+      "contour": "sustain the high target over open harmony so the chord changes its meaning beneath the voice",
+      "placement": "on the beat, clear and vulnerable rather than aggressive"
     },
     "acceptance": {
-      "note_lengths": "sparse, resolving, more space",
-      "contour": "descend gently to the tonic",
-      "placement": "loosen, drift behind the beat again"
+      "note_lengths": "return to sparse phrases, now with less hesitation and more air around the final tones",
+      "contour": "descend gently toward the tonic without over-explaining the resolution",
+      "placement": "loosen behind the beat again, this time as ease rather than doubt"
     }
   },
   "drum_skeleton": {
-    "low_energy": "kick on 1 and the '&' of 3, snare laid-back on 2 and 4, hi-hat sparse quarter notes",
-    "mid_energy": "add off-beat hi-hat 16ths as ghosts (vel < 45), an occasional kick pickup before beat 1",
-    "high_energy": "busier hi-hat 16ths, snare ghost notes around the backbeat, a fill leading into the peak section"
+    "low_energy": "the drummer protects the silence: kick on 1 and the '&' of 3, laid-back snare on 2 and 4, sparse quarter-note hat",
+    "mid_energy": "add quiet off-beat 16th hat ghosts and an occasional kick pickup, creating internal motion without making the room feel crowded",
+    "high_energy": "open the hi-hat texture, add restrained snare ghosts, and use one fill to reveal the peak; intensity should come from focus, not busyness"
   },
   "arrangement_defaults": {
     "entrance_order": [
@@ -89,15 +100,45 @@
       "lead",
       "drums"
     ],
-    "layout_rules": "keys+bass state the intro alone; drums enter with the first full A; drop drums (or go to brushed/sparse) for the bridge; lead lays out during the keys turnaround so the comp breathes"
+    "layout_rules": "keys and bass begin as a private conversation; the lead enters before the drums so its first phrase feels exposed; drums confirm the pocket at the first full A. Drop or thin drums for the bridge so the harmony becomes emotionally naked. Let the lead lay out during the keys turnaround, then return with a phrase that sounds changed by what it heard."
   },
   "anti_boredom_rules": [
-    "the chosen hook must reappear at least twice, always varied (register, rhythm, or harmonization) - never an identical copy",
-    "at least one section drops one instrument for contrast",
-    "no 2-bar loop repeats more than 4 times without a fill, reharm, or dynamic shift",
-    "velocity is never flat across a voice within a bar (ghost notes low, targets/accents high)",
-    "use at least one signature_move from the palette somewhere - do not stay purely diatonic for the whole tune"
+    "the chosen hook must reappear at least twice, and each return must change its emotional meaning through register, rhythm, harmony, articulation, or instrumentation",
+    "at least one section must remove one instrument so a previously hidden relationship becomes audible",
+    "no 2-bar loop may repeat more than 4 times without a fill, reharm, density shift, dropout, or foreground exchange",
+    "do not let every voice carry equal intensity; targets, ghosts, answers, and background figures must remain hierarchically distinct",
+    "use at least one signature_move, and make its arrival coincide with a melodic, textural, or narrative consequence"
   ],
+  "bass_behavior": {
+    "role": "warm melodic foundation with pedal and approach motion",
+    "rhythmic_relationship": "locks major arrivals with kick and uses selective anticipations",
+    "density": "sparse-to-medium, increasing toward the peak",
+    "articulation": "rounded sustain with clean note endings"
+  },
+  "groove_intent": {
+    "feel": "laid-back swung-sixteenth neo-soul pocket",
+    "kick": "sparse anchors plus occasional pickup before arrivals",
+    "snare": "behind beats 2 and 4",
+    "hihat": "sparse at first, then ghosted swung sixteenths",
+    "ensemble_relationship": "keys and snare sit behind while bass selectively anticipates"
+  },
+  "differentiation": {
+    "nearest_templates": [
+      "lofi-jazzhop",
+      "smooth-jazz-radio"
+    ],
+    "distinguishing_traits": [
+      "emotional doubt-to-acceptance arc",
+      "reharmonization drives section development",
+      "Rhodes-led hook grows from sparse phrasing to a sustained peak"
+    ]
+  },
+  "composition_status": {
+    "defined": true,
+    "outline_validated": true,
+    "desk_reviewed": true,
+    "listening_reviewed": false
+  },
   "engine_support": {
     "renderable": true,
     "engine_vibe": "neo-soul",
