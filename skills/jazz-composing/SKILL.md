@@ -70,6 +70,37 @@ untuk memutuskan, bukan micro-timing/humanization milik `pyengine`.
 
 ## Workflow
 
+### Fase 0 — Lihat state DAW (hanya jalur chat Studio)
+
+Kalau skill ini dipicu dari chat panel Studio (bukan CLI/ideation —
+cirinya: working directory SAAT INI adalah folder project, berisi
+`project.json`), jalankan dulu sebelum Fase 1:
+
+```bash
+daw project state --project "$(basename "$PWD")"
+```
+
+Baca `tracks[]`, `tempo`, `timeSignature` yang sudah ada. Kalau project
+BUKAN kosong (sudah ada track dari sesi sebelumnya), perlakukan
+`tempo`/`timeSignature` yang sedang berjalan sebagai **konstrain brief**,
+bukan sesuatu yang bisa dipilih ulang — lihat catatan penting di bawah
+kenapa ini wajib, bukan sekadar rapi.
+
+> **Kenapa wajib, bukan opsional.** `daw song import` (dipakai
+> `rendering-audition` untuk memasukkan hasil komposisi ini ke Studio)
+> **tidak pernah mengubah** `project.tempo`/`timeSignature` — ia cuma
+> menambah track+clip baru. Kalau kamu memutuskan tempo brief beda dari
+> tempo project yang sudah berjalan, hasil importnya akan terdengar salah
+> (semua clip di project diputar pada satu tempo yang sama), dan TIDAK
+> ADA command untuk memperbaikinya belakangan. Jadi cocokkan tempo/meter
+> ke project yang sudah ada SEKARANG, di fase Brief — jangan menebak nilai
+> baru lalu berharap bisa dirapikan setelah render.
+>
+> Kalau project memang kosong (project baru, `tracks: []`), tempo/meter
+> project masih default (`120`, `4/4`) dan bebas ditentukan brief seperti
+> biasa — user bisa menyesuaikannya sendiri di Studio kapan saja SEBELUM
+> import pertama terjadi.
+
 ### Fase 1 — Brief
 
 Gali: vibe/mood, durasi target, referensi rasa (artis/track pembanding

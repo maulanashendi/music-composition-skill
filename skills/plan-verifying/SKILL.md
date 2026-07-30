@@ -31,17 +31,41 @@ hanya supaya validator lolos.
 
 ### Step 1 — Jalankan validator
 
+Dua cara memanggil validator YANG SAMA PERSIS (`pyengine` di baliknya) —
+pakai yang tersedia di environment kamu:
+
+**Kalau `python -m pyengine` ada** (jalur CLI/dev, Claude Code dev-only —
+lihat `daw_generative/CLAUDE.md` §1 "Otak"):
+
 ```bash
 python -m pyengine validate <path/to/plan.json>
 ```
 
-Baca **seluruh** stdout JSON — jangan berhenti di error pertama. Format:
-`{"valid": bool, "errors": [{"path", "code", "message"}], "warnings": [...]}`.
-Exit code 0 = valid (`errors: []`, warning boleh ada), 1 = ada error,
-2 = crash internal (payload tetap JSON valid di stdout, `errors: [{"path":
-"$", "code": "internal_error", "message": ...}]` — biasanya berarti
-`plan.json` bahkan tidak well-formed atau ada bug di pyengine sendiri,
-bukan pelanggaran skema biasa).
+**Kalau tidak ada `pyengine` di sistem ini** (jalur chat Studio —
+container `agent-chat-gateway` sengaja Node-only, TIDAK punya Python;
+lihat `docs/chat-feature-architecture.md` §7 di repo `daw_generative`):
+panggil endpoint HTTP `compose` backend FastAPI, yang menjalankan
+`pyengine` yang SAMA secara in-process, lewat pintu render tunggal:
+
+```bash
+curl -sX POST http://backend:8000/compose/validate \
+  -H 'Content-Type: application/json' \
+  -d @<path/to/plan.json>
+```
+
+(`http://backend:8000` adalah nama service di jaringan Docker Compose —
+kalau `STUDIO_SERVER_URL` di-set beda, pakai itu.)
+
+Kedua cara balas payload JSON **identik**: `{"valid": bool, "errors":
+[{"path", "code", "message"}], "warnings": [...]}` — baca **seluruh**
+error/warning, jangan berhenti di yang pertama. CLI: exit code 0 = valid
+(`errors: []`, warning boleh ada), 1 = ada error, 2 = crash internal
+(payload tetap JSON valid, `errors: [{"path": "$", "code":
+"internal_error", ...}]` — biasanya berarti `plan.json` bahkan tidak
+well-formed atau ada bug di pyengine sendiri, bukan pelanggaran skema
+biasa). HTTP: status 200 selalu (`valid:false` bukan kegagalan transport,
+itu laporan linter) kecuali body malformed (400) atau tool internal error
+(500/503) — baca body JSON yang sama persis di semua kasus itu.
 
 ### Step 2 — Perbaiki tiap error di alamatnya
 

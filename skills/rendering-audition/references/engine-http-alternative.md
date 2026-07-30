@@ -1,22 +1,61 @@
-# Alternatif HTTP: `POST /api/render` / `POST /api/validate`
+# Alternatif HTTP: dua jalur berbeda, jangan tertukar
 
-Referensi tunggal untuk agent yang memakai server dev `daw_generative`
-(engine, Tool 2) lewat HTTP alih-alih memanggil CLI `pyengine` langsung.
-Jalur utama tetap CLI (`python -m pyengine audition|validate|release
-<plan.json> -o <outdir>`, lihat `../SKILL.md`) — HTTP dipakai ketika agent
-tidak punya akses shell ke `pyengine` tapi bisa mengirim request HTTP ke
-server dev yang sudah hidup.
+Referensi untuk agent yang tidak punya akses shell ke `pyengine` (CLI)
+tapi bisa mengirim request HTTP. Ada **dua** server HTTP yang mengekspos
+`pyengine` — pilih sesuai environment kamu, jangan asumsikan satu-satunya:
 
-## Prasyarat
+| | **FastAPI `compose`** (jalur chat Studio) | **Vite dev-render** (dev lokal lama) |
+|---|---|---|
+| Base URL | `http://backend:8000` (nama service Docker Compose) atau `$STUDIO_SERVER_URL` | `http://localhost:<port auto-increment>` dari `npm run dev` di root `daw_generative` |
+| Kapan dipakai | Chat panel Studio (container `agent-chat-gateway`, TIDAK punya Python) — lihat `docs/chat-feature-architecture.md` §7 di repo `daw_generative` | Dev manual di luar Docker, jarang dipakai lintas-agent |
+| Endpoint validate | `POST /compose/validate` | `POST /api/validate` |
+| Endpoint render | `POST /compose` (`?audio=true` utk WAV) | `POST /api/render` |
+| Bentuk respons render sukses | JSON: `{"midi":"<base64>","warnings":[...]}`, tambah `"wav":"<base64>","durationSec":<float>` kalau `?audio=true` | Binary `audio/wav` + header `X-Plan-Warnings` |
 
-- **Server dev engine hidup**: `npm run dev` dijalankan dari root repo
-  `daw_generative` (Vite dev middleware — `vite-plugin-render.js` via
-  `vite.config.js` — dev-only, bukan production server).
-- **Port**: default Vite 5173, tapi **auto-increment** bila terpakai — baca
-  port sesungguhnya dari log terminal `npm run dev`, jangan mengasumsikan
-  5173.
+**Default-kan ke jalur FastAPI `compose`** kalau kamu tidak yakin sedang
+di environment mana — itu satu-satunya yang terjamin hidup di topologi
+Docker tempat chat-lane jalan. Jalur Vite dev-render di bawah cuma
+relevan kalau eksplisit diberitahu sedang jalan di dev lokal non-Docker.
 
-## Kontrak respons HTTP
+## Jalur A — FastAPI `compose` (chat Studio, DEFAULT)
+
+```bash
+# Verify (padanan `pyengine validate`)
+curl -sX POST http://backend:8000/compose/validate \
+  -H 'Content-Type: application/json' -d @<plan.json>
+# -> selalu 200, {"valid": bool, "errors":[...], "warnings":[...]}
+
+# Audition (padanan `pyengine audition`)
+curl -sX POST 'http://backend:8000/compose?audio=true' \
+  -H 'Content-Type: application/json' -d @<plan.json> > response.json
+# -> 200: {"midi":"<base64>","warnings":[...],"wav":"<base64>","durationSec":<float>}
+# -> 422 (belum lolos validate): {"error":"komposisi ditolak validasi","errors":[...],"warnings":[...]}
+# -> 503: tool audio (fluidsynth/ffmpeg/soundfont) tak tersedia di backend
+
+python3 -c "
+import json, base64, sys
+r = json.load(open('response.json'))
+open('<run-folder>/audition/<slug>.mid', 'wb').write(base64.b64decode(r['midi']))
+if 'wav' in r:
+    open('<run-folder>/audition/<slug>.wav', 'wb').write(base64.b64decode(r['wav']))
+"
+```
+
+Kalau `$STUDIO_SERVER_URL` sudah di-set di environment (dipasang lewat
+`docker-compose.yml` untuk container gateway), pakai itu alih-alih
+hardcode `http://backend:8000`.
+
+## Jalur B — Vite dev-render (dev lokal lama, BUKAN default)
+
+Server dev `daw_generative` (Vite dev middleware —
+`vite-plugin-render.js` via `vite.config.js` — dev-only, bukan production
+server, dan bukan yang dipakai chat-lane).
+
+**Prasyarat**: `npm run dev` dijalankan dari root repo `daw_generative`.
+Port default Vite 5173 tapi **auto-increment** bila terpakai — baca port
+sesungguhnya dari log terminal, jangan mengasumsikan 5173.
+
+## Kontrak respons HTTP (Jalur B)
 
 | Endpoint | Kondisi | Status | Body/Header |
 |---|---|---|---|

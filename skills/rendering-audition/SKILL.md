@@ -14,24 +14,67 @@ Input skill ini SELALU `plan.json` yang sudah lolos `plan-verifying`
 
 ### Fase Audition — render draft dan dengarkan
 
+**Kalau `python -m pyengine` ada** (jalur CLI/dev):
+
 ```bash
 python -m pyengine audition <path/to/plan.json> -o <run-folder>/audition/
 ```
 
-Menghasilkan `<slug>.mid` + `<slug>.wav` sekali jalan (slug dari
-`meta.title` tersanitasi `[a-z0-9-]`, fallback `untitled`), plus stdout JSON
+**Kalau tidak** (jalur chat Studio, container gateway Node-only — lihat
+`references/engine-http-alternative.md` Jalur A): panggil `POST
+http://backend:8000/compose?audio=true` dan decode base64 `midi`/`wav` ke
+file, persis seperti dicontohkan di referensi itu — hasil akhirnya SAMA:
+`<slug>.mid` + `<slug>.wav` di `<run-folder>/audition/`.
+
+Kedua cara menghasilkan `<slug>.mid` + `<slug>.wav` sekali jalan (slug dari
+`meta.title` tersanitasi `[a-z0-9-]`, fallback `untitled`), plus metadata
 `{"midi","wav","durationSec"}` — `durationSec` adalah wall-clock waktu
-render, **bukan** durasi lagu. `-o <outdir>` **wajib** per kontrak
-`pyengine` (argumen required, bukan opsional). MIDI-nya byte-identik dan
-diuji sebagai kontrak (`meta.seed` men-drive humanization, bukan random
-tiap render); WAV-nya deterministik **secara musikal** (konten/notasi sama
-persis) tapi byte-identik **tidak** dijamin kontrak — `fluidsynth`/`ffmpeg`
-tidak menjamin bit-reproducibility lintas environment. Jalankan protokol
-uji dengar 3 lapis di `references/audition-protocol.md`: (1) automated gate
-— sudah diselesaikan `plan-verifying`; (2) LLM-judge blind pairwise —
-subagent segar tanpa konteks generasi menilai; (3) **human ear, blind
-A/B — wajib per-piece produksi**, bukan sampel, sebelum piece disebut
-selesai.
+render, **bukan** durasi lagu. MIDI-nya byte-identik dan diuji sebagai
+kontrak (`meta.seed` men-drive humanization, bukan random tiap render);
+WAV-nya deterministik **secara musikal** (konten/notasi sama persis) tapi
+byte-identik **tidak** dijamin kontrak — `fluidsynth`/`ffmpeg` tidak
+menjamin bit-reproducibility lintas environment.
+
+### Fase Import — masukkan ke Studio DAW (hanya jalur chat Studio)
+
+Kalau skill ini dipicu dari chat panel Studio (project name = nama folder
+cwd, sama seperti dicek di `jazz-composing` Fase 0), setelah `<slug>.mid`
+berhasil ditulis, jalankan:
+
+```bash
+daw song import --project "$(basename "$PWD")" --file <run-folder>/audition/<slug>.mid
+```
+
+Ini membaca `<slug>.mid` (multi-track SMF, satu track per voice plan),
+memetakan tiap track ke instrument preset Studio (via GM program), dan
+menambahkannya sebagai track+clip BARU ke `project.json` project ini —
+**satu** `PUT` ber-`If-Match` (satu docVersion bump, satu undo-step di
+Studio). Studio yang sedang terbuka akan menerima update ini **otomatis**
+lewat WebSocket (realtime docVersion sync) tanpa reload — hasil komposisi
+langsung terlihat di piano-roll dalam beberapa detik.
+
+Perlakukan **playback di Studio** sebagai bagian dari protokol uji dengar
+3 lapis (`references/audition-protocol.md`), bukan cuma file WAV
+terpisah: (1) automated gate — sudah diselesaikan `plan-verifying`; (2)
+LLM-judge blind pairwise — subagent segar tanpa konteks generasi menilai;
+(3) **human ear, blind A/B — wajib per-piece produksi**, bukan sampel,
+sebelum piece disebut selesai — user sekarang bisa melakukan ini langsung
+dari Studio.
+
+> **Batas yang sudah ada sebelumnya, bukan regresi baru**: playback di
+> Studio memakai synth TS in-browser sendiri (`packages/engine/
+> renderProject.ts`), BUKAN reproduksi fluidsynth+mastering byte-identik
+> dari `.wav` hasil render di atas. Jadi telinga di Studio menilai NOTASI
+> (pitch/timing/artikulasi/pemilihan instrument), bukan warna sonic
+> finalnya — `.wav` hasil Fase Audition tetap sumber kebenaran untuk itu.
+> Ini gap konvergensi playback-vs-render yang sudah tercatat di
+> `daw_generative/CLAUDE.md` §2 (north-star), di luar tanggung jawab
+> skill ini untuk menutup.
+>
+> Kalau `daw` tidak reachable (bukan chat Studio, mis. dijalankan CLI
+> dev-only tanpa Studio project) — lewati Fase Import ini, `<slug>.mid`/
+> `.wav` di run folder tetap artefak yang sah untuk fase Review/Release
+> di bawah.
 
 ### Fase Review — skor dan revisi
 
@@ -50,9 +93,18 @@ dari piece nyata yang barusan dinilai.
 
 ### Fase Release — render final dan arsipkan
 
+**Kalau `python -m pyengine` ada**:
+
 ```bash
 python -m pyengine release <path/to/plan.json> -o <run-folder>/release/
 ```
+
+**Kalau tidak** (jalur chat Studio): `pyengine release` = `pyengine
+audition` + salin `plan.json` — tidak ada endpoint HTTP terpisah untuk
+ini, jadi lakukan dua langkahnya manual: panggil ulang `POST
+http://backend:8000/compose?audio=true` (sama seperti Fase Audition,
+decode ke `<run-folder>/release/<slug>.{mid,wav}`), lalu `cp
+<path/to/plan.json> <run-folder>/release/plan.json`.
 
 Render final + penamaan + arsip (salinan `plan.json` ikut diarsipkan di
 folder yang sama). **`plan.json` adalah source code lagu** — WAV tidak
@@ -68,26 +120,27 @@ jalankan ulang lewat `../plan-verifying/` → skill ini.
 
 ## Alternatif HTTP
 
-Kalau agent memakai server `daw_generative` alih-alih CLI `pyengine`
-langsung, baca `references/engine-http-alternative.md` — `POST
-/api/render` (body `plan.json`) dan `POST /api/validate` sebagai
-padanan `pyengine audition`/`pyengine validate` lewat HTTP.
+Kalau tidak ada akses CLI `pyengine` (mis. chat-lane Studio), baca
+`references/engine-http-alternative.md` — dua jalur HTTP berbeda
+(FastAPI `compose`, DEFAULT untuk chat Studio; Vite dev-render, dev lokal
+lama) sebagai padanan `pyengine audition`/`pyengine validate`.
 
 ## Jalur legacy (ABC)
 
 Kalau artefak di tangan adalah ABC (bukan `plan.json` — mis. dari
 `../abc-notation/SKILL.md`, jalur 2 yang masih didukung engine JS lama),
-render/audition-nya **tidak** lewat `pyengine`; ikuti jalur lama:
-`POST /api/render` body `{abc, drums?, mastering?}` (lihat
-`references/engine-http-alternative.md` §Jalur legacy ABC). Jangan
-mencampur `plan.json` dan ABC dalam satu run.
+render/audition-nya **tidak** lewat `pyengine`, dan **tidak** lewat
+FastAPI `compose` (modul itu cuma menerima `plan.json`) — hanya lewat
+Jalur B (Vite dev-render): `POST /api/render` body `{abc, drums?,
+mastering?}` (lihat `references/engine-http-alternative.md` Jalur B
+§Jalur legacy ABC). Jangan mencampur `plan.json` dan ABC dalam satu run.
 
 ## References
 
 - `references/audition-protocol.md` — protokol uji dengar 3 lapis, kriteria kelulusan per vibe, L3 wajib per-piece.
 - `references/scorecard-template.md` — template `scorecard.md`, status validasi dari `verify-log.md` + skor L2 + catatan L3.
 - `references/rubric-checklist.md` — rubrik kualitatif konsolidasi (voice-leading, interaksi ensemble, dinamika, timbre) — menggantikan 8 `rubric.md` modul lama.
-- `references/engine-http-alternative.md` — kontrak HTTP `POST /api/render`/`POST /api/validate` sebagai alternatif CLI, plus jalur legacy ABC.
+- `references/engine-http-alternative.md` — kontrak HTTP FastAPI `compose` (default chat Studio) dan Vite dev-render sebagai alternatif CLI, plus jalur legacy ABC.
 - `../RED-FLAGS.md` — pola kegagalan umum lintas skill.
 
 ## Metrik yang relevan (dari `docs/new-prd.md` §8)
