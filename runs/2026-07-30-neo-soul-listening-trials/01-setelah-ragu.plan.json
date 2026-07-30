@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 2,
+  "meta": {"title": "Setelah Ragu", "vibe": "neo-soul", "key": "F major", "seed": 20260730},
+  "sections": [
+    {
+      "name": "intro", "bars": 2, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.35, "end": 0.5},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj9"},
+        {"bar": 1, "beat": 3, "symbol": "Fm(maj9)"},
+        {"bar": 2, "beat": 1, "symbol": "Fmaj9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "F2", "dur": 4},
+          {"bar": 2, "beat": 1, "pitch": "F2", "dur": 4}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 4.5, "pitch": "C5", "dur": 0.5, "artic": "accent"},
+          {"bar": 2, "beat": 1, "pitch": "A5", "dur": 2, "artic": "tenuto"},
+          {"bar": 2, "beat": 3, "pitch": "A4", "dur": 2, "artic": "legato"}
+        ]}
+      }
+    },
+    {
+      "name": "A1-doubt", "bars": 3, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.5, "end": 0.65},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj9"},
+        {"bar": 1, "beat": 3, "symbol": "Am7"},
+        {"bar": 2, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 3, "symbol": "Gm11"},
+        {"bar": 3, "beat": 1, "symbol": "Bbm7"},
+        {"bar": 3, "beat": 3, "symbol": "Eb7"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 1, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 2}, {"bar": 2, "beat": 3, "degree": 1, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 2}, {"bar": 3, "beat": 3, "degree": 1, "dur": 2}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "C5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 2, "pitch": "G4", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 3.5, "pitch": "A4", "dur": 0.5, "artic": "accent"},
+          {"bar": 1, "beat": 4, "pitch": "G5", "dur": 1, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "F5", "dur": 1, "artic": "ghost"}
+        ]},
+        "drums": {"role": "drums"}
+      }
+    },
+    {
+      "name": "A2-hope", "bars": 3, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.65, "end": 0.78},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj9"},
+        {"bar": 1, "beat": 3, "symbol": "Am7"},
+        {"bar": 2, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 3, "symbol": "Db7#11"},
+        {"bar": 3, "beat": 1, "symbol": "Cm9"},
+        {"bar": 3, "beat": 3, "symbol": "B7#11"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "medium"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 2}, {"bar": 1, "beat": 3, "degree": 1, "dur": 2},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 1}, {"bar": 2, "beat": 2, "degree": 5, "dur": 1}, {"bar": 2, "beat": 3, "degree": 1, "dur": 2},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 2}, {"bar": 3, "beat": 3, "degree": 1, "dur": 2}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "E5", "dur": 1, "artic": "legato"},
+          {"bar": 1, "beat": 2.5, "pitch": "F5", "dur": 0.5, "artic": "accent"},
+          {"bar": 2, "beat": 1, "pitch": "A5", "dur": 2, "artic": "tenuto"}
+        ]},
+        "drums": {"role": "drums"}
+      }
+    },
+    {
+      "name": "bridge", "bars": 2, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.78, "end": 0.55},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm11"},
+        {"bar": 1, "beat": 3, "symbol": "Bbm6"},
+        {"bar": 2, "beat": 1, "symbol": "Fmaj9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "pitch": "F2", "dur": 4}
+        ]}
+      }
+    },
+    {
+      "name": "peak", "bars": 3, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.85, "end": 1.0},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Gm11"},
+        {"bar": 2, "beat": 1, "symbol": "C7alt"},
+        {"bar": 3, "beat": 1, "symbol": "Fmaj9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "busy"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "degree": 1, "dur": 4}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "A5", "dur": 4, "artic": "tenuto"},
+          {"bar": 2, "beat": 1, "pitch": "A5", "dur": 4, "artic": "tenuto"},
+          {"bar": 3, "beat": 1, "pitch": "F5", "dur": 4, "artic": "legato"}
+        ]},
+        "drums": {"role": "drums"}
+      }
+    },
+    {
+      "name": "acceptance", "bars": 3, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.6, "end": 0.4},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Fmaj9"},
+        {"bar": 1, "beat": 3, "symbol": "Am7"},
+        {"bar": 2, "beat": 1, "symbol": "Dm9"},
+        {"bar": 2, "beat": 3, "symbol": "Bbmaj7#11"},
+        {"bar": 3, "beat": 1, "symbol": "Fmaj9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 2, "beat": 1, "degree": 1, "dur": 4},
+          {"bar": 3, "beat": 1, "pitch": "F2", "dur": 4}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "A4", "dur": 2, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "F4", "dur": 2, "artic": "legato"},
+          {"bar": 3, "beat": 1, "pitch": "F4", "dur": 4, "artic": "legato"}
+        ]}
+      }
+    },
+    {
+      "name": "outro", "bars": 2, "tempo": 74, "meter": "4/4", "groove": "neo-soul-core",
+      "dynamics": {"start": 0.4, "end": 0.2},
+      "harmony": [
+        {"bar": 1, "beat": 1, "symbol": "Bbmaj7#11"},
+        {"bar": 2, "beat": 1, "symbol": "Fmaj9"}
+      ],
+      "voices": {
+        "comp": {"role": "chords", "instrument": "rhodes", "style": "rootless", "density": "sparse"},
+        "bass": {"role": "bass", "instrument": "upright-bass", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "F2", "dur": 4},
+          {"bar": 2, "beat": 1, "pitch": "F2", "dur": 4}
+        ]},
+        "lead": {"role": "lead", "instrument": "rhodes", "notes": [
+          {"bar": 1, "beat": 1, "pitch": "A4", "dur": 1, "artic": "legato"},
+          {"bar": 2, "beat": 1, "pitch": "F4", "dur": 4, "artic": "legato"}
+        ]}
+      }
+    }
+  ]
+}

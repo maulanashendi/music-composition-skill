@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "title": "Angkat dari Bawah (Guitar Lead, Slow Jazz)",
+    "vibe": "neo-soul",
+    "key": "Bb minor",
+    "seed": 20260730
+  },
+  "sections": [
+    {
+      "name": "intro",
+      "bars": 2,
+      "tempo": 70,
+      "meter": "4/4",
+      "groove": "neo-soul-core",
+      "dynamics": {
+        "start": 0.35,
+        "end": 0.5
+      },
+      "harmony": [
+        {
+          "bar": 1,
+          "beat": 1,
+          "symbol": "Bbm9"
+        },
+        {
+          "bar": 2,
+          "beat": 1,
+          "symbol": "Ab/Bb"
+        }
+      ],
+      "voices": {
+        "comp": {
+          "role": "chords",
+          "instrument": "rhodes",
+          "style": "rootless",
+          "density": "sparse"
+        },
+        "bass": {
+          "role": "bass",
+          "instrument": "upright-bass",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            }
+          ]
+        },
+        "drums": {
+          "role": "drums"
+        }
+      }
+    },
+    {
+      "name": "verse",
+      "bars": 4,
+      "tempo": 70,
+      "meter": "4/4",
+      "groove": "neo-soul-core",
+      "dynamics": {
+        "start": 0.5,
+        "end": 0.65
+      },
+      "harmony": [
+        {
+          "bar": 1,
+          "beat": 1,
+          "symbol": "Bbm9"
+        },
+        {
+          "bar": 2,
+          "beat": 1,
+          "symbol": "Ab/Bb"
+        },
+        {
+          "bar": 3,
+          "beat": 1,
+          "symbol": "Gbmaj9"
+        },
+        {
+          "bar": 4,
+          "beat": 1,
+          "symbol": "F7alt"
+        }
+      ],
+      "voices": {
+        "comp": {
+          "role": "chords",
+          "instrument": "rhodes",
+          "style": "rootless",
+          "density": "medium"
+        },
+        "bass": {
+          "role": "bass",
+          "instrument": "upright-bass",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            }
+          ]
+        },
+        "lead": {
+          "role": "lead",
+          "instrument": "acoustic-guitar",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "pitch": "Bb4",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 1,
+              "beat": 2.5,
+              "pitch": "Db5",
+              "dur": 0.5,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 1,
+              "beat": 3,
+              "pitch": "F5",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "pitch": "Ab4",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 2,
+              "beat": 2.5,
+              "pitch": "C5",
+              "dur": 0.5,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 2,
+              "beat": 3,
+              "pitch": "Eb5",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "pitch": "Gb4",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 3,
+              "beat": 2,
+              "pitch": "Bb4",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 3,
+              "beat": 3,
+              "pitch": "Db5",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "degree": 3,
+              "octave": 5,
+              "dur": 1,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 4,
+              "beat": 3,
+              "degree": 1,
+              "octave": 5,
+              "dur": 2,
+              "artic": "tenuto"
+            }
+          ]
+        },
+        "drums": {
+          "role": "drums"
+        }
+      }
+    },
+    {
+      "name": "lift",
+      "bars": 4,
+      "tempo": 70,
+      "meter": "4/4",
+      "groove": "neo-soul-core",
+      "dynamics": {
+        "start": 0.65,
+        "end": 0.8
+      },
+      "harmony": [
+        {
+          "bar": 1,
+          "beat": 1,
+          "symbol": "Dbmaj9"
+        },
+        {
+          "bar": 2,
+          "beat": 1,
+          "symbol": "Ebm7"
+        },
+        {
+          "bar": 3,
+          "beat": 1,
+          "symbol": "Ab7(b13)"
+        },
+        {
+          "bar": 4,
+          "beat": 1,
+          "symbol": "Dbmaj9"
+        }
+      ],
+      "voices": {
+        "comp": {
+          "role": "chords",
+          "instrument": "rhodes",
+          "style": "rootless",
+          "density": "medium"
+        },
+        "bass": {
+          "role": "bass",
+          "instrument": "upright-bass",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            }
+          ]
+        },
+        "lead": {
+          "role": "lead",
+          "instrument": "acoustic-guitar",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "pitch": "Db5",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 1,
+              "beat": 2,
+              "pitch": "F5",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 1,
+              "beat": 3,
+              "pitch": "Ab5",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "pitch": "Eb5",
+              "dur": 1,
+              "artic": "legato"
+            },
+            {
+              "bar": 2,
+              "beat": 3,
+              "pitch": "Bb4",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "degree": 1,
+              "octave": 5,
+              "dur": 1,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 3,
+              "beat": 3,
+              "degree": 3,
+              "octave": 5,
+              "dur": 1,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "pitch": "F5",
+              "dur": 2,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 4,
+              "beat": 3,
+              "pitch": "Db5",
+              "dur": 2,
+              "artic": "legato"
+            }
+          ]
+        },
+        "drums": {
+          "role": "drums"
+        }
+      }
+    },
+    {
+      "name": "peak",
+      "bars": 4,
+      "tempo": 70,
+      "meter": "4/4",
+      "groove": "neo-soul-core",
+      "dynamics": {
+        "start": 0.85,
+        "end": 1.0
+      },
+      "harmony": [
+        {
+          "bar": 1,
+          "beat": 1,
+          "symbol": "F7alt"
+        },
+        {
+          "bar": 2,
+          "beat": 1,
+          "symbol": "Bbm9"
+        },
+        {
+          "bar": 3,
+          "beat": 1,
+          "symbol": "Gbmaj9"
+        },
+        {
+          "bar": 4,
+          "beat": 1,
+          "symbol": "F7alt"
+        }
+      ],
+      "voices": {
+        "comp": {
+          "role": "chords",
+          "instrument": "rhodes",
+          "style": "rootless",
+          "density": "busy"
+        },
+        "bass": {
+          "role": "bass",
+          "instrument": "upright-bass",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "degree": 1,
+              "octave": 2,
+              "dur": 4
+            }
+          ]
+        },
+        "lead": {
+          "role": "lead",
+          "instrument": "acoustic-guitar",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "degree": 1,
+              "octave": 5,
+              "dur": 4,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "pitch": "F5",
+              "dur": 4,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 3,
+              "beat": 1,
+              "pitch": "F5",
+              "dur": 4,
+              "artic": "tenuto"
+            },
+            {
+              "bar": 4,
+              "beat": 1,
+              "pitch": "A4",
+              "dur": 4,
+              "artic": "legato"
+            }
+          ]
+        },
+        "drums": {
+          "role": "drums"
+        }
+      }
+    },
+    {
+      "name": "outro",
+      "bars": 2,
+      "tempo": 70,
+      "meter": "4/4",
+      "groove": "neo-soul-core",
+      "dynamics": {
+        "start": 0.5,
+        "end": 0.2
+      },
+      "harmony": [
+        {
+          "bar": 1,
+          "beat": 1,
+          "symbol": "Bbm9"
+        },
+        {
+          "bar": 2,
+          "beat": 1,
+          "symbol": "Bbm9"
+        }
+      ],
+      "voices": {
+        "comp": {
+          "role": "chords",
+          "instrument": "rhodes",
+          "style": "rootless",
+          "density": "sparse"
+        },
+        "bass": {
+          "role": "bass",
+          "instrument": "upright-bass",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "pitch": "Bb1",
+              "dur": 4
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "pitch": "Bb1",
+              "dur": 4
+            }
+          ]
+        },
+        "lead": {
+          "role": "lead",
+          "instrument": "acoustic-guitar",
+          "notes": [
+            {
+              "bar": 1,
+              "beat": 1,
+              "pitch": "Bb4",
+              "dur": 2,
+              "artic": "legato"
+            },
+            {
+              "bar": 2,
+              "beat": 1,
+              "pitch": "Bb3",
+              "dur": 4,
+              "artic": "legato"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
